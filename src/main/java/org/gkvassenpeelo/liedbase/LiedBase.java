@@ -2,6 +2,7 @@ package org.gkvassenpeelo.liedbase;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
@@ -32,8 +33,36 @@ public class LiedBase {
      * @return
      */
     private String getSongText(LiturgyPartType type, String songNumber, String verse) {
-        System.out.println(String.format("Fetching text for: %s %s:%s", type.toString(), songNumber, verse));
-        return "Dit zou de liedtekst" + System.getProperty("line.separator") + "kunnen zijn";
+        if (type == LiturgyPartType.psalm) {
+            Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("psalmen.txt"));
+            int lineNum = 0;
+            while (s.hasNextLine()) {
+                String line = s.nextLine();
+                lineNum++;
+                if (line.matches("^psalm " + songNumber + ": 1.*$")) {
+                    System.out.println(lineNum + " " + line);
+                    // we have the line number on which the psalm starts
+                    // continue reading from that line again until we end up on the right verse
+                    while (s.hasNextLine()) {
+                        String psalmLine = s.nextLine();
+                        if (psalmLine.equals(verse)) {
+                            StringBuilder verseText = new StringBuilder();
+                            while (s.hasNextLine()) {
+                                String verseLine = s.nextLine();
+                                if(StringUtils.isEmpty(verseLine)) {
+                                    return verseText.toString();
+                                }
+                                verseText.append(verseLine);
+                                verseText.append(System.getProperty("line.separator"));
+                            }
+                            return verseText.toString();
+                        }
+                    }
+                }
+            }
+
+        }
+        return String.format("Geen tekst gevonden voor %s %s: %s", type.toString(), songNumber, verse);
     }
 
     /**
