@@ -12,9 +12,9 @@ import org.apache.commons.lang.StringUtils;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
-import org.gkvassenpeelo.liedbase.liturgy.Prair;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
+import org.gkvassenpeelo.liedbase.liturgy.Welcome;
 import org.gkvassenpeelo.slidemachine.SlideMachine;
 import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
 import org.pptx4j.Pptx4jException;
@@ -26,6 +26,8 @@ public class LiedBase {
     private String regex_gezang = "([gG]ezang(en)?)";
     private String regex_lied = "([lL]ied([bB]oek)?)";
     private String regex_opwekking = "([oO]pwekking?)";
+
+    SlideMachine sm = new SlideMachine();
 
     private List<LiturgyPart> liturgy = new LinkedList<LiturgyPart>();
 
@@ -39,14 +41,13 @@ public class LiedBase {
     private String getSongText(SlideContents.Type type, String songNumber, String verse) {
         if (type == SlideContents.Type.psalm) {
             Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("psalmen.txt"));
-            int lineNum = 0;
             while (s.hasNextLine()) {
                 String line = s.nextLine();
-                lineNum++;
+
                 if (line.matches("^psalm " + songNumber + ": 1.*$")) {
-                    System.out.println(lineNum + " " + line);
                     // we have the line number on which the psalm starts
-                    // continue reading from that line again until we end up on the right verse
+                    // continue reading from that line again until we end up on
+                    // the right verse
                     while (s.hasNextLine()) {
                         String psalmLine = s.nextLine();
                         if (psalmLine.equals(verse)) {
@@ -64,7 +65,7 @@ public class LiedBase {
                     }
                 }
             }
-
+            s.close();
         }
         return String.format("Geen tekst gevonden voor %s %s: %s", type.toString(), songNumber, verse);
     }
@@ -77,13 +78,17 @@ public class LiedBase {
      */
     private LiturgyPart.Type getLiturgyPartTypeFromLiturgyLine(String name) throws LiedBaseError {
 
+        String regex_end_of_morning_service = "(([eE]inde)?.*[mM]orgendienst)";
+        String regex_end_of_afternoon_service = "(([eE]inde)?.*[mM]orgendienst)";
+        String regex_amen = "(([gG]ezongen)?.*[aA]men)";
+        String regex_votum = "([vV]otum)";
         String regex_gebed = "([gG]ebed)";
         String regex_collecte = "([cC]ollecte)";
         String regex_voorganger = "([vV]oorganger|[dD]ominee)";
         String regex_law = "([wW]et)";
         String regex_lecture = "([pP]reek)";
-        String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_psalm, regex_gezang, regex_lied, regex_opwekking,
-                regex_gebed, regex_collecte, regex_voorganger, regex_law, regex_lecture);
+        String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum,
+                regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_gebed, regex_collecte, regex_voorganger, regex_law, regex_lecture);
 
         // check liturgy part type
         Pattern liturgyPattern = Pattern.compile(regex);
@@ -113,6 +118,14 @@ public class LiedBase {
             return LiturgyPart.Type.law;
         } else if (m.group(1).matches(regex_lecture)) {
             return LiturgyPart.Type.lecture;
+        } else if (m.group(1).matches(regex_votum)) {
+            return LiturgyPart.Type.votum;
+        } else if (m.group(1).matches(regex_amen)) {
+            return LiturgyPart.Type.amen;
+        } else if (m.group(1).matches(regex_end_of_morning_service)) {
+            return LiturgyPart.Type.endOfMorningService;
+        } else if (m.group(1).matches(regex_end_of_afternoon_service)) {
+            return LiturgyPart.Type.endOfAfternoonService;
         }
 
         return null;
@@ -172,16 +185,19 @@ public class LiedBase {
                     scType = SlideContents.Type.opwekking;
                 }
 
-                // for each verse, create a songSlideContents and add it to the liturgyPart
+                // for each verse, create a songSlideContents and add it to the
+                // liturgyPart
                 StringTokenizer st = new StringTokenizer(StringUtils.substringAfter(line, ":"), ",");
                 while (st.hasMoreTokens()) {
                     String currentVerse = st.nextToken();
                     lp.addSlide(new Song(line, getSongText(scType, getSongNumber(line), currentVerse.trim())));
                 }
             } else if (type == LiturgyPart.Type.prair) {
-                lp.addSlide(new Prair());
+                // nothing to do
             } else if (type == LiturgyPart.Type.gathering) {
                 lp.addSlide(new Gathering());
+            } else if (type == LiturgyPart.Type.welcome) {
+                lp.addSlide(new Welcome(getVicarName(line)));
             }
 
             liturgy.add(lp);
@@ -192,14 +208,21 @@ public class LiedBase {
 
     }
 
+    private String getVicarName(String line) {
+        if (!StringUtils.contains(line, ":")) {
+            System.out.println("voorganger werd niet gevonden (geen dubbele punt?). Voorbeeld: 'dominee: V. Oorganger'");
+            return "";
+        }
+        return StringUtils.substringAfter(line, ":").trim();
+    }
+
     /**
      * 
      */
     public void createSlides() {
 
         try {
-            // Liturgy parsed and created, time to create SlideMachine
-            SlideMachine sm = new SlideMachine();
+            // Liturgy parsed and created, time to create Slides
             sm.setTargetFile("/target/presentation.pptx");
             sm.init();
 
@@ -219,25 +242,33 @@ public class LiedBase {
                     }
                 } else if (lp.getType() == LiturgyPart.Type.gathering) {
                     GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.Gathering();
-                    ((org.gkvassenpeelo.slidemachine.model.Gathering) gsc).setFirstBenificiary("De driehoek");
-                    ((org.gkvassenpeelo.slidemachine.model.Gathering) gsc).setSecondBenificiary("Kerk");
+                    ((org.gkvassenpeelo.slidemachine.model.Gathering) gsc).setFirstBenificiary("&lt;invullen>");
+                    ((org.gkvassenpeelo.slidemachine.model.Gathering) gsc).setSecondBenificiary("&lt;invullen>");
                     sm.addSlide(gsc);
                 } else if (lp.getType() == LiturgyPart.Type.welcome) {
-                 
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Welcome(((Welcome) lp.getSlides().get(0)).getVicarName()));
                 } else if (lp.getType() == LiturgyPart.Type.prair) {
-                 
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Prair());
+                } else if (lp.getType() == LiturgyPart.Type.votum) {
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Votum());
+                } else if (lp.getType() == LiturgyPart.Type.endOfMorningService) {
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.EndMorningService());
+                } else if (lp.getType() == LiturgyPart.Type.endOfAfternoonService) {
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.EndAfternoonService());
+                } else if (lp.getType() == LiturgyPart.Type.amen) {
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Amen());
                 } else if (lp.getType() == LiturgyPart.Type.law) {
-                    
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Law());
                 } else if (lp.getType() == LiturgyPart.Type.lecture) {
 
                 }
 
-                // after each liturgy part, add an empty slide
-                sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Blank());
+                // after each liturgy part, add an empty slide, except for the last one!
+                if (lp.getType() != LiturgyPart.Type.endOfMorningService && lp.getType() != LiturgyPart.Type.endOfAfternoonService) {
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Blank());
+                }
 
             }
-
-            sm.save();
 
         } catch (JAXBException e) {
             System.err.println(e.getMessage());
@@ -249,5 +280,9 @@ public class LiedBase {
             System.err.println(e.getMessage());
             System.exit(1);
         }
+    }
+
+    public void save() throws Docx4JException {
+        sm.save();
     }
 }
