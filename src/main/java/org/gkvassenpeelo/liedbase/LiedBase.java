@@ -20,6 +20,23 @@ import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
 import org.pptx4j.Pptx4jException;
 
 public class LiedBase {
+    
+    public static void main(String[] args) throws Docx4JException {
+        LiedBase lb = new LiedBase();
+        lb.parseLiturgyScript("dominee: L.E. Leeftink" + System.getProperty("line.separator") 
+                + "votum en zegengroet" + System.getProperty("line.separator") 
+                + "gezang 1:1,2,3" + System.getProperty("line.separator") 
+                + "gebed" + System.getProperty("line.separator")
+                + "Psalm 100:2, 4" + System.getProperty("line.separator")
+                + "collecte" + System.getProperty("line.separator")
+                + "Gebed" + System.getProperty("line.separator")
+                + "liedboek 119:1, 6" + System.getProperty("line.separator")
+                + "amen" + System.getProperty("line.separator")
+                + "einde middagdienst"
+                );
+        lb.createSlides();
+        lb.save();
+    }
 
     // re-used
     private String regex_psalm = "([pP]salm(en)?)";
@@ -39,47 +56,76 @@ public class LiedBase {
      * @return
      */
     private String getSongText(SlideContents.Type type, String songNumber, String verse) {
-        if (type == SlideContents.Type.psalm) {
-            Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("psalmen.txt"));
-            while (s.hasNextLine()) {
-                String line = s.nextLine();
 
-                if (line.matches("^psalm " + songNumber + ": 1.*$")) {
-                    // we have the line number on which the psalm starts
-                    // continue reading from that line again until we end up on
-                    // the right verse
-                    while (s.hasNextLine()) {
-                        String psalmLine = s.nextLine();
-                        if (psalmLine.equals(verse)) {
-                            StringBuilder verseText = new StringBuilder();
-                            while (s.hasNextLine()) {
-                                String verseLine = s.nextLine();
-                                if (StringUtils.isEmpty(verseLine)) {
-                                    return verseText.toString();
-                                }
-                                verseText.append(verseLine);
-                                verseText.append(System.getProperty("line.separator"));
+        String songBookName = "";
+        String songIdentifier = "";
+
+        if (type == SlideContents.Type.psalm) {
+            songBookName = "psalmen.txt";
+            songIdentifier = "psalm";
+        }
+
+        if (type == SlideContents.Type.gezang) {
+            songBookName = "gezangen.txt";
+            songIdentifier = "gereformeerd kerkboek";
+        }
+
+        if (type == SlideContents.Type.lied) {
+            songBookName = "liedboek.txt";
+            songIdentifier = "lied";
+        }
+
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream(songBookName));
+
+        while (s.hasNextLine()) {
+
+            String line = s.nextLine();
+
+            if (line.matches(String.format("^%s %s:.*$", songIdentifier, songNumber))) {
+                // we have the line number on which the psalm starts
+                // continue reading from that line again until we end up on
+                // the right verse
+                while (s.hasNextLine()) {
+                    String songLine = s.nextLine();
+
+                    // we are reading the next song, stop it!
+                    if (songLine.matches(String.format("^%s %s:.*$", songIdentifier, Integer.parseInt(songNumber) + 1))) {
+                        break;
+                    }
+
+                    if (songLine.equals(verse)) {
+                        StringBuilder verseText = new StringBuilder();
+                        while (s.hasNextLine()) {
+                            String verseLine = s.nextLine();
+                            if (StringUtils.isEmpty(verseLine)) {
+                                s.close();
+                                return verseText.toString();
                             }
-                            return verseText.toString();
+                            verseText.append(verseLine);
+                            verseText.append(System.getProperty("line.separator"));
                         }
+                        s.close();
+                        return verseText.toString();
                     }
                 }
             }
-            s.close();
         }
+
+        s.close();
+
         return String.format("Geen tekst gevonden voor %s %s: %s", type.toString(), songNumber, verse);
     }
 
     /**
      * 
-     * @param name
+     * @param line
      * @return
      * @throws LiedBaseError
      */
-    private LiturgyPart.Type getLiturgyPartTypeFromLiturgyLine(String name) throws LiedBaseError {
+    private LiturgyPart.Type getLiturgyPartTypeFromLiturgyLine(String line) throws LiedBaseError {
 
         String regex_end_of_morning_service = "(([eE]inde)?.*[mM]orgendienst)";
-        String regex_end_of_afternoon_service = "(([eE]inde)?.*[mM]orgendienst)";
+        String regex_end_of_afternoon_service = "(([eE]inde)?.*[mM]iddagdienst)";
         String regex_amen = "(([gG]ezongen)?.*[aA]men)";
         String regex_votum = "([vV]otum)";
         String regex_gebed = "([gG]ebed)";
@@ -92,10 +138,10 @@ public class LiedBase {
 
         // check liturgy part type
         Pattern liturgyPattern = Pattern.compile(regex);
-        java.util.regex.Matcher m = liturgyPattern.matcher(name);
+        java.util.regex.Matcher m = liturgyPattern.matcher(line);
 
-        if (!name.matches(regex)) {
-            throw new LiedBaseError("Onbekend liturgie onderdeel: " + name);
+        if (!line.matches(regex)) {
+            throw new LiedBaseError("Onbekend liturgie onderdeel: " + line);
         }
 
         m.find();

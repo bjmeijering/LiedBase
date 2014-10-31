@@ -17,14 +17,14 @@ public class LiedBaseTest {
 
         lb.parseLiturgyScript("dominee: L.E. Leeftink" + System.getProperty("line.separator") 
                 + "votum en zegengroet" + System.getProperty("line.separator") 
-                + "psalm 1:1,3" + System.getProperty("line.separator") 
+                + "gezang 1:1,2,3" + System.getProperty("line.separator") 
                 + "gebed" + System.getProperty("line.separator")
                 + "Psalm 100:2, 4" + System.getProperty("line.separator")
                 + "collecte" + System.getProperty("line.separator")
                 + "Gebed" + System.getProperty("line.separator")
-                + "Psalm 100:2, 4" + System.getProperty("line.separator")
+                + "liedboek 119:1, 6" + System.getProperty("line.separator")
                 + "amen" + System.getProperty("line.separator")
-                + "einde morgendienst"
+                + "einde middagdienst"
                 );
         lb.createSlides();
         lb.save();
