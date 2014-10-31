@@ -5,6 +5,10 @@ public abstract class SlideContents {
     private String header;
 
     private String body;
+    
+    public enum Type {
+        psalm, gezang, lied, opwekking, gathering, prair, blank, bible_start, bible_continued
+    };
 
     public SlideContents(String header, String body) {
         this.header = header;

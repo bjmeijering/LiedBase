@@ -14,7 +14,10 @@ public class LiedBaseTest {
     @Test
     public void liedBasetest() throws LiedBaseError {
 
-        lb.parseLiturgyScript("psalm 1:1,3" + System.getProperty("line.separator") + "Gezang 1:2, 4");
+        lb.parseLiturgyScript("psalm 1:1,3" + System.getProperty("line.separator") 
+                + "collecte" + System.getProperty("line.separator")
+                + "Psalm 100:2, 4"
+                );
         lb.createSlides();
     }
 

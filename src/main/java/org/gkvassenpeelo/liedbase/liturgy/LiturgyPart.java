@@ -5,7 +5,17 @@ import java.util.List;
 
 public class LiturgyPart {
     
+    public enum Type {
+        welcome, song, gathering, prair, law, lecture
+    };
+    
+    private Type type;
+    
     private List<SlideContents> slides = new ArrayList<SlideContents>();
+    
+    public LiturgyPart(Type type) {
+        setType(type);
+    }
     
     public void addSlide(SlideContents slide) {
         slides.add(slide);
@@ -13,6 +23,14 @@ public class LiturgyPart {
     
     public List<SlideContents> getSlides() {
         return slides;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
     
 }
