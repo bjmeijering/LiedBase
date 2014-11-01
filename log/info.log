@@ -1,0 +1,1275 @@
+2014-11-01 11:06:51  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:06:51  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:06:51  INFO: jaxb.Context - No MOXy JAXB config found; assume not intended..
+2014-11-01 11:06:51  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:06:51  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:06:56  INFO: jaxb.Context - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+2014-11-01 11:06:56  WARN: utils.ResourceUtils - Couldn't get resource: docx4j.properties
+2014-11-01 11:06:56  WARN: docx4j.Docx4jProperties - Couldn't find/read docx4j.properties; docx4j.properties not found via classloader.
+2014-11-01 11:06:56  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
+2014-11-01 11:06:56  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+2014-11-01 11:06:56  INFO: contenttype.ContentTypeManager - Detected PresentationMLPackage package 
+2014-11-01 11:06:56  INFO: io3.Load3 - Instantiated package of type org.docx4j.openpackaging.packages.PresentationMLPackage
+2014-11-01 11:06:56  INFO: utils.XPathFactoryUtil - xpath implementation: org.apache.xpath.jaxp.XPathFactoryImpl
+2014-11-01 11:06:56  INFO: packages.PresentationMLPackage - Set shortcut for docPropsCorePart
+2014-11-01 11:06:56  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:06:56  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:06:56  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:06:56  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:06:56  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:06:58  INFO: jaxb.Context - Not using MOXy.
+2014-11-01 11:06:58  INFO: packages.PresentationMLPackage - Set shortcut for mainPresentationPart
+2014-11-01 11:06:58  INFO: packages.PresentationMLPackage - Set shortcut for docPropsExtendedPart
+2014-11-01 11:06:58  INFO: io3.Load3 - package read;  elapsed time: 7928 ms
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - Lazily unmarshalling /ppt/presentation.xml
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPartXPathAware - For org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart, unmarshall via binder
+2014-11-01 11:06:59  INFO: parts.Parts - Deleting part /ppt/slides/slide1.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide0.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide1.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide2.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide3.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide4.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide5.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide6.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide7.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide8.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide9.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide10.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide11.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide12.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide13.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide14.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide15.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide16.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide17.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide18.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide19.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide20.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide21.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide22.xml
+2014-11-01 11:06:59  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:06:59  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:06:59  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:06:59  INFO: contenttype.ContentTypeManager - marshalling org.docx4j.openpackaging.contenttype.ContentTypeManager ...
+2014-11-01 11:06:59  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: docProps/thumbnail.jpeg
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image5.png
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image4.jpeg
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image10.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image2.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image9.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image14.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image13.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image3.jpeg
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image8.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image12.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image7.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image6.png
+2014-11-01 11:06:59  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image11.png
+2014-11-01 11:06:59  INFO: stores.ZipPartStore - success writing part: ppt/media/image1.jpeg
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:00  INFO: io3.Save - ...Done!
+2014-11-01 11:07:17  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:07:17  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:07:17  INFO: jaxb.Context - No MOXy JAXB config found; assume not intended..
+2014-11-01 11:07:17  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:07:17  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:07:23  INFO: jaxb.Context - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+2014-11-01 11:07:24  WARN: utils.ResourceUtils - Couldn't get resource: docx4j.properties
+2014-11-01 11:07:24  WARN: docx4j.Docx4jProperties - Couldn't find/read docx4j.properties; docx4j.properties not found via classloader.
+2014-11-01 11:07:24  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
+2014-11-01 11:07:24  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+2014-11-01 11:07:24  INFO: contenttype.ContentTypeManager - Detected PresentationMLPackage package 
+2014-11-01 11:07:24  INFO: io3.Load3 - Instantiated package of type org.docx4j.openpackaging.packages.PresentationMLPackage
+2014-11-01 11:07:24  INFO: utils.XPathFactoryUtil - xpath implementation: org.apache.xpath.jaxp.XPathFactoryImpl
+2014-11-01 11:07:24  INFO: packages.PresentationMLPackage - Set shortcut for docPropsCorePart
+2014-11-01 11:07:24  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:07:24  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:07:24  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:07:24  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:07:24  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:07:25  INFO: jaxb.Context - Not using MOXy.
+2014-11-01 11:07:25  INFO: packages.PresentationMLPackage - Set shortcut for mainPresentationPart
+2014-11-01 11:07:26  INFO: packages.PresentationMLPackage - Set shortcut for docPropsExtendedPart
+2014-11-01 11:07:26  INFO: io3.Load3 - package read;  elapsed time: 8518 ms
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - Lazily unmarshalling /ppt/presentation.xml
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPartXPathAware - For org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart, unmarshall via binder
+2014-11-01 11:07:27  INFO: parts.Parts - Deleting part /ppt/slides/slide1.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide0.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide1.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide2.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide3.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide4.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide5.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide6.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide7.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide8.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide9.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide10.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide11.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide12.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide13.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide14.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide15.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide16.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide17.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide18.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide19.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide20.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide21.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide22.xml
+2014-11-01 11:07:27  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:07:27  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:07:27  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:07:27  INFO: contenttype.ContentTypeManager - marshalling org.docx4j.openpackaging.contenttype.ContentTypeManager ...
+2014-11-01 11:07:27  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: docProps/thumbnail.jpeg
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image5.png
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image4.jpeg
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image10.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image2.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image9.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image14.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image13.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image3.jpeg
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image8.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image12.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image7.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image6.png
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image11.png
+2014-11-01 11:07:27  INFO: stores.ZipPartStore - success writing part: ppt/media/image1.jpeg
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:07:27  INFO: io3.Save - ...Done!
+2014-11-01 11:09:13  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:09:13  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:09:13  INFO: jaxb.Context - No MOXy JAXB config found; assume not intended..
+2014-11-01 11:09:13  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:09:13  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:09:20  INFO: jaxb.Context - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+2014-11-01 11:09:21  WARN: utils.ResourceUtils - Couldn't get resource: docx4j.properties
+2014-11-01 11:09:21  WARN: docx4j.Docx4jProperties - Couldn't find/read docx4j.properties; docx4j.properties not found via classloader.
+2014-11-01 11:09:21  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
+2014-11-01 11:09:21  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+2014-11-01 11:09:21  INFO: contenttype.ContentTypeManager - Detected PresentationMLPackage package 
+2014-11-01 11:09:21  INFO: io3.Load3 - Instantiated package of type org.docx4j.openpackaging.packages.PresentationMLPackage
+2014-11-01 11:09:21  INFO: utils.XPathFactoryUtil - xpath implementation: org.apache.xpath.jaxp.XPathFactoryImpl
+2014-11-01 11:09:21  INFO: packages.PresentationMLPackage - Set shortcut for docPropsCorePart
+2014-11-01 11:09:21  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:09:21  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:09:21  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:09:21  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:09:21  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:09:22  INFO: jaxb.Context - Not using MOXy.
+2014-11-01 11:09:22  INFO: packages.PresentationMLPackage - Set shortcut for mainPresentationPart
+2014-11-01 11:09:22  INFO: packages.PresentationMLPackage - Set shortcut for docPropsExtendedPart
+2014-11-01 11:09:22  INFO: io3.Load3 - package read;  elapsed time: 9468 ms
+2014-11-01 11:09:22  INFO: parts.JaxbXmlPart - Lazily unmarshalling /ppt/presentation.xml
+2014-11-01 11:09:22  INFO: parts.JaxbXmlPartXPathAware - For org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart, unmarshall via binder
+2014-11-01 11:09:22  INFO: parts.Parts - Deleting part /ppt/slides/slide1.xml
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide0.xml
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:09:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:09:22  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide1.xml
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:22  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide2.xml
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:09:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:09:22  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide3.xml
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:22  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide4.xml
+2014-11-01 11:09:22  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:22  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide5.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide6.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide7.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide8.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide9.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide10.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide11.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide12.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide13.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide14.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide15.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide16.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide17.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide18.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide19.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide20.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide21.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide22.xml
+2014-11-01 11:09:23  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:09:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:09:23  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:09:23  INFO: contenttype.ContentTypeManager - marshalling org.docx4j.openpackaging.contenttype.ContentTypeManager ...
+2014-11-01 11:09:23  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: docProps/thumbnail.jpeg
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image5.png
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image4.jpeg
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image10.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image2.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image9.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image14.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image13.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image3.jpeg
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image8.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image12.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image7.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image6.png
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image11.png
+2014-11-01 11:09:23  INFO: stores.ZipPartStore - success writing part: ppt/media/image1.jpeg
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:09:23  INFO: io3.Save - ...Done!
+2014-11-01 11:15:54  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:15:54  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:15:54  INFO: jaxb.Context - No MOXy JAXB config found; assume not intended..
+2014-11-01 11:15:54  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:15:54  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:16:00  INFO: jaxb.Context - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+2014-11-01 11:16:01  WARN: utils.ResourceUtils - Couldn't get resource: docx4j.properties
+2014-11-01 11:16:01  WARN: docx4j.Docx4jProperties - Couldn't find/read docx4j.properties; docx4j.properties not found via classloader.
+2014-11-01 11:16:01  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
+2014-11-01 11:16:01  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+2014-11-01 11:16:01  INFO: contenttype.ContentTypeManager - Detected PresentationMLPackage package 
+2014-11-01 11:16:01  INFO: io3.Load3 - Instantiated package of type org.docx4j.openpackaging.packages.PresentationMLPackage
+2014-11-01 11:16:01  INFO: utils.XPathFactoryUtil - xpath implementation: org.apache.xpath.jaxp.XPathFactoryImpl
+2014-11-01 11:16:01  INFO: packages.PresentationMLPackage - Set shortcut for docPropsCorePart
+2014-11-01 11:16:01  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:16:01  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:16:01  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:16:01  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:16:01  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:16:03  INFO: jaxb.Context - Not using MOXy.
+2014-11-01 11:16:03  INFO: packages.PresentationMLPackage - Set shortcut for mainPresentationPart
+2014-11-01 11:16:03  INFO: packages.PresentationMLPackage - Set shortcut for docPropsExtendedPart
+2014-11-01 11:16:03  INFO: io3.Load3 - package read;  elapsed time: 9305 ms
+2014-11-01 11:16:03  INFO: parts.JaxbXmlPart - Lazily unmarshalling /ppt/presentation.xml
+2014-11-01 11:16:03  INFO: parts.JaxbXmlPartXPathAware - For org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart, unmarshall via binder
+2014-11-01 11:16:03  INFO: parts.Parts - Deleting part /ppt/slides/slide1.xml
+2014-11-01 11:16:03  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide0.xml
+2014-11-01 11:16:03  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:16:03  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:16:03  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide1.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide2.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide3.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide4.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide5.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide6.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide7.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide8.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide9.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide10.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide11.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide12.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide13.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide14.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide15.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide16.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide17.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide18.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide19.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide20.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide21.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide22.xml
+2014-11-01 11:16:04  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:16:04  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:16:04  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:07  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:19:07  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:19:07  INFO: jaxb.Context - No MOXy JAXB config found; assume not intended..
+2014-11-01 11:19:07  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:19:07  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:19:14  INFO: jaxb.Context - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+2014-11-01 11:19:14  WARN: utils.ResourceUtils - Couldn't get resource: docx4j.properties
+2014-11-01 11:19:14  WARN: docx4j.Docx4jProperties - Couldn't find/read docx4j.properties; docx4j.properties not found via classloader.
+2014-11-01 11:19:14  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
+2014-11-01 11:19:14  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+2014-11-01 11:19:14  INFO: contenttype.ContentTypeManager - Detected PresentationMLPackage package 
+2014-11-01 11:19:14  INFO: io3.Load3 - Instantiated package of type org.docx4j.openpackaging.packages.PresentationMLPackage
+2014-11-01 11:19:14  INFO: utils.XPathFactoryUtil - xpath implementation: org.apache.xpath.jaxp.XPathFactoryImpl
+2014-11-01 11:19:14  INFO: packages.PresentationMLPackage - Set shortcut for docPropsCorePart
+2014-11-01 11:19:14  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 11:19:14  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 11:19:14  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:19:14  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 11:19:14  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 11:19:16  INFO: jaxb.Context - Not using MOXy.
+2014-11-01 11:19:16  INFO: packages.PresentationMLPackage - Set shortcut for mainPresentationPart
+2014-11-01 11:19:16  INFO: packages.PresentationMLPackage - Set shortcut for docPropsExtendedPart
+2014-11-01 11:19:16  INFO: io3.Load3 - package read;  elapsed time: 9804 ms
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - Lazily unmarshalling /ppt/presentation.xml
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPartXPathAware - For org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart, unmarshall via binder
+2014-11-01 11:19:17  INFO: parts.Parts - Deleting part /ppt/slides/slide1.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide0.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide1.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide2.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide3.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide4.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide5.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide6.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide7.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide8.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide9.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide10.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide11.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide12.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide13.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide14.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide15.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide16.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide17.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide18.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide19.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide20.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide21.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide22.xml
+2014-11-01 11:19:17  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:19:17  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 11:19:17  INFO: openpackaging.Base - shortcut was set
+2014-11-01 11:19:17  INFO: contenttype.ContentTypeManager - marshalling org.docx4j.openpackaging.contenttype.ContentTypeManager ...
+2014-11-01 11:19:17  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: docProps/thumbnail.jpeg
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image5.png
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image4.jpeg
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image10.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image2.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image9.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image14.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image13.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image3.jpeg
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image8.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image12.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image7.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image6.png
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image11.png
+2014-11-01 11:19:17  INFO: stores.ZipPartStore - success writing part: ppt/media/image1.jpeg
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 11:19:17  INFO: io3.Save - ...Done!
+2014-11-01 11:21:16 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:25:24 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:25:32 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:25:56 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:26:13 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:26:20 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:27:51  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 11:27:52 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:28:11  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 11:28:12 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 11:28:30  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 11:28:31 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 12:34:23  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 12:34:24 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 12:34:43  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 12:34:44 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 12:35:00  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 12:35:01 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 12:35:47  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 12:35:47 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 13:58:09  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 13:58:28  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 13:58:29 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 17:00:50  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 17:00:51 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 17:03:43  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 17:03:44 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 17:05:48  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 17:05:49 ERROR: liedbase.LiedBase - Geen doelbestand opgegeven
+2014-11-01 17:06:01  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 17:07:24  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 17:07:34  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 17:59:08  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 17:59:19  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:00:42  INFO: - LiedBase gestart
+2014-11-01 18:00:53  INFO: - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:02:25  INFO: - LiedBase gestart
+2014-11-01 18:02:36  INFO: - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:02:37: - LiedBase gestart
+2014-11-01 18:02:46: - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:02:58  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:03:09  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:03:31  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:03:41  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:10:47  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:10:56  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:11:01  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:11:13  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:13:42  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:13:52  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:14:30  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:14:31  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 18:14:31  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 18:14:31  INFO: jaxb.Context - No MOXy JAXB config found; assume not intended..
+2014-11-01 18:14:31  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 18:14:31  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 18:14:37  INFO: jaxb.Context - Not using MOXy; using com.sun.xml.internal.bind.v2.runtime.JAXBContextImpl
+2014-11-01 18:14:38  WARN: utils.ResourceUtils - Couldn't get resource: docx4j.properties
+2014-11-01 18:14:38  WARN: docx4j.Docx4jProperties - Couldn't find/read docx4j.properties; docx4j.properties not found via classloader.
+2014-11-01 18:14:38  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl
+2014-11-01 18:14:38  INFO: docx4j.XmlUtils - Using com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl
+2014-11-01 18:14:38  INFO: contenttype.ContentTypeManager - Detected PresentationMLPackage package 
+2014-11-01 18:14:38  INFO: io3.Load3 - Instantiated package of type org.docx4j.openpackaging.packages.PresentationMLPackage
+2014-11-01 18:14:38  INFO: utils.XPathFactoryUtil - xpath implementation: org.apache.xpath.jaxp.XPathFactoryImpl
+2014-11-01 18:14:38  INFO: packages.PresentationMLPackage - Set shortcut for docPropsCorePart
+2014-11-01 18:14:38  INFO: jaxb.Context - java.vendor=Oracle Corporation
+2014-11-01 18:14:38  INFO: jaxb.Context - java.version=1.7.0_51
+2014-11-01 18:14:38  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 18:14:38  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 18:14:38  INFO: jaxb.Context - Using Java 6/7 JAXB implementation
+2014-11-01 18:14:41  INFO: jaxb.Context - Not using MOXy.
+2014-11-01 18:14:41  INFO: packages.PresentationMLPackage - Set shortcut for mainPresentationPart
+2014-11-01 18:14:41  INFO: packages.PresentationMLPackage - Set shortcut for docPropsExtendedPart
+2014-11-01 18:14:41  INFO: io3.Load3 - package read;  elapsed time: 10093 ms
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - Lazily unmarshalling /ppt/presentation.xml
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPartXPathAware - For org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart, unmarshall via binder
+2014-11-01 18:14:41  INFO: parts.Parts - Deleting part /ppt/slides/slide1.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide0.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide1.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide2.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide3.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide4.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide5.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide6.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide7.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide8.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide9.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide10.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide11.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide12.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide13.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide14.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide15.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide16.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide17.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide18.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide19.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide20.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide21.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slides/slide22.xml
+2014-11-01 18:14:41  INFO: relationships.RelationshipsPart - adding part with proposed name: /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 18:14:41  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 18:14:41  INFO: openpackaging.Base - shortcut was set
+2014-11-01 18:14:41  INFO: contenttype.ContentTypeManager - marshalling org.docx4j.openpackaging.contenttype.ContentTypeManager ...
+2014-11-01 18:14:41  INFO: jaxb.NamespacePrefixMapperUtils - Using NamespacePrefixMapperSunInternal, which is suitable for Java 6
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: docProps/thumbnail.jpeg
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image5.png
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image4.jpeg
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image10.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image2.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image9.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image14.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image13.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image3.jpeg
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image8.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image12.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image7.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image6.png
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image11.png
+2014-11-01 18:14:41  INFO: stores.ZipPartStore - success writing part: ppt/media/image1.jpeg
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:41  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: parts.JaxbXmlPart - marshalling org.docx4j.openpackaging.parts.relationships.RelationshipsPart
+2014-11-01 18:14:42  INFO: io3.Save - ...Done!
+2014-11-01 18:14:42  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:18:01  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:18:10  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:25:27  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:25:38  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:27:46  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:27:55  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:28:59  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:29:08  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:29:14  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:29:20  WARN: utils.ResourceUtils - Couldn't get resource: docx4j.properties
+2014-11-01 18:29:20  WARN: docx4j.Docx4jProperties - Couldn't find/read docx4j.properties; docx4j.properties not found via classloader.
+2014-11-01 18:29:20  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 18:29:20  WARN: jaxb.Context - org/docx4j/wml/jaxb.properties not found via classloader.
+2014-11-01 18:29:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout1.xml
+2014-11-01 18:29:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout3.xml
+2014-11-01 18:29:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:22  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout6.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout10.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout4.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout9.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout19.xml
+2014-11-01 18:29:23  WARN: parts.Parts - Overwriting existing part /ppt/slideLayouts/slideLayout8.xml
+2014-11-01 18:29:23  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:30:26  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:30:38  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:31:01  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:31:10  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:33:56  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:34:07  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:34:25  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:34:45  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:34:49  INFO: liedbase.LiedBase - Voorganger werd niet gevonden (geen dubbele punt?). Voorbeeld: 'dominee: V. Oorganger'
+2014-11-01 18:34:58  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx
+2014-11-01 18:35:04  INFO: liedbase.LiedBase - LiedBase gestart
+2014-11-01 18:35:04  WARN: liedbase.LiedBase - Voorganger werd niet gevonden (geen dubbele punt?). Voorbeeld: 'dominee: V. Oorganger'
+2014-11-01 18:35:13  INFO: liedbase.LiedBase - Presentatie opgeslagen op: /target/Presentation.pptx

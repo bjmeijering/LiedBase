@@ -10,12 +10,13 @@ public class LiedBaseTest {
 
     @Before
     public void setUp() throws Exception {
+        lb.setTargetFile("/target/Presentation.pptx");
     }
 
     @Test
     public void liedBasetest() throws LiedBaseError, Docx4JException {
 
-        lb.parseLiturgyScript("dominee: L.E. Leeftink" + System.getProperty("line.separator") 
+        lb.parseLiturgyScript("dominee L.E. Leeftink" + System.getProperty("line.separator") 
                 + "votum en zegengroet" + System.getProperty("line.separator") 
                 + "gezang 1:1,2,3" + System.getProperty("line.separator") 
                 + "gebed" + System.getProperty("line.separator")

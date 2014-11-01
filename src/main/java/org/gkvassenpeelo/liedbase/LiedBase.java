@@ -9,6 +9,8 @@ import java.util.regex.Pattern;
 import javax.xml.bind.JAXBException;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
@@ -20,24 +22,9 @@ import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
 import org.pptx4j.Pptx4jException;
 
 public class LiedBase {
-    
-    public static void main(String[] args) throws Docx4JException {
-        LiedBase lb = new LiedBase();
-        lb.parseLiturgyScript("dominee: L.E. Leeftink" + System.getProperty("line.separator") 
-                + "votum en zegengroet" + System.getProperty("line.separator") 
-                + "gezang 1:1,2,3" + System.getProperty("line.separator") 
-                + "gebed" + System.getProperty("line.separator")
-                + "Psalm 100:2, 4" + System.getProperty("line.separator")
-                + "collecte" + System.getProperty("line.separator")
-                + "Gebed" + System.getProperty("line.separator")
-                + "liedboek 119:1, 6" + System.getProperty("line.separator")
-                + "amen" + System.getProperty("line.separator")
-                + "einde middagdienst"
-                );
-        lb.createSlides();
-        lb.save();
-    }
 
+    static final Logger logger = Logger.getLogger(LiedBase.class);
+    
     // re-used
     private String regex_psalm = "([pP]salm(en)?)";
     private String regex_gezang = "([gG]ezang(en)?)";
@@ -47,6 +34,15 @@ public class LiedBase {
     SlideMachine sm = new SlideMachine();
 
     private List<LiturgyPart> liturgy = new LinkedList<LiturgyPart>();
+    private String targetFile;
+    
+    public LiedBase() {
+        
+        logger.setLevel(Level.INFO);
+        
+        logger.info("LiedBase gestart");
+    }
+
 
     /**
      * 
@@ -249,14 +245,14 @@ public class LiedBase {
             liturgy.add(lp);
 
         } catch (LiedBaseError e) {
-            System.err.println(e.getMessage());
+            logger.error(e.getMessage());
         }
 
     }
 
     private String getVicarName(String line) {
         if (!StringUtils.contains(line, ":")) {
-            System.out.println("voorganger werd niet gevonden (geen dubbele punt?). Voorbeeld: 'dominee: V. Oorganger'");
+            logger.warn("Voorganger werd niet gevonden (geen dubbele punt?). Voorbeeld: 'dominee: V. Oorganger'");
             return "";
         }
         return StringUtils.substringAfter(line, ":").trim();
@@ -269,7 +265,7 @@ public class LiedBase {
 
         try {
             // Liturgy parsed and created, time to create Slides
-            sm.setTargetFile("/target/presentation.pptx");
+            sm.setTargetFile(getTargetFile());
             sm.init();
 
             for (LiturgyPart lp : liturgy) {
@@ -317,18 +313,42 @@ public class LiedBase {
             }
 
         } catch (JAXBException e) {
-            System.err.println(e.getMessage());
+            logger.error(e.getMessage());
             System.exit(1);
         } catch (Pptx4jException e) {
-            System.err.println(e.getMessage());
+            logger.error(e.getMessage());
             System.exit(1);
         } catch (Docx4JException e) {
-            System.err.println(e.getMessage());
+            logger.error(e.getMessage());
             System.exit(1);
         }
     }
 
+    private String getTargetFile() {
+        if (targetFile == null) {
+            logger.error("Geen doelbestand opgegeven");
+            System.exit(1);
+        }
+        return targetFile;
+    }
+
+    public void setTargetFile(String filename) {
+        this.targetFile = filename;
+    }
+
     public void save() throws Docx4JException {
         sm.save();
+        logger.info(String.format("Presentatie opgeslagen op: %s", getTargetFile()));
+    }
+
+    public static void main(String[] args) throws Docx4JException {
+        
+        LiedBase lb = new LiedBase();
+        lb.parseLiturgyScript("dominee L.E. Leeftink" + System.getProperty("line.separator") + "votum en zegengroet" + System.getProperty("line.separator") + "gezang 1:1,2,3"
+                + System.getProperty("line.separator") + "gebed" + System.getProperty("line.separator") + "Psalm 100:2, 4" + System.getProperty("line.separator") + "collecte"
+                + System.getProperty("line.separator") + "Gebed" + System.getProperty("line.separator") + "liedboek 119:1, 6" + System.getProperty("line.separator") + "amen"
+                + System.getProperty("line.separator") + "einde middagdienst");
+        lb.createSlides();
+        lb.save();
     }
 }
