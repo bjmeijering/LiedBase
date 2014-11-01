@@ -1,5 +1,7 @@
 package org.gkvassenpeelo.liedbase;
 
+import java.io.File;
+
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +12,7 @@ public class LiedBaseTest {
 
     @Before
     public void setUp() throws Exception {
-        lb.setTargetFile("/target/Presentation.pptx");
+        lb.setTargetFile(new File("target/Presentatie.pptx"));
     }
 
     @Test

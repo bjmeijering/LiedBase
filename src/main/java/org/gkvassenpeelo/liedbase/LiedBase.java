@@ -1,5 +1,6 @@
 package org.gkvassenpeelo.liedbase;
 
+import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,8 +10,12 @@ import java.util.regex.Pattern;
 import javax.xml.bind.JAXBException;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Appender;
+import org.apache.log4j.Layout;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.RollingFileAppender;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
@@ -34,11 +39,17 @@ public class LiedBase {
     SlideMachine sm = new SlideMachine();
 
     private List<LiturgyPart> liturgy = new LinkedList<LiturgyPart>();
-    private String targetFile;
+    private File targetFile = new File("Presentatie.pptx");
     
     public LiedBase() {
         
         logger.setLevel(Level.INFO);
+        
+        Layout layout = new PatternLayout("%d{HH:mm:ss} %5p: %m%n");
+        Appender fileAppender = new RollingFileAppender();
+        fileAppender.setName("User log");
+        fileAppender.setLayout(layout);
+        logger.addAppender(fileAppender);
         
         logger.info("LiedBase gestart");
     }
@@ -324,21 +335,17 @@ public class LiedBase {
         }
     }
 
-    private String getTargetFile() {
-        if (targetFile == null) {
-            logger.error("Geen doelbestand opgegeven");
-            System.exit(1);
-        }
+    private File getTargetFile() {
         return targetFile;
     }
 
-    public void setTargetFile(String filename) {
+    public void setTargetFile(File filename) {
         this.targetFile = filename;
     }
 
     public void save() throws Docx4JException {
         sm.save();
-        logger.info(String.format("Presentatie opgeslagen op: %s", getTargetFile()));
+        logger.info(String.format("Presentatie opgeslagen op: %s", getTargetFile().getAbsolutePath()));
     }
 
     public static void main(String[] args) throws Docx4JException {
