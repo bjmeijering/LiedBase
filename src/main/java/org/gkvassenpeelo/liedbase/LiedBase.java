@@ -1,6 +1,7 @@
 package org.gkvassenpeelo.liedbase;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -9,6 +10,7 @@ import java.util.regex.Pattern;
 
 import javax.xml.bind.JAXBException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Appender;
 import org.apache.log4j.Layout;
@@ -29,7 +31,7 @@ import org.pptx4j.Pptx4jException;
 public class LiedBase {
 
     static final Logger logger = Logger.getLogger(LiedBase.class);
-    
+
     // re-used
     private String regex_psalm = "([pP]salm(en)?)";
     private String regex_gezang = "([gG]ezang(en)?)";
@@ -39,21 +41,26 @@ public class LiedBase {
     SlideMachine sm = new SlideMachine();
 
     private List<LiturgyPart> liturgy = new LinkedList<LiturgyPart>();
-    private File targetFile = new File("Presentatie.pptx");
-    
+    private File targetFile = new File("presentatie.pptx");
+    private File sourceFile = new File("liturgie.txt");
+
     public LiedBase() {
-        
+
         logger.setLevel(Level.INFO);
-        
+
         Layout layout = new PatternLayout("%d{HH:mm:ss} %5p: %m%n");
-        Appender fileAppender = new RollingFileAppender();
-        fileAppender.setName("User log");
-        fileAppender.setLayout(layout);
-        logger.addAppender(fileAppender);
-        
+        Appender fileAppender;
+        try {
+            fileAppender = new RollingFileAppender(layout, "user.log");
+            fileAppender.setName("User log");
+            fileAppender.setLayout(layout);
+            logger.addAppender(fileAppender);
+        } catch (IOException e) {
+            logger.error(String.format("Kan bestand niet aanmaken: %s", "user.log"));
+        }
+
         logger.info("LiedBase gestart");
     }
-
 
     /**
      * 
@@ -140,8 +147,9 @@ public class LiedBase {
         String regex_voorganger = "([vV]oorganger|[dD]ominee)";
         String regex_law = "([wW]et)";
         String regex_lecture = "([pP]reek)";
-        String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum,
-                regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_gebed, regex_collecte, regex_voorganger, regex_law, regex_lecture);
+        String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_end_of_morning_service,
+                regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied, regex_opwekking,
+                regex_gebed, regex_collecte, regex_voorganger, regex_law, regex_lecture);
 
         // check liturgy part type
         Pattern liturgyPattern = Pattern.compile(regex);
@@ -187,8 +195,18 @@ public class LiedBase {
     /**
      * 
      * @param inputString
+     * @throws IOException
      */
     public void parseLiturgyScript(String inputString) {
+
+        if (inputString == null) {
+            try {
+                inputString = FileUtils.readFileToString(getSourceFile());
+            } catch (IOException e) {
+                logger.error(String.format("Invoerbestand '%s' niet gevonden", getSourceFile().getAbsolutePath()));
+            }
+        }
+
         StringTokenizer st = new StringTokenizer(inputString, System.getProperty("line.separator"));
 
         while (st.hasMoreTokens()) {
@@ -196,6 +214,10 @@ public class LiedBase {
             parseLiturgyScriptLine(line);
         }
 
+    }
+
+    private File getSourceFile() {
+        return sourceFile;
     }
 
     /**
@@ -349,12 +371,19 @@ public class LiedBase {
     }
 
     public static void main(String[] args) throws Docx4JException {
-        
+
+        // check arguments, duh!
+        if (args.length == 0) {
+            // use the defaults and continue
+        }
+
         LiedBase lb = new LiedBase();
-        lb.parseLiturgyScript("dominee L.E. Leeftink" + System.getProperty("line.separator") + "votum en zegengroet" + System.getProperty("line.separator") + "gezang 1:1,2,3"
-                + System.getProperty("line.separator") + "gebed" + System.getProperty("line.separator") + "Psalm 100:2, 4" + System.getProperty("line.separator") + "collecte"
-                + System.getProperty("line.separator") + "Gebed" + System.getProperty("line.separator") + "liedboek 119:1, 6" + System.getProperty("line.separator") + "amen"
-                + System.getProperty("line.separator") + "einde middagdienst");
+
+        lb.parseLiturgyScript("dominee L.E. Leeftink" + System.getProperty("line.separator") + "votum en zegengroet"
+                + System.getProperty("line.separator") + "gezang 1:1,2,3" + System.getProperty("line.separator") + "gebed"
+                + System.getProperty("line.separator") + "Psalm 100:2, 4" + System.getProperty("line.separator") + "collecte"
+                + System.getProperty("line.separator") + "Gebed" + System.getProperty("line.separator") + "liedboek 119:1, 6"
+                + System.getProperty("line.separator") + "amen" + System.getProperty("line.separator") + "einde middagdienst");
         lb.createSlides();
         lb.save();
     }
