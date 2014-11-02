@@ -37,6 +37,7 @@ public class LiedBase {
     private String regex_gezang = "([gG]ezang(en)?)";
     private String regex_lied = "([lL]ied([bB]oek)?)";
     private String regex_opwekking = "([oO]pwekking?)";
+    private String regex_voorganger = "([vV]oorganger|[dD]ominee)";
 
     SlideMachine sm = new SlideMachine();
 
@@ -144,7 +145,6 @@ public class LiedBase {
         String regex_votum = "([vV]otum)";
         String regex_gebed = "([gG]ebed)";
         String regex_collecte = "([cC]ollecte)";
-        String regex_voorganger = "([vV]oorganger|[dD]ominee)";
         String regex_law = "([wW]et)";
         String regex_lecture = "([pP]reek)";
         String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_end_of_morning_service,
