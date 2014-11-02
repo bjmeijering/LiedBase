@@ -3,11 +3,10 @@ votum
 psalm 100: 2, 3, 4
 wet
 gebed
-gezang 3: 4, 8
+preek
+gezang 3: 1, 2
 danken
-friet eten
-liedboek 278: 3
+lied 278: 3
 collecte: De Driehoek, Rente en aflossing
-Psalm 2: 2
 amen
 einde middagdienst

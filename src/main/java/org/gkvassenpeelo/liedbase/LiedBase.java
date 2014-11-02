@@ -284,8 +284,10 @@ public class LiedBase {
             // liturgyPart
             StringTokenizer st = new StringTokenizer(StringUtils.substringAfter(line, ":"), ",");
             while (st.hasMoreTokens()) {
-                String currentVerse = st.nextToken();
-                lp.addSlide(new Song(line, getSongText(scType, getSongNumber(line), currentVerse.trim())));
+                String currentVerse = st.nextToken().trim();
+                Song song = new Song(line, getSongText(scType, getSongNumber(line), currentVerse));
+                song.setVerseNumber(currentVerse);
+                lp.addSlide(song);
             }
         } else if (type == LiturgyPart.Type.prair) {
             // nothing to do
@@ -340,6 +342,7 @@ public class LiedBase {
 
                         GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.Song();
 
+                        ((org.gkvassenpeelo.slidemachine.model.Song) gsc).setCurrentVerse(((Song) sc).getVerseNumber());
                         gsc.setHeader(sc.getHeader());
                         gsc.setBody(sc.getBody());
 
@@ -366,7 +369,7 @@ public class LiedBase {
                 } else if (lp.getType() == LiturgyPart.Type.law) {
                     sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Law());
                 } else if (lp.getType() == LiturgyPart.Type.lecture) {
-
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Lecture());
                 }
 
                 // after each liturgy part, add an empty slide, except for the last one!
@@ -396,8 +399,14 @@ public class LiedBase {
         this.targetFile = filename;
     }
 
-    public void save() throws Docx4JException {
-        sm.save();
+    public void save() {
+        try {
+            sm.save();
+        } catch (Docx4JException e) {
+            logger.error(String.format("Het bestand kon niet worden opgeslagen op: %s", getTargetFile().getAbsolutePath()));
+            logger.error("Controleer of het niet is geopend in PowerPoint...");
+            System.exit(1);
+        }
         logger.info(String.format("Presentatie opgeslagen op: %s", getTargetFile().getAbsolutePath()));
     }
 
