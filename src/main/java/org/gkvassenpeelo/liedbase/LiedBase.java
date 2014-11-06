@@ -21,6 +21,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 import org.apache.log4j.RollingFileAppender;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
+import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
@@ -171,9 +172,8 @@ public class LiedBase {
                         nextSong = verseLine.matches(String.format("^%s %s$", songIdentifier, Integer.parseInt(songNumber) + 1));
 
                         if (StringUtils.isEmpty(verseLine)) {
-                            if (!StringUtils.isEmpty(verseText.toString()) &&
-                                    !StringUtils.startsWith(verseText.toString(), "Tekst  muziek:") &&
-                                    !StringUtils.startsWith(verseText.toString(), "(c)")) {
+                            if (!StringUtils.isEmpty(verseText.toString()) && !StringUtils.startsWith(verseText.toString(), "Tekst  muziek:")
+                                    && !StringUtils.startsWith(verseText.toString(), "(c)")) {
                                 verses.add(verseText.toString());
                             }
                             verseText = new StringBuilder();
@@ -370,10 +370,29 @@ public class LiedBase {
             lp.addSlide(new Gathering(getGatheringBenificiaries(line)));
         } else if (type == LiturgyPart.Type.welcome) {
             lp.addSlide(new Welcome(getVicarName(line)));
+        } else if (type == LiturgyPart.Type.endOfMorningService) {
+            EndOfMorningService ems = new EndOfMorningService();
+            ems.setTime(getTimeFromLine(line));
+            ems.setVicarName(getNextVicarFromLine(line));
+            lp.addSlide(ems);
         }
 
         liturgy.add(lp);
 
+    }
+    
+    String getTimeFromLine(String line) {
+        
+        String data = StringUtils.substringAfter(line, ":");
+        
+        return StringUtils.substringBefore(data, ",").trim();
+    }
+
+    String getNextVicarFromLine(String line) {
+        
+        String data = StringUtils.substringAfter(line, ":");
+        
+        return StringUtils.substringAfter(data, ",").trim();
     }
 
     private String getVicarName(String line) {
@@ -438,7 +457,15 @@ public class LiedBase {
                 } else if (lp.getType() == LiturgyPart.Type.votum) {
                     sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Votum());
                 } else if (lp.getType() == LiturgyPart.Type.endOfMorningService) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.EndMorningService());
+
+                    GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.EndMorningService();
+
+                    ((org.gkvassenpeelo.slidemachine.model.EndMorningService) gsc).setTime(((org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService) lp.getSlides().get(0))
+                            .getTime());
+                    ((org.gkvassenpeelo.slidemachine.model.EndMorningService) gsc).setVicarName(((org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService) lp.getSlides().get(0))
+                            .getVicarName());
+
+                    sm.addSlide(gsc);
                 } else if (lp.getType() == LiturgyPart.Type.endOfAfternoonService) {
                     sm.addSlide(new org.gkvassenpeelo.slidemachine.model.EndAfternoonService());
                 } else if (lp.getType() == LiturgyPart.Type.amen) {

@@ -12,4 +12,4 @@ danken
 lied 278: 3
 collecte: De Driehoek, Rente en aflossing
 amen
-einde middagdienst
+einde morgendienst: 15:00, L.E. Leeftink
