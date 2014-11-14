@@ -1,6 +1,6 @@
 dominee L.E. Leeftink
 votum
-gezang 160
+gezang 160: 1,2
 opwekking 20
 opwekking 545
 psalm 100: 2, 3, 4

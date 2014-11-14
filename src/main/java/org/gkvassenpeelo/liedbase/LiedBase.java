@@ -24,6 +24,7 @@ import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart.Type;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
@@ -323,6 +324,9 @@ public class LiedBase {
             return;
         }
 
+        // apply the right formatting to 'line'
+        line = format(line, type);
+
         // create a new liturgy part
         LiturgyPart lp = new LiturgyPart(type);
 
@@ -380,18 +384,67 @@ public class LiedBase {
         liturgy.add(lp);
 
     }
-    
+
+    private String format(String line, Type type) {
+
+        if (type == LiturgyPart.Type.song) {
+
+            //
+            // opwekking does not contain ':', return it with upper case first char
+            //
+            if (!line.contains(":")) {
+                line = line.trim();
+                return Character.toUpperCase(line.charAt(0)) + line.substring(1);
+            }
+
+            StringBuilder result = new StringBuilder();
+
+            //
+            // first part is the part before the ':'
+            //
+            String firstPart = StringUtils.substringBefore(line, ":").trim();
+
+            // make the first character upper case
+            firstPart = Character.toUpperCase(firstPart.charAt(0)) + firstPart.substring(1);
+
+            String[] parts = firstPart.split(" ");
+            if (parts.length != 2) {
+                logger.warn(String.format("Regel '%s' kon niet netjes worden opgemaakt", line));
+                return line;
+            }
+            result.append(String.format("%s %s:", parts[0], parts[1]));
+
+            //
+            // second part is the part after the ':'
+            //
+            String secondPart = StringUtils.substringAfter(line, ":");
+
+            parts = secondPart.split(",");
+            int i = 0;
+            for (String s : parts) {
+                result.append(String.format(" %s", s.trim()));
+                if (++i < parts.length) {
+                    result.append(",");
+                }
+            }
+
+            return result.toString();
+        }
+
+        return line;
+    }
+
     String getTimeFromLine(String line) {
-        
+
         String data = StringUtils.substringAfter(line, ":");
-        
+
         return StringUtils.substringBefore(data, ",").trim();
     }
 
     String getNextVicarFromLine(String line) {
-        
+
         String data = StringUtils.substringAfter(line, ":");
-        
+
         return StringUtils.substringAfter(data, ",").trim();
     }
 
