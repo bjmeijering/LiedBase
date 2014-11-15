@@ -17,6 +17,11 @@ public class BijbelTest extends Bijbel {
     public void extractBibleTextTest() throws IOException {
         bijbel.extractBibleChapter(FileUtils.readFileToString(new File("E:\\temp\\bible.txt"), "UTF-8"));
     }
+    
+    @Test
+    public void getPageContentTest() throws Exception {
+        FileUtils.writeStringToFile(new File("contents.xml"), bijbel.getPageContent("https://www.debijbel.nl/bijbel/zoeken/NBV/Ester+1"));
+    }
 
     @Test
     public void downloadBible() throws Exception {

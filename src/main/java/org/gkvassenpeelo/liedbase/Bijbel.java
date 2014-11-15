@@ -26,8 +26,6 @@ public class Bijbel {
 
     public Bijbel() {
 
-        CookieHandler.setDefault(new CookieManager());
-
     }
 
     public String extractBibleChapter(String result) {
@@ -76,7 +74,9 @@ public class Bijbel {
 
     }
 
-    private String getPageContent(String url) throws Exception {
+    public String getPageContent(String url) throws Exception {
+
+        CookieHandler.setDefault(new CookieManager());
 
         URL obj = new URL(url);
         conn = (HttpsURLConnection) obj.openConnection();
@@ -114,7 +114,7 @@ public class Bijbel {
         // Get the response cookies
         setCookies(conn.getHeaderFields().get("Set-Cookie"));
 
-        return response.toString();
+        return Jsoup.parse(response.toString()).toString();
 
     }
 
