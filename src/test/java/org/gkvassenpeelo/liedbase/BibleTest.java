@@ -7,15 +7,16 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import org.apache.commons.io.FileUtils;
+import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.junit.Test;
 
-public class BijbelTest extends Bijbel {
+public class BibleTest extends Bible {
 
-    Bijbel bijbel = new Bijbel();
+    Bible bijbel = new Bible();
 
     @Test
     public void extractBibleTextTest() throws IOException {
-        bijbel.extractBibleChapter(FileUtils.readFileToString(new File("E:\\temp\\bible.txt"), "UTF-8"));
+        bijbel.extractBibleChapterFromHtml(FileUtils.readFileToString(new File("E:\\temp\\bible.txt"), "UTF-8"));
     }
     
     @Test
@@ -52,10 +53,10 @@ public class BijbelTest extends Bijbel {
         bibleBooksOT.put("Jesaja", "66");
         bibleBooksOT.put("Jeremia", "52");
         bibleBooksOT.put("Klaagliederen", "5");
-        bibleBooksOT.put("Ezechiël", "48");
-        bibleBooksOT.put("Daniël", "12");
+        bibleBooksOT.put("Ezechiel", "48");
+        bibleBooksOT.put("Daniel", "12");
         bibleBooksOT.put("Hosea", "14");
-        bibleBooksOT.put("Joël", "4");
+        bibleBooksOT.put("Joel", "4");
         bibleBooksOT.put("Amos", "9");
         bibleBooksOT.put("Obadja", "1");
         bibleBooksOT.put("Jona", "4");
@@ -68,7 +69,7 @@ public class BijbelTest extends Bijbel {
         bibleBooksOT.put("Maleachi", "4");
 
         for (Entry<String, String> e : bibleBooksOT.entrySet()) {
-            bijbel.downloadAndSaveBibleBook(e.getKey(), e.getValue(), "NBV");
+            bijbel.downloadAndSaveBibleBook(e.getKey(), e.getValue(), "BGT");
         }
 
     }

@@ -1,4 +1,4 @@
-package org.gkvassenpeelo.liedbase;
+package org.gkvassenpeelo.liedbase.bible;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -7,28 +7,23 @@ import java.io.InputStreamReader;
 import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.URL;
-import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-public class Bijbel {
+public class Bible {
 
-    private List<String> cookies;
-    private HttpsURLConnection conn;
-
-    private final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0";
     private static String ENCODING = "UTF-8";
 
     private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
-    public Bijbel() {
+    public Bible() {
 
     }
 
-    public String extractBibleChapter(String result) {
+    public String extractBibleChapterFromHtml(String result) {
 
         Document doc = Jsoup.parse(result, ENCODING);
 
@@ -66,7 +61,7 @@ public class Bijbel {
                 // get the page
                 String result = getPageContent(String.format(url, translation, book, i));
 
-                fw.append(extractBibleChapter(result));
+                fw.append(extractBibleChapterFromHtml(result));
             }
         } finally {
             fw.close();
@@ -77,6 +72,8 @@ public class Bijbel {
     public String getPageContent(String url) throws Exception {
 
         CookieHandler.setDefault(new CookieManager());
+        
+        HttpsURLConnection conn;
 
         URL obj = new URL(url);
         conn = (HttpsURLConnection) obj.openConnection();
@@ -88,10 +85,9 @@ public class Bijbel {
 
         // act like a browser
         conn.setRequestProperty("Host", "www.debijbel.nl");
-        conn.setRequestProperty("User-Agent", USER_AGENT);
+        conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0");
         conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         conn.setRequestProperty("Accept-Language", "nl,en-US;q=0.7,en;q=0.3");
-//        conn.setRequestProperty("Accept-Encoding", "gzip, deflate");
         conn.setRequestProperty("Connection", "keep-alive");
         conn.addRequestProperty(
                 "Cookie",
@@ -111,19 +107,8 @@ public class Bijbel {
         }
         in.close();
 
-        // Get the response cookies
-        setCookies(conn.getHeaderFields().get("Set-Cookie"));
-
         return Jsoup.parse(response.toString()).toString();
 
-    }
-
-    public List<String> getCookies() {
-        return cookies;
-    }
-
-    public void setCookies(List<String> cookies) {
-        this.cookies = cookies;
     }
 
 }
