@@ -3,6 +3,8 @@ package org.gkvassenpeelo.liedbase.bible;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.CookieHandler;
 import java.net.CookieManager;
@@ -12,6 +14,8 @@ import javax.net.ssl.HttpsURLConnection;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 public class Bible {
 
@@ -23,34 +27,49 @@ public class Bible {
 
     }
 
-    public String extractBibleChapterFromHtml(String result) {
+    public String getBiblePart(String translation, String book, String fromVerse, String toVerse) {
+
+        translation = translation.toUpperCase();
+
+        book = book.toLowerCase();
+
+        Document doc;
+        try {
+            InputStream in = ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".dat");
+            if(in == null) {
+                return String.format("Resource for book %s in translation %s not found", book, translation);
+            }
+            doc = Jsoup.parse(in, ENCODING, "");
+            in.close();
+        } catch (IOException e) {
+            return String.format("Resource for book %s in translation %s not found", book, translation);
+        }
+
+        Elements bibletext = doc.select("div.bibletext");
+
+        Elements paragraphs = bibletext.select("p.p");
+
+        for (Element paragraph : paragraphs) {
+            for (Element verse : paragraph.select("span.verse")) {
+                System.out.print(" " + verse.select("sup").first().text() + " ");
+                verse.select("sup").first().html("");
+                System.out.print(verse.text());
+            }
+        }
+
+        return paragraphs.toString();
+    }
+
+    private String extractBibleChapterFromHtml(String result) {
 
         Document doc = Jsoup.parse(result, ENCODING);
 
         return doc.select("div.bibletext").toString();
-
-        // Elements bibletext = doc.select("div.bibletext");
-
-        // Elements paragraphs = bibletext.select("p.p");
-        //
-        // String chapter = paragraphs.select("span.chapterStart").text();
-        //
-        // System.out.print(chapter);
-        //
-        // for (Element paragraph : paragraphs) {
-        // for (Element verse : paragraph.select("span.verse")) {
-        // System.out.print(" " + verse.select("sup").first().text() + " ");
-        // verse.select("sup").first().html("");
-        // System.out.print(verse.text());
-        // }
-        // }
-        //
-        // return paragraphs.toString();
     }
 
     public void downloadAndSaveBibleBook(String book, String maxChapter, String translation) throws Exception {
 
-        File f = new File(translation + "/" + book + ".dat");
+        File f = new File(translation + "/" + book.toLowerCase().replace("+", "") + ".dat");
         f.getParentFile().mkdirs();
 
         FileWriter fw = new FileWriter(f);
@@ -72,7 +91,7 @@ public class Bible {
     public String getPageContent(String url) throws Exception {
 
         CookieHandler.setDefault(new CookieManager());
-        
+
         HttpsURLConnection conn;
 
         URL obj = new URL(url);
@@ -89,11 +108,10 @@ public class Bible {
         conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         conn.setRequestProperty("Accept-Language", "nl,en-US;q=0.7,en;q=0.3");
         conn.setRequestProperty("Connection", "keep-alive");
-        conn.addRequestProperty(
-                "Cookie",
-                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=15ca36449ab755a25f3be9f4785ffbfe; PHPSESSID=dphegcqi6gljj35m157loe3pc0; _gat=1".split(";", 1)[0]);
-                
-        
+        conn.addRequestProperty("Cookie",
+                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=15ca36449ab755a25f3be9f4785ffbfe; PHPSESSID=dphegcqi6gljj35m157loe3pc0; _gat=1".split(
+                        ";", 1)[0]);
+
         int responseCode = conn.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);
         System.out.println("Response Code : " + responseCode);

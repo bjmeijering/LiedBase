@@ -1,27 +1,19 @@
 package org.gkvassenpeelo.liedbase;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import org.apache.commons.io.FileUtils;
 import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.junit.Test;
 
 public class BibleTest extends Bible {
 
     Bible bijbel = new Bible();
-
-    @Test
-    public void extractBibleTextTest() throws IOException {
-        bijbel.extractBibleChapterFromHtml(FileUtils.readFileToString(new File("E:\\temp\\bible.txt"), "UTF-8"));
-    }
     
     @Test
-    public void getPageContentTest() throws Exception {
-        FileUtils.writeStringToFile(new File("contents.xml"), bijbel.getPageContent("https://www.debijbel.nl/bijbel/zoeken/NBV/Ester+1"));
+    public void getBiblePartTest() throws Exception {
+        System.out.println(bijbel.getBiblePart("nbv", "Genesis", "", ""));
     }
 
     @Test
