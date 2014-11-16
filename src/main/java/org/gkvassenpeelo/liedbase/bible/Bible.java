@@ -23,20 +23,24 @@ public class Bible {
 
     private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
+    private static String SPACE = " ";
+
+    private static String LINE_END = System.getProperty("line.separator");
+
     public Bible() {
 
     }
 
-    public String getBiblePart(String translation, String book, String fromVerse, String toVerse) {
+    public String getBiblePart(String translation, String book, int chapter, int fromVerse, int toVerse) {
 
         translation = translation.toUpperCase();
 
-        book = book.toLowerCase();
+        book = String.format("%s%s", book.substring(0, 1).toUpperCase(), book.toLowerCase().substring(1));
 
         Document doc;
         try {
             InputStream in = ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".dat");
-            if(in == null) {
+            if (in == null) {
                 return String.format("Resource for book %s in translation %s not found", book, translation);
             }
             doc = Jsoup.parse(in, ENCODING, "");
@@ -45,19 +49,46 @@ public class Bible {
             return String.format("Resource for book %s in translation %s not found", book, translation);
         }
 
-        Elements bibletext = doc.select("div.bibletext");
+        Element bibletext = doc.select("div[id=scroller]").get(chapter - 1);
 
-        Elements paragraphs = bibletext.select("p.p");
+        StringBuilder sb = new StringBuilder();
 
-        for (Element paragraph : paragraphs) {
-            for (Element verse : paragraph.select("span.verse")) {
-                System.out.print(" " + verse.select("sup").first().text() + " ");
-                verse.select("sup").first().html("");
-                System.out.print(verse.text());
+        Elements parts = bibletext.getAllElements();
+
+        int currentVerse = 1;
+
+        for (Element part : parts) {
+
+            // h3 header
+            if (part.attributes().get("class").equals("s")) {
+                if (currentVerse >= fromVerse && currentVerse <= toVerse) {
+                    sb.append(part.text() + LINE_END);
+                }
             }
+
+            // p paragraph
+            if (part.attributes().get("class").equals("p")) {
+                for (Element e : part.getAllElements()) {
+                    if (e.attributes().get("class").equals("chapterStart") && fromVerse == 1) {
+                        sb.append(e.text() + SPACE);
+                    }
+                    if (e.attributes().get("class").equals("verse")) {
+                        if(e.select("").first().equals("")) {
+                            
+                        }
+                    }
+                }
+                sb.append(LINE_END);
+            }
+
+            // for (Element verse : part.select("span.verse")) {
+            // System.out.print(" " + verse.select("sup").first().text() + " ");
+            // verse.select("sup").first().html("");
+            // System.out.print(verse.text());
+            // }
         }
 
-        return paragraphs.toString();
+        return sb.toString();
     }
 
     private String extractBibleChapterFromHtml(String result) {
