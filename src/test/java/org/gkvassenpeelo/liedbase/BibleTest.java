@@ -13,7 +13,7 @@ public class BibleTest extends Bible {
     
     @Test
     public void getBiblePartTest() throws Exception {
-        System.out.println(bijbel.getBiblePart("nbv", "Genesis", 1, 1, 5));
+        System.out.println(bijbel.getBiblePart("nbv", "Genesis", 2, 1, 5));
     }
 
     @Test

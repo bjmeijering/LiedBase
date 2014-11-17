@@ -53,39 +53,32 @@ public class Bible {
 
         StringBuilder sb = new StringBuilder();
 
-        Elements parts = bibletext.getAllElements();
+        Elements parts = bibletext.children();
 
         int currentVerse = 1;
 
         for (Element part : parts) {
 
+            if (!"p".equals(part.className()) && !"s".equals(part.className())) {
+                continue;
+            }
+
             // h3 header
             if (part.attributes().get("class").equals("s")) {
                 if (currentVerse >= fromVerse && currentVerse <= toVerse) {
-                    sb.append(part.text() + LINE_END);
+                    sb.append(LINE_END + part.text() + LINE_END);
                 }
             }
 
-            // p paragraph
-            if (part.attributes().get("class").equals("p")) {
-                for (Element e : part.getAllElements()) {
-                    if (e.attributes().get("class").equals("chapterStart") && fromVerse == 1) {
-                        sb.append(e.text() + SPACE);
-                    }
-                    if (e.attributes().get("class").equals("verse")) {
-                        if(e.select("").first().equals("")) {
-                            
-                        }
-                    }
+            for (Element verse : part.select("span.verse")) {
+                if (currentVerse >= fromVerse && currentVerse <= toVerse) {
+                    sb.append(verse.select("sup").first().text().trim());
+                    verse.select("sup").first().html("");
+                    sb.append(verse.text().trim());
                 }
-                sb.append(LINE_END);
+                currentVerse++;
             }
 
-            // for (Element verse : part.select("span.verse")) {
-            // System.out.print(" " + verse.select("sup").first().text() + " ");
-            // verse.select("sup").first().html("");
-            // System.out.print(verse.text());
-            // }
         }
 
         return sb.toString();
@@ -139,9 +132,10 @@ public class Bible {
         conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         conn.setRequestProperty("Accept-Language", "nl,en-US;q=0.7,en;q=0.3");
         conn.setRequestProperty("Connection", "keep-alive");
-        conn.addRequestProperty("Cookie",
-                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=15ca36449ab755a25f3be9f4785ffbfe; PHPSESSID=dphegcqi6gljj35m157loe3pc0; _gat=1".split(
-                        ";", 1)[0]);
+        conn.addRequestProperty(
+                "Cookie",
+                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=15ca36449ab755a25f3be9f4785ffbfe; PHPSESSID=dphegcqi6gljj35m157loe3pc0; _gat=1"
+                        .split(";", 1)[0]);
 
         int responseCode = conn.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);

@@ -50,6 +50,6 @@
 	<classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/velocity/velocity/1.7/velocity-1.7.jar" sourcepath="M2_REPO/org/apache/velocity/velocity/1.7/velocity-1.7-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar" sourcepath="M2_REPO/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1-sources.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Harm/.m2/repository/org/jsoup/jsoup/1.8.1/jsoup-1.8.1.jar"/>
+	<classpathentry kind="lib" path="C:/Data/m2_repository/org/jsoup/jsoup/1.8.1/jsoup-1.8.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
