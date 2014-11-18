@@ -9,9 +9,12 @@ import java.io.InputStreamReader;
 import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -23,15 +26,13 @@ public class Bible {
 
     private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
-    private static String SPACE = " ";
-
     private static String LINE_END = System.getProperty("line.separator");
 
     public Bible() {
 
     }
 
-    public String getBiblePart(String translation, String book, int chapter, int fromVerse, int toVerse) {
+    public static List<BiblePartFragment> getBiblePart(String translation, String book, int chapter, int fromVerse, int toVerse) throws BibleException {
 
         translation = translation.toUpperCase();
 
@@ -40,18 +41,17 @@ public class Bible {
         Document doc;
         try {
             InputStream in = ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".dat");
-            if (in == null) {
-                return String.format("Resource for book %s in translation %s not found", book, translation);
-            }
             doc = Jsoup.parse(in, ENCODING, "");
             in.close();
         } catch (IOException e) {
-            return String.format("Resource for book %s in translation %s not found", book, translation);
+            throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
+        } catch (NullPointerException e) {
+            throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
         }
 
         Element bibletext = doc.select("div[id=scroller]").get(chapter - 1);
 
-        StringBuilder sb = new StringBuilder();
+        List<BiblePartFragment> bp = new ArrayList<BiblePartFragment>();
 
         Elements parts = bibletext.children();
 
@@ -66,22 +66,26 @@ public class Bible {
             // h3 header
             if (part.attributes().get("class").equals("s")) {
                 if (currentVerse >= fromVerse && currentVerse <= toVerse) {
-                    sb.append(LINE_END + part.text() + LINE_END);
+                    if (bp.size() == 0) {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, part.text() + LINE_END));
+                    } else {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, LINE_END + part.text() + LINE_END));
+                    }
                 }
             }
 
             for (Element verse : part.select("span.verse")) {
                 if (currentVerse >= fromVerse && currentVerse <= toVerse) {
-                    sb.append(verse.select("sup").first().text().trim());
+                    bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, verse.select("sup").first().text().trim()));
                     verse.select("sup").first().html("");
-                    sb.append(verse.text().trim());
+                    bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, verse.text().trim()));
                 }
                 currentVerse++;
             }
 
         }
 
-        return sb.toString();
+        return bp;
     }
 
     private String extractBibleChapterFromHtml(String result) {
@@ -132,10 +136,9 @@ public class Bible {
         conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         conn.setRequestProperty("Accept-Language", "nl,en-US;q=0.7,en;q=0.3");
         conn.setRequestProperty("Connection", "keep-alive");
-        conn.addRequestProperty(
-                "Cookie",
-                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=15ca36449ab755a25f3be9f4785ffbfe; PHPSESSID=dphegcqi6gljj35m157loe3pc0; _gat=1"
-                        .split(";", 1)[0]);
+        conn.addRequestProperty("Cookie",
+                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=15ca36449ab755a25f3be9f4785ffbfe; PHPSESSID=dphegcqi6gljj35m157loe3pc0; _gat=1".split(
+                        ";", 1)[0]);
 
         int responseCode = conn.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);
@@ -152,6 +155,24 @@ public class Bible {
 
         return Jsoup.parse(response.toString()).toString();
 
+    }
+    
+    public static String getTranslation(String line) throws BibleException {
+        if(line.toLowerCase().endsWith("(nbv)")) {
+            return "NBV";
+        }
+        if(line.toLowerCase().endsWith("(bgt)")) {
+            return "BGT";
+        }
+        throw new BibleException("Onbekende vertaling in regel: " + line);
+    }
+
+    // for each bible book an if statement
+    public static String getBibleBook(String line) throws BibleException {
+        if (line.toLowerCase().startsWith("gen")) {
+            return "Genisis";
+        }
+        throw new BibleException("Bijbelboek niet gevonden in regel: " + line);
     }
 
 }

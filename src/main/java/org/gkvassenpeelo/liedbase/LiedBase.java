@@ -21,6 +21,8 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PatternLayout;
 import org.apache.log4j.RollingFileAppender;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
+import org.gkvassenpeelo.liedbase.bible.Bible;
+import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
@@ -30,6 +32,7 @@ import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
 import org.gkvassenpeelo.slidemachine.SlideMachine;
 import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
+import org.gkvassenpeelo.slidemachine.model.Scripture;
 import org.pptx4j.Pptx4jException;
 
 public class LiedBase {
@@ -259,9 +262,10 @@ public class LiedBase {
     /**
      * 
      * @param inputString
+     * @throws BibleException
      * @throws IOException
      */
-    public void parseLiturgyScript() {
+    public void parseLiturgyScript() throws BibleException {
 
         String inputString = null;
 
@@ -310,8 +314,9 @@ public class LiedBase {
     /**
      * 
      * @param line
+     * @throws BibleException
      */
-    private void parseLiturgyScriptLine(String line) {
+    private void parseLiturgyScriptLine(String line) throws BibleException {
 
         LiturgyPart.Type type = null;
 
@@ -379,6 +384,12 @@ public class LiedBase {
             ems.setTime(getTimeFromLine(line));
             ems.setVicarName(getNextVicarFromLine(line));
             lp.addSlide(ems);
+        } else if (type == LiturgyPart.Type.scripture) {
+            int chapter = Integer.parseInt(StringUtils.substringBetween(line, " ", ":"));
+            int fromVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "-"));
+            int toVerse = Integer.parseInt(StringUtils.substringBetween(line, "-", "("));
+
+            lp.addSlide(new Scripture(Bible.getBiblePart(Bible.getTranslation(line), Bible.getBibleBook(line), chapter, fromVerse, toVerse)));
         }
 
         liturgy.add(lp);
@@ -567,7 +578,7 @@ public class LiedBase {
         logger.info(String.format("Presentatie opgeslagen op: %s", getTargetFile().getAbsolutePath()));
     }
 
-    public static void main(String[] args) throws Docx4JException {
+    public static void main(String[] args) throws Docx4JException, BibleException {
 
         // check arguments, duh!
         if (args.length == 0) {

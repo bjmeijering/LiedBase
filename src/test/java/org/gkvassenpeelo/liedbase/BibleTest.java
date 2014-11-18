@@ -1,19 +1,49 @@
 package org.gkvassenpeelo.liedbase;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import org.gkvassenpeelo.liedbase.bible.Bible;
+import org.gkvassenpeelo.liedbase.bible.BibleException;
+import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
 import org.junit.Test;
 
 public class BibleTest extends Bible {
 
     Bible bijbel = new Bible();
-    
+
     @Test
     public void getBiblePartTest() throws Exception {
-        System.out.println(bijbel.getBiblePart("nbv", "Genesis", 2, 1, 5));
+        List<BiblePartFragment> bp = Bible.getBiblePart("nbv", "Exodus", 2, 1, 5);
+
+        for (BiblePartFragment bpf : bp) {
+            System.out.print("[" + bpf.getDisplayType().toString() + "]" + bpf.getContent());
+        }
+    }
+
+    @Test
+    public void getBiblePartNonExistentTest() throws Exception {
+
+        try {
+            Bible.getBiblePart("nbv", "Exoddus", 2, 1, 5);
+        } catch (BibleException e) {
+            assertEquals("Boek Exoddus in vertaling NBV niet gevonden", e.getMessage());
+        }
+
+    }
+
+    @Test
+    public void getBibleBookTest() {
+        try {
+            assertEquals("Genisis", Bible.getBibleBook("Gen 1: 4 - 8"));
+        } catch (BibleException e) {
+            fail(e.getMessage());
+        }
     }
 
     @Test
