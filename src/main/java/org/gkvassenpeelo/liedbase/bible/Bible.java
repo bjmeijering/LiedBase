@@ -22,7 +22,7 @@ import org.jsoup.select.Elements;
 
 public class Bible {
 
-    private static String ENCODING = "UTF-8";
+    private static final String ENCODING = "UTF-8";
 
     private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
@@ -42,6 +42,7 @@ public class Bible {
         try {
             InputStream in = ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".dat");
             doc = Jsoup.parse(in, ENCODING, "");
+            doc.outputSettings().charset(ENCODING);
             in.close();
         } catch (IOException e) {
             throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
@@ -156,21 +157,24 @@ public class Bible {
         return Jsoup.parse(response.toString()).toString();
 
     }
-    
+
     public static String getTranslation(String line) throws BibleException {
-        if(line.toLowerCase().endsWith("(nbv)")) {
-            return "NBV";
+        if (line.trim().matches(".*\\([a-zA-Z]{1,3}\\)$")) {
+            if (line.toLowerCase().trim().endsWith("(nbv)")) {
+                return "NBV";
+            } else if (line.toLowerCase().trim().endsWith("(bgt)")) {
+                return "BGT";
+            } else {
+                throw new BibleException("Onbekende vertaling in regel: " + line);
+            }
         }
-        if(line.toLowerCase().endsWith("(bgt)")) {
-            return "BGT";
-        }
-        throw new BibleException("Onbekende vertaling in regel: " + line);
+        return "NBV";
     }
 
     // for each bible book an if statement
     public static String getBibleBook(String line) throws BibleException {
         if (line.toLowerCase().startsWith("gen")) {
-            return "Genisis";
+            return "Genesis";
         }
         throw new BibleException("Bijbelboek niet gevonden in regel: " + line);
     }

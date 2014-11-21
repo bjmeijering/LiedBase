@@ -32,6 +32,7 @@ import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
 import org.gkvassenpeelo.slidemachine.model.Law;
 import org.gkvassenpeelo.slidemachine.model.Lecture;
 import org.gkvassenpeelo.slidemachine.model.Prair;
+import org.gkvassenpeelo.slidemachine.model.Scripture;
 import org.gkvassenpeelo.slidemachine.model.Song;
 import org.gkvassenpeelo.slidemachine.model.Votum;
 import org.gkvassenpeelo.slidemachine.model.Welcome;
@@ -44,12 +45,13 @@ import org.pptx4j.pml.Shape;
  * @author m07b836
  * 
  */
-@SuppressWarnings("restriction")
 public class SlideFactory {
 
     private Map<Class<? extends GenericSlideContent>, String> slideLayoutMap = new HashMap<Class<? extends GenericSlideContent>, String>();
 
     private VelocityEngine velocityEngine;
+
+    private static String ENCODING = "UTF-8";
 
     /**
      * 
@@ -57,6 +59,7 @@ public class SlideFactory {
     public SlideFactory() {
         // fill the slide layout map
         slideLayoutMap.put(Song.class, "/ppt/slideLayouts/slideLayout4.xml");
+        slideLayoutMap.put(Scripture.class, "/ppt/slideLayouts/slideLayout4.xml");
         slideLayoutMap.put(Blank.class, "/ppt/slideLayouts/slideLayout19.xml");
         slideLayoutMap.put(Gathering.class, "/ppt/slideLayouts/slideLayout6.xml");
         slideLayoutMap.put(Prair.class, "/ppt/slideLayouts/slideLayout10.xml");
@@ -91,7 +94,7 @@ public class SlideFactory {
         if (content instanceof Song) {
             // Create and add header
             if (!StringUtils.isEmpty(content.getHeader())) {
-                Shape header = createSongHeaderShape((Song)content);
+                Shape header = createSongHeaderShape((Song) content);
                 slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(header);
             }
 
@@ -111,24 +114,60 @@ public class SlideFactory {
             Shape vicar = createVicarShape(((Welcome) content).getVicarName());
             slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
         }
-        if(content instanceof EndMorningService) {
+        if (content instanceof EndMorningService) {
 
             Shape time = createTimeShape(((EndMorningService) content).getTime());
             slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(time);
-            
+
             Shape vicar = createNextVicarShape(((EndMorningService) content).getVicarName());
             slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
         }
+        if (content instanceof Scripture) {
+
+            Shape scriptureHeader = createScriptureHeaderShape(content);
+            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureHeader);
+
+            Shape scriptureBody = createScriptureBodyShape(content);
+            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureBody);
+
+        }
     }
-    
+
+    private Shape createScriptureHeaderShape(GenericSlideContent content) throws JAXBException {
+        VelocityContext vc = new VelocityContext();
+        vc.put("bibleBook", ((Scripture) content).getBibleBook());
+        vc.put("chapter", ((Scripture) content).getChapter());
+        vc.put("verseStart", ((Scripture) content).getFromVerse());
+        vc.put("verseEnd", ((Scripture) content).getToVerse());
+
+        StringWriter ow = new StringWriter();
+
+        getVelocityEngine().getTemplate("/templates/shape_scripture_header.vc").merge(vc, ow);
+
+        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+        return shape;
+    }
+
+    private Shape createScriptureBodyShape(GenericSlideContent content) throws JAXBException {
+        VelocityContext vc = new VelocityContext();
+        vc.put("biblePartFragments", ((Scripture) content).getBiblePart());
+
+        StringWriter ow = new StringWriter();
+
+        getVelocityEngine().getTemplate("/templates/shape_scripture_body.vc", ENCODING).merge(vc, ow);
+
+        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+        return shape;
+    }
+
     private Shape createVicarShape(Object vicarName) throws JAXBException {
         VelocityContext vc = new VelocityContext();
         vc.put("vicarName", vicarName);
-        
+
         StringWriter ow = new StringWriter();
-        
+
         getVelocityEngine().getTemplate("/templates/shape_welcome.vc").merge(vc, ow);
-        
+
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
     }
@@ -144,15 +183,15 @@ public class SlideFactory {
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
     }
-    
+
     private Shape createNextVicarShape(String vicarName) throws JAXBException {
         VelocityContext vc = new VelocityContext();
         vc.put("vicarName", vicarName);
-        
+
         StringWriter ow = new StringWriter();
-        
+
         getVelocityEngine().getTemplate("/templates/shape_end_morning_service_vicar.vc").merge(vc, ow);
-        
+
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
     }
@@ -164,13 +203,13 @@ public class SlideFactory {
      * @throws JAXBException
      */
     private Shape createSongHeaderShape(Song song) throws JAXBException {
-        
+
         // separate the header for easier handling below
         String songNumber = StringUtils.substringBefore(song.getHeader(), ":");
         String verses = StringUtils.substringAfter(song.getHeader(), ":");
 
         VelocityContext vc = new VelocityContext();
-        vc.put("title_text_before", songNumber +  (StringUtils.isEmpty(song.getCurrentVerse()) ? "" : ":") + StringUtils.substringBefore(verses, song.getCurrentVerse()));
+        vc.put("title_text_before", songNumber + (StringUtils.isEmpty(song.getCurrentVerse()) ? "" : ":") + StringUtils.substringBefore(verses, song.getCurrentVerse()));
         vc.put("title_text_bold", song.getCurrentVerse());
         vc.put("title_text_after", StringUtils.substringAfter(verses, song.getCurrentVerse()));
 

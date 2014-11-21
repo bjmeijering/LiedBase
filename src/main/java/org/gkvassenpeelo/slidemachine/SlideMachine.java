@@ -12,7 +12,6 @@ import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
 import org.pptx4j.Pptx4jException;
 
-@SuppressWarnings("restriction")
 public class SlideMachine {
 
     private MainPresentationPart targetPresentationPart;

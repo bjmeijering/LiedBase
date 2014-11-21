@@ -2,15 +2,33 @@ package org.gkvassenpeelo.slidemachine.model;
 
 import java.util.List;
 
+import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
+
 public class Scripture extends GenericSlideContent {
+    
+    private org.gkvassenpeelo.liedbase.liturgy.Scripture scripture;
 
-    private List<BiblePartFragment> biblePart;
-
-    public Scripture(List<BiblePartFragment> biblePart) {
-        this.biblePart = biblePart;
+    public Scripture(SlideContents sc) {
+        this.scripture = (org.gkvassenpeelo.liedbase.liturgy.Scripture)sc;
     }
 
     public List<BiblePartFragment> getBiblePart() {
-        return this.biblePart;
+        return scripture.getBiblePart();
+    }
+
+    public String getBibleBook() {
+        return scripture.getBibleBook();
+    }
+
+    public int getChapter() {
+        return scripture.getChapter();
+    }
+
+    public int getFromVerse() {
+        return scripture.getFromVerse();
+    }
+
+    public int getToVerse() {
+        return scripture.getToVerse();
     }
 }

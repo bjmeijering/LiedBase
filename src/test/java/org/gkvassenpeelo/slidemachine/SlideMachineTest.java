@@ -16,7 +16,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.pptx4j.Pptx4jException;
 
-@SuppressWarnings("restriction")
 public class SlideMachineTest {
 
     @Before
@@ -42,10 +41,10 @@ public class SlideMachineTest {
     @SuppressWarnings("deprecation")
     public void printSlideContents() throws Docx4JException {
 
-        PresentationMLPackage presentationMLPackage = (PresentationMLPackage) OpcPackage.load(new java.io.File("E:/Projects/Eclipse Workspace/LiedBase/target/Presentatie.pptx"));
+        PresentationMLPackage presentationMLPackage = (PresentationMLPackage) OpcPackage.load(new java.io.File("E:/Projects/Eclipse Workspace/LiedBase/target/presentatie.pptx"));
         
         // get specific slide
-        SlidePart slidePart = (SlidePart) presentationMLPackage.getParts().get(new PartName("/ppt/slides/slide36.xml"));
+        SlidePart slidePart = (SlidePart) presentationMLPackage.getParts().get(new PartName("/ppt/slides/slide1.xml"));
         List<Object> shapeList = slidePart.getJaxbElement().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame();
 
         String indent = "";

@@ -27,12 +27,13 @@ import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart.Type;
+import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
 import org.gkvassenpeelo.slidemachine.SlideMachine;
+import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
 import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
-import org.gkvassenpeelo.slidemachine.model.Scripture;
 import org.pptx4j.Pptx4jException;
 
 public class LiedBase {
@@ -51,6 +52,8 @@ public class LiedBase {
     private List<LiturgyPart> liturgy = new LinkedList<LiturgyPart>();
     private File targetFile = new File("presentatie.pptx");
     private File sourceFile = new File("liturgie.txt");
+
+    private static String DEFAULT_TRANSLATION = "NBV";
 
     public LiedBase() {
 
@@ -97,7 +100,7 @@ public class LiedBase {
             songIdentifier = "lied";
         }
 
-        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream(songBookName));
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName));
 
         while (s.hasNextLine()) {
 
@@ -144,7 +147,7 @@ public class LiedBase {
         String songBookName = "opwekking.txt";
         String songIdentifier = "opwekking";
 
-        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream(songBookName), "UTF-8");
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), "UTF-8");
 
         while (s.hasNextLine()) {
 
@@ -223,7 +226,7 @@ public class LiedBase {
         java.util.regex.Matcher m = liturgyPattern.matcher(line);
 
         if (!line.matches(regex)) {
-            throw new LiedBaseError("Onbekend liturgie onderdeel: " + line);
+            return LiturgyPart.Type.scripture;
         }
 
         m.find();
@@ -385,11 +388,36 @@ public class LiedBase {
             ems.setVicarName(getNextVicarFromLine(line));
             lp.addSlide(ems);
         } else if (type == LiturgyPart.Type.scripture) {
-            int chapter = Integer.parseInt(StringUtils.substringBetween(line, " ", ":"));
-            int fromVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "-"));
-            int toVerse = Integer.parseInt(StringUtils.substringBetween(line, "-", "("));
+            String bibleBook = Bible.getBibleBook(line);
+            int chapter = Integer.parseInt(StringUtils.substringBetween(line, " ", ":").trim());
+            int fromVerse = -1;
+            int toVerse = -1;
+            String translation;
+            if (line.contains("-")) {
+                fromVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "-").trim());
+                if (line.contains("(")) {
+                    toVerse = Integer.parseInt(StringUtils.substringBetween(line, "-", "(").trim());
+                } else {
+                    toVerse = Integer.parseInt(StringUtils.substringAfterLast(line, "-").trim());
+                }
+                translation = Bible.getTranslation(line);
+            } else {
+                if (line.contains("(")) {
+                    fromVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "(").trim());
+                } else {
+                    fromVerse = Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+                    toVerse = Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+                }
+                translation = DEFAULT_TRANSLATION;
+            }
+            
+            if(fromVerse == -1 || toVerse == -1) {
+                throw new BibleException("Vanaf en/of tot vers kon niet worden bepaald");
+            }
 
-            lp.addSlide(new Scripture(Bible.getBiblePart(Bible.getTranslation(line), Bible.getBibleBook(line), chapter, fromVerse, toVerse)));
+            List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBook(line), chapter, fromVerse, toVerse);
+
+            lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
         }
 
         liturgy.add(lp);
@@ -538,6 +566,9 @@ public class LiedBase {
                     sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Law());
                 } else if (lp.getType() == LiturgyPart.Type.lecture) {
                     sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Lecture());
+                } else if (lp.getType() == LiturgyPart.Type.scripture) {
+                    GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.Scripture(lp.getSlides().get(0));
+                    sm.addSlide(gsc);
                 }
 
                 // after each liturgy part, add an empty slide, except for the last one!
@@ -548,13 +579,13 @@ public class LiedBase {
             }
 
         } catch (JAXBException e) {
-            logger.error(e.getMessage());
+            logger.error(e.getMessage(), e);
             System.exit(1);
         } catch (Pptx4jException e) {
-            logger.error(e.getMessage());
+            logger.error(e.getMessage(), e);
             System.exit(1);
         } catch (Docx4JException e) {
-            logger.error(e.getMessage());
+            logger.error(e.getMessage(), e);
             System.exit(1);
         }
     }

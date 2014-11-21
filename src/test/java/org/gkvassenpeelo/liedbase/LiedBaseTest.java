@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.io.File;
 
 import org.docx4j.openpackaging.exceptions.Docx4JException;
+import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,7 +19,7 @@ public class LiedBaseTest {
     }
 
     @Test
-    public void liedBasetest() throws LiedBaseError, Docx4JException {
+    public void liedBasetest() throws LiedBaseError, Docx4JException, BibleException {
 
         lb.setSourceFile(new File("src/test/resources/liturgie.txt"));
 

@@ -1,0 +1,23 @@
+<p:sp xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:ns12="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas" xmlns:ns6="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:ns11="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram">
+	<p:nvSpPr>
+		<p:cNvPr id="3" name="Tijdelijke aanduiding voor tekst 2"/>
+		<p:cNvSpPr>
+			<a:spLocks noGrp="true"/>
+		</p:cNvSpPr>
+		<p:nvPr>
+			<p:ph type="body" sz="quarter" idx="11"/>
+		</p:nvPr>
+	</p:nvSpPr>
+	<p:spPr/>
+	<p:txBody>
+		<a:bodyPr/>
+		<a:lstStyle/>
+		<a:p>
+			<a:r>
+				<a:rPr lang="nl-NL" smtClean="false"/>
+				<a:t>${benificiary}</a:t>
+			</a:r>
+			<a:endParaRPr lang="nl-NL"/>
+		</a:p>
+	</p:txBody>
+</p:sp>
