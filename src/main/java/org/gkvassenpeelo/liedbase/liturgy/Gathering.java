@@ -10,13 +10,19 @@ public class Gathering extends SlideContents {
     public Gathering(List<String> gatheringBenificiaries) {
         benificiaries = gatheringBenificiaries;
     }
-    
+
     public String getFirstGatheringBenificiary() {
-        return benificiaries.get(0);
+        if (benificiaries.size() > 0) {
+            return benificiaries.get(0);
+        }
+        return "eerste collecte";
     }
-    
+
     public String getSecondGatheringBenificiary() {
-        return benificiaries.get(1);
+        if (benificiaries.size() > 1) {
+            return benificiaries.get(1);
+        }
+        return "tweede collecte";
     }
 
 }

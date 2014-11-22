@@ -215,7 +215,7 @@ public class LiedBase {
         String regex_amen = "(([gG]ezongen)?.*[aA]men)";
         String regex_votum = "([vV]otum)";
         String regex_gebed = "(([gG]ebed)|([bB]idden)|([dD]anken))";
-        String regex_collecte = "([cC]ollecte)";
+        String regex_collecte = "(([cC]|[kK])olle[ck]te)";
         String regex_law = "([wW]et)";
         String regex_lecture = "([pP]reek)";
         String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum,
@@ -288,7 +288,9 @@ public class LiedBase {
 
         while (st.hasMoreTokens()) {
             String line = st.nextToken();
-            parseLiturgyScriptLine(line);
+            if (!line.startsWith("#")) {
+                parseLiturgyScriptLine(line);
+            }
         }
 
     }
@@ -410,8 +412,8 @@ public class LiedBase {
                 }
                 translation = DEFAULT_TRANSLATION;
             }
-            
-            if(fromVerse == -1 || toVerse == -1) {
+
+            if (fromVerse == -1 || toVerse == -1) {
                 throw new BibleException("Vanaf en/of tot vers kon niet worden bepaald");
             }
 

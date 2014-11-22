@@ -176,6 +176,9 @@ public class Bible {
         if (line.toLowerCase().startsWith("gen")) {
             return "Genesis";
         }
+        if (line.toLowerCase().startsWith("exod")) {
+            return "Exodus";
+        }
         throw new BibleException("Bijbelboek niet gevonden in regel: " + line);
     }
 
