@@ -100,10 +100,36 @@ public class BibleTest extends Bible {
     public void downloadBibleNT() throws Exception {
 
         Map<String, String> bibleBooksOT = new HashMap<String, String>();
-        bibleBooksOT.put("Genesis", "50");
+//        bibleBooksOT.put("matteus", "28");
+//        bibleBooksOT.put("marcus", "16");
+//        bibleBooksOT.put("lucas", "24");
+//        bibleBooksOT.put("johannes", "21");
+//        bibleBooksOT.put("handelingen", "28");
+//        bibleBooksOT.put("romeinen", "16");
+//        bibleBooksOT.put("1+korintiers", "16");
+//        bibleBooksOT.put("2+korintiers", "13");
+//        bibleBooksOT.put("galaten", "6");
+//        bibleBooksOT.put("efeziers", "6");
+        bibleBooksOT.put("filippenzen", "4");
+//        bibleBooksOT.put("kolossenzen", "4");
+//        bibleBooksOT.put("1+tessalonicenzen", "5");
+//        bibleBooksOT.put("2+tessalonicenzen", "3");
+//        bibleBooksOT.put("1+timoteus", "6");
+//        bibleBooksOT.put("2+timoteus", "4");
+//        bibleBooksOT.put("titus", "3");
+//        bibleBooksOT.put("filemon", "1");
+//        bibleBooksOT.put("hebreeen", "13");
+//        bibleBooksOT.put("jakobus", "5");
+//        bibleBooksOT.put("1+petrus", "5");
+//        bibleBooksOT.put("2+petrus", "3");
+//        bibleBooksOT.put("1+johannes", "5");
+//        bibleBooksOT.put("2+johannes", "1");
+//        bibleBooksOT.put("3+johannes", "2");
+//        bibleBooksOT.put("judas", "1");
+//        bibleBooksOT.put("openbaring", "22");
 
         for (Entry<String, String> e : bibleBooksOT.entrySet()) {
-            bijbel.downloadAndSaveBibleBook(e.getKey(), e.getValue(), "NBV");
+            bijbel.downloadAndSaveBibleBook(e.getKey(), e.getValue(), "BGT");
         }
 
     }

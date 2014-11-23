@@ -158,7 +158,7 @@ public class Bible {
         conn.setRequestProperty("Accept-Language", "nl,en-US;q=0.7,en;q=0.3");
         conn.setRequestProperty("Connection", "keep-alive");
         conn.addRequestProperty("Cookie",
-                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=15ca36449ab755a25f3be9f4785ffbfe; PHPSESSID=dphegcqi6gljj35m157loe3pc0; _gat=1".split(
+                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; PHPSESSID=a5g3ik78moco8nj0u440q86ag4; auth_key=4ba19a57b55e7d13b03e381b41f43896".split(
                         ";", 1)[0]);
 
         int responseCode = conn.getResponseCode();
