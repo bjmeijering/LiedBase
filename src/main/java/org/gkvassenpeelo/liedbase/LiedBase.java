@@ -41,11 +41,11 @@ public class LiedBase {
     static final Logger logger = Logger.getLogger(LiedBase.class);
 
     // re-used
-    private String regex_psalm = "([pP]salm(en)?)";
-    private String regex_gezang = "([gG]ezang(en)?)";
-    private String regex_lied = "([lL]ied([bB]oek)?)";
-    private String regex_opwekking = "([oO]pwekking?)";
-    private String regex_voorganger = "([vV]oorganger|[dD]ominee)";
+    private static final String regex_psalm = "([pP]salm(en)?)";
+    private static final String regex_gezang = "([gG]ezang(en)?)";
+    private static final String regex_lied = "([lL]ied([bB]oek)?)";
+    private static final String regex_opwekking = "([oO]pwekking?)";
+    private static final String regex_voorganger = "([vV]oorganger|[dD]ominee)";
 
     SlideMachine sm = new SlideMachine();
 
@@ -53,7 +53,7 @@ public class LiedBase {
     private File targetFile = new File("presentatie.pptx");
     private File sourceFile = new File("liturgie.txt");
 
-    private static String DEFAULT_TRANSLATION = "NBV";
+    private static final String ENCODING = "UTF-8";
 
     public LiedBase() {
 
@@ -100,7 +100,7 @@ public class LiedBase {
             songIdentifier = "lied";
         }
 
-        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName));
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), ENCODING);
 
         while (s.hasNextLine()) {
 
@@ -112,11 +112,6 @@ public class LiedBase {
                 // the right verse
                 while (s.hasNextLine()) {
                     String songLine = s.nextLine();
-
-                    // we are reading the next song, stop it!
-                    if (songLine.matches(String.format("^%s %s:.*$", songIdentifier, Integer.parseInt(songNumber) + 1))) {
-                        break;
-                    }
 
                     if (songLine.equals(verse)) {
                         StringBuilder verseText = new StringBuilder();
@@ -147,7 +142,7 @@ public class LiedBase {
         String songBookName = "opwekking.txt";
         String songIdentifier = "opwekking";
 
-        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), "UTF-8");
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), ENCODING);
 
         while (s.hasNextLine()) {
 
@@ -321,7 +316,7 @@ public class LiedBase {
      * @param line
      * @throws BibleException
      */
-    private void parseLiturgyScriptLine(String line) throws BibleException {
+    private String parseLiturgyScriptLine(String line) throws BibleException {
 
         LiturgyPart.Type type = null;
 
@@ -331,7 +326,7 @@ public class LiedBase {
 
         } catch (LiedBaseError e) {
             logger.warn(e.getMessage());
-            return;
+            return line;
         }
 
         // apply the right formatting to 'line'
@@ -360,7 +355,28 @@ public class LiedBase {
                 scType = SlideContents.Type.opwekking;
             }
 
-            if (scType != SlideContents.Type.opwekking) {
+            if (scType == SlideContents.Type.opwekking) {
+
+                for (String verse : getOpwekkingSongTekst(getSongNumber(line))) {
+                    Song song = new Song(line, verse);
+                    lp.addSlide(song);
+                }
+
+            } else {
+
+                // quick and dirty fix for character appended songs
+                if (getSongNumber(line).matches("179a") || getSongNumber(line).matches("179b")) {
+                    line = line + ": 1";
+                }
+
+                if (!line.contains(":")) {
+                    List<String> allVerses = getVersesFromSong(scType, getSongNumber(line));
+                    String displayLine = String.format("%s%s", line, ": ");
+                    for (String verse : allVerses) {
+                        displayLine += verse + ", ";
+                    }
+                    line = StringUtils.substringBeforeLast(displayLine, ",");
+                }
                 // for each verse, create a songSlideContents and add it to the
                 // liturgyPart
                 StringTokenizer st = new StringTokenizer(StringUtils.substringAfter(line, ":"), ",");
@@ -370,14 +386,9 @@ public class LiedBase {
                     song.setVerseNumber(currentVerse);
                     lp.addSlide(song);
                 }
-            } else {
-
-                for (String verse : getOpwekkingSongTekst(getSongNumber(line))) {
-                    Song song = new Song(line, verse);
-                    lp.addSlide(song);
-                }
 
             }
+
         } else if (type == LiturgyPart.Type.prair) {
             // nothing to do
         } else if (type == LiturgyPart.Type.gathering) {
@@ -390,40 +401,75 @@ public class LiedBase {
             ems.setVicarName(getNextVicarFromLine(line));
             lp.addSlide(ems);
         } else if (type == LiturgyPart.Type.scripture) {
-            String bibleBook = Bible.getBibleBook(line);
-            int chapter = Integer.parseInt(StringUtils.substringBetween(line, " ", ":").trim());
-            int fromVerse = -1;
-            int toVerse = -1;
-            String translation;
-            if (line.contains("-")) {
-                fromVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "-").trim());
-                if (line.contains("(")) {
-                    toVerse = Integer.parseInt(StringUtils.substringBetween(line, "-", "(").trim());
-                } else {
-                    toVerse = Integer.parseInt(StringUtils.substringAfterLast(line, "-").trim());
-                }
-                translation = Bible.getTranslation(line);
-            } else {
-                if (line.contains("(")) {
-                    fromVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "(").trim());
-                } else {
-                    fromVerse = Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
-                    toVerse = Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
-                }
-                translation = DEFAULT_TRANSLATION;
-            }
+            String bibleBook = Bible.getBibleBookFromLine(line);
+            int chapter = Bible.getChapterFromLine(line);
+            int fromVerse = Bible.getStartVerseFromLine(line);
+            int toVerse = Bible.getEndVerseFromLine(line);
+            String translation = Bible.getTranslationFromLine(line);
 
-            if (fromVerse == -1 || toVerse == -1) {
-                throw new BibleException("Vanaf en/of tot vers kon niet worden bepaald");
-            }
-
-            List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBook(line), chapter, fromVerse, toVerse);
+            List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
 
             lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
         }
 
         liturgy.add(lp);
 
+        return line;
+
+    }
+
+    private List<String> getVersesFromSong(org.gkvassenpeelo.liedbase.liturgy.SlideContents.Type type, String songNumber) {
+        List<String> verses = new ArrayList<String>();
+
+        String songBookName = "";
+        String songIdentifier = "";
+
+        if (type == SlideContents.Type.psalm) {
+            songBookName = "psalmen.txt";
+            songIdentifier = "psalm";
+        }
+
+        if (type == SlideContents.Type.gezang) {
+            songBookName = "gezangen.txt";
+            songIdentifier = "gereformeerd kerkboek";
+        }
+
+        if (type == SlideContents.Type.lied) {
+            songBookName = "liedboek.txt";
+            songIdentifier = "lied";
+        }
+
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), ENCODING);
+
+        while (s.hasNextLine()) {
+
+            String line = s.nextLine();
+
+            if (line.matches(String.format("^%s %s:.*$", songIdentifier, songNumber))) {
+                // we have the line number on which the song starts
+                // continue reading from that line until we have all verses
+                while (s.hasNextLine()) {
+                    String songLine = s.nextLine();
+
+                    // we are reading the next song, stop it!
+                    if (songLine.matches(String.format("^%s %s:.*$", songIdentifier, Integer.parseInt(songNumber) + 1))) {
+                        s.close();
+                        return verses;
+                    }
+
+                    try {
+                        Integer.parseInt(songLine);
+                        verses.add(songLine);
+                    } catch (Exception e) {
+                        // do nothing
+                    }
+                }
+            }
+        }
+
+        s.close();
+
+        return verses;
     }
 
     private String format(String line, Type type) {

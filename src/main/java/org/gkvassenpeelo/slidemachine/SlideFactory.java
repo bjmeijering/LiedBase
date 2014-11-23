@@ -51,7 +51,7 @@ public class SlideFactory {
 
     private VelocityEngine velocityEngine;
 
-    private static String ENCODING = "UTF-8";
+    private static final String ENCODING = "UTF-8";
 
     /**
      * 
@@ -142,7 +142,7 @@ public class SlideFactory {
 
         StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_scripture_header.vc").merge(vc, ow);
+        getVelocityEngine().getTemplate("/templates/shape_scripture_header.vc", ENCODING).merge(vc, ow);
 
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
@@ -166,7 +166,7 @@ public class SlideFactory {
 
         StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_welcome.vc").merge(vc, ow);
+        getVelocityEngine().getTemplate("/templates/shape_welcome.vc", ENCODING).merge(vc, ow);
 
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
@@ -178,7 +178,7 @@ public class SlideFactory {
 
         StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_end_morning_service_time.vc").merge(vc, ow);
+        getVelocityEngine().getTemplate("/templates/shape_end_morning_service_time.vc", ENCODING).merge(vc, ow);
 
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
@@ -190,7 +190,7 @@ public class SlideFactory {
 
         StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_end_morning_service_vicar.vc").merge(vc, ow);
+        getVelocityEngine().getTemplate("/templates/shape_end_morning_service_vicar.vc", ENCODING).merge(vc, ow);
 
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
@@ -215,7 +215,7 @@ public class SlideFactory {
 
         StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_song_header.vc").merge(vc, ow);
+        getVelocityEngine().getTemplate("/templates/shape_song_header.vc", ENCODING).merge(vc, ow);
 
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
@@ -241,7 +241,7 @@ public class SlideFactory {
 
         StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_song_body.vc").merge(vc, ow);
+        getVelocityEngine().getTemplate("/templates/shape_song_body.vc", ENCODING).merge(vc, ow);
 
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
         return shape;
@@ -254,9 +254,9 @@ public class SlideFactory {
         StringWriter ow = new StringWriter();
 
         if (firstBenificiary) {
-            getVelocityEngine().getTemplate("/templates/shape_gathering_firstbenificiary.vc").merge(vc, ow);
+            getVelocityEngine().getTemplate("/templates/shape_gathering_firstbenificiary.vc", ENCODING).merge(vc, ow);
         } else {
-            getVelocityEngine().getTemplate("/templates/shape_gathering_secondbenificiary.vc").merge(vc, ow);
+            getVelocityEngine().getTemplate("/templates/shape_gathering_secondbenificiary.vc", ENCODING).merge(vc, ow);
         }
 
         Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));

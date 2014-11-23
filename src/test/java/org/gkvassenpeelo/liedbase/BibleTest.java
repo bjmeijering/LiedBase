@@ -40,15 +40,15 @@ public class BibleTest extends Bible {
     @Test
     public void getBibleBookTest() {
         try {
-            assertEquals("Genisis", Bible.getBibleBook("Gen 1: 4 - 8"));
+            assertEquals("Genisis", Bible.getBibleBookFromLine("Gen 1: 4 - 8"));
         } catch (BibleException e) {
             fail(e.getMessage());
         }
     }
-
+    
     @Test
-    public void downloadBible() throws Exception {
-
+    public void downloadBibleOT() throws Exception {
+        
         Map<String, String> bibleBooksOT = new HashMap<String, String>();
         bibleBooksOT.put("Genesis", "50");
         bibleBooksOT.put("Exodus", "40");
@@ -89,9 +89,21 @@ public class BibleTest extends Bible {
         bibleBooksOT.put("Haggai", "2");
         bibleBooksOT.put("Zacharia", "14");
         bibleBooksOT.put("Maleachi", "4");
-
+        
         for (Entry<String, String> e : bibleBooksOT.entrySet()) {
             bijbel.downloadAndSaveBibleBook(e.getKey(), e.getValue(), "BGT");
+        }
+        
+    }
+
+    @Test
+    public void downloadBibleNT() throws Exception {
+
+        Map<String, String> bibleBooksOT = new HashMap<String, String>();
+        bibleBooksOT.put("Genesis", "50");
+
+        for (Entry<String, String> e : bibleBooksOT.entrySet()) {
+            bijbel.downloadAndSaveBibleBook(e.getKey(), e.getValue(), "NBV");
         }
 
     }

@@ -14,6 +14,7 @@ import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
 
+import org.apache.commons.lang.StringUtils;
 import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -23,6 +24,8 @@ import org.jsoup.select.Elements;
 public class Bible {
 
     private static final String ENCODING = "UTF-8";
+
+    private static String DEFAULT_TRANSLATION = "NBV";
 
     private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
@@ -56,9 +59,10 @@ public class Bible {
 
         Elements parts = bibletext.children();
 
-        int currentVerse = 1;
-
         for (Element part : parts) {
+
+            int currentStartVerse = -1;
+            int currentEndVerse = 1000;
 
             if (!"p".equals(part.className()) && !"s".equals(part.className())) {
                 continue;
@@ -66,7 +70,7 @@ public class Bible {
 
             // h3 header
             if (part.attributes().get("class").equals("s")) {
-                if (currentVerse >= fromVerse && currentVerse <= toVerse) {
+                if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
                     if (bp.size() == 0) {
                         bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, part.text() + LINE_END));
                     } else {
@@ -76,12 +80,28 @@ public class Bible {
             }
 
             for (Element verse : part.select("span.verse")) {
-                if (currentVerse >= fromVerse && currentVerse <= toVerse) {
+                String verseId = verse.select("sup").text();
+                if (verseId.contains("-")) {
+                    currentStartVerse = Integer.parseInt(StringUtils.substringBefore(verseId, "-"));
+                    currentEndVerse = Integer.parseInt(StringUtils.substringAfter(verseId, "-"));
+                } else {
+                    currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
+                }
+                if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
                     bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, verse.select("sup").first().text().trim()));
                     verse.select("sup").first().html("");
                     bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, verse.text().trim()));
                 }
-                currentVerse++;
+
+                // stop iterating verses
+                if (currentStartVerse > toVerse) {
+                    break;
+                }
+            }
+
+            // stop iterating paragraphs
+            if (currentStartVerse > toVerse) {
+                break;
             }
 
         }
@@ -158,7 +178,7 @@ public class Bible {
 
     }
 
-    public static String getTranslation(String line) throws BibleException {
+    public static String getTranslationFromLine(String line) throws BibleException {
         if (line.trim().matches(".*\\([a-zA-Z]{1,3}\\)$")) {
             if (line.toLowerCase().trim().endsWith("(nbv)")) {
                 return "NBV";
@@ -168,18 +188,173 @@ public class Bible {
                 throw new BibleException("Onbekende vertaling in regel: " + line);
             }
         }
-        return "NBV";
+        return DEFAULT_TRANSLATION;
     }
 
     // for each bible book an if statement
-    public static String getBibleBook(String line) throws BibleException {
+    public static String getBibleBookFromLine(String line) throws BibleException {
         if (line.toLowerCase().startsWith("gen")) {
             return "Genesis";
         }
         if (line.toLowerCase().startsWith("exod")) {
             return "Exodus";
         }
+        if (line.toLowerCase().startsWith("Levi")) {
+            return "Leviticus";
+        }
+        if (line.toLowerCase().startsWith("Nume")) {
+            return "Numeri";
+        }
+        if (line.toLowerCase().startsWith("Deut")) {
+            return "Deuteronomium";
+        }
+        if (line.toLowerCase().startsWith("Jozu")) {
+            return "Jozua";
+        }
+        if (line.toLowerCase().startsWith("Rech")) {
+            return "Rechters";
+        }
+        if (line.toLowerCase().startsWith("Ruth")) {
+            return "Ruth";
+        }
+        if (line.toLowerCase().matches("^1 ?sam.*")) {
+            return "1+Samuel";
+        }
+        if (line.toLowerCase().matches("^2 ?sam.*")) {
+            return "2+Samuel";
+        }
+        if (line.toLowerCase().matches("^1 ?kon.*")) {
+            return "1+Koningen";
+        }
+        if (line.toLowerCase().matches("^2 ?kon.*")) {
+            return "2+Koningen";
+        }
+        if (line.toLowerCase().matches("^1 ?kro.*")) {
+            return "1+Kronieken";
+        }
+        if (line.toLowerCase().matches("^2 ?kro.*")) {
+            return "2+Kronieken";
+        }
+        if (line.toLowerCase().startsWith("Ezra")) {
+            return "Ezra";
+        }
+        if (line.toLowerCase().startsWith("Nehe")) {
+            return "Nehemia";
+        }
+        if (line.toLowerCase().startsWith("Este")) {
+            return "Ester";
+        }
+        if (line.toLowerCase().startsWith("Job")) {
+            return "Job";
+        }
+        if (line.toLowerCase().startsWith("Psal")) {
+            return "Psalmen";
+        }
+        if (line.toLowerCase().startsWith("Spre")) {
+            return "Spreuken";
+        }
+        if (line.toLowerCase().startsWith("Pred")) {
+            return "Prediker";
+        }
+        if (line.toLowerCase().startsWith("Hoog")) {
+            return "Hooglied";
+        }
+        if (line.toLowerCase().startsWith("Jesa")) {
+            return "Jesaja";
+        }
+        if (line.toLowerCase().startsWith("Jere")) {
+            return "Jeremia";
+        }
+        if (line.toLowerCase().startsWith("Klaa")) {
+            return "Klaagliederen";
+        }
+        if (line.toLowerCase().startsWith("Ezec")) {
+            return "Ezechiel";
+        }
+        if (line.toLowerCase().startsWith("Dani")) {
+            return "Daniel";
+        }
+        if (line.toLowerCase().startsWith("Hose")) {
+            return "Hosea";
+        }
+        if (line.toLowerCase().startsWith("Joel")) {
+            return "Joel";
+        }
+        if (line.toLowerCase().startsWith("Amos")) {
+            return "Amos";
+        }
+        if (line.toLowerCase().startsWith("Obad")) {
+            return "Obadja";
+        }
+        if (line.toLowerCase().startsWith("Jona")) {
+            return "Jona";
+        }
+        if (line.toLowerCase().startsWith("Mich")) {
+            return "Micha";
+        }
+        if (line.toLowerCase().startsWith("Nahu")) {
+            return "Nahum";
+        }
+        if (line.toLowerCase().startsWith("Haba")) {
+            return "Habakuk";
+        }
+        if (line.toLowerCase().startsWith("Sefa")) {
+            return "Sefanja";
+        }
+        if (line.toLowerCase().startsWith("Hagg")) {
+            return "Haggai";
+        }
+        if (line.toLowerCase().startsWith("Zach")) {
+            return "Zacharia";
+        }
+        if (line.toLowerCase().startsWith("Male")) {
+            return "Maleachi";
+        }
         throw new BibleException("Bijbelboek niet gevonden in regel: " + line);
+    }
+
+    public static int getChapterFromLine(String line) {
+        if (line.contains(":")) {
+            return Integer.parseInt(StringUtils.substringBetween(line, " ", ":").trim());
+        } else {
+            if (line.contains("(")) {
+                return Integer.parseInt(StringUtils.substringBetween(line, " ", "(").trim());
+            } else {
+                return Integer.parseInt(StringUtils.substringAfter(line, " ").trim());
+            }
+        }
+    }
+
+    public static int getStartVerseFromLine(String line) {
+        if (line.contains(":")) {
+            if (line.contains("-")) {
+                return Integer.parseInt(StringUtils.substringBetween(line, ":", "-").trim());
+            } else {
+                if (line.contains("(")) {
+                    return Integer.parseInt(StringUtils.substringBetween(line, ":", "(").trim());
+                } else {
+                    return Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+                }
+            }
+        } else {
+            return 0;
+        }
+    }
+
+    public static int getEndVerseFromLine(String line) {
+        if (line.contains(":")) {
+            if (line.contains("-")) {
+                if (line.contains("(")) {
+                    return Integer.parseInt(StringUtils.substringBetween(line, "-", "(").trim());
+                } else {
+                    return Integer.parseInt(StringUtils.substringAfterLast(line, "-").trim());
+                }
+            } else {
+                return Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+            }
+        } else {
+            return 999;
+        }
     }
 
 }
