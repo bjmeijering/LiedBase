@@ -39,7 +39,7 @@ public class Bible {
 
         translation = translation.toUpperCase();
 
-        book = String.format("%s%s", book.substring(0, 1).toUpperCase(), book.toLowerCase().substring(1));
+        book = book.toLowerCase();
 
         Document doc;
         try {
@@ -157,9 +157,9 @@ public class Bible {
         conn.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         conn.setRequestProperty("Accept-Language", "nl,en-US;q=0.7,en;q=0.3");
         conn.setRequestProperty("Connection", "keep-alive");
-        conn.addRequestProperty("Cookie",
-                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; PHPSESSID=a5g3ik78moco8nj0u440q86ag4; auth_key=4ba19a57b55e7d13b03e381b41f43896".split(
-                        ";", 1)[0]);
+        conn.addRequestProperty(
+                "Cookie",
+                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; PHPSESSID=a5g3ik78moco8nj0u440q86ag4; auth_key=4ba19a57b55e7d13b03e381b41f43896".split(";", 1)[0]);
 
         int responseCode = conn.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);
@@ -218,22 +218,22 @@ public class Bible {
             return "Ruth";
         }
         if (line.toLowerCase().matches("^1 ?sam.*")) {
-            return "1+Samuel";
+            return "1 Samuel";
         }
         if (line.toLowerCase().matches("^2 ?sam.*")) {
-            return "2+Samuel";
+            return "2 Samuel";
         }
         if (line.toLowerCase().matches("^1 ?kon.*")) {
-            return "1+Koningen";
+            return "1 Koningen";
         }
         if (line.toLowerCase().matches("^2 ?kon.*")) {
-            return "2+Koningen";
+            return "2 Koningen";
         }
         if (line.toLowerCase().matches("^1 ?kro.*")) {
-            return "1+Kronieken";
+            return "1 Kronieken";
         }
         if (line.toLowerCase().matches("^2 ?kro.*")) {
-            return "2+Kronieken";
+            return "2 Kronieken";
         }
         if (line.toLowerCase().startsWith("Ezra")) {
             return "Ezra";
@@ -310,12 +310,94 @@ public class Bible {
         if (line.toLowerCase().startsWith("Male")) {
             return "Maleachi";
         }
+        if (line.toLowerCase().startsWith("matte")) {
+            return "Matteus";
+        }
+        if (line.toLowerCase().startsWith("marcu")) {
+            return "Marcus";
+        }
+        if (line.toLowerCase().startsWith("lucas")) {
+            return "Lucas";
+        }
+        if (line.toLowerCase().startsWith("johan")) {
+            return "Johannes";
+        }
+        if (line.toLowerCase().startsWith("hande")) {
+            return "Handelingen";
+        }
+        if (line.toLowerCase().startsWith("romei")) {
+            return "Romeinen";
+        }
+        if (line.toLowerCase().matches("^1 ?kor.*")) {
+            return "1 Korintiers";
+        }
+        if (line.toLowerCase().matches("^2 ?kor.*")) {
+            return "2 Korintiers";
+        }
+        if (line.toLowerCase().startsWith("galat")) {
+            return "Galaten";
+        }
+        if (line.toLowerCase().startsWith("efezi")) {
+            return "Efeziers";
+        }
+        if (line.toLowerCase().startsWith("filip")) {
+            return "Filippenzen";
+        }
+        if (line.toLowerCase().startsWith("kolos")) {
+            return "Kolossenzen";
+        }
+        if (line.toLowerCase().matches("^1 ?tes.*")) {
+            return "1 Tessalonicenzen";
+        }
+        if (line.toLowerCase().matches("^2 ?tes.*")) {
+            return "2 Tessalonicenzen";
+        }
+        if (line.toLowerCase().matches("^1 ?tim.*")) {
+            return "1 Timoteus";
+        }
+        if (line.toLowerCase().matches("^2 ?tim.*")) {
+            return "2 Timoteus";
+        }
+        if (line.toLowerCase().startsWith("titus")) {
+            return "Titus";
+        }
+        if (line.toLowerCase().startsWith("filem")) {
+            return "Filemon";
+        }
+        if (line.toLowerCase().startsWith("hebre")) {
+            return "Hebreeen";
+        }
+        if (line.toLowerCase().startsWith("jakob")) {
+            return "Jakobus";
+        }
+        if (line.toLowerCase().matches("^1 ?pet.*")) {
+            return "1 Petrus";
+        }
+        if (line.toLowerCase().matches("^2 ?pet.*")) {
+            return "2 Petrus";
+        }
+        if (line.toLowerCase().matches("^1 ?joh.*")) {
+            return "1 Johannes";
+        }
+        if (line.toLowerCase().matches("^2 ?joh.*")) {
+            return "2 Johannes";
+        }
+        if (line.toLowerCase().matches("^3 ?joh.*")) {
+            return "3 Johannes";
+        }
+        if (line.toLowerCase().startsWith("judas")) {
+            return "Judas";
+        }
+        if (line.toLowerCase().startsWith("openb")) {
+            return "Openbaring";
+        }
         throw new BibleException("Bijbelboek niet gevonden in regel: " + line);
     }
 
     public static int getChapterFromLine(String line) {
         if (line.contains(":")) {
-            return Integer.parseInt(StringUtils.substringBetween(line, " ", ":").trim());
+            String s = StringUtils.substringBefore(line, ":");
+            return Integer.parseInt(StringUtils.substringBefore(StringUtils.substringAfterLast(s, " "), ":").trim());
         } else {
             if (line.contains("(")) {
                 return Integer.parseInt(StringUtils.substringBetween(line, " ", "(").trim());
