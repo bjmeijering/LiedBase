@@ -391,7 +391,7 @@ public class Bible {
         if (line.toLowerCase().startsWith("openb")) {
             return "Openbaring";
         }
-        throw new BibleException("Bijbelboek niet gevonden in regel: " + line);
+        throw new BibleException("Bijbelboek niet gevonden in liturgieregel: " + line);
     }
 
     public static int getChapterFromLine(String line) {

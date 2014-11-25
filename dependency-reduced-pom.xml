@@ -29,7 +29,7 @@
                   <mainClass>org.gkvassenpeelo.liedbase.LiedBase</mainClass>
                 </transformer>
               </transformers>
-              <minimizeJar>true</minimizeJar>
+              <minimizeJar>false</minimizeJar>
             </configuration>
           </execution>
         </executions>

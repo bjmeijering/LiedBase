@@ -1,2 +1,1 @@
-lied 303: 2
-1 tessalicenben 2: 4 - 10
+genesis 1: 1 - 10

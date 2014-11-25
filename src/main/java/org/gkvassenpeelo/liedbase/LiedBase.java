@@ -14,12 +14,7 @@ import javax.xml.bind.JAXBException;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Appender;
-import org.apache.log4j.Layout;
-import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
-import org.apache.log4j.RollingFileAppender;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
@@ -56,20 +51,6 @@ public class LiedBase {
     private static final String ENCODING = "UTF-8";
 
     public LiedBase() {
-
-        logger.setLevel(Level.INFO);
-
-        Layout layout = new PatternLayout("%d{HH:mm:ss} %5p: %m%n");
-        Appender fileAppender;
-        try {
-            fileAppender = new RollingFileAppender(layout, "liedbase.log");
-            fileAppender.setName("User log");
-            fileAppender.setLayout(layout);
-            logger.addAppender(fileAppender);
-        } catch (IOException e) {
-            logger.error(String.format("Kan bestand niet aanmaken: %s", "user.log"));
-        }
-
         logger.info("LiedBase gestart");
     }
 
@@ -81,6 +62,8 @@ public class LiedBase {
      * @return
      */
     private String getSongText(SlideContents.Type type, String songNumber, String verse) {
+        
+        logger.trace("foo");
 
         String songBookName = "";
         String songIdentifier = "";
@@ -659,15 +642,14 @@ public class LiedBase {
 
     public static void main(String[] args) throws Docx4JException, BibleException {
 
-        // check arguments, duh!
-        if (args.length == 0) {
-            // use the defaults and continue
+        try {
+            LiedBase lb = new LiedBase();
+
+            lb.parseLiturgyScript();
+            lb.createSlides();
+            lb.save();
+        } catch (Exception e) {
+            logger.error(e.getMessage(), e);
         }
-
-        LiedBase lb = new LiedBase();
-
-        lb.parseLiturgyScript();
-        lb.createSlides();
-        lb.save();
     }
 }
