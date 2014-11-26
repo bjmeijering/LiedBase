@@ -199,22 +199,22 @@ public class Bible {
         if (line.toLowerCase().startsWith("exod")) {
             return "Exodus";
         }
-        if (line.toLowerCase().startsWith("Levi")) {
+        if (line.toLowerCase().startsWith("levi")) {
             return "Leviticus";
         }
-        if (line.toLowerCase().startsWith("Nume")) {
+        if (line.toLowerCase().startsWith("nume")) {
             return "Numeri";
         }
-        if (line.toLowerCase().startsWith("Deut")) {
+        if (line.toLowerCase().startsWith("deut")) {
             return "Deuteronomium";
         }
-        if (line.toLowerCase().startsWith("Jozu")) {
+        if (line.toLowerCase().startsWith("jozu")) {
             return "Jozua";
         }
-        if (line.toLowerCase().startsWith("Rech")) {
+        if (line.toLowerCase().startsWith("rech")) {
             return "Rechters";
         }
-        if (line.toLowerCase().startsWith("Ruth")) {
+        if (line.toLowerCase().startsWith("ruth")) {
             return "Ruth";
         }
         if (line.toLowerCase().matches("^1 ?sam.*")) {
@@ -235,79 +235,79 @@ public class Bible {
         if (line.toLowerCase().matches("^2 ?kro.*")) {
             return "2 Kronieken";
         }
-        if (line.toLowerCase().startsWith("Ezra")) {
+        if (line.toLowerCase().startsWith("ezra")) {
             return "Ezra";
         }
-        if (line.toLowerCase().startsWith("Nehe")) {
+        if (line.toLowerCase().startsWith("nehe")) {
             return "Nehemia";
         }
-        if (line.toLowerCase().startsWith("Este")) {
+        if (line.toLowerCase().startsWith("este")) {
             return "Ester";
         }
-        if (line.toLowerCase().startsWith("Job")) {
+        if (line.toLowerCase().startsWith("job")) {
             return "Job";
         }
-        if (line.toLowerCase().startsWith("Psal")) {
+        if (line.toLowerCase().startsWith("psal")) {
             return "Psalmen";
         }
-        if (line.toLowerCase().startsWith("Spre")) {
+        if (line.toLowerCase().startsWith("spre")) {
             return "Spreuken";
         }
-        if (line.toLowerCase().startsWith("Pred")) {
+        if (line.toLowerCase().startsWith("pred")) {
             return "Prediker";
         }
-        if (line.toLowerCase().startsWith("Hoog")) {
+        if (line.toLowerCase().startsWith("hoog")) {
             return "Hooglied";
         }
-        if (line.toLowerCase().startsWith("Jesa")) {
+        if (line.toLowerCase().startsWith("jesa")) {
             return "Jesaja";
         }
-        if (line.toLowerCase().startsWith("Jere")) {
+        if (line.toLowerCase().startsWith("jere")) {
             return "Jeremia";
         }
-        if (line.toLowerCase().startsWith("Klaa")) {
+        if (line.toLowerCase().startsWith("klaa")) {
             return "Klaagliederen";
         }
-        if (line.toLowerCase().startsWith("Ezec")) {
+        if (line.toLowerCase().startsWith("ezec")) {
             return "Ezechiel";
         }
-        if (line.toLowerCase().startsWith("Dani")) {
+        if (line.toLowerCase().startsWith("dani")) {
             return "Daniel";
         }
-        if (line.toLowerCase().startsWith("Hose")) {
+        if (line.toLowerCase().startsWith("hose")) {
             return "Hosea";
         }
-        if (line.toLowerCase().startsWith("Joel")) {
+        if (line.toLowerCase().startsWith("joel")) {
             return "Joel";
         }
-        if (line.toLowerCase().startsWith("Amos")) {
+        if (line.toLowerCase().startsWith("amos")) {
             return "Amos";
         }
-        if (line.toLowerCase().startsWith("Obad")) {
+        if (line.toLowerCase().startsWith("obad")) {
             return "Obadja";
         }
-        if (line.toLowerCase().startsWith("Jona")) {
+        if (line.toLowerCase().startsWith("jona")) {
             return "Jona";
         }
-        if (line.toLowerCase().startsWith("Mich")) {
+        if (line.toLowerCase().startsWith("mich")) {
             return "Micha";
         }
-        if (line.toLowerCase().startsWith("Nahu")) {
+        if (line.toLowerCase().startsWith("nahu")) {
             return "Nahum";
         }
-        if (line.toLowerCase().startsWith("Haba")) {
+        if (line.toLowerCase().startsWith("haba")) {
             return "Habakuk";
         }
-        if (line.toLowerCase().startsWith("Sefa")) {
+        if (line.toLowerCase().startsWith("sefa")) {
             return "Sefanja";
         }
-        if (line.toLowerCase().startsWith("Hagg")) {
+        if (line.toLowerCase().startsWith("hagg")) {
             return "Haggai";
         }
-        if (line.toLowerCase().startsWith("Zach")) {
+        if (line.toLowerCase().startsWith("zach")) {
             return "Zacharia";
         }
-        if (line.toLowerCase().startsWith("Male")) {
+        if (line.toLowerCase().startsWith("male")) {
             return "Maleachi";
         }
         if (line.toLowerCase().startsWith("matte")) {
