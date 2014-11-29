@@ -59,6 +59,7 @@ public class Bible {
 
         Elements parts = bibletext.children();
 
+        String header = "";
         for (Element part : parts) {
 
             int currentStartVerse = -1;
@@ -70,14 +71,10 @@ public class Bible {
 
             // h3 header
             if (part.attributes().get("class").equals("s")) {
-                if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
-                    if (bp.size() == 0) {
-                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, part.text() + LINE_END));
-                    } else {
-                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, LINE_END + part.text() + LINE_END));
-                    }
-                }
+                header = part.text();
             }
+
+            boolean shouldAddLineBreak = false;
 
             for (Element verse : part.select("span.verse")) {
                 String verseId = verse.select("sup").text();
@@ -88,9 +85,14 @@ public class Bible {
                     currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
                 }
                 if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
+                    if (!StringUtils.isEmpty(header)) {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, header + LINE_END));
+                        header = "";
+                    }
                     bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, verse.select("sup").first().text().trim()));
                     verse.select("sup").first().html("");
                     bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, verse.text().trim()));
+                    shouldAddLineBreak = true;
                 }
 
                 // stop iterating verses
@@ -102,6 +104,11 @@ public class Bible {
             // stop iterating paragraphs
             if (currentStartVerse > toVerse) {
                 break;
+            }
+
+            // add a line break after each paragraph
+            if (shouldAddLineBreak) {
+                bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, LINE_END));
             }
 
         }
@@ -159,7 +166,7 @@ public class Bible {
         conn.setRequestProperty("Connection", "keep-alive");
         conn.addRequestProperty(
                 "Cookie",
-                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; PHPSESSID=a5g3ik78moco8nj0u440q86ag4; auth_key=4ba19a57b55e7d13b03e381b41f43896".split(";", 1)[0]);
+                "_ga=GA1.2.276380152.1413559522; nbg_ecmgt_status=implicitconsent; auth_key=aff46db4d4bd04f71a9f62712f590f8b; PHPSESSID=a5g3ik78moco8nj0u440q86ag4".split(";", 1)[0]);
 
         int responseCode = conn.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);
@@ -184,6 +191,10 @@ public class Bible {
                 return "NBV";
             } else if (line.toLowerCase().trim().endsWith("(bgt)")) {
                 return "BGT";
+            } else if (line.toLowerCase().trim().endsWith("(nbg)")) {
+                return "NBG51";
+            } else if (line.toLowerCase().trim().endsWith("(sv)")) {
+                return "SV77";
             } else {
                 throw new BibleException("Onbekende vertaling in regel: " + line);
             }
