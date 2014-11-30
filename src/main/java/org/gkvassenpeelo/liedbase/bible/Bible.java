@@ -59,19 +59,16 @@ public class Bible {
 
         Elements parts = bibletext.children();
 
+        String mainHeader = "";
         String header = "";
+        
         for (Element part : parts) {
 
             int currentStartVerse = -1;
             int currentEndVerse = 1000;
 
-            if (!"p".equals(part.className()) && !"s".equals(part.className())) {
+            if (!"p".equals(part.className()) && !"s".equals(part.className()) && !"ms".equals(part.className())) {
                 continue;
-            }
-
-            // h3 header
-            if (part.attributes().get("class").equals("s")) {
-                header = part.text();
             }
 
             boolean shouldAddLineBreak = false;
@@ -85,9 +82,13 @@ public class Bible {
                     currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
                 }
                 if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
+                    if (!StringUtils.isEmpty(mainHeader)) {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, mainHeader + LINE_END));
+//                        mainHeader = "";
+                    }
                     if (!StringUtils.isEmpty(header)) {
                         bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, header + LINE_END));
-                        header = "";
+//                        header = "";
                     }
                     bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, verse.select("sup").first().text().trim()));
                     verse.select("sup").first().html("");
@@ -99,6 +100,9 @@ public class Bible {
                 if (currentStartVerse > toVerse) {
                     break;
                 }
+                
+                mainHeader = "";
+                header = "";
             }
 
             // stop iterating paragraphs
@@ -109,6 +113,16 @@ public class Bible {
             // add a line break after each paragraph
             if (shouldAddLineBreak) {
                 bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, LINE_END));
+            }
+            
+            // h2 header
+            if (part.attributes().get("class").equals("ms")) {
+                mainHeader = part.text();
+            }
+
+            // h3 header
+            if (part.attributes().get("class").equals("s")) {
+                header = part.text();
             }
 
         }
