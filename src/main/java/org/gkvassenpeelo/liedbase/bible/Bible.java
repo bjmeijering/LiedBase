@@ -84,11 +84,9 @@ public class Bible {
                 if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
                     if (!StringUtils.isEmpty(mainHeader)) {
                         bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, mainHeader + LINE_END));
-//                        mainHeader = "";
                     }
                     if (!StringUtils.isEmpty(header)) {
                         bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, header + LINE_END));
-//                        header = "";
                     }
                     bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, verse.select("sup").first().text().trim()));
                     verse.select("sup").first().html("");
@@ -101,6 +99,7 @@ public class Bible {
                     break;
                 }
                 
+                // clear the headers
                 mainHeader = "";
                 header = "";
             }
