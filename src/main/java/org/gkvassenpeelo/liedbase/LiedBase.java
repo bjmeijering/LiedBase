@@ -196,7 +196,8 @@ public class LiedBase {
         String regex_collecte = "(([cC]|[kK])olle[ck]te)";
         String regex_law = "([wW]et)";
         String regex_lecture = "([pP]reek)";
-        String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum,
+        String regex_agenda = "([aA]genda)";
+        String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_agenda, regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum,
                 regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_gebed, regex_collecte, regex_voorganger, regex_law, regex_lecture);
 
         // check liturgy part type
@@ -221,6 +222,8 @@ public class LiedBase {
             return LiturgyPart.Type.prair;
         } else if (m.group(1).matches(regex_collecte)) {
             return LiturgyPart.Type.gathering;
+        } else if (m.group(1).matches(regex_agenda)) {
+            return LiturgyPart.Type.agenda;
         } else if (m.group(1).matches(regex_voorganger)) {
             return LiturgyPart.Type.welcome;
         } else if (m.group(1).matches(regex_law)) {

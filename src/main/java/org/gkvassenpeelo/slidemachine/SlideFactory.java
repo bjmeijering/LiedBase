@@ -70,6 +70,7 @@ public class SlideFactory {
         slideLayoutMap.put(EndMorningService.class, "/ppt/slideLayouts/slideLayout7.xml");
         slideLayoutMap.put(EndAfternoonService.class, "/ppt/slideLayouts/slideLayout8.xml");
         slideLayoutMap.put(Lecture.class, "/ppt/slideLayouts/slideLayout14.xml");
+        slideLayoutMap.put(Agenda.class, "/ppt/slideLayouts/slideLayout2.xml");
 
         // init velocity with defaults
         Velocity.init();
@@ -131,6 +132,23 @@ public class SlideFactory {
             slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureBody);
 
         }
+        if (content instanceof Agenda) {
+            
+            Shape agenda = createAgendaShape();
+            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(agenda);
+            
+        }
+    }
+
+    private Shape createAgendaShape() throws JAXBException {
+        VelocityContext vc = new VelocityContext();
+
+        StringWriter ow = new StringWriter();
+
+        getVelocityEngine().getTemplate("/templates/shape_agenda_table.vc", ENCODING).merge(vc, ow);
+
+        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+        return shape;
     }
 
     private Shape createScriptureHeaderShape(GenericSlideContent content) throws JAXBException {

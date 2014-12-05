@@ -1,4 +1,2 @@
-#genesis 1: 1 - 4 (sv)
-genesis 1: 1 -5 (bgt)
-#genesis 1: 1 - 4 (nbv)
-#genesis 1: 1 - 4 (nbg)
+agenda
+gezang 71
