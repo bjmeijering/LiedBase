@@ -396,6 +396,8 @@ public class LiedBase {
             List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
 
             lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
+        } else if(type == LiturgyPart.Type.agenda) {
+            // nothing to do
         }
 
         liturgy.add(lp);
@@ -603,6 +605,8 @@ public class LiedBase {
                 } else if (lp.getType() == LiturgyPart.Type.scripture) {
                     GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.Scripture(lp.getSlides().get(0));
                     sm.addSlide(gsc);
+                } else if (lp.getType() == LiturgyPart.Type.agenda) {
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Agenda());
                 }
 
                 // after each liturgy part, add an empty slide, except for the last one!

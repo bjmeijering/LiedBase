@@ -11,6 +11,7 @@ import java.util.Map.Entry;
 import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class BibleTest extends Bible {
@@ -19,14 +20,14 @@ public class BibleTest extends Bible {
 
     @Test
     public void getBiblePartTest() throws Exception {
-        List<BiblePartFragment> bp = Bible.getBiblePart("bgt", "Genesis", 1, 1, 5);
+        List<BiblePartFragment> bp = Bible.getBiblePart("nbv", "Hebreeen", 3, 1, 11);
 
         for (BiblePartFragment bpf : bp) {
             System.out.print("[" + bpf.getDisplayType().toString() + "]" + bpf.getContent());
         }
     }
 
-    @Test
+    @Ignore
     public void getBiblePartNonExistentTest() throws Exception {
 
         try {
@@ -37,7 +38,7 @@ public class BibleTest extends Bible {
 
     }
 
-    @Test
+    @Ignore
     public void getBibleBookTest() {
         try {
             assertEquals("Genisis", Bible.getBibleBookFromLine("Gen 1: 4 - 8"));
@@ -46,7 +47,7 @@ public class BibleTest extends Bible {
         }
     }
     
-    @Test
+    @Ignore
     public void downloadBibleOT() throws Exception {
         
         Map<String, String> bibleBooksOT = new HashMap<String, String>();
@@ -96,7 +97,7 @@ public class BibleTest extends Bible {
         
     }
 
-    @Test
+    @Ignore
     public void downloadBibleNT() throws Exception {
 
         Map<String, String> bibleBooksOT = new HashMap<String, String>();

@@ -67,7 +67,7 @@ public class Bible {
             int currentStartVerse = -1;
             int currentEndVerse = 1000;
 
-            if (!"p".equals(part.className()) && !"s".equals(part.className()) && !"ms".equals(part.className())) {
+            if (!"p".equals(part.className()) && !"s".equals(part.className()) && !"ms".equals(part.className()) && !"q".equals(part.className())) {
                 continue;
             }
 
