@@ -20,10 +20,11 @@ public class BibleTest extends Bible {
 
     @Test
     public void getBiblePartTest() throws Exception {
-        List<BiblePartFragment> bp = Bible.getBiblePart("nbv", "Hebreeen", 3, 1, 11);
+        List<BiblePartFragment> bp = Bible.getBiblePart("nbv", "Hebreeen", 3, 7, 11);
 
         for (BiblePartFragment bpf : bp) {
-            System.out.print("[" + bpf.getDisplayType().toString() + "]" + bpf.getContent());
+//            System.out.print("[" + bpf.getDisplayType().toString() + "]" + bpf.getContent());
+            System.out.print(bpf.getContent());
         }
     }
 

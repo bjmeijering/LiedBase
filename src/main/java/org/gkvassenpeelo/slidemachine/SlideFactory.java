@@ -62,7 +62,7 @@ public class SlideFactory {
         // fill the slide layout map
         slideLayoutMap.put(Song.class, "/ppt/slideLayouts/slideLayout4.xml");
         slideLayoutMap.put(Scripture.class, "/ppt/slideLayouts/slideLayout4.xml");
-        slideLayoutMap.put(Blank.class, "/ppt/slideLayouts/slideLayout19.xml");
+        slideLayoutMap.put(Blank.class, "/ppt/slideLayouts/slideLayout18.xml");
         slideLayoutMap.put(Gathering.class, "/ppt/slideLayouts/slideLayout6.xml");
         slideLayoutMap.put(Prair.class, "/ppt/slideLayouts/slideLayout10.xml");
         slideLayoutMap.put(Welcome.class, "/ppt/slideLayouts/slideLayout1.xml");

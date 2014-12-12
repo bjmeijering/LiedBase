@@ -15,6 +15,7 @@ import java.util.List;
 import javax.net.ssl.HttpsURLConnection;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.log4j.Logger;
 import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,6 +23,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class Bible {
+
+    static final Logger logger = Logger.getLogger(Bible.class);
 
     private static final String ENCODING = "UTF-8";
 
@@ -59,61 +62,16 @@ public class Bible {
 
         Elements parts = bibletext.children();
 
+        logger.info(parts.text());
+
         String mainHeader = "";
         String header = "";
-        
+
+        int currentStartVerse = -1;
+        int currentEndVerse = 1000;
+
         for (Element part : parts) {
 
-            int currentStartVerse = -1;
-            int currentEndVerse = 1000;
-
-            if (!"p".equals(part.className()) && !"s".equals(part.className()) && !"ms".equals(part.className()) && !"q".equals(part.className())) {
-                continue;
-            }
-
-            boolean shouldAddLineBreak = false;
-
-            for (Element verse : part.select("span.verse")) {
-                String verseId = verse.select("sup").text();
-                if (verseId.contains("-")) {
-                    currentStartVerse = Integer.parseInt(StringUtils.substringBefore(verseId, "-"));
-                    currentEndVerse = Integer.parseInt(StringUtils.substringAfter(verseId, "-"));
-                } else {
-                    currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
-                }
-                if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
-                    if (!StringUtils.isEmpty(mainHeader)) {
-                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, mainHeader + LINE_END));
-                    }
-                    if (!StringUtils.isEmpty(header)) {
-                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, header + LINE_END));
-                    }
-                    bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, verse.select("sup").first().text().trim()));
-                    verse.select("sup").first().html("");
-                    bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, verse.text().trim()));
-                    shouldAddLineBreak = true;
-                }
-
-                // stop iterating verses
-                if (currentStartVerse > toVerse) {
-                    break;
-                }
-                
-                // clear the headers
-                mainHeader = "";
-                header = "";
-            }
-
-            // stop iterating paragraphs
-            if (currentStartVerse > toVerse) {
-                break;
-            }
-
-            // add a line break after each paragraph
-            if (shouldAddLineBreak) {
-                bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, LINE_END));
-            }
-            
             // h2 header
             if (part.attributes().get("class").equals("ms")) {
                 mainHeader = part.text();
@@ -124,9 +82,67 @@ public class Bible {
                 header = part.text();
             }
 
+            if (part.children().size() == 0 && part.tag().getName().equals("p")) {
+                if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
+                    bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, part.text()));
+                    bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, LINE_END));
+                }
+            }
+
+            for (Element subPart : part.children()) {
+
+                // try to capture verse number
+                String verseId = subPart.select("sup").text();
+                if (!StringUtils.isEmpty(verseId)) {
+                    if (verseId.contains("-")) {
+                        currentStartVerse = Integer.parseInt(StringUtils.substringBefore(verseId, "-"));
+                        currentEndVerse = Integer.parseInt(StringUtils.substringAfter(verseId, "-"));
+                    } else {
+                        currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
+                    }
+                }
+
+                // add verse part contents
+                if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
+                    if (!StringUtils.isEmpty(mainHeader)) {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, mainHeader + LINE_END));
+                    }
+                    if (!StringUtils.isEmpty(header)) {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, header + LINE_END));
+                    }
+                    if (subPart.select("sup").size() > 0) {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, subPart.select("sup").first().text().trim()));
+                        subPart.select("sup").first().html("");
+                    }
+                    bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, subPart.text().trim()));
+                    
+                    if (part.tag().getName().equals("p")) {
+                        bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, LINE_END));
+                    }
+                }
+
+                // stop iterating verses
+                if (currentStartVerse > toVerse) {
+                    break;
+                }
+
+                // clear the headers
+                mainHeader = "";
+                header = "";
+            }
+
+            // stop iterating paragraphs
+            if (currentStartVerse > toVerse) {
+                break;
+            }
+
         }
 
         return bp;
+    }
+    
+    private void renderElement(Element element, List<BiblePartFragment> bp) {
+        
     }
 
     private String extractBibleChapterFromHtml(String result) {
