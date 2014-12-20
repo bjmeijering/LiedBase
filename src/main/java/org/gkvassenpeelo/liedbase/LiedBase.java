@@ -576,6 +576,8 @@ public class LiedBase {
                     ((org.gkvassenpeelo.slidemachine.model.Gathering) gsc).setSecondBenificiary(((org.gkvassenpeelo.liedbase.liturgy.Gathering) lp.getSlides().get(0))
                             .getSecondGatheringBenificiary());
                     sm.addSlide(gsc);
+                } else if (lp.getType() == LiturgyPart.Type.agenda) {
+                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Agenda());
                 } else if (lp.getType() == LiturgyPart.Type.welcome) {
                     sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Welcome(((Welcome) lp.getSlides().get(0)).getVicarName()));
                 } else if (lp.getType() == LiturgyPart.Type.prair) {

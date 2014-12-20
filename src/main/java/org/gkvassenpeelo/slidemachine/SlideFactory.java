@@ -23,6 +23,7 @@ import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlideLayoutPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
+import org.gkvassenpeelo.slidemachine.model.Agenda;
 import org.gkvassenpeelo.slidemachine.model.Amen;
 import org.gkvassenpeelo.slidemachine.model.Blank;
 import org.gkvassenpeelo.slidemachine.model.EndAfternoonService;
@@ -37,6 +38,7 @@ import org.gkvassenpeelo.slidemachine.model.Song;
 import org.gkvassenpeelo.slidemachine.model.Votum;
 import org.gkvassenpeelo.slidemachine.model.Welcome;
 import org.pptx4j.jaxb.Context;
+import org.pptx4j.pml.CTGraphicalObjectFrame;
 import org.pptx4j.pml.Shape;
 
 /**
@@ -134,21 +136,19 @@ public class SlideFactory {
         }
         if (content instanceof Agenda) {
             
-            Shape agenda = createAgendaShape();
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(agenda);
+            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
             
         }
     }
 
-    private Shape createAgendaShape() throws JAXBException {
+    private CTGraphicalObjectFrame createAgendaShape() throws JAXBException {
         VelocityContext vc = new VelocityContext();
 
         StringWriter ow = new StringWriter();
 
         getVelocityEngine().getTemplate("/templates/shape_agenda_table.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
+        return (CTGraphicalObjectFrame) XmlUtils.unmarshalString(ow.toString(), Context.jcPML, CTGraphicalObjectFrame.class);
     }
 
     private Shape createScriptureHeaderShape(GenericSlideContent content) throws JAXBException {

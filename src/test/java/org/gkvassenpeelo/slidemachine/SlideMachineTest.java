@@ -17,6 +17,7 @@ import org.gkvassenpeelo.slidemachine.model.Song;
 import org.junit.Before;
 import org.junit.Test;
 import org.pptx4j.Pptx4jException;
+import org.pptx4j.jaxb.Context;
 
 public class SlideMachineTest {
 
@@ -53,7 +54,8 @@ public class SlideMachineTest {
 
         for (Object o : shapeList) {
             try {
-                System.out.println(indent + XmlUtils.marshaltoString(o, true, org.pptx4j.jaxb.Context.jcPML));
+                System.out.println(indent + XmlUtils.marshaltoString(o, true, true, Context.jcPML,
+                        "http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame", org.pptx4j.pml.CTGraphicalObjectFrame.class));
             } catch (RuntimeException me) {
                 System.out.println(indent + o.getClass().getName());
             }
