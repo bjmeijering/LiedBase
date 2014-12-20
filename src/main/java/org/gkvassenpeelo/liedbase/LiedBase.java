@@ -605,7 +605,7 @@ public class LiedBase {
                     sm.addSlide(gsc);
                 }
 
-                // after each liturgy part, add an empty slide, except for the last one!
+                // after each liturgy part, add an overview slide, except for the last one!
                 if (lp.getType() != LiturgyPart.Type.endOfMorningService && lp.getType() != LiturgyPart.Type.endOfAfternoonService) {
                     sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Blank());
                 }
