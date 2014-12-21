@@ -22,8 +22,8 @@ public class BibleTest extends Bible {
         List<BiblePartFragment> bp = Bible.getBiblePart("nbv", "Hebreeen", 3, 7, 11);
 
         for (BiblePartFragment bpf : bp) {
-//            System.out.print("[" + bpf.getDisplayType().toString() + "]" + bpf.getContent());
-            System.out.print(bpf.getContent());
+            System.out.print("[" + bpf.getDisplayType().toString() + "]" + bpf.getContent());
+//            System.out.print(bpf.getContent());
         }
     }
 
