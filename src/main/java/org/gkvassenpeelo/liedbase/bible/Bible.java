@@ -32,7 +32,7 @@ public class Bible {
 
 	private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
-//	private static String LINE_END = System.getProperty("line.separator");
+	// private static String LINE_END = System.getProperty("line.separator");
 
 	public Bible() {
 
@@ -78,8 +78,9 @@ public class Bible {
 
 		boolean parsingVerse = true;
 		boolean buildingVerse = true;
-		
-		int currentVerse = 0;
+
+		int currentStartVerse = 0;
+		int currentEndVerse = 0;
 
 		for (int i = 0; i < chapterText.length(); i++) {
 			char c = chapterText.charAt(i);
@@ -100,10 +101,21 @@ public class Bible {
 
 			// End of building verse Number. Add contents of StringBuilder with superscript
 			if (buildingVerse && !parsingVerse) {
-				
-				currentVerse = Integer.parseInt(sb.toString());
-				
-				if (!StringUtils.isEmpty(sb.toString()) && fromVerse <= currentVerse && toVerse >= currentVerse) {
+
+				currentEndVerse = Integer.parseInt(sb.toString());
+
+				// try to capture verse number
+				String verseId = sb.toString();
+				if (!StringUtils.isEmpty(verseId)) {
+					if (verseId.contains("-")) {
+						currentStartVerse = Integer.parseInt(StringUtils.substringBefore(verseId, "-"));
+						currentEndVerse = Integer.parseInt(StringUtils.substringAfter(verseId, "-"));
+					} else {
+						currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
+					}
+				}
+
+				if (!StringUtils.isEmpty(sb.toString()) && currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
 					bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
 				}
 				sb = new StringBuilder();
@@ -111,7 +123,7 @@ public class Bible {
 			}
 			// End of text building. Add contents of stringbuilder with normal script
 			else if (!buildingVerse && parsingVerse) {
-				if (!StringUtils.isEmpty(sb.toString()) && fromVerse <= currentVerse && toVerse >= currentVerse) {
+				if (!StringUtils.isEmpty(sb.toString()) && currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
 					bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
 				}
 				sb = new StringBuilder();
@@ -120,93 +132,6 @@ public class Bible {
 				sb.append(String.valueOf(c));
 			}
 		}
-
-		// Elements parts = bibletext.children();
-		//
-		// int currentStartVerse = -1;
-		// int currentEndVerse = 1000;
-		//
-		// String mainHeader = "";
-		// String header = "";
-		//
-		// for (Element part : parts) {
-		//
-		// // h2 header
-		// if (part.attributes().get("class").equals("ms")) {
-		// mainHeader = part.text();
-		// }
-		//
-		// // h3 header
-		// if (part.attributes().get("class").equals("s")) {
-		// header = part.text();
-		// }
-		//
-		// if (part.children().size() == 0 && part.tag().getName().equals("p"))
-		// {
-		// if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
-		// bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal,
-		// part.text()));
-		// bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal,
-		// LINE_END));
-		// }
-		// }
-		//
-		// for (Element subPart : part.children()) {
-		//
-		// // try to capture verse number
-		// String verseId = subPart.select("sup").text();
-		// if (!StringUtils.isEmpty(verseId)) {
-		// if (verseId.contains("-")) {
-		// currentStartVerse =
-		// Integer.parseInt(StringUtils.substringBefore(verseId, "-"));
-		// currentEndVerse =
-		// Integer.parseInt(StringUtils.substringAfter(verseId, "-"));
-		// } else {
-		// currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
-		// }
-		// }
-		//
-		// // add verse part contents
-		// if (currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
-		// if (!StringUtils.isEmpty(mainHeader)) {
-		// bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal,
-		// mainHeader + LINE_END));
-		// }
-		// if (!StringUtils.isEmpty(header)) {
-		// bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal,
-		// header + LINE_END));
-		// }
-		// if (subPart.select("sup").size() > 0) {
-		// bp.add(new
-		// BiblePartFragment(BiblePartFragment.DisplayType.superScript,
-		// subPart.select("sup").first().text().trim()));
-		// subPart.select("sup").first().html("");
-		// }
-		// bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal,
-		// subPart.text().trim()));
-		//
-		// if (part.tag().getName().equals("p")) {
-		// bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal,
-		// LINE_END));
-		// }
-		// }
-		//
-		// // stop iterating verses
-		// if (currentStartVerse > toVerse) {
-		// break;
-		// }
-		//
-		// // clear the headers
-		// mainHeader = "";
-		// header = "";
-		// }
-		//
-		// // stop iterating paragraphs
-		// if (currentStartVerse > toVerse) {
-		// break;
-		// }
-		//
-		// }
 
 		return bp;
 	}
