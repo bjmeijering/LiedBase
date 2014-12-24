@@ -29,6 +29,7 @@ import org.gkvassenpeelo.liedbase.liturgy.Welcome;
 import org.gkvassenpeelo.slidemachine.SlideMachine;
 import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
 import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
+import org.gkvassenpeelo.slidemachine.model.LiturgyOverview;
 import org.pptx4j.Pptx4jException;
 
 public class LiedBase {
@@ -50,8 +51,18 @@ public class LiedBase {
 
 	private static final String ENCODING = "UTF-8";
 
+	private List<String> liturgyView = new ArrayList<String>();
+
+	private List<LiturgyPart.Type> followedByLiturgyOverview = new ArrayList<LiturgyPart.Type>();
+
 	public LiedBase() {
 		logger.info("LiedBase gestart");
+
+		// fill list containing slide types after which a liturgy overview slide must be added
+		followedByLiturgyOverview.add(LiturgyPart.Type.welcome);
+		followedByLiturgyOverview.add(LiturgyPart.Type.law);
+		followedByLiturgyOverview.add(LiturgyPart.Type.song);
+		followedByLiturgyOverview.add(LiturgyPart.Type.lecture);
 	}
 
 	/**
@@ -320,6 +331,7 @@ public class LiedBase {
 
 		// create a new liturgy part
 		LiturgyPart lp = new LiturgyPart(type);
+		lp.setLine(line);
 
 		if (type == LiturgyPart.Type.song) {
 
@@ -399,6 +411,8 @@ public class LiedBase {
 		}
 
 		liturgy.add(lp);
+
+		liturgyView.add(line);
 
 		return line;
 
@@ -607,9 +621,26 @@ public class LiedBase {
 					sm.addSlide(gsc);
 				}
 
-				// after each liturgy part, add an overview slide, except for the last one!
-				if (lp.getType() != LiturgyPart.Type.endOfMorningService && lp.getType() != LiturgyPart.Type.endOfAfternoonService) {
-					sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Blank());
+				// after some liturgy parts, add an overview slide, except for the last one!
+				if (followedByLiturgyOverview.contains(lp.getType())) {
+					LiturgyOverview lo = new org.gkvassenpeelo.slidemachine.model.LiturgyOverview();
+
+					StringBuilder builder = new StringBuilder();
+					for (String s : liturgyView) {
+						if (s.equals(lp.getLine())) {
+							lo.addLiturgyLinePast(s);
+						} else {
+							lo.addLiturgyLinesFuture(s);
+						}
+					}
+
+					lo.setHeader("Liturgie:");
+					lo.setBody(builder.toString());
+					sm.addSlide(lo);
+				} else {
+					if (lp.getType() != LiturgyPart.Type.endOfMorningService && lp.getType() != LiturgyPart.Type.endOfAfternoonService) {
+						sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Blank());
+					}
 				}
 
 			}

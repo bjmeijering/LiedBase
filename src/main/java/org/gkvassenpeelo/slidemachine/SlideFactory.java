@@ -32,6 +32,7 @@ import org.gkvassenpeelo.slidemachine.model.Gathering;
 import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
 import org.gkvassenpeelo.slidemachine.model.Law;
 import org.gkvassenpeelo.slidemachine.model.Lecture;
+import org.gkvassenpeelo.slidemachine.model.LiturgyOverview;
 import org.gkvassenpeelo.slidemachine.model.Prair;
 import org.gkvassenpeelo.slidemachine.model.Scripture;
 import org.gkvassenpeelo.slidemachine.model.Song;
@@ -73,6 +74,7 @@ public class SlideFactory {
         slideLayoutMap.put(EndAfternoonService.class, "/ppt/slideLayouts/slideLayout8.xml");
         slideLayoutMap.put(Lecture.class, "/ppt/slideLayouts/slideLayout14.xml");
         slideLayoutMap.put(Agenda.class, "/ppt/slideLayouts/slideLayout2.xml");
+        slideLayoutMap.put(LiturgyOverview.class, "/ppt/slideLayouts/slideLayout20.xml");
 
         // init velocity with defaults
         Velocity.init();
@@ -139,9 +141,38 @@ public class SlideFactory {
             slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
             
         }
+        if(content instanceof LiturgyOverview) {
+        	slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewHeader());
+            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewBody(content));
+        }
+        
     }
 
-    private CTGraphicalObjectFrame createAgendaShape() throws JAXBException {
+	private Shape getLiturgyOverviewHeader() throws JAXBException {
+    	VelocityContext vc = new VelocityContext();
+
+        StringWriter ow = new StringWriter();
+
+        getVelocityEngine().getTemplate("/templates/shape_liturgy_overview_header.vc", ENCODING).merge(vc, ow);
+
+        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+        return shape;
+	}
+
+    private Shape getLiturgyOverviewBody(GenericSlideContent content) throws JAXBException {
+    	VelocityContext vc = new VelocityContext();
+    	vc.put("pastParts", ((LiturgyOverview)content).getLiturgyLinesPast());
+        vc.put("futureParts", ((LiturgyOverview)content).getLiturgyLinesFuture());
+
+        StringWriter ow = new StringWriter();
+
+        getVelocityEngine().getTemplate("/templates/shape_liturgy_overview_body.vc", ENCODING).merge(vc, ow);
+
+        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+        return shape;
+	}
+
+	private CTGraphicalObjectFrame createAgendaShape() throws JAXBException {
         VelocityContext vc = new VelocityContext();
 
         StringWriter ow = new StringWriter();
