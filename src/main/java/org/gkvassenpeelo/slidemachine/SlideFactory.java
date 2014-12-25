@@ -142,22 +142,10 @@ public class SlideFactory {
             
         }
         if(content instanceof LiturgyOverview) {
-        	slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewHeader());
             slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewBody(content));
         }
         
     }
-
-	private Shape getLiturgyOverviewHeader() throws JAXBException {
-    	VelocityContext vc = new VelocityContext();
-
-        StringWriter ow = new StringWriter();
-
-        getVelocityEngine().getTemplate("/templates/shape_liturgy_overview_header.vc", ENCODING).merge(vc, ow);
-
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-	}
 
     private Shape getLiturgyOverviewBody(GenericSlideContent content) throws JAXBException {
     	VelocityContext vc = new VelocityContext();

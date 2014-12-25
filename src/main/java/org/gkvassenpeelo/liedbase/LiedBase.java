@@ -21,7 +21,6 @@ import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart.Type;
 import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
@@ -54,6 +53,8 @@ public class LiedBase {
 	private List<String> liturgyView = new ArrayList<String>();
 
 	private List<LiturgyPart.Type> followedByLiturgyOverview = new ArrayList<LiturgyPart.Type>();
+	
+	private enum CharType {number, character, dash, colon, comma}
 
 	public LiedBase() {
 		logger.info("LiedBase gestart");
@@ -327,7 +328,7 @@ public class LiedBase {
 		}
 
 		// apply the right formatting to 'line'
-		line = format(line, type);
+		line = format(line);
 
 		// create a new liturgy part
 		LiturgyPart lp = new LiturgyPart(type);
@@ -472,53 +473,90 @@ public class LiedBase {
 		return verses;
 	}
 
-	private String format(String line, Type type) {
+	private String format(String line) {
 
-		if (type == LiturgyPart.Type.song) {
+		StringBuilder sb = new StringBuilder();
+		
+		// start by stripping all spaces
+		line = line.replaceAll(" ", "");
 
-			//
-			// opwekking does not contain ':', return it with upper case first char
-			//
-			if (!line.contains(":")) {
-				line = line.trim();
-				return Character.toUpperCase(line.charAt(0)) + line.substring(1);
+		CharType prevCharType = null;
+
+		for (Character c : line.toCharArray()) {
+
+			// handle first round
+			if(prevCharType == null) {
+				sb.append(c);
+				prevCharType = getCharType(c);
+				continue;
 			}
-
-			StringBuilder result = new StringBuilder();
-
-			//
-			// first part is the part before the ':'
-			//
-			String firstPart = StringUtils.substringBefore(line, ":").trim();
-
-			// make the first character upper case
-			firstPart = Character.toUpperCase(firstPart.charAt(0)) + firstPart.substring(1);
-
-			String[] parts = firstPart.split(" ");
-			if (parts.length != 2) {
-				logger.warn(String.format("Regel '%s' kon niet netjes worden opgemaakt", line));
-				return line;
+			
+			if(prevCharType == CharType.number && getCharType(c) == CharType.number) {
+				sb.append(c);
+				continue;
 			}
-			result.append(String.format("%s %s:", parts[0], parts[1]));
-
-			//
-			// second part is the part after the ':'
-			//
-			String secondPart = StringUtils.substringAfter(line, ":");
-
-			parts = secondPart.split(",");
-			int i = 0;
-			for (String s : parts) {
-				result.append(String.format(" %s", s.trim()));
-				if (++i < parts.length) {
-					result.append(",");
-				}
+			
+			if(prevCharType == CharType.character && getCharType(c) == CharType.character) {
+				sb.append(c);
+				continue;
 			}
-
-			return result.toString();
+			
+			if(prevCharType == CharType.character && getCharType(c) == CharType.number) {
+				sb.append(" ");
+				sb.append(c);
+				prevCharType = getCharType(c);
+				continue;
+			}
+			
+			if(prevCharType == CharType.number && getCharType(c) == CharType.character) {
+				sb.append(" ");
+				sb.append(c);
+				prevCharType = getCharType(c);
+				continue;
+			}
+			
+			if(getCharType(c) == CharType.colon) {
+				sb.append(c);
+				sb.append(" ");
+				prevCharType = getCharType(c);
+				continue;
+			}
+			
+			if(getCharType(c) == CharType.comma) {
+				sb.append(c);
+				sb.append(" ");
+				prevCharType = getCharType(c);
+				continue;
+			}
+			
+			sb.append(c);
+			
 		}
 
-		return line;
+		return sb.toString();
+	}
+	
+	private CharType getCharType(char c) {
+		try {
+			Integer.parseInt(String.valueOf(c));
+			return CharType.number;
+		} catch (NumberFormatException e) {
+			// do nothing
+		}
+		
+		if("-".equals(String.valueOf(c))) {
+			return CharType.dash;
+		}
+		
+		if(",".equals(String.valueOf(c))) {
+			return CharType.comma;
+		}
+		
+		if(":".equals(String.valueOf(c))) {
+			return CharType.colon;
+		}
+		
+		return CharType.character;
 	}
 
 	String getTimeFromLine(String line) {
@@ -626,12 +664,15 @@ public class LiedBase {
 					LiturgyOverview lo = new org.gkvassenpeelo.slidemachine.model.LiturgyOverview();
 
 					StringBuilder builder = new StringBuilder();
+					int pos = liturgyView.indexOf(lp.getLine());
 					for (String s : liturgyView) {
-						if (s.equals(lp.getLine())) {
+
+						if (liturgyView.indexOf(s) <= pos) {
 							lo.addLiturgyLinePast(s);
 						} else {
 							lo.addLiturgyLinesFuture(s);
 						}
+
 					}
 
 					lo.setHeader("Liturgie:");
