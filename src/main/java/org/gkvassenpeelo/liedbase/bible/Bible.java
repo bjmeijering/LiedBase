@@ -43,6 +43,10 @@ public class Bible {
 		translation = translation.toUpperCase();
 
 		book = book.toLowerCase();
+		
+		book = book.replaceAll("ë", "e");
+		book = book.replaceAll("ï", "i");
+		book = book.replaceAll("ü", "u");
 
 		Document doc;
 		try {
@@ -249,10 +253,10 @@ public class Bible {
 			return "Ruth";
 		}
 		if (line.toLowerCase().matches("^1 ?sam.*")) {
-			return "1 Samuel";
+			return "1 Samuël";
 		}
 		if (line.toLowerCase().matches("^2 ?sam.*")) {
-			return "2 Samuel";
+			return "2 Samuël";
 		}
 		if (line.toLowerCase().matches("^1 ?kon.*")) {
 			return "1 Koningen";
@@ -300,16 +304,16 @@ public class Bible {
 			return "Klaagliederen";
 		}
 		if (line.toLowerCase().startsWith("ezec")) {
-			return "Ezechiel";
+			return "Ezechiël";
 		}
 		if (line.toLowerCase().startsWith("dani")) {
-			return "Daniel";
+			return "Daniël";
 		}
 		if (line.toLowerCase().startsWith("hose")) {
 			return "Hosea";
 		}
 		if (line.toLowerCase().startsWith("joel")) {
-			return "Joel";
+			return "Joël";
 		}
 		if (line.toLowerCase().startsWith("amos")) {
 			return "Amos";
@@ -342,7 +346,7 @@ public class Bible {
 			return "Maleachi";
 		}
 		if (line.toLowerCase().startsWith("matte")) {
-			return "Matteus";
+			return "Matteüs";
 		}
 		if (line.toLowerCase().startsWith("marcu")) {
 			return "Marcus";
@@ -360,16 +364,16 @@ public class Bible {
 			return "Romeinen";
 		}
 		if (line.toLowerCase().matches("^1 ?kor.*")) {
-			return "1 Korintiers";
+			return "1 Korintiërs";
 		}
 		if (line.toLowerCase().matches("^2 ?kor.*")) {
-			return "2 Korintiers";
+			return "2 Korintiërs";
 		}
 		if (line.toLowerCase().startsWith("galat")) {
 			return "Galaten";
 		}
 		if (line.toLowerCase().startsWith("efezi")) {
-			return "Efeziers";
+			return "Efeziërs";
 		}
 		if (line.toLowerCase().startsWith("filip")) {
 			return "Filippenzen";
@@ -384,10 +388,10 @@ public class Bible {
 			return "2 Tessalonicenzen";
 		}
 		if (line.toLowerCase().matches("^1 ?tim.*")) {
-			return "1 Timoteus";
+			return "1 Timoteüs";
 		}
 		if (line.toLowerCase().matches("^2 ?tim.*")) {
-			return "2 Timoteus";
+			return "2 Timoteüs";
 		}
 		if (line.toLowerCase().startsWith("titus")) {
 			return "Titus";
@@ -396,7 +400,7 @@ public class Bible {
 			return "Filemon";
 		}
 		if (line.toLowerCase().startsWith("hebre")) {
-			return "Hebreeen";
+			return "Hebreeën";
 		}
 		if (line.toLowerCase().startsWith("jakob")) {
 			return "Jakobus";

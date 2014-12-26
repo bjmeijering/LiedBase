@@ -53,8 +53,10 @@ public class LiedBase {
 	private List<String> liturgyView = new ArrayList<String>();
 
 	private List<LiturgyPart.Type> followedByLiturgyOverview = new ArrayList<LiturgyPart.Type>();
-	
-	private enum CharType {number, character, dash, colon, comma}
+
+	private enum CharType {
+		number, character, dash, colon, comma
+	}
 
 	public LiedBase() {
 		logger.info("LiedBase gestart");
@@ -407,7 +409,9 @@ public class LiedBase {
 			String translation = Bible.getTranslationFromLine(line);
 
 			List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
-
+			
+			line = format(String.format("%s%s:%s-%s", bibleBook, chapter, fromVerse, toVerse));
+			
 			lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
 		}
 
@@ -476,7 +480,7 @@ public class LiedBase {
 	private String format(String line) {
 
 		StringBuilder sb = new StringBuilder();
-		
+
 		// start by stripping all spaces
 		line = line.replaceAll(" ", "");
 
@@ -485,57 +489,62 @@ public class LiedBase {
 		for (Character c : line.toCharArray()) {
 
 			// handle first round
-			if(prevCharType == null) {
-				sb.append(c);
+			if (prevCharType == null) {
+				sb.append(Character.toUpperCase(c));
 				prevCharType = getCharType(c);
 				continue;
 			}
-			
-			if(prevCharType == CharType.number && getCharType(c) == CharType.number) {
+
+			if (prevCharType == CharType.number && getCharType(c) == CharType.number) {
 				sb.append(c);
 				continue;
 			}
-			
-			if(prevCharType == CharType.character && getCharType(c) == CharType.character) {
+
+			if (prevCharType == CharType.character && getCharType(c) == CharType.character) {
 				sb.append(c);
 				continue;
 			}
-			
-			if(prevCharType == CharType.character && getCharType(c) == CharType.number) {
+
+			if (prevCharType == CharType.character && getCharType(c) == CharType.number) {
 				sb.append(" ");
 				sb.append(c);
 				prevCharType = getCharType(c);
 				continue;
 			}
-			
-			if(prevCharType == CharType.number && getCharType(c) == CharType.character) {
+
+			if (prevCharType == CharType.number && getCharType(c) == CharType.character) {
 				sb.append(" ");
-				sb.append(c);
+				if (line.indexOf(c) < 3) {
+					sb.append(Character.toUpperCase(c));
+				} else {
+					sb.append(c);
+
+				}
 				prevCharType = getCharType(c);
 				continue;
 			}
-			
-			if(getCharType(c) == CharType.colon) {
-				sb.append(c);
-				sb.append(" ");
-				prevCharType = getCharType(c);
-				continue;
-			}
-			
-			if(getCharType(c) == CharType.comma) {
+
+			if (getCharType(c) == CharType.colon) {
 				sb.append(c);
 				sb.append(" ");
 				prevCharType = getCharType(c);
 				continue;
 			}
-			
+
+			if (getCharType(c) == CharType.comma) {
+				sb.append(c);
+				sb.append(" ");
+				prevCharType = getCharType(c);
+				continue;
+			}
+
 			sb.append(c);
-			
+
 		}
 
 		return sb.toString();
 	}
-	
+
 	private CharType getCharType(char c) {
 		try {
 			Integer.parseInt(String.valueOf(c));
@@ -543,19 +552,19 @@ public class LiedBase {
 		} catch (NumberFormatException e) {
 			// do nothing
 		}
-		
-		if("-".equals(String.valueOf(c))) {
+
+		if ("-".equals(String.valueOf(c))) {
 			return CharType.dash;
 		}
-		
-		if(",".equals(String.valueOf(c))) {
+
+		if (",".equals(String.valueOf(c))) {
 			return CharType.comma;
 		}
-		
-		if(":".equals(String.valueOf(c))) {
+
+		if (":".equals(String.valueOf(c))) {
 			return CharType.colon;
 		}
-		
+
 		return CharType.character;
 	}
 
