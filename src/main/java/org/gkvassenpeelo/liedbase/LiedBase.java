@@ -40,7 +40,7 @@ public class LiedBase {
 	private static final String regex_gezang = "([gG]ezang(en)?)";
 	private static final String regex_lied = "([lL]ied([bB]oek)?)";
 	private static final String regex_opwekking = "([oO]pwekking?)";
-	private static final String regex_voorganger = "([vV]oorganger|[dD]ominee)";
+	private static final String regex_voorganger = "([vV]oorganger|[dD]ominee|[wW]el[ck]om)";
 
 	SlideMachine sm = new SlideMachine();
 
@@ -52,6 +52,7 @@ public class LiedBase {
 
 	private List<String> liturgyView = new ArrayList<String>();
 
+	private boolean showLiturgyOverview = false;
 	private List<LiturgyPart.Type> followedByLiturgyOverview = new ArrayList<LiturgyPart.Type>();
 
 	private enum CharType {
@@ -283,7 +284,7 @@ public class LiedBase {
 
 		while (st.hasMoreTokens()) {
 			String line = st.nextToken();
-			if (!line.startsWith("#")) {
+			if (!line.startsWith("#") && !StringUtils.isEmpty(line.trim())) {
 				parseLiturgyScriptLine(line);
 			}
 		}
@@ -330,7 +331,9 @@ public class LiedBase {
 		}
 
 		// apply the right formatting to 'line'
-		line = format(line);
+		if (type == LiturgyPart.Type.song || type == LiturgyPart.Type.scripture) {
+			line = format(line);
+		}
 
 		// create a new liturgy part
 		LiturgyPart lp = new LiturgyPart(type);
@@ -409,9 +412,9 @@ public class LiedBase {
 			String translation = Bible.getTranslationFromLine(line);
 
 			List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
-			
+
 			line = format(String.format("%s%s:%s-%s", bibleBook, chapter, fromVerse, toVerse));
-			
+
 			lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
 		}
 
@@ -669,7 +672,7 @@ public class LiedBase {
 				}
 
 				// after some liturgy parts, add an overview slide, except for the last one!
-				if (followedByLiturgyOverview.contains(lp.getType())) {
+				if (followedByLiturgyOverview.contains(lp.getType()) && showLiturgyOverview) {
 					LiturgyOverview lo = new org.gkvassenpeelo.slidemachine.model.LiturgyOverview();
 
 					StringBuilder builder = new StringBuilder();
