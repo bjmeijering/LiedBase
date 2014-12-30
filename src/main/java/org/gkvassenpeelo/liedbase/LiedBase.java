@@ -525,7 +525,7 @@ public class LiedBase {
 			for (String s : liturgyView) {
 
 				if (pos == -1) {
-					if (currentLiturgyPartIndex >= currentPosition++) {
+					if (currentLiturgyPartIndex > currentPosition++) {
 						lo.addLiturgyLinePast(s);
 					} else {
 						lo.addLiturgyLinesFuture(s);
@@ -533,7 +533,7 @@ public class LiedBase {
 				} else {
 					if (liturgyView.indexOf(s) <= pos) {
 						lo.addLiturgyLinePast(s);
-						currentLiturgyPartIndex = pos;
+						currentLiturgyPartIndex = pos+1;
 					} else {
 						lo.addLiturgyLinesFuture(s);
 					}
