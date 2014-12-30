@@ -24,7 +24,7 @@ public class SlideMachine {
 
     public void init() throws Docx4JException, Pptx4jException {
 
-        presentationMLPackage = (PresentationMLPackage) OpcPackage.load(ClassLoader.getSystemResourceAsStream("Presentation.pptx"));
+        presentationMLPackage = (PresentationMLPackage) OpcPackage.load(ClassLoader.getSystemResourceAsStream("template.pptx"));
 
         slideFactory = new SlideFactory();
 
