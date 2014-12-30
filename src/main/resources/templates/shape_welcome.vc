@@ -14,18 +14,13 @@
 		<a:lstStyle/>
 		<a:p>
 			<a:r>
-				<a:rPr lang="nl-NL" dirty="false" err="true" smtClean="false">
+				<a:rPr lang="nl-NL" dirty="false" smtClean="false">
 					<a:solidFill>
-						<a:srgbClr val="FFFFFF"/>
+						<a:schemeClr val="tx1">
+							<a:lumMod val="95000"/>
+						</a:schemeClr>
 					</a:solidFill>
-					<a:effectLst>
-						<a:outerShdw blurRad="63500" dist="38100" algn="ctr" rotWithShape="false">
-							<a:prstClr val="white">
-								<a:alpha val="70000"/>
-							</a:prstClr>
-						</a:outerShdw>
-					</a:effectLst>
-					<a:cs typeface="+mn-cs"/>
+					<a:effectLst/>
 				</a:rPr>
 				<a:t>${vicarName}</a:t>
 			</a:r>

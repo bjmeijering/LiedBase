@@ -35,18 +35,14 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
                                     <a:t>Datum</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
@@ -77,18 +73,14 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
                                     <a:t>Onderwerp</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
@@ -119,18 +111,14 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
                                     <a:t>Locatie</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
@@ -161,19 +149,15 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
-                                    <a:t>tijd</a:t>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
+                                    <a:t>Tijd</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
                                     <a:solidFill>
