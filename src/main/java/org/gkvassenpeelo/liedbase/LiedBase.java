@@ -273,6 +273,8 @@ public class LiedBase {
 			// nothing to do
 		} else if (type == LiturgyPart.Type.gathering) {
 			lp.addSlide(new Gathering(getGatheringBenificiaries(line)));
+
+			line = "Collecte";
 		} else if (type == LiturgyPart.Type.welcome) {
 			lp.addSlide(new Welcome(getVicarName(line)));
 		} else if (type == LiturgyPart.Type.endOfMorningService) {
@@ -533,7 +535,7 @@ public class LiedBase {
 				} else {
 					if (liturgyView.indexOf(s) <= pos) {
 						lo.addLiturgyLinePast(s);
-						currentLiturgyPartIndex = pos+1;
+						currentLiturgyPartIndex = pos + 1;
 					} else {
 						lo.addLiturgyLinesFuture(s);
 					}
