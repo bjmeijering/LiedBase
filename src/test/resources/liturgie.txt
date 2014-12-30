@@ -1,12 +1,8 @@
-Welkom: Ds. S.W. de Boer
-Votum
-Psalm 93 : 1,2,3
-wet
-Gezang 145 : 1, 2,3, 4
+Gezang 145
 Gebed
 Lucas 2 : 21 - 40
 Psalm 138 : 1, 2
-Lucas 2 : 29 - 32
+Joel 2 : 2-14
 Preek
 Gezang 52 : 1, 2
 Gebed
@@ -14,9 +10,3 @@ Collecte: Kerk, Theologische Universiteit
 Lied 1 : 1,2,3,4
 amen
 einde morgendienst: 15:30,Ds. G.O. Sander/Ds. L.E. Leeftink
-
-#Thema/verdeling:
- 
-#De profeet Simeon ziet de Messias van de Heer.
-#1. Hij ziet in Hem de vervulling van zijn levensdienst
-#2. Hij ziet in Hem de vervulling van Gods beloften
