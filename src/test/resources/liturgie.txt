@@ -3,9 +3,7 @@ votum
 Gezang 118: 1, 2, 3
 Gezang 23: 1
 gebed
-Efeziërs 4: 32
-Efeziërs 5: 1 - 2
-Efeziërs 5: 21 – 32
+psalmen 18: 15 - 20
 Psalm 84: 1, 2, 5
 # kinderblok door Jos Jonker
 # Kinderlied in te vullen door Jos
