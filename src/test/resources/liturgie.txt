@@ -1,14 +1,18 @@
-welkom: L.E. Leeftink
+welkom: Br. K. Schoon
 votum
-Gezang 145: 1, 2
-Gebed
-Lucas 2 : 21 - 40
-Psalm 138 : 1, 2
-Joel 2 : 2-14
+Gezang 118: 1, 2, 3
+Gezang 23: 1
+gebed
+Efeziërs 4: 32
+Efeziërs 5: 1 - 2
+Efeziërs 5: 21 – 32
+Psalm 84: 1, 2, 5
+# kinderblok door Jos Jonker
+# Kinderlied in te vullen door Jos
 Preek
-Psalm 117
-Gebed
-Collecte: Kerk, Theologische Universiteit
-Lied 1 : 1
-amen
-einde morgendienst: 15:30,Ds. G.O. Sander
+Gezang 167: 1, 2, 3
+gebed
+Collecte: Theologische Universiteit, Huisvesting
+Opwekking 710
+Lied 456: 1, 2, 3
+einde morgendienst: 15:30,Ds. Ds. H.J. Lopers (Hoogezand)

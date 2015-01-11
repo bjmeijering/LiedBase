@@ -67,11 +67,8 @@ public class LiedBase {
 
 		// all following liturgy part types will appear on liturgy overview
 		// slides
-		litugyOverViewItems.add(LiturgyPart.Type.law);
-		litugyOverViewItems.add(LiturgyPart.Type.lecture);
 		litugyOverViewItems.add(LiturgyPart.Type.scripture);
 		litugyOverViewItems.add(LiturgyPart.Type.song);
-		litugyOverViewItems.add(LiturgyPart.Type.gathering);
 
 		// fill list containing slide types after which a liturgy overview slide
 		// must be added
@@ -314,6 +311,9 @@ public class LiedBase {
 
 		// start by stripping all spaces
 		line = line.replaceAll(" ", "");
+		
+		// replace incorrect characters
+		line = replaceForbiddenChars(line);
 
 		CharType prevCharType = null;
 
@@ -376,7 +376,12 @@ public class LiedBase {
 		return sb.toString();
 	}
 
-	private CharType getCharType(char c) {
+	private String replaceForbiddenChars(String line) {
+        line = line.replace("–", "-");
+        return line;
+    }
+
+    private CharType getCharType(char c) {
 		try {
 			Integer.parseInt(String.valueOf(c));
 			return CharType.number;
