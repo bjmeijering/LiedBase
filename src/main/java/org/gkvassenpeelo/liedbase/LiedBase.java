@@ -306,7 +306,9 @@ public class LiedBase {
 
     }
 
-    private String format(String line) {
+    public static String format(String line) {
+        
+        // TODO: een vers uit bijbelboek formatteerd dubbel
 
         StringBuilder sb = new StringBuilder();
 
@@ -374,7 +376,7 @@ public class LiedBase {
         return sb.toString();
     }
 
-    private String replaceForbiddenChars(String line) {
+    private static String replaceForbiddenChars(String line) {
 
         // start by stripping all spaces
         line = line.replaceAll(" ", "");
@@ -385,7 +387,7 @@ public class LiedBase {
         return line;
     }
 
-    private CharType getCharType(char c) {
+    private static CharType getCharType(char c) {
         try {
             Integer.parseInt(String.valueOf(c));
             return CharType.number;

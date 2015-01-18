@@ -16,6 +16,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
+import org.gkvassenpeelo.liedbase.LiedBase;
 import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -345,7 +346,7 @@ public class Bible {
 		if (line.toLowerCase().startsWith("male")) {
 			return "Maleachi";
 		}
-		if (line.toLowerCase().startsWith("matte")) {
+		if (line.toLowerCase().matches("matt?h?e.*")) {
 			return "Matteüs";
 		}
 		if (line.toLowerCase().startsWith("marcu")) {
@@ -430,6 +431,9 @@ public class Bible {
 	}
 
 	public static int getChapterFromLine(String line) {
+	    
+	    line = LiedBase.format(line);
+	    
 		if (line.contains(":")) {
 			String s = StringUtils.substringBefore(line, ":");
 			return Integer.parseInt(StringUtils.substringBefore(StringUtils.substringAfterLast(s, " "), ":").trim());

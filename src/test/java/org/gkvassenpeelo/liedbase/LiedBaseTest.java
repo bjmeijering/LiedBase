@@ -7,9 +7,12 @@ import java.io.File;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class LiedBaseTest {
+    
+    // TODO: agenda
 
     LiedBase lb = new LiedBase();
 
@@ -18,7 +21,7 @@ public class LiedBaseTest {
         lb.setTargetFile(new File("target/Presentatie.pptx"));
     }
 
-    @Test
+    @Ignore
     public void liedBasetest() throws LiedBaseError, Docx4JException, BibleException {
 
         lb.setSourceFile(new File("src/test/resources/liturgie.txt"));

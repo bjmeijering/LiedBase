@@ -15,9 +15,8 @@ import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.gkvassenpeelo.slidemachine.model.Song;
 import org.junit.Before;
-import org.junit.Test;
+import org.junit.Ignore;
 import org.pptx4j.Pptx4jException;
-import org.pptx4j.jaxb.Context;
 
 public class SlideMachineTest {
 
@@ -25,7 +24,7 @@ public class SlideMachineTest {
 	public void setUp() throws Exception {
 	}
 
-	@Test
+	@Ignore
 	public void testSlideMachine() throws Docx4JException, Pptx4jException, JAXBException {
 		SlideMachine sm = new SlideMachine();
 		sm.init();
@@ -39,7 +38,7 @@ public class SlideMachineTest {
 		sm.save();
 	}
 
-	@Test
+	@Ignore
 	// use for debugging only!
 	@SuppressWarnings("deprecation")
 	public void printSlideContents() throws Docx4JException {
