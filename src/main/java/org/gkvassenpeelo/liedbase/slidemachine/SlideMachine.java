@@ -1,4 +1,4 @@
-package org.gkvassenpeelo.slidemachine;
+package org.gkvassenpeelo.liedbase.slidemachine;
 
 import java.io.File;
 
@@ -9,7 +9,7 @@ import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
-import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
+import org.gkvassenpeelo.liedbase.slidemachine.model.GenericSlideContent;
 import org.pptx4j.Pptx4jException;
 
 public class SlideMachine {
@@ -24,7 +24,7 @@ public class SlideMachine {
 
     public void init() throws Docx4JException, Pptx4jException {
 
-        presentationMLPackage = (PresentationMLPackage) OpcPackage.load(ClassLoader.getSystemResourceAsStream("Presentation.pptx"));
+        presentationMLPackage = (PresentationMLPackage) OpcPackage.load(ClassLoader.getSystemResourceAsStream("template.pptx"));
 
         slideFactory = new SlideFactory();
 

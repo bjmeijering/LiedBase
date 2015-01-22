@@ -1,4 +1,4 @@
-package org.gkvassenpeelo.slidemachine;
+package org.gkvassenpeelo.liedbase.slidemachine;
 
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -23,20 +23,21 @@ import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlideLayoutPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
-import org.gkvassenpeelo.slidemachine.model.Agenda;
-import org.gkvassenpeelo.slidemachine.model.Amen;
-import org.gkvassenpeelo.slidemachine.model.Blank;
-import org.gkvassenpeelo.slidemachine.model.EndAfternoonService;
-import org.gkvassenpeelo.slidemachine.model.EndMorningService;
-import org.gkvassenpeelo.slidemachine.model.Gathering;
-import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
-import org.gkvassenpeelo.slidemachine.model.Law;
-import org.gkvassenpeelo.slidemachine.model.Lecture;
-import org.gkvassenpeelo.slidemachine.model.Prair;
-import org.gkvassenpeelo.slidemachine.model.Scripture;
-import org.gkvassenpeelo.slidemachine.model.Song;
-import org.gkvassenpeelo.slidemachine.model.Votum;
-import org.gkvassenpeelo.slidemachine.model.Welcome;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Agenda;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Amen;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Blank;
+import org.gkvassenpeelo.liedbase.slidemachine.model.EndAfternoonService;
+import org.gkvassenpeelo.liedbase.slidemachine.model.EndMorningService;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Gathering;
+import org.gkvassenpeelo.liedbase.slidemachine.model.GenericSlideContent;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Law;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Lecture;
+import org.gkvassenpeelo.liedbase.slidemachine.model.LiturgyOverview;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Prair;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Scripture;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Song;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Votum;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Welcome;
 import org.pptx4j.jaxb.Context;
 import org.pptx4j.pml.CTGraphicalObjectFrame;
 import org.pptx4j.pml.Shape;
@@ -62,7 +63,7 @@ public class SlideFactory {
         // fill the slide layout map
         slideLayoutMap.put(Song.class, "/ppt/slideLayouts/slideLayout4.xml");
         slideLayoutMap.put(Scripture.class, "/ppt/slideLayouts/slideLayout4.xml");
-        slideLayoutMap.put(Blank.class, "/ppt/slideLayouts/slideLayout18.xml");
+        slideLayoutMap.put(Blank.class, "/ppt/slideLayouts/slideLayout19.xml");
         slideLayoutMap.put(Gathering.class, "/ppt/slideLayouts/slideLayout6.xml");
         slideLayoutMap.put(Prair.class, "/ppt/slideLayouts/slideLayout10.xml");
         slideLayoutMap.put(Welcome.class, "/ppt/slideLayouts/slideLayout1.xml");
@@ -73,6 +74,7 @@ public class SlideFactory {
         slideLayoutMap.put(EndAfternoonService.class, "/ppt/slideLayouts/slideLayout8.xml");
         slideLayoutMap.put(Lecture.class, "/ppt/slideLayouts/slideLayout14.xml");
         slideLayoutMap.put(Agenda.class, "/ppt/slideLayouts/slideLayout2.xml");
+        slideLayoutMap.put(LiturgyOverview.class, "/ppt/slideLayouts/slideLayout20.xml");
 
         // init velocity with defaults
         Velocity.init();
@@ -136,19 +138,35 @@ public class SlideFactory {
         }
         if (content instanceof Agenda) {
             
-            CTGraphicalObjectFrame agenda = createAgendaShape();
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(agenda);
+            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
             
         }
+        if(content instanceof LiturgyOverview) {
+            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewBody(content));
+        }
+        
     }
 
-    private CTGraphicalObjectFrame createAgendaShape() throws JAXBException {
+    private Shape getLiturgyOverviewBody(GenericSlideContent content) throws JAXBException {
+    	VelocityContext vc = new VelocityContext();
+    	vc.put("pastParts", ((LiturgyOverview)content).getLiturgyLinesPast());
+        vc.put("futureParts", ((LiturgyOverview)content).getLiturgyLinesFuture());
+
+        StringWriter ow = new StringWriter();
+
+        getVelocityEngine().getTemplate("/templates/shape_liturgy_overview_body.vc", ENCODING).merge(vc, ow);
+
+        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+        return shape;
+	}
+
+	private CTGraphicalObjectFrame createAgendaShape() throws JAXBException {
         VelocityContext vc = new VelocityContext();
 
         StringWriter ow = new StringWriter();
 
         getVelocityEngine().getTemplate("/templates/shape_agenda_table.vc", ENCODING).merge(vc, ow);
-        
+
         return (CTGraphicalObjectFrame) XmlUtils.unmarshalString(ow.toString(), Context.jcPML, CTGraphicalObjectFrame.class);
     }
 

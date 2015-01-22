@@ -1,4 +1,4 @@
-package org.gkvassenpeelo.slidemachine;
+package org.gkvassenpeelo.liedbase.slidemachine;
 
 public class SlideFactoryException extends Exception {
 

@@ -2,7 +2,7 @@ package org.gkvassenpeelo.liedbase.liturgy;
 
 import java.util.List;
 
-import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
+import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
 
 public class Scripture extends SlideContents {
 

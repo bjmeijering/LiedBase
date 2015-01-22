@@ -44,3 +44,4 @@ Temporary Items
 target
 *.1
 *.log
+/dependency-reduced-pom.xml

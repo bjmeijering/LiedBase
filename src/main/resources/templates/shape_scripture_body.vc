@@ -16,9 +16,23 @@
 #foreach(${biblePartFragment} in ${biblePartFragments})
 			<a:r>
 #if(${biblePartFragment.getDisplayType()} == "superScript")
-				<a:rPr lang="nl-NL" baseline="30000" dirty="false" smtClean="false"/>
+				<a:rPr lang="nl-NL" baseline="30000" dirty="false" smtClean="false">
+					<a:solidFill>
+						<a:schemeClr val="tx1">
+							<a:lumMod val="95000"/>
+						</a:schemeClr>
+					</a:solidFill>
+					<a:effectLst/>
+				</a:rPr>
 #else
-				<a:rPr lang="nl-NL" dirty="false" smtClean="false"/>
+				<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+					<a:solidFill>
+						<a:schemeClr val="tx1">
+							<a:lumMod val="95000"/>
+						</a:schemeClr>
+					</a:solidFill>
+					<a:effectLst/>
+				</a:rPr>
 #end
 				<a:t>${biblePartFragment.getContent()}</a:t>
 			</a:r>

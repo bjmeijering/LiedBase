@@ -15,7 +15,14 @@
 #foreach( ${line} in ${lines} )
 		<a:p>
 			<a:r>
-				<a:rPr lang="nl-NL" dirty="false"/>
+				<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+					<a:solidFill>
+						<a:schemeClr val="tx1">
+							<a:lumMod val="95000"/>
+						</a:schemeClr>
+					</a:solidFill>
+					<a:effectLst/>
+				</a:rPr>
 				<a:t>${line}</a:t>
 			</a:r>
 		</a:p>

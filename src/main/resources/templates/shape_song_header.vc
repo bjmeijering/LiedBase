@@ -14,15 +14,36 @@
 		<a:lstStyle/>
 		<a:p>
 			<a:r>
-				<a:rPr lang="nl-NL" dirty="false" smtClean="false"/>
+				<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+					<a:solidFill>
+						<a:schemeClr val="tx1">
+							<a:lumMod val="95000"/>
+						</a:schemeClr>
+					</a:solidFill>
+					<a:effectLst/>
+				</a:rPr>
 				<a:t>${title_text_before}</a:t>
 			</a:r>
 			<a:r>
-				<a:rPr lang="nl-NL" b="true" dirty="false" smtClean="false"/>
+				<a:rPr lang="nl-NL" b="true" dirty="false" smtClean="false">
+					<a:solidFill>
+						<a:schemeClr val="tx1">
+							<a:lumMod val="95000"/>
+						</a:schemeClr>
+					</a:solidFill>
+					<a:effectLst/>
+				</a:rPr>
 				<a:t>${title_text_bold}</a:t>
 			</a:r>
 			<a:r>
-				<a:rPr lang="nl-NL" dirty="false" smtClean="false"/>
+				<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+					<a:solidFill>
+						<a:schemeClr val="tx1">
+							<a:lumMod val="95000"/>
+						</a:schemeClr>
+					</a:solidFill>
+					<a:effectLst/>
+				</a:rPr>
 				<a:t>${title_text_after}</a:t>
 			</a:r>
 			<a:endParaRPr lang="nl-NL"/>

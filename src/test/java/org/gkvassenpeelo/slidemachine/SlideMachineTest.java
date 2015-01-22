@@ -1,60 +1,80 @@
 package org.gkvassenpeelo.slidemachine;
 
 import java.io.File;
+import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
 import org.docx4j.XmlUtils;
+import org.docx4j.dml.CTTextBody;
+import org.docx4j.dml.CTTextParagraph;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
-import org.gkvassenpeelo.slidemachine.model.Song;
+import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
+import org.gkvassenpeelo.liedbase.slidemachine.model.Song;
 import org.junit.Before;
 import org.junit.Ignore;
-import org.junit.Test;
 import org.pptx4j.Pptx4jException;
-import org.pptx4j.jaxb.Context;
-import org.pptx4j.pml.CTGraphicalObjectFrame;
 
 public class SlideMachineTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
+	@Before
+	public void setUp() throws Exception {
+	}
 
-    @Ignore
-    public void testSlideMachine() throws Docx4JException, Pptx4jException, JAXBException {
-        SlideMachine sm = new SlideMachine();
-        sm.init();
-        sm.setTargetFile(new File("/target/presentation.pptx"));
+	@Ignore
+	public void testSlideMachine() throws Docx4JException, Pptx4jException, JAXBException {
+		SlideMachine sm = new SlideMachine();
+		sm.init();
+		sm.setTargetFile(new File("/target/presentation.pptx"));
 
-        Song song = new Song();
-        song.setHeader("Samen in de naam van Jezus");
-        song.setBody("Samen in de naam van Jezus" + System.getProperty("line.separator") + "Hef ik hier mijn loflied aan");
+		Song song = new Song();
+		song.setHeader("Samen in de naam van Jezus");
+		song.setBody("Samen in de naam van Jezus" + System.getProperty("line.separator") + "Hef ik hier mijn loflied aan");
 
-        sm.addSlide(song);
-        sm.save();
-    }
+		sm.addSlide(song);
+		sm.save();
+	}
 
-    @Test
-    public void prinlideContents() throws Docx4JException, JAXBException {
-        
-        PresentationMLPackage presentationMLPackage = (PresentationMLPackage) OpcPackage.load(new java.io.File("E:/Projects/Eclipse Workspace/LiedBase/target/Presentatie.pptx"));
+	@Ignore
+	// use for debugging only!
+	@SuppressWarnings("deprecation")
+	public void printSlideContents() throws Docx4JException {
 
-        SlidePart slide = (SlidePart) presentationMLPackage.getParts().get(new PartName("/ppt/slides/slide1.xml"));
+		PresentationMLPackage presentationMLPackage = (PresentationMLPackage) OpcPackage.load(new java.io.File("D:/Projects/LiedBase/target/Presentatie.pptx"));
 
-        CTGraphicalObjectFrame graphicFrame = (CTGraphicalObjectFrame) slide.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame()
-                .get(0);
+		// get specific slide
+		SlidePart slidePart = (SlidePart) presentationMLPackage.getParts().get(new PartName("/ppt/slides/slide1.xml"));
+		List<Object> shapeList = slidePart.getJaxbElement().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame();
 
-        String foo = XmlUtils.marshaltoString(graphicFrame, true, true, Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame",
-                CTGraphicalObjectFrame.class);
+		String indent = "";
 
-        System.out.println(foo);
+		for (Object o : shapeList) {
+			try {
+//				System.out.println(indent
+//						+ XmlUtils.marshaltoString(o, true, true, Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame",
+//								org.pptx4j.pml.CTGraphicalObjectFrame.class));
+				System.out.println("\n\n" + XmlUtils.marshaltoString(o, true, org.pptx4j.jaxb.Context.jcPML));
+			} catch (RuntimeException me) {
+				System.out.println(indent + o.getClass().getName());
+			}
 
-//        org.pptx4j.pml.CTGraphicalObjectFrame graphicFrame2 = (org.pptx4j.pml.CTGraphicalObjectFrame) XmlUtils.unmarshalString(foo, Context.jcPML, CTGraphicalObjectFrame.class);
+			if (o instanceof org.pptx4j.pml.Shape) {
+				CTTextBody txBody = ((org.pptx4j.pml.Shape) o).getTxBody();
+				if (txBody != null) {
+					for (CTTextParagraph tp : txBody.getP()) {
 
-    }
+//						System.out.println(indent
+//								+ XmlUtils.marshaltoString(tp, true, true, org.pptx4j.jaxb.Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "txBody",
+//										CTTextParagraph.class));
+
+					}
+				}
+			}
+		}
+	}
 
 }

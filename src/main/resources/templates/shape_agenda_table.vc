@@ -1,4 +1,4 @@
-<p:graphicFrame xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:ns12="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas" xmlns:ns6="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:ns11="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram">
+<p:graphicFrame xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:ns12="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas" xmlns:ns6="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:ns11="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram">
     <p:nvGraphicFramePr>
         <p:cNvPr id="5" name="Tabel 5"/>
         <p:cNvGraphicFramePr>
@@ -7,7 +7,7 @@
         <p:nvPr>
             <p:extLst>
                 <p:ext uri="{D42A27DB-BD31-4B8C-83A1-F6EECF244321}">
-                    <p14:modId val="2422738323" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main"/>
+                    <p14:modId val="4251131506" xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main"/>
                 </p:ext>
             </p:extLst>
         </p:nvPr>
@@ -35,18 +35,14 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
                                     <a:t>Datum</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
@@ -77,18 +73,14 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
                                     <a:t>Onderwerp</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
@@ -119,18 +111,14 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
                                     <a:t>Locatie</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
@@ -161,19 +149,15 @@
                             <a:lstStyle/>
                             <a:p>
                                 <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" smtClean="false">
-                                        <a:solidFill>
-                                            <a:srgbClr val="000000"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
-                                    <a:t>tijd</a:t>
+									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+										<a:solidFill>
+											<a:schemeClr val="tx1">
+												<a:lumMod val="95000"/>
+											</a:schemeClr>
+										</a:solidFill>
+										<a:effectLst/>
+									</a:rPr>
+                                    <a:t>Tijd</a:t>
                                 </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
                                     <a:solidFill>
@@ -204,21 +188,6 @@
                             <a:bodyPr/>
                             <a:lstStyle/>
                             <a:p>
-                                <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" err="true" smtClean="false">
-                                        <a:solidFill>
-                                            <a:schemeClr val="bg1"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
-                                    <a:t></a:t>
-                                </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
                                     <a:solidFill>
                                         <a:schemeClr val="bg1"/>
@@ -259,24 +228,6 @@
                                     <a:tabLst/>
                                     <a:defRPr/>
                                 </a:pPr>
-                                <a:r>
-                                    <a:rPr lang="en-US" sz="2400" kern="1200" dirty="false" err="true" smtClean="false">
-                                        <a:solidFill>
-                                            <a:schemeClr val="bg1"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                        <a:latin typeface="+mn-lt"/>
-                                        <a:ea typeface="+mn-ea"/>
-                                        <a:cs typeface="+mn-cs"/>
-                                    </a:rPr>
-                                    <a:t></a:t>
-                                </a:r>
                                 <a:endParaRPr sz="2400" kern="1200" dirty="false">
                                     <a:solidFill>
                                         <a:schemeClr val="bg1"/>
@@ -303,21 +254,6 @@
                             <a:bodyPr/>
                             <a:lstStyle/>
                             <a:p>
-                                <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" err="true" smtClean="false">
-                                        <a:solidFill>
-                                            <a:schemeClr val="bg1"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
-                                    <a:t></a:t>
-                                </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
                                     <a:solidFill>
                                         <a:schemeClr val="bg1"/>
@@ -341,21 +277,6 @@
                             <a:bodyPr/>
                             <a:lstStyle/>
                             <a:p>
-                                <a:r>
-                                    <a:rPr lang="nl-NL" sz="2400" dirty="false" err="true" smtClean="false">
-                                        <a:solidFill>
-                                            <a:schemeClr val="bg1"/>
-                                        </a:solidFill>
-                                        <a:effectLst>
-                                            <a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
-                                                <a:srgbClr val="000000">
-                                                    <a:alpha val="43137"/>
-                                                </a:srgbClr>
-                                            </a:outerShdw>
-                                        </a:effectLst>
-                                    </a:rPr>
-                                    <a:t></a:t>
-                                </a:r>
                                 <a:endParaRPr lang="nl-NL" sz="2400" dirty="false">
                                     <a:solidFill>
                                         <a:schemeClr val="bg1"/>

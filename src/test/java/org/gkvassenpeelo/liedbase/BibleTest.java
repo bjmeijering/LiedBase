@@ -10,7 +10,7 @@ import java.util.Map.Entry;
 
 import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
-import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
+import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -19,38 +19,78 @@ public class BibleTest extends Bible {
     Bible bijbel = new Bible();
 
     @Test
-    public void getBiblePartTest() throws Exception {
-        List<BiblePartFragment> bp = Bible.getBiblePart("nbv", "Hebreeen", 3, 7, 11);
+    public void getBibleBookFromLineTest() throws BibleException {
 
-        for (BiblePartFragment bpf : bp) {
-//            System.out.print("[" + bpf.getDisplayType().toString() + "]" + bpf.getContent());
-            System.out.print(bpf.getContent());
+        try {
+            Bible.getBibleBookFromLine("");
+        } catch (BibleException e) {
+            assertEquals("Bijbelboek niet gevonden in liturgieregel: ", e.getMessage());
+        }
+
+        try {
+            Bible.getBibleBookFromLine("fiets");
+        } catch (BibleException e) {
+            assertEquals("Bijbelboek niet gevonden in liturgieregel: fiets", e.getMessage());
+        }
+
+        try {
+            assertEquals("Genesis", Bible.getBibleBookFromLine("genesis 3: 2-3"));
+            assertEquals("Exodus", Bible.getBibleBookFromLine("eXoddues 3: 2-3"));
+            assertEquals("Daniël", Bible.getBibleBookFromLine(" daniel 1"));
+            assertEquals("2 Johannes", Bible.getBibleBookFromLine("2 johannus 14: 34 - 10000"));
+            assertEquals("Openbaring", Bible.getBibleBookFromLine("openbaringngn 2: 2-3"));
+            assertEquals("Matteüs", Bible.getBibleBookFromLine("mattheus 2: 2-2"));
+        } catch (BibleException e) {
+            fail("Something went wrong: " + e.getMessage());
         }
     }
 
-    @Ignore
+    @Test
+    public void getBiblePartTest() throws Exception {
+        List<BiblePartFragment> bp = Bible.getBiblePart("bgt", "genesis", 1, 1, 2);
+
+        assertEquals("superScript", bp.get(0).getDisplayType().toString());
+        assertEquals("1", bp.get(0).getContent());
+        assertEquals("normal", bp.get(1).getDisplayType().toString());
+        assertEquals("In het begin maakte God de hemel en de aarde. ", bp.get(1).getContent());
+    }
+    
+    @Test
+    public void getChapterFromLineTest() {
+        assertEquals(2, Bible.getChapterFromLine("genesis 2: 13"));
+        assertEquals(2, Bible.getChapterFromLine(" genesis 2 : 13"));
+        assertEquals(2, Bible.getChapterFromLine("2 johannes 2 : 13"));
+        assertEquals(2, Bible.getChapterFromLine("nietb estaadn 2 : 13"));
+    }
+    
+    @Test
+    public void getEndVerseFromLineTest() {
+        assertEquals(13, Bible.getEndVerseFromLine("genesis 2: 13"));
+    }
+
+    @Test
     public void getBiblePartNonExistentTest() throws Exception {
 
         try {
             Bible.getBiblePart("nbv", "Exoddus", 2, 1, 5);
         } catch (BibleException e) {
-            assertEquals("Boek Exoddus in vertaling NBV niet gevonden", e.getMessage());
+            assertEquals("Boek exoddus in vertaling NBV niet gevonden", e.getMessage());
         }
 
     }
 
-    @Ignore
+    @Test
     public void getBibleBookTest() {
         try {
-            assertEquals("Genisis", Bible.getBibleBookFromLine("Gen 1: 4 - 8"));
+            assertEquals("Genesis", Bible.getBibleBookFromLine("Gen 1: 4 - 8"));
         } catch (BibleException e) {
             fail(e.getMessage());
         }
     }
-    
+
     @Ignore
     public void downloadBibleOT() throws Exception {
-        
+
         Map<String, String> bibleBooksOT = new HashMap<String, String>();
         bibleBooksOT.put("genesis", "50");
         bibleBooksOT.put("exodus", "40");
@@ -91,11 +131,11 @@ public class BibleTest extends Bible {
         bibleBooksOT.put("haggai", "2");
         bibleBooksOT.put("zacharia", "14");
         bibleBooksOT.put("maleachi", "4");
-        
+
         for (Entry<String, String> e : bibleBooksOT.entrySet()) {
             bijbel.downloadAndSaveBibleBook(e.getKey(), e.getValue(), "SV77");
         }
-        
+
     }
 
     @Ignore
