@@ -1,4 +1,4 @@
-package org.gkvassenpeelo.slidemachine.model;
+package org.gkvassenpeelo.liedbase.slidemachine.model;
 
 import java.util.ArrayList;
 import java.util.List;

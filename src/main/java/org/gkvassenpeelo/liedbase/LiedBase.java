@@ -3,7 +3,6 @@ package org.gkvassenpeelo.liedbase;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.regex.Matcher;
@@ -19,16 +18,17 @@ import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
+import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
+import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
+import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
+import org.gkvassenpeelo.liedbase.slidemachine.model.GenericSlideContent;
+import org.gkvassenpeelo.liedbase.slidemachine.model.LiturgyOverview;
 import org.gkvassenpeelo.liedbase.songbook.SongBook;
-import org.gkvassenpeelo.slidemachine.SlideMachine;
-import org.gkvassenpeelo.slidemachine.model.BiblePartFragment;
-import org.gkvassenpeelo.slidemachine.model.GenericSlideContent;
-import org.gkvassenpeelo.slidemachine.model.LiturgyOverview;
 import org.pptx4j.Pptx4jException;
 
 public class LiedBase {
@@ -44,7 +44,8 @@ public class LiedBase {
 
     SlideMachine sm = new SlideMachine();
 
-    private List<LiturgyPart> liturgy = new LinkedList<LiturgyPart>();
+    private Liturgy liturgy;
+    
     private File targetFile = new File("presentatie.pptx");
     private File sourceFile = new File("liturgie.txt");
 
@@ -296,7 +297,7 @@ public class LiedBase {
 
         lp.setLine(line);
 
-        liturgy.add(lp);
+        liturgy.addLiturgyPart(lp);
 
         if (litugyOverViewItems.contains(type)) {
             liturgyView.add(line);
@@ -307,8 +308,6 @@ public class LiedBase {
     }
 
     public static String format(String line) {
-        
-        // TODO: een vers uit bijbelboek formatteerd dubbel
 
         StringBuilder sb = new StringBuilder();
 
@@ -457,15 +456,15 @@ public class LiedBase {
             sm.setTargetFile(getTargetFile());
             sm.init();
 
-            for (LiturgyPart lp : liturgy) {
+            for (LiturgyPart lp : liturgy.getLiturgyParts()) {
 
                 if (lp.getType() == LiturgyPart.Type.song) {
 
                     for (SlideContents sc : lp.getSlides()) {
 
-                        GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.Song();
+                        GenericSlideContent gsc = new org.gkvassenpeelo.liedbase.slidemachine.model.Song();
 
-                        ((org.gkvassenpeelo.slidemachine.model.Song) gsc).setCurrentVerse(((Song) sc).getVerseNumber());
+                        ((org.gkvassenpeelo.liedbase.slidemachine.model.Song) gsc).setCurrentVerse(((Song) sc).getVerseNumber());
                         gsc.setHeader(sc.getHeader());
                         gsc.setBody(sc.getBody());
 
@@ -473,40 +472,40 @@ public class LiedBase {
 
                     }
                 } else if (lp.getType() == LiturgyPart.Type.gathering) {
-                    GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.Gathering();
-                    ((org.gkvassenpeelo.slidemachine.model.Gathering) gsc).setFirstBenificiary(((org.gkvassenpeelo.liedbase.liturgy.Gathering) lp.getSlides().get(0))
+                    GenericSlideContent gsc = new org.gkvassenpeelo.liedbase.slidemachine.model.Gathering();
+                    ((org.gkvassenpeelo.liedbase.slidemachine.model.Gathering) gsc).setFirstBenificiary(((org.gkvassenpeelo.liedbase.liturgy.Gathering) lp.getSlides().get(0))
                             .getFirstGatheringBenificiary());
-                    ((org.gkvassenpeelo.slidemachine.model.Gathering) gsc).setSecondBenificiary(((org.gkvassenpeelo.liedbase.liturgy.Gathering) lp.getSlides().get(0))
+                    ((org.gkvassenpeelo.liedbase.slidemachine.model.Gathering) gsc).setSecondBenificiary(((org.gkvassenpeelo.liedbase.liturgy.Gathering) lp.getSlides().get(0))
                             .getSecondGatheringBenificiary());
                     sm.addSlide(gsc);
                 } else if (lp.getType() == LiturgyPart.Type.agenda) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Agenda());
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Agenda());
                 } else if (lp.getType() == LiturgyPart.Type.welcome) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Welcome(((Welcome) lp.getSlides().get(0)).getVicarName()));
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Welcome(((Welcome) lp.getSlides().get(0)).getVicarName()));
                 } else if (lp.getType() == LiturgyPart.Type.prair) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Prair());
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Prair());
                 } else if (lp.getType() == LiturgyPart.Type.votum) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Votum());
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Votum());
                 } else if (lp.getType() == LiturgyPart.Type.endOfMorningService) {
 
-                    GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.EndMorningService();
+                    GenericSlideContent gsc = new org.gkvassenpeelo.liedbase.slidemachine.model.EndMorningService();
 
-                    ((org.gkvassenpeelo.slidemachine.model.EndMorningService) gsc).setTime(((org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService) lp.getSlides().get(0))
+                    ((org.gkvassenpeelo.liedbase.slidemachine.model.EndMorningService) gsc).setTime(((org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService) lp.getSlides().get(0))
                             .getTime());
-                    ((org.gkvassenpeelo.slidemachine.model.EndMorningService) gsc).setVicarName(((org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService) lp.getSlides().get(0))
+                    ((org.gkvassenpeelo.liedbase.slidemachine.model.EndMorningService) gsc).setVicarName(((org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService) lp.getSlides().get(0))
                             .getVicarName());
 
                     sm.addSlide(gsc);
                 } else if (lp.getType() == LiturgyPart.Type.endOfAfternoonService) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.EndAfternoonService());
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.EndAfternoonService());
                 } else if (lp.getType() == LiturgyPart.Type.amen) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Amen());
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Amen());
                 } else if (lp.getType() == LiturgyPart.Type.law) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Law());
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Law());
                 } else if (lp.getType() == LiturgyPart.Type.lecture) {
-                    sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Lecture());
+                    sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Lecture());
                 } else if (lp.getType() == LiturgyPart.Type.scripture) {
-                    GenericSlideContent gsc = new org.gkvassenpeelo.slidemachine.model.Scripture(lp.getSlides().get(0));
+                    GenericSlideContent gsc = new org.gkvassenpeelo.liedbase.slidemachine.model.Scripture(lp.getSlides().get(0));
                     sm.addSlide(gsc);
                 }
 
@@ -530,7 +529,7 @@ public class LiedBase {
         // after some liturgy parts, add an overview slide, except for
         // the last one!
         if (followedByLiturgyOverview.contains(lp.getType()) && showLiturgyOverview) {
-            LiturgyOverview lo = new org.gkvassenpeelo.slidemachine.model.LiturgyOverview();
+            LiturgyOverview lo = new org.gkvassenpeelo.liedbase.slidemachine.model.LiturgyOverview();
 
             StringBuilder builder = new StringBuilder();
             int pos = liturgyView.indexOf(lp.getLine());
@@ -560,7 +559,7 @@ public class LiedBase {
             sm.addSlide(lo);
         } else {
             if (lp.getType() != LiturgyPart.Type.endOfMorningService && lp.getType() != LiturgyPart.Type.endOfAfternoonService) {
-                sm.addSlide(new org.gkvassenpeelo.slidemachine.model.Blank());
+                sm.addSlide(new org.gkvassenpeelo.liedbase.slidemachine.model.Blank());
             }
         }
     }

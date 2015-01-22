@@ -1,6 +1,6 @@
-package org.gkvassenpeelo.slidemachine.model;
+package org.gkvassenpeelo.liedbase.slidemachine.model;
 
-public class Prair extends GenericSlideContent {
+public class Gathering extends GenericSlideContent {
     
     private String firstBenificiary;
     
