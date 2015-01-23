@@ -14,7 +14,10 @@ public class PaperMachine {
 
     private WordprocessingMLPackage wordMLPackage;
 
-    public PaperMachine() throws PaperMachineException {
+    public PaperMachine(Liturgy liturgy) throws PaperMachineException {
+        
+        this.liturgy = liturgy;
+        
         try {
             wordMLPackage = WordprocessingMLPackage.createPackage();
             mainDocumentPart = wordMLPackage.getMainDocumentPart();
@@ -28,7 +31,7 @@ public class PaperMachine {
     
     public void save(String location) throws PaperMachineException {
         try {
-            wordMLPackage.save(new java.io.File("target/HelloWord.docx"));
+            wordMLPackage.save(new java.io.File("E:/Projects/Eclipse Workspace/LiedBase/target/HelloWord.docx"));
         } catch (Docx4JException e) {
             throw new PaperMachineException(String.format("Error while saving paper machine: %s", e.getMessage()), e);
         }

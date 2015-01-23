@@ -24,6 +24,7 @@ import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
+import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.slidemachine.model.GenericSlideContent;
@@ -44,7 +45,7 @@ public class LiedBase {
 
     SlideMachine sm = new SlideMachine();
 
-    private Liturgy liturgy;
+    private Liturgy liturgy = new Liturgy();
     
     private File targetFile = new File("presentatie.pptx");
     private File sourceFile = new File("liturgie.txt");
@@ -589,8 +590,11 @@ public class LiedBase {
             LiedBase lb = new LiedBase();
 
             lb.parseLiturgyScript();
-            lb.createSlides();
-            lb.save();
+            
+            PaperMachine pm = new PaperMachine(lb.liturgy);
+            pm.save("");
+//            lb.createSlides();
+//            lb.save();
         } catch (Exception e) {
             logger.error(e.getMessage(), e);
         }
