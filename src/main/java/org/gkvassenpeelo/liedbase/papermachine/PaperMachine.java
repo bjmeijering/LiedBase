@@ -1,10 +1,15 @@
 package org.gkvassenpeelo.liedbase.papermachine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 
 public class PaperMachine {
 
@@ -13,10 +18,21 @@ public class PaperMachine {
 	private MainDocumentPart mainDocumentPart;
 
 	private WordprocessingMLPackage wordMLPackage;
+	
+	private List<LiturgyPart.Type> liturgyPartsToPrint = new ArrayList<LiturgyPart.Type>();
 
 	public PaperMachine(Liturgy liturgy) throws PaperMachineException {
 
 		this.liturgy = liturgy;
+		
+		liturgyPartsToPrint.add(LiturgyPart.Type.amen);
+		liturgyPartsToPrint.add(LiturgyPart.Type.gathering);
+		liturgyPartsToPrint.add(LiturgyPart.Type.law);
+		liturgyPartsToPrint.add(LiturgyPart.Type.lecture);
+		liturgyPartsToPrint.add(LiturgyPart.Type.prair);
+		liturgyPartsToPrint.add(LiturgyPart.Type.scripture);
+		liturgyPartsToPrint.add(LiturgyPart.Type.song);
+		liturgyPartsToPrint.add(LiturgyPart.Type.votum);
 
 	}
 
@@ -25,11 +41,23 @@ public class PaperMachine {
 			wordMLPackage = WordprocessingMLPackage.createPackage();
 			mainDocumentPart = wordMLPackage.getMainDocumentPart();
 
-			mainDocumentPart.addStyledParagraphOfText("Heading 1", liturgy.getLiturgyParts().get(0).getLine());
-			mainDocumentPart.addParagraphOfText("Hello Word!");
+			for (LiturgyPart lp : liturgy.getLiturgyParts()) {
+				addLiturgyPartToDocument(lp);
+			}
 
 		} catch (InvalidFormatException e) {
 			throw new PaperMachineException(String.format("Error while creating paper machine: %s", e.getMessage()), e);
+		}
+	}
+
+	private void addLiturgyPartToDocument(LiturgyPart lp) {
+		if(!liturgyPartsToPrint.contains(lp.getType())) {
+			return;
+		}
+		
+		mainDocumentPart.addStyledParagraphOfText("", lp.getLine());
+		for (SlideContents sc : lp.getSlides()) {
+			mainDocumentPart.addParagraphOfText(sc.getBody());
 		}
 	}
 

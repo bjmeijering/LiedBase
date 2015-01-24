@@ -27,6 +27,13 @@ import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.songbook.SongBook;
 
+/**
+ * TODO: vers nummers corerct tonen als geen verzen zijn opgegeven. TODO:
+ * 
+ * 
+ * @author hdo20043
+ *
+ */
 public class LiedBase {
 
 	static final Logger logger = Logger.getLogger(LiedBase.class);
@@ -39,6 +46,7 @@ public class LiedBase {
 	private static final String regex_voorganger = "([vV]oorganger|[dD]ominee|[wW]el[ck]om)";
 
 	private Liturgy liturgy = new Liturgy();
+
 	private File sourceFile = new File("liturgie.txt");
 
 	public static final String ENCODING = "UTF-8";
@@ -421,17 +429,25 @@ public class LiedBase {
 		return benificiaries;
 	}
 
+	public Liturgy getLiturgy() {
+		return liturgy;
+	}
+
+	public List<String> getLiturgyView() {
+		return liturgyView;
+	}
+
 	public static void main(String[] args) throws Docx4JException, BibleException {
 
 		try {
 			LiedBase lb = new LiedBase();
 			lb.parseLiturgyScript();
 
-			SlideMachine slideMachine = new SlideMachine(lb.liturgy, lb.liturgyView);
+			SlideMachine slideMachine = new SlideMachine(lb.getLiturgy(), lb.getLiturgyView());
 			slideMachine.createSlides();
 			slideMachine.save();
 
-			PaperMachine pm = new PaperMachine(lb.liturgy);
+			PaperMachine pm = new PaperMachine(lb.getLiturgy());
 			pm.createDocument();
 			pm.save("D:/Projects/LiedBase/target/HelloWord.docx");
 

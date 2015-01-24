@@ -30,13 +30,13 @@ public class SlideMachine {
 	private File targetFile = new File("presentatie.pptx");
 
 	private PresentationMLPackage presentationMLPackage;
-	
+
 	private List<LiturgyPart.Type> followedByLiturgyOverview = new ArrayList<LiturgyPart.Type>();
 
 	private int currentLiturgyPartIndex = 0;
 
 	private boolean showLiturgyOverview = true;
-	
+
 	private List<String> liturgyView;
 
 	SlideFactory slideFactory;
@@ -206,13 +206,12 @@ public class SlideMachine {
 		slideFactory.addSlideContents(presentationMLPackage, slidePart, content);
 
 	}
-	
-    private File getTargetFile() {
-        return targetFile;
-    }
+
+	private File getTargetFile() {
+		return targetFile;
+	}
 
 	public void save() throws Docx4JException {
-		// All done: save it
 		presentationMLPackage.save(targetFile);
 	}
 
