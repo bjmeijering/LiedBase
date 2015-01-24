@@ -14,6 +14,7 @@ import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
+import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 import org.gkvassenpeelo.liedbase.slidemachine.model.Song;
 import org.junit.Before;
 import org.junit.Ignore;
@@ -26,9 +27,8 @@ public class SlideMachineTest {
 	}
 
 	@Ignore
-	public void testSlideMachine() throws Docx4JException, Pptx4jException, JAXBException {
-		SlideMachine sm = new SlideMachine();
-		sm.init();
+	public void testSlideMachine() throws Docx4JException, Pptx4jException, JAXBException, SlideMachineException {
+		SlideMachine sm = new SlideMachine(null, null);
 		sm.setTargetFile(new File("/target/presentation.pptx"));
 
 		Song song = new Song();

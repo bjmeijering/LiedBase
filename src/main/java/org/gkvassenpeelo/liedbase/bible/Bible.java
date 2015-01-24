@@ -229,6 +229,9 @@ public class Bible {
 
 	// for each bible book an if statement
 	public static String getBibleBookFromLine(String line) throws BibleException {
+		
+		line = line.trim();
+		
 		if (line.toLowerCase().startsWith("gen")) {
 			return "Genesis";
 		}

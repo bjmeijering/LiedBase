@@ -18,7 +18,7 @@ public class LiedBaseTest {
 
     @Before
     public void setUp() throws Exception {
-        lb.setTargetFile(new File("target/Presentatie.pptx"));
+    	
     }
 
     @Ignore
@@ -27,8 +27,6 @@ public class LiedBaseTest {
         lb.setSourceFile(new File("src/test/resources/liturgie.txt"));
 
         lb.parseLiturgyScript();
-        lb.createSlides();
-        lb.save();
 
     }
 
