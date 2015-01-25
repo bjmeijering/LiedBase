@@ -1,15 +1,4 @@
-welkom: Br. K. Schoon
-votum
-Gezang 118: 1, 2, 3
-Gezang 23: 1
-gebed
-psalmen 18: 15 - 20
-Psalm 84: 1, 2, 5
-# kinderblok door Jos Jonker
-# Kinderlied in te vullen door Jos
-Preek
-Gezang 167: 1, 2, 3
-gebed
-Collecte: Theologische Universiteit, Huisvesting
-Lied 456: 1, 2, 3
-einde morgendienst: 15:30,Ds. Ds. H.J. Lopers (Hoogezand)
+agenda
+Gezang 179a
+Exodus 13: 4-10
+psalm 1:2

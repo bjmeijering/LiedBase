@@ -28,7 +28,8 @@ import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.songbook.SongBook;
 
 /**
- * TODO: vers nummers corerct tonen als geen verzen zijn opgegeven. TODO:
+ * TODO: vers nummers correct tonen als geen verzen zijn opgegeven.
+ * TODO: Gezang 179a en 179b worden niet gepakt
  * 
  * 
  * @author hdo20043
@@ -225,11 +226,6 @@ public class LiedBase {
 				}
 
 			} else {
-
-				// quick and dirty fix for character appended songs
-				if (SongBook.getSongNumber(line).matches("179a") || SongBook.getSongNumber(line).matches("179b")) {
-					line = line + ": 1";
-				}
 
 				if (!line.contains(":")) {
 					List<String> allVerses = SongBook.getVersesFromSong(scType, SongBook.getSongNumber(line));
