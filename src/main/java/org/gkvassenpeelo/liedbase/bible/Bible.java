@@ -17,7 +17,6 @@ import javax.net.ssl.HttpsURLConnection;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gkvassenpeelo.liedbase.LiedBase;
-import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

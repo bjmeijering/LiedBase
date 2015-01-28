@@ -5,15 +5,21 @@ import java.util.List;
 
 import javax.xml.bind.JAXBException;
 
+import org.docx4j.jaxb.Context;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
+import org.docx4j.wml.Body;
+import org.docx4j.wml.Br;
+import org.docx4j.wml.ObjectFactory;
+import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
-import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
+import org.gkvassenpeelo.liedbase.liturgy.Song;
+import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 public class PaperMachine {
 
@@ -65,7 +71,7 @@ public class PaperMachine {
 
 		if (lp.getType() == LiturgyPart.Type.scripture) {
 
-			mainDocumentPart.addStyledParagraphOfText("Subtitle", lp.getLine());
+			mainDocumentPart.addStyledParagraphOfText("", lp.getLine());
 
 			StringBuilder sb = new StringBuilder();
 
@@ -89,7 +95,30 @@ public class PaperMachine {
 
 				mainDocumentPart.addStyledParagraphOfText("", lp.getLine());
 
-				mainDocumentPart.addParagraphOfText(sc.getBody());
+				ObjectFactory factory = Context.getWmlObjectFactory();
+				// Create the paragraph
+				org.docx4j.wml.P para = factory.createP();
+
+				// Create the run
+				org.docx4j.wml.R run = factory.createR();
+
+				for (SongLine line : ((Song) sc).getSongText()) {
+
+					// Create the text element
+					org.docx4j.wml.Text t = factory.createText();
+					t.setValue(line.getContent());
+					run.getRunContent().add(t);
+
+					Br br = factory.createBr(); // this Br element is used break the current and go for next line
+					run.getContent().add(br);
+
+				}
+
+				para.getParagraphContent().add(run);
+				// Now add our paragraph to the document body
+				Body body = mainDocumentPart.getJaxbElement().getBody();
+				body.getEGBlockLevelElts().add(para);
+
 			}
 		}
 	}

@@ -10,7 +10,7 @@ import java.util.Map.Entry;
 
 import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
-import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
+import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.junit.Ignore;
 import org.junit.Test;
 

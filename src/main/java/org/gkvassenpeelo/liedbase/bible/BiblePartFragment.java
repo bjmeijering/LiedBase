@@ -1,4 +1,4 @@
-package org.gkvassenpeelo.liedbase.slidemachine.model;
+package org.gkvassenpeelo.liedbase.bible;
 
 public class BiblePartFragment {
 

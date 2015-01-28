@@ -20,7 +20,9 @@ public class SongBook {
 	 * @param verse
 	 * @return
 	 */
-	public static String getSongText(SlideContents.Type type, String songNumber, String verse) {
+	public static List<SongLine> getSongText(SlideContents.Type type, String songNumber, String verse) {
+
+		List<SongLine> songText = new ArrayList<SongLine>();
 
 		String songBookName = "";
 		String songIdentifier = "";
@@ -54,18 +56,16 @@ public class SongBook {
 					String songLine = s.nextLine();
 
 					if (songLine.equals(verse)) {
-						StringBuilder verseText = new StringBuilder();
 						while (s.hasNextLine()) {
 							String verseLine = s.nextLine();
 							if (StringUtils.isEmpty(verseLine)) {
 								s.close();
-								return verseText.toString();
+								return songText;
 							}
-							verseText.append(verseLine);
-							verseText.append(System.getProperty("line.separator"));
+							songText.add(new SongLine(SongLine.DisplayType.normal, verseLine));
 						}
 						s.close();
-						return verseText.toString();
+						return songText;
 					}
 				}
 			}
@@ -73,11 +73,12 @@ public class SongBook {
 
 		s.close();
 
-		return String.format("Geen tekst gevonden voor %s %s: %s", type.toString(), songNumber, verse);
+		songText.add(new SongLine(SongLine.DisplayType.normal, String.format("Geen tekst gevonden voor %s %s: %s", type.toString(), songNumber, verse)));
+		return songText;
 	}
 
-	public static List<String> getOpwekkingSongTekst(String songNumber) {
-		List<String> verses = new ArrayList<String>();
+	public static List<List<SongLine>> getOpwekkingSongTekst(String songNumber) {
+		List<List<SongLine>> verses = new ArrayList<List<SongLine>>();
 
 		String songBookName = "opwekking.txt";
 		String songIdentifier = "opwekking";
@@ -107,7 +108,7 @@ public class SongBook {
 					// }
 
 					boolean nextSong = false;
-					StringBuilder verseText = new StringBuilder();
+					List<SongLine> verseText = new ArrayList<SongLine>();
 
 					while (s.hasNextLine() && !nextSong) {
 
@@ -120,13 +121,12 @@ public class SongBook {
 						if (StringUtils.isEmpty(verseLine)) {
 							if (!StringUtils.isEmpty(verseText.toString()) && !StringUtils.startsWith(verseText.toString(), "Tekst  muziek:")
 									&& !StringUtils.startsWith(verseText.toString(), "(c)")) {
-								verses.add(verseText.toString());
+								verses.add(verseText);
 							}
-							verseText = new StringBuilder();
+							verseText = new ArrayList<SongLine>();
 							continue;
 						}
-						verseText.append(verseLine);
-						verseText.append(System.getProperty("line.separator"));
+						verseText.add(new SongLine(SongLine.DisplayType.normal, verseLine));
 					}
 
 					return verses;

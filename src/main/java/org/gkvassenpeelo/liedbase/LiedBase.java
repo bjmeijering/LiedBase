@@ -14,6 +14,7 @@ import org.apache.log4j.Logger;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
+import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
@@ -24,8 +25,8 @@ import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
 import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
-import org.gkvassenpeelo.liedbase.slidemachine.model.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.songbook.SongBook;
+import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 /**
  * TODO: vers nummers correct tonen als geen verzen zijn opgegeven.
@@ -220,7 +221,7 @@ public class LiedBase {
 
 			if (scType == SlideContents.Type.opwekking) {
 
-				for (String verse : SongBook.getOpwekkingSongTekst(SongBook.getSongNumber(line))) {
+				for (List<SongLine> verse : SongBook.getOpwekkingSongTekst(SongBook.getSongNumber(line))) {
 					Song song = new Song(line, verse);
 					lp.addSlide(song);
 				}
