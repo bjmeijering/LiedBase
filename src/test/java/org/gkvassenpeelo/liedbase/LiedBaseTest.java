@@ -31,10 +31,10 @@ public class LiedBaseTest {
 
 		lb.parseLiturgyScript();
 
-//		SlideMachine slideMachine = new SlideMachine(lb.getLiturgy(), lb.getLiturgyView());
-//		slideMachine.createSlides();
-//		slideMachine.setTargetFile(new File("D:/Projects/LiedBase/target/Presentatie.pptx"));
-//		slideMachine.save();
+		SlideMachine slideMachine = new SlideMachine(lb.getLiturgy(), lb.getLiturgyView());
+		slideMachine.createSlides();
+		slideMachine.setTargetFile(new File("D:/Projects/LiedBase/target/Presentatie.pptx"));
+		slideMachine.save();
 
 		PaperMachine pm = new PaperMachine(lb.getLiturgy());
 		pm.createDocument();

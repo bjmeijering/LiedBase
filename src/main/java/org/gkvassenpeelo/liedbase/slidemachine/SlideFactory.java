@@ -56,7 +56,7 @@ public class SlideFactory {
 		// fill the slide layout map
 		slideLayoutMap.put(LiturgyPart.Type.song, "/ppt/slideLayouts/slideLayout4.xml");
 		slideLayoutMap.put(LiturgyPart.Type.scripture, "/ppt/slideLayouts/slideLayout4.xml");
-		// slideLayoutMap.put(LiturgyPart.Type., "/ppt/slideLayouts/slideLayout19.xml");
+		slideLayoutMap.put(LiturgyPart.Type.blank, "/ppt/slideLayouts/slideLayout19.xml");
 		slideLayoutMap.put(LiturgyPart.Type.gathering, "/ppt/slideLayouts/slideLayout6.xml");
 		slideLayoutMap.put(LiturgyPart.Type.prair, "/ppt/slideLayouts/slideLayout10.xml");
 		slideLayoutMap.put(LiturgyPart.Type.welcome, "/ppt/slideLayouts/slideLayout1.xml");

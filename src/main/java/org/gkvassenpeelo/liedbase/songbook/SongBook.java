@@ -141,7 +141,7 @@ public class SongBook {
 		return verses;
 	}
 
-	public static List<String> getVersesFromSong(org.gkvassenpeelo.liedbase.liturgy.SlideContents.Type type, String songNumber) {
+	public static List<String> getVersesFromSong(SlideContents.Type type, String songNumber) {
 		List<String> verses = new ArrayList<String>();
 
 		String songBookName = "";
@@ -174,8 +174,18 @@ public class SongBook {
 				while (s.hasNextLine()) {
 					String songLine = s.nextLine();
 
-					// we are reading the next song, stop it!
-					if (songLine.matches(String.format("^%s %s:.*$", songIdentifier, Integer.parseInt(songNumber) + 1))) {
+					// we are reading the next song, stop!
+					String tempSongNumber = songNumber;
+					if (tempSongNumber.matches("^[0-9]*[a-z]{1}$")) {
+						tempSongNumber = songNumber.substring(0, songNumber.length() - 1);
+					}
+					// next song in integers
+					if (songLine.matches(String.format("^%s %s[a-z]*:.*$", songIdentifier, Integer.parseInt(tempSongNumber) + 1))) {
+						s.close();
+						return verses;
+					}
+					// next song alphabetically
+					if (songLine.matches(String.format("^%s %s[a-z]*:.*$", songIdentifier, Integer.parseInt(tempSongNumber)))) {
 						s.close();
 						return verses;
 					}

@@ -29,8 +29,8 @@ import org.gkvassenpeelo.liedbase.songbook.SongBook;
 import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 /**
- * TODO: vers nummers correct tonen als geen verzen zijn opgegeven.
- * TODO: Gezang 179a en 179b worden niet gepakt
+ * TODO: vers nummers correct tonen als geen verzen zijn opgegeven bij een bijbeltekst
+ * TODO: Agenda table is verdwenen
  * 
  * 
  * @author hdo20043
@@ -193,7 +193,7 @@ public class LiedBase {
 
 		// apply the right formatting to 'line'
 		if (type == LiturgyPart.Type.song || type == LiturgyPart.Type.scripture) {
-			line = format(line);
+			line = format(line, LiturgyPart.Type.song);
 		}
 
 		// create a new liturgy part
@@ -270,7 +270,7 @@ public class LiedBase {
 
 			List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
 
-			line = format(String.format("%s%s:%s-%s", bibleBook, chapter, fromVerse, toVerse));
+			line = format(String.format("%s%s:%s-%s", bibleBook, chapter, fromVerse, toVerse), LiturgyPart.Type.scripture);
 
 			lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
 		}
@@ -287,7 +287,7 @@ public class LiedBase {
 
 	}
 
-	public static String format(String line) {
+	public static String format(String line, LiturgyPart.Type type) {
 
 		StringBuilder sb = new StringBuilder();
 
@@ -322,7 +322,7 @@ public class LiedBase {
 				continue;
 			}
 
-			if (prevCharType == CharType.number && getCharType(c) == CharType.character) {
+			if (prevCharType == CharType.number && getCharType(c) == CharType.character && type == LiturgyPart.Type.scripture) {
 				sb.append(" ");
 				if (line.indexOf(c) < 3) {
 					sb.append(Character.toUpperCase(c));

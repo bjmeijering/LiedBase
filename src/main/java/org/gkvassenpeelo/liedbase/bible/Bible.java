@@ -17,6 +17,7 @@ import javax.net.ssl.HttpsURLConnection;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gkvassenpeelo.liedbase.LiedBase;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -43,7 +44,7 @@ public class Bible {
 		translation = translation.toUpperCase();
 
 		book = book.toLowerCase();
-		
+
 		book = book.replaceAll("ë", "e");
 		book = book.replaceAll("ï", "i");
 		book = book.replaceAll("ü", "u");
@@ -228,9 +229,9 @@ public class Bible {
 
 	// for each bible book an if statement
 	public static String getBibleBookFromLine(String line) throws BibleException {
-		
+
 		line = line.trim();
-		
+
 		if (line.toLowerCase().startsWith("gen")) {
 			return "Genesis";
 		}
@@ -433,9 +434,9 @@ public class Bible {
 	}
 
 	public static int getChapterFromLine(String line) {
-	    
-	    line = LiedBase.format(line);
-	    
+
+		line = LiedBase.format(line, LiturgyPart.Type.scripture);
+
 		if (line.contains(":")) {
 			String s = StringUtils.substringBefore(line, ":");
 			return Integer.parseInt(StringUtils.substringBefore(StringUtils.substringAfterLast(s, " "), ":").trim());
