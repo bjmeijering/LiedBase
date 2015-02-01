@@ -23,21 +23,14 @@ import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlideLayoutPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Agenda;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Amen;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Blank;
-import org.gkvassenpeelo.liedbase.slidemachine.model.EndAfternoonService;
-import org.gkvassenpeelo.liedbase.slidemachine.model.EndMorningService;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Gathering;
-import org.gkvassenpeelo.liedbase.slidemachine.model.GenericSlideContent;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Law;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Lecture;
-import org.gkvassenpeelo.liedbase.slidemachine.model.LiturgyOverview;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Prair;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Scripture;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Song;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Votum;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Welcome;
+import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
+import org.gkvassenpeelo.liedbase.liturgy.Gathering;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.Scripture;
+import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
+import org.gkvassenpeelo.liedbase.liturgy.Song;
+import org.gkvassenpeelo.liedbase.liturgy.Welcome;
 import org.pptx4j.jaxb.Context;
 import org.pptx4j.pml.CTGraphicalObjectFrame;
 import org.pptx4j.pml.Shape;
@@ -50,296 +43,301 @@ import org.pptx4j.pml.Shape;
  */
 public class SlideFactory {
 
-    private Map<Class<? extends GenericSlideContent>, String> slideLayoutMap = new HashMap<Class<? extends GenericSlideContent>, String>();
+	private Map<LiturgyPart.Type, String> slideLayoutMap = new HashMap<LiturgyPart.Type, String>();
 
-    private VelocityEngine velocityEngine;
+	private VelocityEngine velocityEngine;
 
-    private static final String ENCODING = "UTF-8";
+	private static final String ENCODING = "UTF-8";
 
-    /**
+	/**
      * 
      */
-    public SlideFactory() {
-        // fill the slide layout map
-        slideLayoutMap.put(Song.class, "/ppt/slideLayouts/slideLayout4.xml");
-        slideLayoutMap.put(Scripture.class, "/ppt/slideLayouts/slideLayout4.xml");
-        slideLayoutMap.put(Blank.class, "/ppt/slideLayouts/slideLayout19.xml");
-        slideLayoutMap.put(Gathering.class, "/ppt/slideLayouts/slideLayout6.xml");
-        slideLayoutMap.put(Prair.class, "/ppt/slideLayouts/slideLayout10.xml");
-        slideLayoutMap.put(Welcome.class, "/ppt/slideLayouts/slideLayout1.xml");
-        slideLayoutMap.put(Law.class, "/ppt/slideLayouts/slideLayout12.xml");
-        slideLayoutMap.put(Votum.class, "/ppt/slideLayouts/slideLayout3.xml");
-        slideLayoutMap.put(Amen.class, "/ppt/slideLayouts/slideLayout9.xml");
-        slideLayoutMap.put(EndMorningService.class, "/ppt/slideLayouts/slideLayout7.xml");
-        slideLayoutMap.put(EndAfternoonService.class, "/ppt/slideLayouts/slideLayout8.xml");
-        slideLayoutMap.put(Lecture.class, "/ppt/slideLayouts/slideLayout14.xml");
-        slideLayoutMap.put(Agenda.class, "/ppt/slideLayouts/slideLayout2.xml");
-        slideLayoutMap.put(LiturgyOverview.class, "/ppt/slideLayouts/slideLayout20.xml");
+	public SlideFactory() {
+		// fill the slide layout map
+		slideLayoutMap.put(LiturgyPart.Type.song, "/ppt/slideLayouts/slideLayout4.xml");
+		slideLayoutMap.put(LiturgyPart.Type.scripture, "/ppt/slideLayouts/slideLayout4.xml");
+		// slideLayoutMap.put(LiturgyPart.Type., "/ppt/slideLayouts/slideLayout19.xml");
+		slideLayoutMap.put(LiturgyPart.Type.gathering, "/ppt/slideLayouts/slideLayout6.xml");
+		slideLayoutMap.put(LiturgyPart.Type.prair, "/ppt/slideLayouts/slideLayout10.xml");
+		slideLayoutMap.put(LiturgyPart.Type.welcome, "/ppt/slideLayouts/slideLayout1.xml");
+		slideLayoutMap.put(LiturgyPart.Type.law, "/ppt/slideLayouts/slideLayout12.xml");
+		slideLayoutMap.put(LiturgyPart.Type.votum, "/ppt/slideLayouts/slideLayout3.xml");
+		slideLayoutMap.put(LiturgyPart.Type.amen, "/ppt/slideLayouts/slideLayout9.xml");
+		slideLayoutMap.put(LiturgyPart.Type.endOfMorningService, "/ppt/slideLayouts/slideLayout7.xml");
+		slideLayoutMap.put(LiturgyPart.Type.endOfAfternoonService, "/ppt/slideLayouts/slideLayout8.xml");
+		slideLayoutMap.put(LiturgyPart.Type.lecture, "/ppt/slideLayouts/slideLayout14.xml");
+		slideLayoutMap.put(LiturgyPart.Type.agenda, "/ppt/slideLayouts/slideLayout2.xml");
+		slideLayoutMap.put(LiturgyPart.Type.liturgyOverview, "/ppt/slideLayouts/slideLayout20.xml");
 
-        // init velocity with defaults
-        Velocity.init();
-    }
+		// init velocity with defaults
+		Velocity.init();
+	}
 
-    /**
-     * 
-     * @param presentationMLPackage
-     * @param slidePart
-     * @param content
-     * @throws JAXBException
-     * @throws Docx4JException
-     * @throws SlideFactoryException
-     */
-    public void addSlideContents(PresentationMLPackage presentationMLPackage, SlidePart slidePart, GenericSlideContent content) throws JAXBException, Docx4JException {
-        SlideLayoutPart layoutPart = (SlideLayoutPart) presentationMLPackage.getParts().getParts().get(new PartName(slideLayoutMap.get(content.getClass())));
+	/**
+	 * 
+	 * @param presentationMLPackage
+	 * @param slidePart
+	 * @param content
+	 * @throws JAXBException
+	 * @throws Docx4JException
+	 * @throws SlideFactoryException
+	 */
+	public void addSlideContents(PresentationMLPackage presentationMLPackage, SlidePart slidePart, SlideContents content, LiturgyPart.Type type) throws JAXBException,
+			Docx4JException {
+		SlideLayoutPart layoutPart = (SlideLayoutPart) presentationMLPackage.getParts().getParts().get(new PartName(slideLayoutMap.get(type)));
 
-        // add Slide layout part
-        slidePart.addTargetPart(layoutPart);
+		// add Slide layout part
+		slidePart.addTargetPart(layoutPart);
 
-        // Add contents to layout if neccesary
-        if (content instanceof Song) {
-            // Create and add header
-            if (!StringUtils.isEmpty(content.getHeader())) {
-                Shape header = createSongHeaderShape((Song) content);
-                slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(header);
-            }
+		// Add contents to layout if neccesary
+		if (type == LiturgyPart.Type.song) {
+			// Create and add header
+			if (!StringUtils.isEmpty(content.getHeader())) {
+				Shape header = createSongHeaderShape((Song) content);
+				slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(header);
+			}
 
-            // create and add body
-            if (!StringUtils.isEmpty(content.getBody())) {
-                Shape body = createSongBody(content.getBody());
-                slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(body);
-            }
-        }
-        if (content instanceof Gathering) {
-            Shape benificiary = createGatheringShape(((Gathering) content).getFirstBenificiary(), true);
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(benificiary);
-            benificiary = createGatheringShape(((Gathering) content).getSecondBenificiary(), false);
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(benificiary);
-        }
-        if (content instanceof Welcome) {
-            Shape vicar = createVicarShape(((Welcome) content).getVicarName());
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
-        }
-        if (content instanceof EndMorningService) {
+			// create and add body
+			if (((Song) content).getSongText().size() > 0) {
 
-            Shape time = createTimeShape(((EndMorningService) content).getTime());
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(time);
+			}
 
-            Shape vicar = createNextVicarShape(((EndMorningService) content).getVicarName());
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
-        }
-        if (content instanceof Scripture) {
+			if (!StringUtils.isEmpty(content.getBody())) {
+				Shape body = createSongBody(content.getBody());
+				slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(body);
+			}
+		}
+		if (type == LiturgyPart.Type.gathering) {
+			Shape benificiary = createGatheringShape(((Gathering) content).getFirstGatheringBenificiary(), true);
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(benificiary);
+			benificiary = createGatheringShape(((Gathering) content).getSecondGatheringBenificiary(), false);
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(benificiary);
+		}
+		if (type == LiturgyPart.Type.welcome) {
+			Shape vicar = createVicarShape(((Welcome) content).getVicarName());
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
+		}
+		if (type == LiturgyPart.Type.endOfMorningService) {
 
-            Shape scriptureHeader = createScriptureHeaderShape(content);
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureHeader);
+			Shape time = createTimeShape(((EndOfMorningService) content).getTime());
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(time);
 
-            Shape scriptureBody = createScriptureBodyShape(content);
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureBody);
+			Shape vicar = createNextVicarShape(((EndOfMorningService) content).getVicarName());
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
+		}
+		if (type == LiturgyPart.Type.scripture) {
 
-        }
-        if (content instanceof Agenda) {
-            
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
-            
-        }
-        if(content instanceof LiturgyOverview) {
-            slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewBody(content));
-        }
-        
-    }
+			Shape scriptureHeader = createScriptureHeaderShape(content);
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureHeader);
 
-    private Shape getLiturgyOverviewBody(GenericSlideContent content) throws JAXBException {
-    	VelocityContext vc = new VelocityContext();
-    	vc.put("pastParts", ((LiturgyOverview)content).getLiturgyLinesPast());
-        vc.put("futureParts", ((LiturgyOverview)content).getLiturgyLinesFuture());
+			Shape scriptureBody = createScriptureBodyShape(content);
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureBody);
 
-        StringWriter ow = new StringWriter();
+		}
+		if (type == LiturgyPart.Type.agenda) {
 
-        getVelocityEngine().getTemplate("/templates/shape_liturgy_overview_body.vc", ENCODING).merge(vc, ow);
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
+		}
+		if (type == LiturgyPart.Type.liturgyOverview) {
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewBody(content));
+		}
+
+	}
+
+	private Shape getLiturgyOverviewBody(SlideContents content) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("pastParts", ((LiturgyOverview) content).getLiturgyLinesPast());
+		vc.put("futureParts", ((LiturgyOverview) content).getLiturgyLinesFuture());
+
+		StringWriter ow = new StringWriter();
+
+		getVelocityEngine().getTemplate("/templates/shape_liturgy_overview_body.vc", ENCODING).merge(vc, ow);
+
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
 	}
 
 	private CTGraphicalObjectFrame createAgendaShape() throws JAXBException {
-        VelocityContext vc = new VelocityContext();
+		VelocityContext vc = new VelocityContext();
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_agenda_table.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_agenda_table.vc", ENCODING).merge(vc, ow);
 
-        return (CTGraphicalObjectFrame) XmlUtils.unmarshalString(ow.toString(), Context.jcPML, CTGraphicalObjectFrame.class);
-    }
+		return (CTGraphicalObjectFrame) XmlUtils.unmarshalString(ow.toString(), Context.jcPML, CTGraphicalObjectFrame.class);
+	}
 
-    private Shape createScriptureHeaderShape(GenericSlideContent content) throws JAXBException {
-        VelocityContext vc = new VelocityContext();
-        vc.put("bibleBook", ((Scripture) content).getBibleBook());
-        vc.put("chapter", ((Scripture) content).getChapter());
-        vc.put("verseStart", ((Scripture) content).getFromVerse());
-        vc.put("verseEnd", ((Scripture) content).getToVerse());
+	private Shape createScriptureHeaderShape(SlideContents content) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("bibleBook", ((Scripture) content).getBibleBook());
+		vc.put("chapter", ((Scripture) content).getChapter());
+		vc.put("verseStart", ((Scripture) content).getFromVerse());
+		vc.put("verseEnd", ((Scripture) content).getToVerse());
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_scripture_header.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_scripture_header.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    private Shape createScriptureBodyShape(GenericSlideContent content) throws JAXBException {
-        VelocityContext vc = new VelocityContext();
-        vc.put("biblePartFragments", ((Scripture) content).getBiblePart());
+	private Shape createScriptureBodyShape(SlideContents content) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("biblePartFragments", ((Scripture) content).getBiblePart());
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_scripture_body.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_scripture_body.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    private Shape createVicarShape(Object vicarName) throws JAXBException {
-        VelocityContext vc = new VelocityContext();
-        vc.put("vicarName", vicarName);
+	private Shape createVicarShape(Object vicarName) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("vicarName", vicarName);
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_welcome.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_welcome.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    private Shape createTimeShape(String time) throws JAXBException {
-        VelocityContext vc = new VelocityContext();
-        vc.put("time", time);
+	private Shape createTimeShape(String time) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("time", time);
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_end_morning_service_time.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_end_morning_service_time.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    private Shape createNextVicarShape(String vicarName) throws JAXBException {
-        VelocityContext vc = new VelocityContext();
-        vc.put("vicarName", vicarName);
+	private Shape createNextVicarShape(String vicarName) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("vicarName", vicarName);
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_end_morning_service_vicar.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_end_morning_service_vicar.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    /**
-     * 
-     * @param textContent
-     * @return
-     * @throws JAXBException
-     */
-    private Shape createSongHeaderShape(Song song) throws JAXBException {
+	/**
+	 * 
+	 * @param textContent
+	 * @return
+	 * @throws JAXBException
+	 */
+	private Shape createSongHeaderShape(Song song) throws JAXBException {
 
-        // separate the header for easier handling below
-        String songNumber = StringUtils.substringBefore(song.getHeader(), ":");
-        String verses = StringUtils.substringAfter(song.getHeader(), ":");
+		// separate the header for easier handling below
+		String songNumber = StringUtils.substringBefore(song.getHeader(), ":");
+		String verses = StringUtils.substringAfter(song.getHeader(), ":");
 
-        VelocityContext vc = new VelocityContext();
-        vc.put("title_text_before", songNumber + (StringUtils.isEmpty(song.getCurrentVerse()) ? "" : ":") + StringUtils.substringBefore(verses, song.getCurrentVerse()));
-        vc.put("title_text_bold", song.getCurrentVerse());
-        vc.put("title_text_after", StringUtils.substringAfter(verses, song.getCurrentVerse()));
+		VelocityContext vc = new VelocityContext();
+		vc.put("title_text_before", songNumber + (StringUtils.isEmpty(song.getVerseNumber()) ? "" : ":") + StringUtils.substringBefore(verses, song.getVerseNumber()));
+		vc.put("title_text_bold", song.getVerseNumber());
+		vc.put("title_text_after", StringUtils.substringAfter(verses, song.getVerseNumber()));
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_song_header.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_song_header.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    /**
-     * 
-     * @param lines
-     * @return
-     * @throws JAXBException
-     */
-    private Shape createSongBody(String lines) throws JAXBException {
-        VelocityContext vc = new VelocityContext();
+	/**
+	 * 
+	 * @param lines
+	 * @return
+	 * @throws JAXBException
+	 */
+	private Shape createSongBody(String lines) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
 
-        // transform lines String into array of lines
-        List<String> lineList = new ArrayList<String>();
-        StringTokenizer st = new StringTokenizer(lines, System.getProperty("line.separator"));
-        while (st.hasMoreTokens()) {
-            lineList.add(st.nextToken());
-        }
+		// transform lines String into array of lines
+		List<String> lineList = new ArrayList<String>();
+		StringTokenizer st = new StringTokenizer(lines, System.getProperty("line.separator"));
+		while (st.hasMoreTokens()) {
+			lineList.add(st.nextToken());
+		}
 
-        vc.put("lines", lineList);
+		vc.put("lines", lineList);
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        getVelocityEngine().getTemplate("/templates/shape_song_body.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/shape_song_body.vc", ENCODING).merge(vc, ow);
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    private Shape createGatheringShape(String benificiary, Boolean firstBenificiary) throws JAXBException {
-        VelocityContext vc = new VelocityContext();
-        vc.put("benificiary", benificiary);
+	private Shape createGatheringShape(String benificiary, Boolean firstBenificiary) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("benificiary", benificiary);
 
-        StringWriter ow = new StringWriter();
+		StringWriter ow = new StringWriter();
 
-        if (firstBenificiary) {
-            getVelocityEngine().getTemplate("/templates/shape_gathering_firstbenificiary.vc", ENCODING).merge(vc, ow);
-        } else {
-            getVelocityEngine().getTemplate("/templates/shape_gathering_secondbenificiary.vc", ENCODING).merge(vc, ow);
-        }
+		if (firstBenificiary) {
+			getVelocityEngine().getTemplate("/templates/shape_gathering_firstbenificiary.vc", ENCODING).merge(vc, ow);
+		} else {
+			getVelocityEngine().getTemplate("/templates/shape_gathering_secondbenificiary.vc", ENCODING).merge(vc, ow);
+		}
 
-        Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
-        return shape;
-    }
+		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
+		return shape;
+	}
 
-    /**
-     * 
-     * @param targetPosition
-     * @return
-     * @throws InvalidFormatException
-     * @throws JAXBException
-     */
-    public SlidePart createSlide(int targetPosition) throws InvalidFormatException, JAXBException {
-        // OK, now we can create a slide
-        SlidePart slidePart = new SlidePart(new PartName(String.format("/ppt/slides/slide%s.xml", targetPosition)));
-        slidePart.setContents(SlidePart.createSld());
-        return slidePart;
-    }
+	/**
+	 * 
+	 * @param targetPosition
+	 * @return
+	 * @throws InvalidFormatException
+	 * @throws JAXBException
+	 */
+	public SlidePart createSlide(int targetPosition) throws InvalidFormatException, JAXBException {
+		// OK, now we can create a slide
+		SlidePart slidePart = new SlidePart(new PartName(String.format("/ppt/slides/slide%s.xml", targetPosition)));
+		slidePart.setContents(SlidePart.createSld());
+		return slidePart;
+	}
 
-    /**
-     * 
-     * @param presentationMLPackage
-     * @return
-     */
-    public MainPresentationPart getMainPresentationPart(PresentationMLPackage presentationMLPackage) {
-        try {
-            return (MainPresentationPart) presentationMLPackage.getParts().getParts().get(new PartName("/ppt/presentation.xml"));
-        } catch (InvalidFormatException e) {
-            // TODO print human fiendly message
-            System.err.println(e.getMessage());
-        }
-        return null;
-    }
+	/**
+	 * 
+	 * @param presentationMLPackage
+	 * @return
+	 */
+	public MainPresentationPart getMainPresentationPart(PresentationMLPackage presentationMLPackage) {
+		try {
+			return (MainPresentationPart) presentationMLPackage.getParts().getParts().get(new PartName("/ppt/presentation.xml"));
+		} catch (InvalidFormatException e) {
+			// TODO print human fiendly message
+			System.err.println(e.getMessage());
+		}
+		return null;
+	}
 
-    /**
-     * 
-     * @return
-     */
-    private VelocityEngine getVelocityEngine() {
-        if (velocityEngine == null) {
-            velocityEngine = new VelocityEngine();
-            velocityEngine.setProperty(RuntimeConstants.RESOURCE_LOADER, "file,classpath");
-            velocityEngine.setProperty("classpath.resource.loader.class", ClasspathResourceLoader.class.getName());
-        }
-        return velocityEngine;
-    }
+	/**
+	 * 
+	 * @return
+	 */
+	private VelocityEngine getVelocityEngine() {
+		if (velocityEngine == null) {
+			velocityEngine = new VelocityEngine();
+			velocityEngine.setProperty(RuntimeConstants.RESOURCE_LOADER, "file,classpath");
+			velocityEngine.setProperty("classpath.resource.loader.class", ClasspathResourceLoader.class.getName());
+		}
+		return velocityEngine;
+	}
 
 }

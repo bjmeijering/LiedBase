@@ -6,7 +6,7 @@ import java.util.List;
 public class LiturgyPart {
 
 	public enum Type {
-		welcome, song, gathering, prair, law, lecture, votum, amen, endOfMorningService, endOfAfternoonService, scripture, agenda, liturgyOverview
+		welcome, blank, song, gathering, prair, law, lecture, votum, amen, endOfMorningService, endOfAfternoonService, scripture, agenda, liturgyOverview
 	};
 
 	private Type type;

@@ -13,9 +13,10 @@ import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
-import org.gkvassenpeelo.liedbase.slidemachine.model.Song;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.pptx4j.Pptx4jException;
@@ -35,7 +36,7 @@ public class SlideMachineTest {
 		song.setHeader("Samen in de naam van Jezus");
 		song.setBody("Samen in de naam van Jezus" + System.getProperty("line.separator") + "Hef ik hier mijn loflied aan");
 
-		sm.addSlide(song);
+		sm.addSlide(song, LiturgyPart.Type.song);
 		sm.save();
 	}
 
@@ -54,9 +55,9 @@ public class SlideMachineTest {
 
 		for (Object o : shapeList) {
 			try {
-//				System.out.println(indent
-//						+ XmlUtils.marshaltoString(o, true, true, Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame",
-//								org.pptx4j.pml.CTGraphicalObjectFrame.class));
+				// System.out.println(indent
+				// + XmlUtils.marshaltoString(o, true, true, Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "graphicFrame",
+				// org.pptx4j.pml.CTGraphicalObjectFrame.class));
 				System.out.println("\n\n" + XmlUtils.marshaltoString(o, true, org.pptx4j.jaxb.Context.jcPML));
 			} catch (RuntimeException me) {
 				System.out.println(indent + o.getClass().getName());
@@ -67,9 +68,9 @@ public class SlideMachineTest {
 				if (txBody != null) {
 					for (CTTextParagraph tp : txBody.getP()) {
 
-//						System.out.println(indent
-//								+ XmlUtils.marshaltoString(tp, true, true, org.pptx4j.jaxb.Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "txBody",
-//										CTTextParagraph.class));
+						// System.out.println(indent
+						// + XmlUtils.marshaltoString(tp, true, true, org.pptx4j.jaxb.Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "txBody",
+						// CTTextParagraph.class));
 
 					}
 				}
