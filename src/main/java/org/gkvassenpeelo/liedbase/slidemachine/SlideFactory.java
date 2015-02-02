@@ -1,11 +1,9 @@
 package org.gkvassenpeelo.liedbase.slidemachine;
 
 import java.io.StringWriter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.StringTokenizer;
 
 import javax.xml.bind.JAXBException;
 
@@ -31,6 +29,7 @@ import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
+import org.gkvassenpeelo.liedbase.songbook.SongLine;
 import org.pptx4j.jaxb.Context;
 import org.pptx4j.pml.CTGraphicalObjectFrame;
 import org.pptx4j.pml.Shape;
@@ -99,11 +98,7 @@ public class SlideFactory {
 
 			// create and add body
 			if (((Song) content).getSongText().size() > 0) {
-
-			}
-
-			if (!StringUtils.isEmpty(content.getBody())) {
-				Shape body = createSongBody(content.getBody());
+				Shape body = createSongBody(((Song) content).getSongText());
 				slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(body);
 			}
 		}
@@ -262,17 +257,10 @@ public class SlideFactory {
 	 * @return
 	 * @throws JAXBException
 	 */
-	private Shape createSongBody(String lines) throws JAXBException {
+	private Shape createSongBody(List<SongLine> lines) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
 
-		// transform lines String into array of lines
-		List<String> lineList = new ArrayList<String>();
-		StringTokenizer st = new StringTokenizer(lines, System.getProperty("line.separator"));
-		while (st.hasMoreTokens()) {
-			lineList.add(st.nextToken());
-		}
-
-		vc.put("lines", lineList);
+		vc.put("lines", lines);
 
 		StringWriter ow = new StringWriter();
 

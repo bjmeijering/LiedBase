@@ -23,7 +23,7 @@
 					</a:solidFill>
 					<a:effectLst/>
 				</a:rPr>
-				<a:t>${line}</a:t>
+				<a:t>${line.getContent()}</a:t>
 			</a:r>
 		</a:p>
 #end

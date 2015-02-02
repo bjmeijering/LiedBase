@@ -91,9 +91,10 @@ public class PaperMachine {
 		}
 
 		if (lp.getType() == LiturgyPart.Type.song) {
-			for (SlideContents sc : lp.getSlides()) {
 
-				mainDocumentPart.addStyledParagraphOfText("", lp.getLine());
+			mainDocumentPart.addStyledParagraphOfText("", lp.getLine());
+			
+			for (SlideContents sc : lp.getSlides()) {
 
 				ObjectFactory factory = Context.getWmlObjectFactory();
 				// Create the paragraph
@@ -101,10 +102,17 @@ public class PaperMachine {
 
 				// Create the run
 				org.docx4j.wml.R run = factory.createR();
+				
+				// Add the current verse above the verse text
+				org.docx4j.wml.Text t1 = factory.createText();
+				t1.setValue(((Song)sc).getVerseNumber());
+				run.getRunContent().add(t1);
+				Br br1 = factory.createBr(); // this Br element is used break the current and go for next line
+				run.getContent().add(br1);
 
 				for (SongLine line : ((Song) sc).getSongText()) {
 
-					// Create the text element
+					// Add the verse line followed by a line break
 					org.docx4j.wml.Text t = factory.createText();
 					t.setValue(line.getContent());
 					run.getRunContent().add(t);

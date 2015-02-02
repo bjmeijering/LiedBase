@@ -89,13 +89,9 @@ public class SlideMachine {
 
 			for (LiturgyPart lp : liturgy.getLiturgyParts()) {
 
-				if (lp.getType() == LiturgyPart.Type.song) {
+				for (SlideContents sc : lp.getSlides()) {
 
-					for (SlideContents sc : lp.getSlides()) {
-
-						addSlide(sc, lp.getType());
-
-					}
+					addSlide(sc, lp.getType());
 				}
 
 				addIntermediateSlide(lp);
