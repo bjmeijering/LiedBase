@@ -441,6 +441,9 @@ public class Bible {
 			String s = StringUtils.substringBefore(line, ":");
 			return Integer.parseInt(StringUtils.substringBefore(StringUtils.substringAfterLast(s, " "), ":").trim());
 		} else {
+			if (line.matches("^[0-9]{1} .*")) {
+				line = StringUtils.substringAfter(line, " ");
+			}
 			if (line.contains("(")) {
 				return Integer.parseInt(StringUtils.substringBetween(line, " ", "(").trim());
 			} else {

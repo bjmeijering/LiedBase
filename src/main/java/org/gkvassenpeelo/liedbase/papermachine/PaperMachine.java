@@ -28,6 +28,8 @@ public class PaperMachine {
 	private MainDocumentPart mainDocumentPart;
 
 	private WordprocessingMLPackage wordMLPackage;
+	
+	ObjectFactory factory = Context.getWmlObjectFactory();
 
 	private List<LiturgyPart.Type> liturgyPartsToPrint = new ArrayList<LiturgyPart.Type>();
 
@@ -96,7 +98,7 @@ public class PaperMachine {
 			
 			for (SlideContents sc : lp.getSlides()) {
 
-				ObjectFactory factory = Context.getWmlObjectFactory();
+				
 				// Create the paragraph
 				org.docx4j.wml.P para = factory.createP();
 

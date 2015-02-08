@@ -270,7 +270,7 @@ public class LiedBase {
 
 			List<BiblePartFragment> biblePart = Bible.getBiblePart(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
 
-			line = format(String.format("%s%s:%s-%s", bibleBook, chapter, fromVerse, toVerse), LiturgyPart.Type.scripture);
+			line = format(line, LiturgyPart.Type.scripture);
 
 			lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
 		}

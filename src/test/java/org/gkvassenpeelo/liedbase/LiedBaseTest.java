@@ -15,8 +15,6 @@ import org.junit.Test;
 
 public class LiedBaseTest {
 
-	// TODO: agenda
-
 	LiedBase lb = new LiedBase();
 
 	@Before
