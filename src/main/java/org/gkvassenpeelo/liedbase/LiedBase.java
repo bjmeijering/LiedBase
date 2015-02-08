@@ -29,8 +29,7 @@ import org.gkvassenpeelo.liedbase.songbook.SongBook;
 import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 /**
- * TODO: vers nummers correct tonen als geen verzen zijn opgegeven bij een bijbeltekst
- * TODO: Agenda table is verdwenen
+ * TODO: vers nummers correct tonen als geen verzen zijn opgegeven bij een bijbeltekst TODO: Agenda table is verdwenen
  * 
  * 
  * @author hdo20043

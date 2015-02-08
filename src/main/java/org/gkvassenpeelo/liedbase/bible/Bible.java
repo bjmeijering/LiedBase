@@ -25,7 +25,7 @@ import org.jsoup.select.Elements;
 
 public class Bible {
 
-	static final Logger logger = Logger.getLogger(Bible.class);
+	static final Logger logger = Logger.getLogger(BibleTest.class);
 
 	private static final String ENCODING = "UTF-8";
 
@@ -51,7 +51,7 @@ public class Bible {
 
 		Document doc;
 		try {
-			InputStream in = ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".dat");
+			InputStream in = ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".html");
 
 			doc = Jsoup.parse(in, ENCODING, "");
 			doc.outputSettings().charset(ENCODING);
