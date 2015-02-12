@@ -1,347 +1,132 @@
 
-
-
-
-Opschrift en groet
-==================
-
-
-
-
-1
-=
-
+=Opschrift en groet
+#1
 1 Paulus, een apostel van Jezus Christus, naar het bevel van God, onze Zaligmaker, en de Heere Jezus Christus, Die onze Hoop is,
-
 2 Aan Timótheüs, mijn oprechte zoon in het geloof; genade, barmhartigheid, vrede zij u van God, onze Vader, en Christus Jezus, onze Heere.
-
-
-Waarschuwing tegen dwaalleringen
-================================
-
-
+=Waarschuwing tegen dwaalleringen
 3 Gelijk ik u vermaand heb, dat gij te Éfeze zoudt blijven, toen ik naar Macedónië reisde, zo vermaan ik het u nog, opdat gij sommigen beveelt geen andere leer te leren;
-
 4 Noch zich te begeven tot fabels en eindeloze geslachtsrekeningen, welke meer twistvragen voortbrengen dan stichting Gods, die in het geloof is.
-
 5 Maar het einde van het gebod is liefde uit een rein hart, en uit een goed geweten, en uit een ongeveinsd geloof.
-
 6 Waarvan sommigen afgeweken zijnde, zich gewend hebben tot ijdel spreken;
-
 7 Willende leraars der wet zijn, niet verstaande, noch wat zij zeggen, noch wat zij bevestigen.
-
 8 Doch wij weten, dat de wet goed is, zo iemand die wettig gebruikt;
-
 9 En hij dit weet, dat de rechtvaardigen de wet niet is gezet, maar de onrechtvaardigen en de halsstarrigen, de goddelozen en de zondaars, de onheiligen en de ongoddelijken, de vadermoordenaars en de moedermoordenaars, de doodslagers,
-
 10 De hoereerders, hun, die bij mannen liggen, de mensendieven, de leugenaars, de meinedigen, en zo er iets anders tegen de gezonde leer is;
-
 11 Naar het Evangelie der heerlijkheid van de zalige God, dat mij toebetrouwd is.
-
-
-Paulus dankt voor zijn bekering
-===============================
-
-
+=Paulus dankt voor zijn bekering
 12 En ik dank Hem, Die mij bekrachtigd heeft, namelijk Christus Jezus, onze Heere, dat Hij mij getrouw geacht heeft, mij in de bediening gesteld hebbende;
-
 13 Die te voren een godslasteraar was, en een vervolger, en een verdrukker; maar mij is barmhartigheid geschied, daar ik het onwetend gedaan heb in mijn ongelovigheid.
-
 14 Doch de genade van onze Heere is zeer overvloedig geweest, met geloof en liefde, die er is in Christus Jezus.
-
 15 Dit is een getrouw woord, en alle aanneming waardig, dat Christus Jezus in de wereld gekomen is, om de zondaren zalig te maken, van wie ik de voornaamste ben.
-
 16 Maar daarom is mij barmhartigheid geschied, opdat Jezus Christus in mij, die de voornaamste ben, al Zijn lankmoedigheid zou betonen, tot een voorbeeld van hen, die in Hem geloven zullen ten eeuwige leven.
-
 17 De Koning der eeuwen nu, de onverderfelijke, de onzienlijke, de alleen wijze God, zij eer en heerlijkheid in alle eeuwigheid. Amen.
-
-
-Opwekking tot moedig strijden
-=============================
-
-
+=Opwekking tot moedig strijden
 18 Dit gebod beveel ik u, mijn zoon, Timótheüs, dat gij naar de profetieën, die aangaande u voorafgegaan zijn, daarin de goede strijd strijdt;
-
 19 Houdende het geloof, en een goed geweten, hetwelk sommigen verstoten hebbende, aangaande het geloof schipbreuk geleden hebben;
-
 20 Onder wie is Hymenéüs en Alexander, die ik de satan overgegeven heb, opdat zij zouden leren niet meer te lasteren.
-
-
-
-
-
-
-
-Vermaning tot voorbidding
-=========================
-
-
-
-
-2
-=
-
+=Vermaning tot voorbidding
+#2
 1 Ik vermaan dan voor alle dingen, dat gedaan worden smekingen, gebeden, voorbiddingen, dankzeggingen, voor alle mensen;
-
 2 Voor koningen, en allen, die in hoogheid zijn; opdat wij een gerust en stil leven leiden mogen in alle godzaligheid en eerbaarheid.
-
 3 Want dat is goed en aangenaam voor God, onze Zaligmaker;
-
 4 Die wil, dat alle mensen zalig worden, en tot kennis der waarheid komen.
-
 5 Want er is één God, er is ook één Middelaar Gods en der mensen, de Mens Christus Jezus;
-
 6 Die Zichzelf gegeven heeft tot een losprijs voor allen, zijnde de getuigenis te zijner tijd;
-
 7 Waartoe ik gesteld ben een prediker en apostel (ik zeg de waarheid in Christus, ik lieg niet), een leraar der heidenen, in geloof en waarheid.
-
-
-Plichten van mannen en vrouwen
-==============================
-
-
+=Plichten van mannen en vrouwen
 8 Ik wil dan, dat de mannen bidden in alle plaatsen, opheffende heilige handen, zonder toorn en twisting.
-
 9 Evenzo ook, dat de vrouwen, in een eerbaar gewaad, met zedigheid en matigheid zichzelf versieren, niet in vlechtingen van het haar, of goud, of paarlen, of kostbare kleding;
-
 10 Maar (hetwelk de vrouwen betaamt, die de godvruchtigheid belijden) door goede werken.
-
 11 Een vrouw late zich leren in stilheid, in alle onderdanigheid.
-
 12 Doch ik laat de vrouw niet toe, dat zij leert, noch over de man heerst, maar wil, dat zij in stilheid is.
-
 13 Want Adam is eerst gemaakt, daarna Eva.
-
 14 En Adam is niet verleid geworden; maar de vrouw, verleid zijnde, is in overtreding geweest.
-
 15 Doch zij zal zalig worden in kinderen te baren, zo zij blijft in het geloof, en liefde, en heiligmaking, met matigheid.
-
-
-
-
-
-
-
-Plichten van opzieners en diakenen
-==================================
-
-
-
-
-3
-=
-
+=Plichten van opzieners en diakenen
+#3
 1 Dit is een getrouw woord: zo iemand tot het ambt van een opziener lust heeft, die begeert een voortreffelijk werk.
-
 2 Een opziener dan moet onberispelijk zijn, de man van één vrouw, wakker, matig, eerbaar, gaarne herbergende, bekwaam om te leren;
-
 3 Niet genegen tot de wijn, geen smijter, geen vuil-gewinzoeker; maar bescheiden, geen vechter, niet geldgierig.
-
 4 Die zijn eigen huis wèl regeert, zijn kinderen in onderdanigheid houdende, met alle stemmigheid;
-
 5 (Want zo iemand zijn eigen huis niet weet te regeren, hoe zal hij voor de gemeente Gods zorg dragen?)
-
 6 Geen nieuweling, opdat hij niet opgeblazen worde, en in het oordeel des duivels valle.
-
 7 En hij moet ook een goed getuigenis hebben van hen, die buiten zijn, opdat hij niet valle in smaadheid, en in de strik des duivels.
-
 8 De diakenen eveneens moeten eerbaar zijn, niet tweetongig, niet die zich tot veel wijn begeven, geen vuil-gewinzoekers;
-
 9 Houdende de verborgenheid des geloofs in een rein geweten.
-
 10 En dat dezen ook eerst beproefd worden, en dat zij daarna dienen, zo zij onbestraffelijk zijn.
-
 11 De vrouwen eveneens moeten eerbaar zijn, geen lasteraarsters, wakker, getrouw in alles.
-
 12 Dat de diakenen mannen van één vrouw zijn, die hun kinderen en hun eigen huizen wèl regeren.
-
 13 Want die wèl gediend hebben, verkrijgen voor zichzelf een goede opgang, en veel vrijmoedigheid in het geloof, hetwelk is in Christus Jezus.
-
 14 Deze dingen schrijf ik u, hopende zeer spoedig tot u te komen;
-
 15 Maar zo ik vertoef, opdat gij moogt weten, hoe men in het huis Gods moet verkeren, hetwelk is de gemeente van de levende God, een pilaar en vastigheid der waarheid.
-
 16 En buiten alle twijfel, de verborgenheid der godzaligheid is groot: God is geopenbaard in het vlees, is gerechtvaardigd in de Geest, is gezien van de engelen, is gepredikt onder de heidenen, is geloofd in de wereld, is opgenomen in heerlijkheid.
-
-
-
-
-
-
-
-De afval in de laatste tijden
-=============================
-
-
-
-
-4
-=
-
+=De afval in de laatste tijden
+#4
 1 Doch de Geest zegt duidelijk, dat in de laatste tijden sommigen zullen afvallen van het geloof, zich begevende tot verleidende geesten, en leringen der duivelen,
-
 2 Door geveinsdheid der leugensprekers, hebbende hun eigen geweten als met een brandijzer toegeschroeid;
-
 3 Verbiedende te huwen, gebiedende zich van spijzen te onthouden, die God geschapen heeft, tot nuttiging met dankzegging, voor de gelovigen, en die de waarheid hebben bekend.
-
 4 Want alle schepsel Gods is goed, en er is niets verwerpelijk, met dankzegging genomen zijnde;
-
 5 Want het wordt geheiligd door het Woord van God, en door het gebed.
-
-
-Vermaning tot getrouwe ambtsvervulling
-======================================
-
-
+=Vermaning tot getrouwe ambtsvervulling
 6 Als gij deze dingen de broeders voorstelt, zo zult gij een goed dienaar van Jezus Christus zijn, opgevoed in de woorden des geloofs en der goede leer, welke gij nagevolgd hebt.
-
 7 Maar verwerp de ongoddelijke en oudwijfse fabels; en oefen uzelf tot godzaligheid.
-
 8 Want de lichamelijke oefening is tot weinig nut; maar de godzaligheid is tot alle dingen nut, hebbende de belofte van het tegenwoordige en van het toekomende leven.
-
 9 Dit is een getrouw woord, en alle aanneming waardig.
-
 10 Want hiertoe arbeiden wij ook, en worden gesmaad, omdat wij gehoopt hebben op de levende God, Die een Behouder is van alle mensen, maar allermeest van de gelovigen.
-
 11 Beveel deze dingen, en leer ze.
-
 12 Niemand verachte uw jonkheid, maar wees een voorbeeld voor de gelovigen in woord, in wandel, in liefde, in de geest, in geloof, in reinheid.
-
 13 Houd aan in het lezen, in het vermanen, in het leren, totdat ik kom.
-
 14 Verzuim de gave niet, die in u is, die u gegeven is door de profetie, met oplegging der handen van het ouderlingschap.
-
 15 Bedenk deze dingen, wees hierin bezig, opdat uw toenemen openbaar zij in alles.
-
 16 Heb acht op uzelf en op de leer; volhard daarin; want dat doende, zult gij en uzelf behouden, en die u horen.
-
-
-
-
-
-
-
-Voorschriften voor het gemeenteleven
-====================================
-
-
-
-
-5
-=
-
+=Voorschriften voor het gemeenteleven
+#5
 1 Bestraf een oude man niet hard, maar vermaan hem als een vader; de jonge als broeders;
-
 2 De oude vrouwen als moeders; de jonge als zusters, in alle reinheid.
-
 3 Eer de weduwen, die waarlijk weduwen zijn.
-
 4 Maar zo enige weduwe kinderen heeft, of kindskinderen, dat die leren eerst aan hun eigen huis godzaligheid te oefenen, en de voorouders wedervergelding te doen; want dat is goed en aangenaam voor God.
-
 5 Die nu waarlijk weduwe is, en alleen gelaten, die hoopt op God, en blijft in smekingen en gebeden nacht en dag.
-
 6 Maar die haar wellust volgt, die is levende gestorven.
-
 7 En beveel dit, opdat zij onberispelijk zijn.
-
 8 Doch zo iemand de zijnen, en voornamelijk zijn huisgenoten, niet verzorgt, die heeft het geloof verloochend, en is erger dan een ongelovige.
-
 9 Dat een weduwe gekozen worde niet minder dan van zestig jaren, die de vrouw van één man geweest is;
-
 10 Getuigenis hebbende van goede werken: zo zij kinderen opgevoed heeft, zo zij gaarne heeft geherbergd, zo zij de voeten der heiligen heeft gewassen, zo zij de verdrukten genoegzame hulp gedaan heeft, zo zij alle goed werk nagevolgd heeft.
-
 11 Maar neem de jonge weduwen niet aan; want als zij weelderig geworden zijn tegen Christus, zo willen zij huwen;
-
 12 Hebbende hun oordeel, omdat zij hun eerste geloof hebben te niet gedaan.
-
 13 En meteen ook leren zij ledig rondgaan bij de huizen; en zijn niet alleen ledig, maar ook klapachtig, en ijdele dingen doende, sprekende hetgeen niet betaamt.
-
 14 Ik wil dan, dat de jonge weduwen huwen, kinderen baren, het huis regeren, geen oorzaak van lastering aan de tegenpartij geven.
-
 15 Want enigen hebben zich reeds afgewend achter de satan.
-
 16 Zo enig gelovig man, of gelovige vrouw weduwen heeft, dat die hun genoegzame hulp doe, en dat de gemeente niet bezwaard worde, opdat zij degenen, die waarlijk weduwen zijn, genoegzame hulp doen moge.
-
 17 Dat de ouderlingen, die wèl regeren, dubbele eer waardig geacht worden, voornamelijk die arbeiden in het Woord en de leer.
-
 18 Want de Schrift zegt: Een dorsende os zult gij niet muilbanden; en: De arbeider is zijn loon waardig.
-
 19 Neem tegen een ouderling geen beschuldiging aan, anders dan onder twee of drie getuigen.
-
 20 Bestraf die zondigen in tegenwoordigheid van allen, opdat ook de anderen vreze mogen hebben.
-
 21 Ik betuig voor God, en de Heere Jezus Christus, en de uitverkoren engelen, dat gij deze dingen onderhoudt, zonder vooroordeel, niets doende naar toegenegenheid.
-
 22 Leg niemand haastig de handen op, en heb geen gemeenschap aan de zonden van anderen; bewaar uzelf rein.
-
 23 Drink niet langer water alleen, maar gebruik een weinig wijn, om uw maag en uw menigvuldige zwakheden.
-
 24 Van sommige mensen zijn de zonden te voren openbaar, en gaan voor tot hun veroordeling; en in sommigen ook volgen zij na.
-
 25 Evenzo ook de goede werken zijn te voren openbaar, en die, waar het anders mee gelegen is, kunnen niet verborgen worden.
-
-
-
-
-
-
-
-Plichten der dienstknechten
-===========================
-
-
-
-
-6
-=
-
+=Plichten der dienstknechten
+#6
 1 De dienstknechten, zovelen als er onder het juk zijn, zullen hun heren alle eer waardig achten, opdat de Naam van God, en de leer niet gelasterd worde.
-
 2 En die gelovige heren hebben, zullen hen niet verachten, omdat zij broeders zijn; maar zullen hen te meer dienen, omdat zij gelovig en geliefd zijn, als die deze weldaad mede deelachtig zijn. Leer en vermaan deze dingen.
-
-
-Vermaningen en raadgevingen
-===========================
-
-
+=Vermaningen en raadgevingen
 3 Indien iemand een andere leer leert, en niet overeenkomt met de gezonde woorden van onze Heere Jezus Christus, en met de leer, die naar de godzaligheid is,
-
 4 Die is opgeblazen, en weet niets, maar hij raast omtrent twistvragen en woordenstrijd; uit welke komt nijd, twist, lasteringen, kwade verdenkingen,
-
 5 Verkeerde krakelingen van mensen, die een verdorven verstand hebben, en van de waarheid beroofd zijn, menende, dat de godzaligheid een gewin is. Wijk af van dezulken.
-
 6 Doch de godzaligheid is een groot gewin met vergenoeging.
-
 7 Want wij hebben niets in de wereld gebracht, het is openbaar, dat wij ook niet iets daaruit kunnen dragen.
-
 8 Maar als wij voedsel en deksel hebben, wij zullen daarmede vergenoegd zijn.
-
 9 Doch die rijk willen worden, vallen in verzoeking, en in de strik, en in vele dwaze en schadelijke begeerlijkheden, welke de mensen doen verzinken in verderf en ondergang.
-
 10 Want de geldgierigheid is een wortel van alle kwaad, tot welke sommigen lust hebbende zijn afgedwaald van het geloof, en hebben zichzelf met vele smarten doorstoken.
-
 11 Maar gij, o mens Gods, vlied deze dingen; en jaag naar gerechtigheid, godzaligheid, geloof, liefde, lijdzaamheid, zachtmoedigheid.
-
 12 Strijd de goede strijd des geloofs, grijp naar het eeuwige leven, waartoe gij ook geroepen zijt, en de goede belijdenis beleden hebt voor vele getuigen.
-
 13 Ik beveel u voor God, Die alle ding levend maakt, en voor Christus Jezus, Die onder Pontius Pilatus de goede belijdenis betuigd heeft,
-
 14 Dat gij dit gebod houdt, onbevlekt en onberispelijk, tot op de verschijning van onze Heere Jezus Christus;
-
 15 Die te Zijner tijd vertonen zal de zalige en alleen machtige Heere, de Koning der koningen, en Heere der heren;
-
 16 Die alleen onsterfelijkheid heeft, en een ontoegankelijk licht bewoont; Die geen mens gezien heeft, noch zien kan; Welke zij eer en eeuwige kracht. Amen.
-
 17 Beveel de rijken in deze tegenwoordige wereld, dat zij niet hoogmoedig zijn, noch hun hoop stellen op de ongestadigheid van de rijkdom, maar op de levende God, Die ons alle dingen rijkelijk verleent, om te genieten;
-
 18 Dat zij weldadig zijn, rijk worden in goede werken, gaarne mededelende zijn, en gemeenzaam;
-
 19 Leggende zichzelf weg tot een schat een goed fundament tegen het toekomende, opdat zij het eeuwige leven verkrijgen mogen.
-
 20 O Timótheüs, bewaar het pand u toebetrouwd, een afkeer hebbende van het ongoddelijk ijdel-roepen, en van de tegenstellingen der valselijk genaamde wetenschap;
-
 21 Welke sommigen voorgevende, zijn van het geloof afgeweken. De genade zij met u. Amen.
-
-
-
-

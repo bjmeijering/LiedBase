@@ -1,76 +1,30 @@
 
-
-
-
-Opschrift en groet
-==================
-
-
-
-
-1
-=
-
+=Opschrift en groet
+#1
 1 Paulus, een gevangene van Christus Jezus, en Timótheüs, de broeder, aan Filémon, de geliefde, en onze medearbeider,
-
 2 En aan Appia, de geliefde, en aan Archippus, onze medestrijder, en aan de gemeente, die te uwen huize is:
-
 3 Genade zij u en vrede van God, onze Vader, en de Heere Jezus Christus.
-
 4 Ik dank mijn God, u altijd gedachtig zijnde in mijn gebeden;
-
 5 Alzo ik hoor uw liefde en geloof, hetwelk gij hebt aan de Heere Jezus, en jegens al de heiligen;
-
 6 Opdat de gemeenschap van uw geloof krachtig worde in de bekendmaking van alle goed, hetwelk in u is door Christus Jezus.
-
 7 Want wij hebben grote vreugde en vertroosting over uw liefde, dat de ingewanden der heiligen verkwikt zijn geworden door u, broeder!
-
-
-Aanbeveling van de slaaf Onésimus
-=================================
-
-
+=Aanbeveling van de slaaf Onésimus
 8 Daarom, hoewel ik grote vrijmoedigheid heb in Christus, om u te bevelen, hetgeen betamelijk is;
-
 9 Zo bid ik nochtans liever door de liefde, daar ik zo iemand ben, te weten Paulus, een oud man, en nu ook een gevangene van Jezus Christus.
-
 10 Ik bid u dan voor mijn zoon, die ik in mijn banden heb geteeld, namelijk Onésimus;
-
 11 Die eertijds u onnut was, maar nu u en mij zeer nuttig; die ik weergezonden heb;
-
 12 Doch gij, neem hem, dat is mijn ingewanden, weer aan.
-
 13 Ik had hem wel bij mij willen behouden, opdat hij mij voor u dienen zou in de banden van het Evangelie,
-
 14 Maar ik heb zonder uw goedvinden niets willen doen, opdat uw weldadigheid niet zou zijn als onder dwang, maar naar vrijwilligheid.
-
 15 Want wellicht is hij daarom voor een kleine tijd van u gescheiden geweest, opdat gij hem eeuwig weer zoudt hebben.
-
 16 Nu voortaan niet als een dienstknecht, maar meer dan een dienstknecht, namelijk een geliefde broeder, inzonderheid mij, hoeveel te meer dan u, beide in het vlees en in de Heere.
-
 17 Indien gij mij dan houdt voor een metgezel, zo neem hem aan, zoals mij.
-
 18 En indien hij u iets verongelijkt heeft, of schuldig is, reken dat mij toe.
-
 19 Ik, Paulus, heb het geschreven met deze mijn hand, ik zal het betalen; opdat ik u niet zegge, dat gij ook uzelf mij daartoe schuldig zijt.
-
 20 Ja, broeder, laat mij u hierin genieten in de Heere; verkwik mijn ingewanden in de Heere.
-
 21 Ik heb aan u geschreven, vertrouwende op uw gehoorzaamheid; en ik weet, dat gij doen zult ook boven hetgeen ik zeg.
-
 22 En bereid mij ook tegelijk een herberg; want ik hoop, dat ik door uw gebeden u zal geschonken worden.
-
-
-Groeten en zegenbede
-====================
-
-
+=Groeten en zegenbede
 23 U groeten Épafras, mijn medegevangene in Christus Jezus,
-
 24 Markus, Aristarchus, Demas, Lukas, mijn medearbeiders.
-
 25 De genade van onze Heere Jezus Christus zij met uw geest. Amen.
-
-
-
-

@@ -24,7 +24,7 @@ public class SlideMachine {
 
 	private MainPresentationPart targetPresentationPart;
 
-	private File targetFile = new File("presentatie.pptx");
+	private File targetFile = new File("Presentatie.pptx");
 
 	private PresentationMLPackage presentationMLPackage;
 
@@ -71,8 +71,7 @@ public class SlideMachine {
 		} catch (Docx4JException e) {
 			throw new SlideMachineException(e.getMessage(), e);
 		} catch (Pptx4jException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new SlideMachineException(e.getMessage(), e);
 		}
 	}
 

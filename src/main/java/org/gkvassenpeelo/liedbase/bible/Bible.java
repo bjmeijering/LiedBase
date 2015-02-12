@@ -11,6 +11,7 @@ import java.net.CookieManager;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -33,13 +34,17 @@ public class Bible {
 
 	private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
-	// private static String LINE_END = System.getProperty("line.separator");
+	private enum CharType {
+		number, character, dash, colon, comma
+	}
+
+	private static String LINE_END = System.getProperty("line.separator");
 
 	public Bible() {
 
 	}
 
-	public static List<BiblePartFragment> getBiblePart(String translation, String book, int chapter, int fromVerse, int toVerse) throws BibleException {
+	public static List<BiblePartFragment> getBiblePartFromHtml(String translation, String book, int chapter, int fromVerse, int toVerse) throws BibleException {
 
 		translation = translation.toUpperCase();
 
@@ -139,6 +144,107 @@ public class Bible {
 		}
 
 		return bp;
+	}
+
+	public static List<BiblePartFragment> getBiblePartFromText(String translation, String book, int chapter, int fromVerse, int toVerse) throws BibleException {
+
+		List<BiblePartFragment> fragmentList = new ArrayList<BiblePartFragment>();
+
+		translation = translation.toUpperCase();
+
+		book = book.toLowerCase();
+
+		book = book.replaceAll("ë", "e");
+		book = book.replaceAll("ï", "i");
+		book = book.replaceAll("ü", "u");
+
+		Scanner s = null;
+
+		Document doc;
+		try {
+			s = new Scanner(ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".txt"));
+		} catch (NullPointerException e) {
+			throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
+		}
+
+		while (s.hasNextLine()) {
+
+			String line = s.nextLine();
+
+			if (line.matches(String.format("#%s", book))) {
+				// we have the line number on which the book starts
+				// continue reading from that line again until we end up on
+				// the right verse
+				while (s.hasNextLine()) {
+					String songLine = s.nextLine();
+
+					StringBuilder sb = new StringBuilder();
+					CharType prevCharType = null;
+
+					// all lines start with a verse number in the format: [0-9]+[-]?[0-9]+
+					// determine the versenumber at the start of the line and continue reading character by character
+					for (Character c : line.toCharArray()) {
+
+						// handle first round
+						if (prevCharType == null) {
+							sb.append(Character.toUpperCase(c));
+							prevCharType = getCharType(c);
+							continue;
+						}
+
+						if (prevCharType == CharType.number && getCharType(c) == CharType.number) {
+							sb.append(c);
+							continue;
+						}
+
+						if (prevCharType == CharType.character && getCharType(c) == CharType.character) {
+							sb.append(c);
+							continue;
+						}
+
+						if (prevCharType == CharType.character && getCharType(c) == CharType.number) {
+							sb.append(" ");
+							sb.append(c);
+							prevCharType = getCharType(c);
+							continue;
+						}
+
+						if (prevCharType == CharType.number && getCharType(c) == CharType.character) {
+							sb.append(" ");
+							if (line.indexOf(c) < 3) {
+								sb.append(Character.toUpperCase(c));
+							} else {
+								sb.append(c);
+
+							}
+							prevCharType = getCharType(c);
+							continue;
+						}
+
+						if (getCharType(c) == CharType.colon) {
+							sb.append(c);
+							sb.append(" ");
+							prevCharType = getCharType(c);
+							continue;
+						}
+
+						if (getCharType(c) == CharType.comma) {
+							sb.append(c);
+							sb.append(" ");
+							prevCharType = getCharType(c);
+							continue;
+						}
+
+						sb.append(c);
+
+					}
+					
+					fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
+				}
+			}
+		}
+		
+		return fragmentList;
 	}
 
 	private String extractBibleChapterFromHtml(String result) {
@@ -482,6 +588,29 @@ public class Bible {
 		} else {
 			return 999;
 		}
+	}
+
+	private static CharType getCharType(char c) {
+		try {
+			Integer.parseInt(String.valueOf(c));
+			return CharType.number;
+		} catch (NumberFormatException e) {
+			// do nothing
+		}
+
+		if ("-".equals(String.valueOf(c))) {
+			return CharType.dash;
+		}
+
+		if (",".equals(String.valueOf(c))) {
+			return CharType.comma;
+		}
+
+		if (":".equals(String.valueOf(c))) {
+			return CharType.colon;
+		}
+
+		return CharType.character;
 	}
 
 }

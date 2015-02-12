@@ -44,7 +44,7 @@ public class BibleTest {
 
 	@Test
 	public void getBiblePartTest() throws Exception {
-		List<BiblePartFragment> bp = Bible.getBiblePart("bgt", "genesis", 1, 1, 2);
+		List<BiblePartFragment> bp = Bible.getBiblePartFromHtml("bgt", "genesis", 1, 1, 2);
 
 		assertEquals("superScript", bp.get(0).getDisplayType().toString());
 		assertEquals("1", bp.get(0).getContent());
@@ -69,7 +69,7 @@ public class BibleTest {
 	public void getBiblePartNonExistentTest() throws Exception {
 
 		try {
-			Bible.getBiblePart("nbv", "Exoddus", 2, 1, 5);
+			Bible.getBiblePartFromHtml("nbv", "Exoddus", 2, 1, 5);
 		} catch (BibleException e) {
 			assertEquals("Boek exoddus in vertaling NBV niet gevonden", e.getMessage());
 		}

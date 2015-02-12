@@ -309,7 +309,6 @@ public class SlideFactory {
 		try {
 			return (MainPresentationPart) presentationMLPackage.getParts().getParts().get(new PartName("/ppt/presentation.xml"));
 		} catch (InvalidFormatException e) {
-			// TODO print human fiendly message
 			System.err.println(e.getMessage());
 		}
 		return null;

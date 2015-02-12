@@ -1,3237 +1,1385 @@
 
-
-
-
-Telling der stammen
-===================
-
-
-
-
-1
-=
-
+=Telling der stammen
+#1
 1 Voorts sprak de Heere tot Mozes, in de woestijn van Sinaï, in de tent der samenkomst, op de eerste van de tweede maand, in het tweede jaar, nadat zij uit Egypteland uitgetrokken waren, zeggende:
-
 2 Neem op de som van de gehele vergadering van de kinderen Israëls, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van al wat mannelijk is, hoofd voor hoofd.
-
 3 Van twintig jaren oud en daarboven, allen, die ten strijde in Israël uittrekken; die zult gij tellen naar hun legers, gij en Aäron.
-
 4 En met u zullen zijn van elke stam een man, die een hoofd is over het huis van zijn vaderen.
-
 5 Dit nu zijn de namen van de mannen, die bij u staan zullen: van Ruben, Elizur, de zoon van Sedéür.
-
 6 Van Simeon, Selûmiël, de zoon van Zurísaddai.
-
 7 Van Juda, Nahesson, de zoon van Amminádab.
-
 8 Van Issaschar, Netháneël, de zoon van Zuar.
-
 9 Van Zebulon, Elíab, de zoon van Helon.
-
 10 Van de kinderen van Jozef: van Efraïm, Elisáma, de zoon van Ammihud; van Manasse, Gamáliël, de zoon van Pedázur.
-
 11 Van Benjamin, Abídan, de zoon van Gidéoni.
-
 12 Van Dan, Ahiézer, de zoon van Ammísaddai.
-
 13 Van Aser, Págiël, de zoon van Ochran.
-
 14 Van Gad, Eljasaf, de zoon van Dehuël.
-
 15 Van Nafthali, Ahíra, de zoon van Enan.
-
 16 Dezen waren de geroepenen ter vergadering, de oversten der stammen van hun vaderen; zij waren de hoofden van de duizenden van Israël.
-
 17 Toen namen Mozes en Aäron die mannen, die met namen uitgedrukt zijn.
-
 18 En zij verzamelden de gehele vergadering, op de eerste dag van de tweede maand; en die verklaarden hun afkomst, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van die twintig jaren oud was en daarboven, hoofd voor hoofd.
-
 19 Zoals de Heere Mozes geboden had, zo heeft hij hen geteld in de woestijn van Sinaï.
-
 20 Zo waren de zonen van Ruben, de eerstgeborene van Israël, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, hoofd voor hoofd, al wat mannelijk was, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 21 Hun getelden van de stam van Ruben waren zes en veertig duizend vijfhonderd.
-
 22 Van de zonen van Simeon, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, zijn getelden, in het getal der namen, hoofd voor hoofd, al wat mannelijk was, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 23 Hun getelden van de stam van Simeon waren negen en vijftig duizend driehonderd.
-
 24 Van de zonen van Gad, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 25 Hun getelden van de stam van Gad waren vijf en veertig duizend zeshonderd vijftig.
-
 26 Van de zonen van Juda, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 27 Hun getelden van de stam van Juda waren vier en zeventig duizend zeshonderd.
-
 28 Van de zonen van Issaschar, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 29 Hun getelden van de stam van Issaschar waren vier en vijftig duizend vierhonderd.
-
 30 Van de zonen van Zebulon, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 31 Hun getelden van de stam van Zebulon waren zeven en vijftig duizend vierhonderd.
-
 32 Van de zonen van Jozef: van de zonen van Efraïm, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 33 Hun getelden van de stam van Efraïm waren veertig duizend vijfhonderd;
-
 34 Van de zonen van Manasse, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 35 Hun getelden van de stam van Manasse waren twee en dertig duizend tweehonderd.
-
 36 Van de zonen van Benjamin, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 37 Hun getelden van de stam van Benjamin waren vijf en dertig duizend vierhonderd.
-
 38 Van de zonen van Dan, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 39 Hun getelden van de stam van Dan waren twee en zestig duizend zevenhonderd.
-
 40 Van de zonen van Aser, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 41 Hun getelden van de stam van Aser waren een en veertig duizend vijfhonderd.
-
 42 Van de zonen van Nafthali, hun geboorten, naar hun geslachten, naar het huis van hun vaderen, in het getal der namen, van twintig jaren oud en daarboven, allen, die ten strijde uittrokken;
-
 43 Hun getelden van de stam van Nafthali waren drie en vijftig duizend vierhonderd.
-
 44 Dezen zijn de getelden, die Mozes geteld heeft, en Aäron, en de oversten van Israël; twaalf mannen waren zij, elk over het huis van zijn vaderen.
-
 45 Alzo waren al de getelden van de zonen van Israël, naar het huis van hun vaderen, van twintig jaren oud en daarboven, allen, die in Israël ten strijde uittrokken;
-
 46 Al de getelden dan waren zeshonderd drie duizend vijfhonderd vijftig.
-
 47 Maar de Levieten, naar de stam van hun vaderen, werden onder hen niet geteld.
-
 48 Want de Heere had tot Mozes gesproken, zeggende:
-
 49 Alleen de stam Levi zult gij niet tellen, noch hun som opnemen, onder de zonen van Israël.
-
 50 Maar gij, stel de Levieten over de tabernakel der getuigenis, en over al zijn gereedschap, en over alles, wat daartoe behoort; zij zullen de tabernakel dragen, en al zijn gereedschap; en zij zullen die bedienen, en zij zullen zich rondom de tabernakel legeren.
-
 51 En als de tabernakel zal optrekken, zullen de Levieten die afnemen; en wanneer de tabernakel zich legeren zal, zullen de Levieten die oprichten; en de vreemde, die daarbij komt, zal gedood worden.
-
 52 En de kinderen Israëls zullen zich legeren, een ieder bij zijn leger, en een ieder bij zijn banier, naar hun legers.
-
 53 Maar de Levieten zullen zich legeren rondom de tabernakel der getuigenis, opdat geen verbolgenheid over de vergadering van de kinderen Israëls zij; daarom zullen de Levieten de wacht van de tabernakel der getuigenis waarnemen.
-
 54 Zo deden de kinderen Israëls; naar alles, wat de Heere Mozes geboden had, zo deden zij.
-
-
-
-
-
-
-
-Legering der stammen
-====================
-
-
-
-
-2
-=
-
+=Legering der stammen
+#2
 1 En de Heere sprak tot Mozes en tot Aäron, zeggende:
-
 2 De kinderen Israëls zullen zich legeren, een ieder onder zijn banier, naar de tekenen van het huis van hun vaderen; rondom tegenover de tent der samenkomst zullen zij zich legeren.
-
 3 Die zich nu legeren zullen oostwaarts tegen de opgang, zal zijn de banier van het leger van Juda, naar hun legers; en Nahesson, de zoon van Amminádab, zal de overste van de zonen van Juda zijn.
-
 4 Zijn heer nu, en zijn getelden waren vier en zeventig duizend zeshonderd.
-
 5 En naast hem zal zich legeren de stam van Issaschar; en Netháneël, de zoon van Zuar, zal de overste van de zonen van Issaschar zijn.
-
 6 Zijn heer nu, en zijn getelden waren vier en vijftig duizend vierhonderd.
-
 7 Daartoe de stam van Zebulon; en Elíab, de zoon van Helon, zal de overste van de zonen van Zebulon zijn.
-
 8 Zijn heer nu, en zijn getelden waren zeven en vijftig duizend vierhonderd.
-
 9 Al de getelden van het leger van Juda waren honderd zes en tachtig duizend vierhonderd, naar hun legers. Zij zullen vooraan optrekken.
-
 10 De banier van het leger van Ruben, naar hun legers, zal tegen het zuiden zijn; en Elízur, de zoon van Sedéür, zal de overste van de zonen van Ruben zijn.
-
 11 Zijn heer nu, en zijn getelden waren zes en veertig duizend vijfhonderd.
-
 12 En naast hem zal zich legeren de stam van Simeon; en Selûmiël, de zoon van Zurísaddai, zal de overste van de zonen van Simeon zijn.
-
 13 Zijn heer nu, en zijn getelden waren negen en vijftig duizend driehonderd.
-
 14 Daartoe de stam van Gad; en Eljasaf, de zoon van Rehuël, zal de overste van de zonen van Gad zijn.
-
 15 Zijn heer nu, en zijn getelden waren vijf en veertig duizend zeshonderd vijftig.
-
 16 Al de getelden in het leger van Ruben waren honderd een en vijftig duizend vierhonderd vijftig; naar hun legers. En zij zullen als tweede optrekken.
-
 17 Daarna zal de tent der samenkomst optrekken, met het leger der Levieten, in het midden van de legers; zoals zij zich legeren zullen, alzo zullen zij optrekken, een ieder aan zijn plaats, naar hun banieren.
-
 18 De banier van het leger van Efraïm, naar hun legers, zal tegen het westen zijn; en Elisáma, de zoon van Ammihud, zal de overste van de zonen van Efraïm zijn.
-
 19 Zijn heer nu, en zijn getelden waren veertig duizend vijfhonderd.
-
 20 En naast hem de stam van Manasse; en Gamáliël, de zoon van Pedázur, zal de overste van de zonen van Manasse zijn.
-
 21 Zijn heer nu, en zijn getelden waren twee en dertig duizend tweehonderd.
-
 22 Daartoe de stam van Benjamin; en Abídan, de zoon van Gidéoni, zal de overste van de zonen van Benjamin zijn.
-
 23 Zijn heer nu, en zijn getelden waren vijf en dertig duizend vierhonderd.
-
 24 Al de getelden in het leger van Efraïm waren honderd acht duizend eenhonderd, naar hun legers. En zij zullen als derde optrekken.
-
 25 De banier van het leger van Dan zal tegen het noorden zijn, naar hun legers; en Ahiézer, de zoon van Ammísaddai, zal de overste van de zonen van Dan zijn.
-
 26 Zijn heer nu, en zijn getelden waren twee en zestig duizend zevenhonderd.
-
 27 En naast hem zal zich legeren de stam van Aser; en Págiël, de zoon van Ochran, zal de overste van de zonen van Aser zijn.
-
 28 Zijn heer nu, en zijn getelden waren een en veertig duizend vijfhonderd.
-
 29 Daartoe de stam van Nafthali; en Ahíra, de zoon van Enan, zal de overste van de zonen van Nafthali zijn.
-
 30 Zijn heer nu, en zijn getelden waren drie en vijftig duizend vierhonderd.
-
 31 Al de getelden in het leger van Dan waren honderd zeven en vijftig duizend zeshonderd. Als laatste zullen zij optrekken, naar hun banieren.
-
 32 Dezen zijn de getelden van de kinderen Israëls, naar het huis van hun vaderen; al de getelden van de legers, naar hun heren, waren zeshonderd drie duizend vijfhonderd vijftig.
-
 33 Maar de Levieten werden niet geteld onder de zonen van Israël, zoals de Heere Mozes geboden had.
-
 34 En de kinderen Israëls deden naar alles, wat de Heere Mozes geboden had, zo legerden zij zich naar hun banieren, en zo trokken zij op, een ieder naar zijn geslachten, naar het huis van zijn vaderen.
-
-
-
-
-
-
-
-Telling der Levieten
-====================
-
-
-
-
-3
-=
-
+=Telling der Levieten
+#3
 1 Dit nu zijn de geboorten van Aäron en Mozes; ten dage als de Heere met Mozes gesproken heeft op de berg Sinaï.
-
 2 En dit zijn de namen van de zonen van Aäron: de eerstgeborene, Nadab, daarna Abíhu, Eleázar, en Ithamar.
-
 3 Dit zijn de namen van de zonen van Aäron, de priesters, die gezalfd waren, wier hand men gevuld had, om het priesterambt te bedienen.
-
 4 Maar Nadab en Abíhu stierven voor het aangezicht des Heeren, toen zij vreemd vuur voor het aangezicht des Heeren in de woestijn van Sinaï brachten, en hadden geen kinderen, doch Eleázar en Ithamar bedienden het priesterambt voor het aangezicht van hun vader Aäron.
-
 5 En de Heere sprak tot Mozes, zeggende:
-
 6 Doe de stam Levi naderen, en stel hem voor het aangezicht van de priester Aäron, opdat zij hem dienen;
-
 7 En dat zij waarnemen zijn wacht, en de wacht van de gehele vergadering, voor de tent der samenkomst, om de dienst van de tabernakel te bedienen;
-
 8 En dat zij al het gereedschap van de tent der samenkomst, en de wacht der kinderen Israëls waarnemen, om de dienst van de tabernakel te bedienen.
-
 9 Gij zult dan, aan Aäron en aan zijn zonen, de Levieten geven; zij zijn gegeven, zij zijn hem gegeven uit de kinderen Israëls.
-
 10 Maar Aäron en zijn zonen zult gij stellen, dat zij hun priesterambt waarnemen; en de vreemde, die nadert, zal gedood worden.
-
 11 En de Heere sprak tot Mozes, zeggende:
-
 12 En Ik, zie, Ik heb de Levieten uit het midden van de kinderen Israëls genomen, in plaats van elke eerstgeborene, die de baarmoeder opent, uit de kinderen Israëls; en de Levieten zullen van Mij zijn.
-
 13 Want elke eerstgeborene is van Mij; van de dag, dat Ik alle eerstgeborenen in Egypteland sloeg, heb Ik Mij geheiligd alle eerstgeborenen in Israël, van de mensen tot de beesten; zij zullen van Mij zijn; Ik ben de Heere!
-
 14 En de Heere sprak tot Mozes in de woestijn van Sinaï, zeggende:
-
 15 Tel de zonen van Levi naar het huis van hun vaderen, naar hun geslachten, al wat mannelijk is, van een maand oud en daarboven, die zult gij tellen.
-
 16 En Mozes telde hen naar het bevel des Heeren, zoals hem geboden was.
-
 17 Dit nu waren de zonen van Levi met hun namen: Gerson, en Kahath, en Merári.
-
 18 En dit zijn de namen van de zonen van Gerson, naar hun geslachten: Libni en Simeï.
-
 19 En de zonen van Kahath, naar hun geslachten: Amram en Izhar, Hebron en Uzziël.
-
 20 En de zonen van Merári, naar hun geslachten: Máheli en Mûsi; dit zijn de geslachten der Levieten, naar het huis van hun vaderen.
-
 21 Van Gerson was het geslacht der Libnieten, en het geslacht der Simeïeten; dit zijn de geslachten der Gersonieten.
-
 22 Hun getelden in getal waren van al wat mannelijk was, van een maand oud en daarboven; hun getelden waren zeven duizend vijfhonderd.
-
 23 De geslachten der Gersonieten zullen zich legeren achter de tabernakel, westwaarts.
-
 24 De overste nu van het vaderlijke huis der Gersonieten zal zijn Eljasaf, de zoon van Laël.
-
 25 En de wacht van de zonen van Gerson in de tent der samenkomst zal zijn de tabernakel en de tent, haar bedekking, en de bedekking aan de deur van de tent der samenkomst;
-
 26 En de behangsels van de voorhof, en de bedekking van de deur van de voorhof, die bij de tabernakel en bij het altaar rondom zijn; alsook zijn zelen, tot de ganse dienst.
-
 27 En van Kahath is het geslacht der Amramieten en het geslacht der Izharieten en het geslacht der Hebronieten, en het geslacht der Uzziëlieten; dit zijn de geslachten der Kahathieten.
-
 28 In getal van al wat mannelijk was, van een maand oud en daarboven, waren er acht duizend zeshonderd, waarnemende de wacht van het heiligdom.
-
 29 De geslachten van de zonen van Kahath zullen zich legeren aan de zijde van de tabernakel, zuidwaarts.
-
 30 De overste nu van het vaderlijke huis der geslachten van de Kahathieten, zal zijn Elísafan, de zoon van Uzziël.
-
 31 Hun wacht nu zal zijn de ark, en de tafel, en de kandelaar, en de altaren en het gereedschap van het heiligdom, waarmee zij dienst doen, en de bedekking, en al wat tot haar dienst behoort.
-
 32 De overste nu van de oversten van Levi zal zijn Eleázar, de zoon van Aäron, de priester; zijn opzicht zal zijn over hen, die de wacht van het heiligdom waarnemen.
-
 33 Van Merári is het geslacht der Máhelieten, en het geslacht der Mûsieten; dit zijn de geslachten van Merári.
-
 34 En hun getelden in getal van al wat mannelijk was, van een maand oud en daarboven, waren zes duizend tweehonderd.
-
 35 De overste nu van het vaderlijke huis der geslachten van Merári zal zijn Zûriël, de zoon van Abíhaïl; zij zullen zich legeren aan de zijde van de tabernakel, noordwaarts.
-
 36 En het opzicht der wachten van de zonen van Merári zal zijn over de planken van de tabernakel, en zijn richels, en zijn pilaren, en zijn voeten, en al zijn gereedschap, en al wat tot zijn dienst behoort;
-
 37 En de pilaren van de voorhof rondom, en hun voeten, en hun pinnen, en hun zelen.
-
 38 Die zich nu legeren zullen voor de tabernakel oostwaarts, voor de tent der samenkomst, tegen de opgang, zullen zijn Mozes, en Aäron met zijn zonen, waarnemende de wacht van het heiligdom, voor de wacht van de kinderen Israëls; en de vreemde die nadert, zal gedood worden.
-
 39 Al de getelden der Levieten, die Mozes en Aäron, op het bevel des Heeren, naar hun geslachten, geteld hebben, al wat mannelijk was, van een maand oud en daarboven, waren twee en twintig duizend.
-
 40 En de Heere zeide tot Mozes: Tel alle eerstgeborenen, wat mannelijk is onder de kinderen Israëls, van een maand oud en daarboven; en neem het getal van hun namen op.
-
 41 En Gij zult voor Mij de Levieten nemen (Ik ben de Heere!) in plaats van alle eerstgeborenen onder de kinderen Israëls, en de beesten der Levieten, in plaats van alle eerstgeborenen onder de beesten van de kinderen Israëls.
-
 42 Mozes dan telde, zoals de Heere hem geboden had, alle eerstgeborenen onder de kinderen Israëls.
-
 43 En alle eerstgeborenen, die mannelijk waren, in het getal der namen, van een maand oud en daarboven, naar hun getelden, waren twee en twintig duizend tweehonderd drie en zeventig.
-
 44 En de Heere sprak tot Mozes, zeggende:
-
 45 Neem de Levieten, in plaats van alle eerstgeboorte onder de kinderen Israëls, en de beesten der Levieten, in plaats van hun beesten; want de Levieten zullen van Mij zijn; Ik ben de Heere!
-
 46 Aangaande de tweehonderd drie en zeventig, die gelost zullen worden, die overschieten, boven de Levieten, van de eerstgeborenen van de kinderen Israëls;
-
 47 Gij zult voor elk hoofd vijf sikkels nemen; naar de sikkel van het heiligdom zult gij ze nemen; die sikkel is twintig gera.
-
 48 En gij zult dat geld aan Aäron en zijn zonen geven, het geld der gelosten die onder hen overschieten.
-
 49 Toen nam Mozes dat losgeld van hen, die overschoten boven de gelosten door de Levieten.
-
 50 Van de eerstgeborenen van de kinderen Israëls nam hij dat geld, duizend driehonderd vijf en zestig sikkels, naar de sikkel van het heiligdom.
-
 51 En Mozes gaf dat geld der gelosten aan Aäron en aan zijn zonen, naar het bevel des Heeren, zoals de Heere Mozes geboden had.
-
-
-
-
-
-
-
-Ambtsverdeling der Levieten
-===========================
-
-
-
-
-4
-=
-
+=Ambtsverdeling der Levieten
+#4
 1 En de Heere sprak tot Mozes en tot Aäron, zeggende:
-
 2 Neemt op de som van de zonen van Kahath, uit het midden van de zonen van Levi, naar hun geslachten, naar het huis van hun vaderen.
-
 3 Van dertig jaren oud en daarboven, tot vijftig jaren oud; al wie tot deze strijd inkomt, om het werk in de tent der samenkomst te doen.
-
 4 Dit zal de dienst zijn van de zonen van Kahath, in de tent der samenkomst, te weten de heiligheid der heiligheden.
-
 5 In het optrekken van het leger, zo zullen Aäron en zijn zonen komen, en de voorhang van de bedekking afnemen, en zullen daarmee de ark der getuigenis bedekken.
-
 6 En zij zullen een bedekking van dassenvellen daarop leggen, en een geheel kleed van hemelsblauw daar bovenop uitspreiden; en zij zullen haar handbomen aanleggen.
-
 7 Zij zullen ook op de toontafel een kleed van hemelsblauw uitspreiden, en zullen daarop zetten de schotels, en de reukschalen, en de kroezen, en de dekschotels; ook zal het gedurig brood daarop zijn.
-
 8 Daarna zullen zij een scharlaken kleed daarover uitspreiden, en zullen dat met een bedekking van dassenvellen bedekken; en zij zullen haar handbomen aanleggen.
-
 9 Dan zullen zij een kleed van hemelsblauw nemen, en bedekken de kandelaar van de luchter, en zijn lampen, en zijn snuiters, en zijn blusvaten, en al zijn olievaten, waarmee zij daarbij dienen.
-
 10 Zij zullen ook hem, en al zijn gereedschap, in een bedekking van dassenvellen doen, en zullen hem op de draagboom leggen.
-
 11 En over het gouden altaar zullen zij een kleed van hemelsblauw uitspreiden, en zullen dat met een bedekking van dassenvellen bedekken; en zij zullen zijn handbomen aanleggen.
-
 12 Zij zullen ook nemen alle gereedschap van de dienst, waarmee zij in het heiligdom dienen, en zullen het leggen in een kleed van hemelsblauw, en zullen het met een bedekking van dassenvellen bedekken; en zij zullen het op de draagboom leggen.
-
 13 En zij zullen de as van het altaar vegen, en zij zullen daarover een kleed van purper uitspreiden.
-
 14 En zij zullen daarop leggen al zijn gereedschap, waarmee zij daarbij dienen, de koolpannen, de krauwels, en de schoffels, en de sprengbekkens, al het gereedschap van het altaar; en zij zullen daarover een bedekking van dassenvellen uitspreiden, en zullen zijn handbomen aanleggen.
-
 15 Als nu Aäron en zijn zonen, het bedekken van het heiligdom, en van alle gereedschap van het heiligdom, in het optrekken van het leger, zullen voleindigd hebben, zo zullen daarna de zonen van Kahath komen om te dragen; maar zij zullen dat heilige niet aanroeren, dat zij niet sterven. Dit is de last van de zonen van Kahath, in de tent der samenkomst.
-
 16 Het opzicht nu van Eleázar, de zoon van Aäron, de priester, zal zijn over de olie van de luchter, en het reukwerk van de welriekende specerijen, en het gedurig spijsoffer, en de zalfolie; het opzicht van de ganse tabernakel, en alles wat daarin is, aan het heiligdom en aan zijn gereedschap.
-
 17 En de Heere sprak tot Mozes en tot Aäron, zeggende:
-
 18 Gij zult de stam van de geslachten der Kahathieten niet laten uitgeroeid worden uit het midden der Levieten;
-
 19 Maar dit zult gij hun doen, opdat zij leven en niet sterven, als zij tot de heiligheid der heiligheden toetreden zullen: Aäron en zijn zonen zullen komen, en hen een ieder over zijn dienst en aan zijn last stellen.
-
 20 Doch zij zullen niet inkomen om te zien, als men het heiligdom inwindt, opdat zij niet sterven.
-
 21 En de Heere sprak tot Mozes, zeggende:
-
 22 Neem ook op de som van de zonen van Gerson, naar het huis van hun vaderen, naar hun geslachten.
-
 23 Gij zult hen tellen van dertig jaren oud en daarboven, tot vijftig jaren oud, al wie inkomt om de strijd te strijden, opdat hij de dienst bediene in de tent der samenkomst.
-
 24 Dit zal zijn de dienst van de geslachten van de Gersonieten, in het dienen en in de last.
-
 25 Zij zullen dan dragen de gordijnen van de tabernakel, en de tent der samenkomst; te weten haar bedekking, en de bedekking van dassenvel, die er bovenop is, en de bedekking van de deur van de tent der samenkomst,
-
 26 En de behangsels van de voorhof, en de bedekking van de deur van de poort van de voorhof, die is bij de tabernakel en bij het altaar rondom; en hun zelen, en al het gereedschap van hun dienst, alsook al wat daarvoor bereid wordt, opdat zij dienen.
-
 27 De gehele dienst van de zonen der Gersonieten, in al hun last, en in al hun dienst, zal zijn naar het bevel van Aäron en van zijn zonen; en gij zult hun ter bewaring al hun last bevelen.
-
 28 Dit is de dienst van de geslachten van de zonen van de Gersonieten, in de tent der samenkomst; en hun wacht zal zijn onder de hand van Ithamar, de zoon van Aäron, de priester.
-
 29 Aangaande de zonen van Merári, die zult gij naar hun geslachten, en naar het huis van hun vaderen tellen.
-
 30 Gij zult hen tellen van dertig jaren oud en daarboven, tot vijftig jaren oud, al wie inkomt tot deze strijd, om te bedienen de dienst van de tent der samenkomst.
-
 31 Dit zal nu zijn de onderhouding van hun last, naar al hun dienst, in de tent der samenkomst: de planken van de tabernakel, en zijn richels, en zijn pilaren, en zijn voeten;
-
 32 Alsook de pilaren van de voorhof rondom, hun voeten, en hun pinnen, en hun zelen, met al hun gereedschap, en met al hun dienst; en het gereedschap van de waarneming van hun last zult gij bij namen tellen.
-
 33 Dit is de dienst van de geslachten van de zonen van Merári, naar hun ganse dienst, in de tent der samenkomst, onder de hand van Ithamar, de zoon van Aäron, de priester.
-
 34 Mozes dan en Aäron, en de oversten der vergadering telden de zonen der Kahathieten, naar hun geslachten, en naar het huis van hun vaderen:
-
 35 Van dertig jaren oud en daarboven, tot vijftig jaren oud, al wie inkwam tot deze strijd, tot de dienst in de tent der samenkomst;
-
 36 Hun getelden nu waren, naar hun geslachten, twee duizend zevenhonderd vijftig.
-
 37 Dit zijn de getelden van de geslachten der Kahathieten, van al wie in de tent der samenkomst diende, die Mozes en Aäron geteld hebben, naar het bevel des Heeren, door de hand van Mozes.
-
 38 Evenzo de getelden van de zonen van Gerson, naar hun geslachten, en naar het huis van hun vaderen;
-
 39 Van dertig jaren oud en daarboven, tot vijftig jaren oud, al wie inkwam tot deze strijd, tot de dienst in de tent der samenkomst;
-
 40 Hun getelden waren, naar hun geslachten, naar het huis van hun vaderen, twee duizend zeshonderd dertig.
-
 41 Dezen zijn de getelden van de geslachten van de zonen van Gerson, van al wie in de tent der samenkomst diende, die Mozes en Aäron telden, naar het bevel des Heeren.
-
 42 En de getelden van de geslachten van de zonen van Merári, naar hun geslachten, naar het huis van hun vaderen,
-
 43 Van dertig jaren oud en daarboven, tot vijftig jaren oud, al wie inkwam tot deze strijd, tot de dienst in de tent der samenkomst;
-
 44 Hun getelden nu waren, naar hun geslachten, drie duizend tweehonderd.
-
 45 Dezen zijn de getelden van de geslachten van de zonen van Merári, die Mozes en Aäron geteld hebben, naar het bevel des Heeren, door de hand van Mozes.
-
 46 Al de getelden, die Mozes en Aäron, en de oversten van Israël geteld hebben van de Levieten, naar hun geslachten, en naar het huis van hun vaderen,
-
 47 Van dertig jaren oud en daarboven, tot vijftig jaren oud, al wie inkwam, om de dienst der bediening en de dienst van de last, in de tent der samenkomst, te bedienen;
-
 48 Hun getelden waren acht duizend vijfhonderd tachtig.
-
 49 Men telde hen, naar het bevel des Heeren, door de hand van Mozes, een ieder naar zijn dienst, en naar zijn last; en zijn getelden waren, die de Heere Mozes geboden had.
-
-
-
-
-
-
-
-Wegzending van de onreinen
-==========================
-
-
-
-
-5
-=
-
+=Wegzending van de onreinen
+#5
 1 En de Heere sprak tot Mozes, zeggende:
-
 2 Gebied de kinderen Israëls, dat zij uit het leger wegzenden alle melaatsen, en alle vloeienden, en allen, die onrein zijn van een dode.
-
 3 Van de man tot de vrouw toe zult gij hen wegzenden; tot buiten het leger zult gij hen wegzenden; opdat zij hun legers niet verontreinigen, in welker midden Ik woon.
-
 4 En de kinderen Israëls deden alzo, en zonden hen tot buiten het leger; gelijk de Heere tot Mozes gesproken had, alzo deden de kinderen Israëls.
-
-
-Wetten over ontvreemding
-========================
-
-
+=Wetten over ontvreemding
 5 Verder sprak de Heere tot Mozes, zeggende:
-
 6 Spreek tot de kinderen Israëls: Wanneer een man of een vrouw iets van enige menselijke zonden gedaan zullen hebben, overtreden hebbende door overtreding tegen de Heere, zo is die ziel schuldig.
-
 7 En zij zullen hun zonde, die zij gedaan hebben, belijden; daarna zal hij zijn schuld weer uitkeren, naar de hoofdsom daarvan, en het vijfde deel ervan zal hij daarboven toedoen, en zal het hem geven, bij wie hij zich schuldig gemaakt heeft.
-
 8 Maar zo die man geen losser zal hebben, om de schuld aan hem weer uit te keren, zal die schuld, die de Heere weer uitgekeerd wordt, voor de priester zijn; behalve de ram der verzoening, waarmee hij voor hem verzoening doen zal.
-
 9 Evenzo zal alle heffing van alle geheiligde dingen van de kinderen Israëls, die zij tot de priester brengen, van hem zijn.
-
 10 En een ieders geheiligde dingen zullen van hem zijn; wat iemand de priester zal gegeven hebben, zal het zijne zijn.
-
-
-Wetten over de ijverzucht
-=========================
-
-
+=Wetten over de ijverzucht
 11 Voorts sprak de Heere tot Mozes, zeggende:
-
 12 Spreek tot de kinderen Israëls, en zeg tot hen: Wanneer iemands vrouw zal afgeweken zijn, en door overtreding tegen hem overtreden zal hebben;
-
 13 Dat een man bij haar door bijligging des zaads zal gelegen hebben, en het voor de ogen van haar man verborgen zal zijn, en zij zich verheimelijkt zal hebben, terwijl ze nochtans onrein geworden is; en geen getuige tegen haar is, en zij niet betrapt is;
-
 14 En de ijvergeest over hem gekomen is, dat hij ijvert over zijn vrouw, omdat zij onrein geworden is; of dat over hem de ijvergeest gekomen is, dat hij over zijn vrouw ijvert, hoewel zij niet onrein geworden is;
-
 15 Dan zal die man zijn vrouw tot de priester brengen, en zal haar offerande voor haar meebrengen, een tiende deel van een efa gerstemeel; hij zal geen olie daarop gieten, noch wierook daarop leggen, omdat het een spijsoffer der ijveringen is, een spijsoffer der gedachtenis, dat de ongerechtigheid in gedachtenis brengt.
-
 16 En de priester zal haar doen naderen; hij zal haar stellen voor het aangezicht des Heeren.
-
 17 En de priester zal heilig water in een aarden vat nemen; en van het stof, dat op de vloer van de tabernakel is, zal de priester nemen, en in het water doen.
-
 18 Daarna zal de priester de vrouw voor het aangezicht des Heeren stellen, en zal het hoofd van de vrouw ontbloten, en zal het spijsoffer der gedachtenis op haar handen leggen, dat het spijsoffer der ijveringen is; en in de hand van de priester zal dat bittere water zijn, dat de vloek meebrengt.
-
 19 En de priester zal haar beëdigen, en zal tot die vrouw zeggen: Indien niemand bij u gelegen heeft, en indien gij, onder uw man zijnde, niet afgeweken zijt tot onreinheid, wees vrij van dit bittere water, dat de vloek meebrengt!
-
 20 Maar zo gij, onder uw man zijnde, afgeweken zijt, en zo gij onrein geworden zijt, dat een man bij u gelegen heeft, behalve uw man:
-
 21 (Dan zal de priester die vrouw met de eed der vervloeking beëdigen, en de priester zal tot die vrouw zeggen:) De Heere zette u tot een vloek, en tot een eed, in het midden van uw volk, doordat de Heere uw heup doe invallen, en uw buik doe opzwellen;
-
 22 Dat dit water, dat de vervloeking meebrengt, in uw ingewand inga, om de buik te doen opzwellen, en de heup te doen invallen! Dan zal die vrouw zeggen: Amen, amen!
-
 23 Daarna zal de priester deze zelfde vloeken op een blad schrijven, en hij zal het met het bittere water uitwissen.
-
 24 En hij zal die vrouw dat bittere water, dat de vervloeking meebrengt, te drinken geven, dat het water, dat de vervloeking meebrengt, in haar tot bitterheden in zal gaan.
-
 25 En de priester zal uit de hand van die vrouw het spijsoffer der ijveringen nemen, en hij zal dat spijsoffer voor het aangezicht des Heeren bewegen, en zal dat op het altaar offeren.
-
 26 De priester zal ook van dat spijsoffer, zijn gedenkoffer, een handvol grijpen, en zal het op het altaar aansteken; en daarna zal hij dat water die vrouw te drinken geven.
-
 27 Als hij haar nu dat water zal te drinken gegeven hebben, zal het geschieden, indien zij onrein geworden is, en tegen haar man door overtreding zal overtreden hebben, dat het water, dat vervloeking meebrengt, tot bitterheid in haar ingaan zal, en haar buik opzwellen, en haar heup invallen zal; en die vrouw zal in het midden van haar volk tot een vloek zijn.
-
 28 Doch indien de vrouw niet onrein geworden is, maar rein is, zo zal zij vrij zijn, en zal met zaad bezaad worden.
-
 29 Dit is de wet der ijveringen, als een vrouw, onder haar man zijnde, zal afgeweken en onrein geworden zijn;
-
 30 Of als over een man de ijvergeest zal gekomen zijn, en hij over zijn vrouw zal geijverd hebben, dat hij de vrouw voor het aangezicht des Heeren stelle, en de priester aan haar deze ganse wet volbrenge.
-
 31 En de man zal van de ongerechtigheid onschuldig zijn; maar die vrouw zal haar ongerechtigheid dragen.
-
-
-
-
-
-
-
-Wet van het Nazireërschap
-=========================
-
-
-
-
-6
-=
-
+=Wet van het Nazireërschap
+#6
 1 En de Heere sprak tot Mozes, zeggende:
-
 2 Spreek tot de kinderen Israëls, en zeg tot hen: Wanneer een man of een vrouw zich afgescheiden zal hebben, belovende de gelofte van een Nazireër, om zich de Heere af te zonderen;
-
 3 Van wijn en sterke drank zal hij zich afzonderen; wijnedik, en edik van sterke drank zal hij niet drinken, noch enige vochtigheid van druiven zal hij drinken, noch verse of gedroogde druiven eten.
-
 4 Al de dagen van zijn Nazireërschap zal hij niet eten van iets, dat van de wijnstok van de wijn gemaakt is, van de kernen af tot de basten toe.
-
 5 Al de dagen van de gelofte van zijn Nazireërschap zal het scheermes over zijn hoofd niet gaan; totdat die dagen vervuld zullen zijn, die hij zich de Heere zal afgezonderd hebben, zal hij heilig zijn, latende de lokken van het haar van zijn hoofd groeien.
-
 6 Al de dagen, die hij zich de Heere zal afgezonderd hebben, zal hij tot het lichaam van een dode niet gaan.
-
 7 Om zijn vader of om zijn moeder, om zijn broeder of om zijn zuster, om hen zal hij zich niet verontreinigen, als zij dood zijn; want het Nazireërschap van zijn God is op zijn hoofd.
-
 8 Al de dagen van zijn Nazireërschap is hij de Heere heilig.
-
 9 En zo de gestorvene bij hem onvoorziens haastig gestorven ware, dat hij het hoofd van zijn Nazireërschap zou verontreinigd hebben, zo zal hij op de dag van zijn reiniging zijn hoofd bescheren; op de zevende dag zal hij het bescheren.
-
 10 En op de achtste dag zal hij twee tortelduiven, of twee jonge duiven brengen tot de priester, tot de deur van de tent der samenkomst.
-
 11 De priester nu zal één bereiden ten zondoffer, en één ten brandoffer, en zal voor hem verzoening doen, omdat hij aan het dode lichaam gezondigd heeft; alzo zal hij zijn hoofd op diezelfde dag heiligen.
-
 12 Daarna zal hij de dagen van zijn Nazireërschap de Heere afzonderen, en zal een lam, dat eenjarig is, brengen ten schuldoffer; en de vorige dagen zullen vervallen, omdat zijn Nazireërschap verontreinigd was.
-
 13 En dit is de wet van de Nazireër: op de dag, als de dagen van zijn Nazireërschap zullen vervuld zijn, zal hij dit brengen tot de deur van de tent der samenkomst.
-
 14 Hij dan zal tot zijn offerande de Heere offeren een volkomen eenjarig lam ten brandoffer, en een volkomen eenjarig ooilam ten zondoffer, en een volkomen ram ten dankoffer.
-
 15 En een korf ongezuurde koeken, koeken van meelbloem, met olie gemengd, en ongezuurde vladen, met olie bestreken, alsook hun spijsoffer, en hun drankoffers;
-
 16 En de priester zal het voor het aangezicht des Heeren brengen, en zal zijn zondoffer en zijn brandoffer bereiden.
-
 17 Hij zal ook de ram ten dankoffer de Heere bereiden, met de korf der ongezuurde koeken; en de priester zal zijn spijsoffer en drankoffer bereiden.
-
 18 Alsdan zal de Nazireër, aan de deur van de tent der samenkomst, het hoofd van zijn Nazireërschap bescheren; en hij zal het hoofdhaar van zijn Nazireërschap nemen, en hij zal het leggen op het vuur, dat onder het dankoffer is.
-
 19 Daarna zal de priester een gekookte schouder nemen van de ram, en een ongezuurde koek uit de korf, en een ongezuurde vlade; en hij zal ze op de handen van de Nazireër leggen, nadat hij zijn Nazireërschap afgeschoren heeft.
-
 20 En de priester zal die bewegen ten beweegoffer, voor het aangezicht des Heeren; het is een heilig ding voor de priester, met de borst van het beweegoffer, en met de schouder van het hefoffer; en daarna zal die Nazireër wijn drinken.
-
 21 Dit is de wet van de Nazireër, die zijn offerande de Heere voor zijn Nazireërschap zal beloofd hebben, behalve wat zijn hand verkrijgen zal; naar zijn gelofte, die hij beloofd zal hebben, alzo zal hij doen, naar de wet van zijn Nazireërschap.
-
-
-De priesterlijke zegen
-======================
-
-
+=De priesterlijke zegen
 22 En de Heere sprak tot Mozes, zeggende:
-
 23 Spreek tot Aäron en zijn zonen, zeggende: Alzo zult gij de kinderen Israëls zegenen, zeggende tot hen:
-
 24 De Heere zegene u, en behoede u!
-
 25 De Heere doe Zijn aangezicht over u lichten, en zij u genadig!
-
 26 De Heere verheffe Zijn aangezicht over u, en geve u vrede!
-
 27 Alzo zullen zij Mijn Naam op de kinderen Israëls leggen; en Ik zal hen zegenen.
-
-
-
-
-
-
-
-Offeranden van de oversten bij de inwijding van de tabernakel
-=============================================================
-
-
-
-
-7
-=
-
+=Offeranden van de oversten bij de inwijding van de tabernakel
+#7
 1 En het geschiedde ten dage, toen Mozes geëindigd had de tabernakel op te richten, en dat hij die gezalfd, en die geheiligd had, en al zijn gereedschap, alsook het altaar en al zijn gereedschap, en hij ze gezalfd, en ze geheiligd had;
-
 2 Dat de oversten van Israël, de hoofden van het huis van hun vaderen, offerden; deze waren de oversten der stammen, die over de getelden stonden.
-
 3 En zij brachten hun offerande voor het aangezicht des Heeren, zes overdekte wagens, en twaalf runderen; een wagen voor twee oversten, en een os voor elk een; en brachten ze voor de tabernakel.
-
 4 En de Heere sprak tot Mozes, zeggende:
-
 5 Neem ze van hen, opdat zij zijn mogen om te bedienen de dienst van de tent der samenkomst; en gij zult ze de Levieten geven, een ieder naar zijn dienst.
-
 6 Alzo nam Mozes die wagens, en die runderen, en gaf ze de Levieten.
-
 7 Twee wagens en vier runderen gaf hij de zonen van Gerson, naar hun dienst;
-
 8 En vier wagens en acht runderen gaf hij de zonen van Merári, naar hun dienst; onder de hand van Ithamar, de zoon van Aäron, de priester.
-
 9 Maar de zonen van Kohath gaf hij niet; want de dienst der heilige dingen was op hen, die zij op de schouders droegen.
-
 10 En de oversten offerden ter inwijding van het altaar, op de dag toen het gezalfd werd; de oversten dan offerden hun offeranden voor het altaar.
-
 11 En de Heere zeide tot Mozes: Elke overste zal (een ieder op zijn dag) zijn offerande offeren, ter inwijding van het altaar.
-
 12 Die nu op de eerste dag zijn offerande offerde, was Nahesson, de zoon van Amminádab, voor de stam van Juda.
-
 13 En zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 14 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 15 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 16 Een geitenbok, ten zondoffer;
-
 17 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Nahesson, de zoon van Amminádab.
-
 18 Op de tweede dag offerde Netháneël, de zoon van Zuar, de overste van Issaschar.
-
 19 Hij offerde zijn offerande: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 20 En een reukschaal van tien gouden sikkels, vol reukwerk;
-
 21 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 22 Een geitenbok, ten zondoffer;
-
 23 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Netháneël, de zoon van Zuar.
-
 24 Op de derde dag offerde de overste van de zonen van Zebulon, Elíab, de zoon van Helon.
-
 25 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 26 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 27 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 28 Een geitenbok, ten zondoffer;
-
 29 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Elíab, de zoon van Helon.
-
 30 Op de vierde dag offerde de overste van de kinderen van Ruben, Elízur, de zoon van Sedéür.
-
 31 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 32 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 33 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 34 Een geitenbok, ten zondoffer;
-
 35 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Elízur, de zoon van Sedéür.
-
 36 Op de vijfde dag offerde de overste van de kinderen van Simeon, Selûmiël, de zoon van Zurísaddai.
-
 37 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 38 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 39 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 40 Een geitenbok, ten zondoffer;
-
 41 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Selûmiël, de zoon van Zurísaddai.
-
 42 Op de zesde dag offerde de overste van de kinderen van Gad, Eljasaf, de zoon van Dehuël.
-
 43 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; beide vol meelbloem gemengd met olie, ten spijsoffer;
-
 44 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 45 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 46 Een geitenbok, ten zondoffer;
-
 47 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Eljasaf, de zoon van Dehuël.
-
 48 Op de zevende dag offerde de overste van de kinderen van Efraïm, Elisáma, de zoon van Ammihud.
-
 49 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 50 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 51 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 52 Een geitenbok, ten zondoffer;
-
 53 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Elisáma, de zoon van Ammihud.
-
 54 Op de achtste dag offerde de overste van de kinderen van Manasse, Gamáliël, de zoon van Pedázur.
-
 55 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 56 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 57 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 58 Een geitenbok, ten zondoffer;
-
 59 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Gamáliël, de zoon van Pedázur.
-
 60 Op de negende dag offerde de overste van de kinderen van Benjamin, Abídan, de zoon van Gideóni.
-
 61 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 62 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 63 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 64 Een geitenbok, ten zondoffer;
-
 65 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Abídan, de zoon van Gideóni.
-
 66 Op de tiende dag offerde de overste van de kinderen van Dan, Ahiëzer, de zoon van Ammísaddai.
-
 67 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 68 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 69 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 70 Een geitenbok, ten zondoffer;
-
 71 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Ahiëzer, de zoon van Ammísaddai.
-
 72 Op de elfde dag offerde de overste van de kinderen van Aser, Págiël, de zoon van Ochran.
-
 73 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 74 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 75 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 76 Een geitenbok, ten zondoffer;
-
 77 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Págiël, de zoon van Ochran.
-
 78 Op de twaalfde dag offerde de overste van de kinderen van Nafthali, Ahíra, de zoon van Enan.
-
 79 Zijn offerande was: een zilveren schotel, welks gewicht was honderd dertig sikkels; een zilveren sprengbekken van zeventig sikkels, naar de sikkel van het heiligdom; zij waren beide vol meelbloem met olie gemengd, ten spijsoffer;
-
 80 Een reukschaal van tien gouden sikkels, vol reukwerk;
-
 81 Een var, een jong rund, een ram, een lam, dat eenjarig was, ten brandoffer;
-
 82 Een geitenbok, ten zondoffer;
-
 83 En ten dankoffer: twee runderen, vijf rammen, vijf bokken, vijf eenjarige lammeren. Dit was de offerande van Ahíra, de zoon van Enan.
-
 84 Dit was de inwijding van het altaar van de oversten van Israël, op de dag toen het gezalfd werd: twaalf zilveren schotels, twaalf zilveren sprengbekkens, twaalf gouden reukschalen.
-
 85 Een zilveren schotel was van honderd dertig sikkels, en een sprengbekken van zeventig; al het zilver van de vaten was twee duizend vierhonderd sikkels, naar de sikkel van het heiligdom.
-
 86 Twaalf gouden reukschalen vol reukwerk; elke reukschaal was van tien sikkels, naar de sikkel van het heiligdom; al het goud van de reukschalen was honderd twintig sikkels.
-
 87 Al de runderen ten brandoffer waren twaalf varren, twaalf rammen, twaalf eenjarige lammeren, met hun spijsoffer; en twaalf geitenbokken ten zondoffer.
-
 88 En al de runderen ten dankoffer waren vier en twintig varren, de rammen zestig, de bokken zestig, de eenjarige lammeren zestig. Dit is de inwijding van het altaar, nadat het gezalfd was.
-
 89 En toen Mozes in de tent der samenkomst ging, om met Hem te spreken, zo hoorde hij een stem tot hem sprekende, van boven het verzoendeksel, dat is op de ark der getuigenis, van tussen de twee cherubs. Alzo sprak Hij tot hem.
-
-
-
-
-
-
-
-Wetten over het aansteken der lampen
-====================================
-
-
-
-
-8
-=
-
+=Wetten over het aansteken der lampen
+#8
 1 En de Heere sprak tot Mozes, zeggende:
-
 2 Spreek tot Aäron, en zeg tot hem: Als gij de lampen aansteken zult, aan de voorzijde van de kandelaar zullen de zeven lampen lichten.
-
 3 En Aäron deed alzo: aan de voorzijde van de kandelaar stak hij zijn lampen aan; zoals de Heere Mozes geboden had.
-
 4 Dit werk nu van de kandelaar was van dicht goud, tot zijn schacht, tot zijn bloemen was het dicht; naar het voorbeeld, dat de Heere Mozes getoond had, alzo had hij de kandelaar gemaakt.
-
-
-Inwijding der Levieten
-======================
-
-
+=Inwijding der Levieten
 5 En de Heere sprak tot Mozes, zeggende:
-
 6 Neem de Levieten uit het midden van de kinderen Israëls, en reinig hen.
-
 7 En aldus zult gij hun doen, om hen te reinigen: spreng op hen water der ontzondiging; en zij zullen het scheermes over hun ganse vlees doen gaan, en zij zullen hun klederen wassen, en zich reinigen.
-
 8 Daarna zullen zij nemen een var, een jong rund, met zijn spijsoffer van meelbloem, met olie gemengd; en een andere var, een jong rund, zult gij nemen ten zondoffer.
-
 9 En gij zult de Levieten voor de tent der samenkomst doen naderen; en gij zult de gehele vergadering van de kinderen Israëls doen verzamelen.
-
 10 Ja, gij zult de Levieten voor het aangezicht des Heeren doen naderen; en de kinderen Israëls zullen hun handen op de Levieten leggen.
-
 11 En Aäron zal de Levieten bewegen ten beweegoffer voor het aangezicht des Heeren, vanwege de kinderen Israëls; opdat zij zijn, om de dienst des Heeren te bedienen.
-
 12 En de Levieten zullen hun handen op het hoofd van de varren leggen; daarna bereidt gij er één ten zondoffer, en één ten brandoffer voor de Heere, om over de Levieten verzoening te doen.
-
 13 En gij zult de Levieten stellen voor het aangezicht van Aäron, en voor het aangezicht van zijn zonen, en gij zult hen bewegen ten beweegoffer voor de Heere.
-
 14 En gij zult de Levieten uit het midden van de kinderen Israëls afscheiden, opdat de Levieten van Mij zijn.
-
 15 En daarna zullen de Levieten inkomen, om de tent der samenkomst te bedienen; en gij zult hen reinigen, en zult hen ten beweegoffer bewegen.
-
 16 Want zij zijn gegeven, zij zijn Mij gegeven uit het midden van de kinderen Israëls; voor de opening van alle baarmoeder, voor de eerstgeborenen van een ieder uit de kinderen Israëls, heb Ik ze Mij genomen.
-
 17 Want elke eerstgeborene onder de kinderen Israëls is van Mij, onder de mensen en onder de beesten; ten dage dat Ik alle eerstgeboorte in Egypteland sloeg, heb Ik die Mij geheiligd.
-
 18 En Ik heb de Levieten genomen voor alle eerstgeborenen onder de kinderen Israëls.
-
 19 En Ik heb de Levieten aan Aäron en aan zijn zonen tot een gift gegeven, uit het midden van de kinderen Israëls, om de dienst van de kinderen Israëls in de tent der samenkomst te bedienen, en om voor de kinderen Israëls verzoening te doen, dat er geen plaag zij onder de kinderen Israëls, als de kinderen Israëls tot het heiligdom naderen zouden.
-
 20 En Mozes deed, en Aäron, en de ganse vergadering van de kinderen Israëls, aan de Levieten, naar alles, wat de Heere Mozes geboden had omtrent de Levieten, zo deden de kinderen Israëls aan hen.
-
 21 En de Levieten ontzondigden zich, en wiesen hun klederen, en Aäron bewoog hen ten beweegoffer voor het aangezicht des Heeren; en Aäron deed verzoening over hen, om hen te reinigen.
-
 22 En daarna kwamen de Levieten, om hun dienst te bedienen in de tent der samenkomst, voor het aangezicht van Aäron, en voor het aangezicht van zijn zonen; zoals de Heere Mozes omtrent de Levieten geboden had, alzo deden zij aan hen.
-
 23 En de Heere sprak tot Mozes, zeggende:
-
 24 Dit is het, wat de Levieten betreft: van vijf en twintig jaren oud en daarboven, zullen zij inkomen, om de strijd te strijden, in de dienst van de tent der samenkomst.
-
 25 Maar van dat hij vijftig jaren oud is, zal hij van de strijd van deze dienst afgaan, en hij zal niet meer dienen.
-
 26 Doch hij zal met zijn broeders dienen in de tent der samenkomst, om de wacht waar te nemen; maar de dienst zal hij niet bedienen. Alzo zult gij aan de Levieten doen in hun wachten.
-
-
-
-
-
-
-
-Het pascha in de woestijn van Sinaï
-===================================
-
-
-
-
-9
-=
-
+=Het pascha in de woestijn van Sinaï
+#9
 1 En de Heere sprak tot Mozes in de woestijn van Sinaï, in het tweede jaar, nadat zij uit Egypteland uitgetrokken waren, in de eerste maand, zeggende:
-
 2 Dat de kinderen Israëls het pascha houden zouden, op zijn gezette tijd;
-
 3 Op de veertiende dag in deze maand, tussen de twee avonden zult gij dat houden, op zijn gezette tijd; naar al zijn inzettingen, en naar al zijn rechten zult gij dat houden.
-
 4 Mozes dan sprak tot de kinderen Israëls, dat zij het pascha zouden houden.
-
 5 En zij hielden het pascha op de veertiende dag van de eerste maand, tussen de twee avonden, in de woestijn van Sinaï; naar alles, wat de Heere Mozes geboden had, alzo deden de kinderen Israëls.
-
-
-Verandering van de wettige tijd
-===============================
-
-
+=Verandering van de wettige tijd
 6 Toen waren er lieden geweest, die door het dode lichaam van een mens onrein waren, en op die dag het pascha niet hadden kunnen houden; daarom naderden zij voor het aangezicht van Mozes, en voor het aangezicht van Aäron op die dag.
-
 7 En die lieden zeiden tot hem: Wij zijn onrein door het dode lichaam van een mens; waarom zou ons tekort gedaan worden, dat wij de offerande des Heeren op zijn gezette tijd niet zouden offeren, in het midden van de kinderen Israëls?
-
 8 En Mozes zeide tot hen: Blijft staande, dat ik hoor, wat de Heere u gebieden zal.
-
 9 Toen sprak de Heere tot Mozes, zeggende:
-
 10 Spreek tot de kinderen Israëls, zeggende: Wanneer iemand onder u, of onder uw geslachten, door een dood lichaam onrein, of op een verre weg zal zijn, hij zal dan nog de Heere het pascha houden.
-
 11 In de tweede maand, op de veertiende dag, tussen de twee avonden, zullen zij dat houden; met ongezuurde broden en bittere saus zullen zij dat eten.
-
 12 Zij zullen daarvan niet overlaten tot de morgen, en zullen daaraan geen been breken; naar alle inzetting van het pascha zullen zij dat houden.
-
 13 Als een man, die rein is, en niet op weg is, en nalaten zal het pascha te houden, zo zal die ziel uit haar volken uitgeroeid worden; want hij heeft de offerande des Heeren op zijn gezette tijd niet geofferd, die man zal zijn zonde dragen.
-
 14 En wanneer een vreemdeling bij u als vreemdeling verkeert, en hij het pascha de Heere ook houden zal, naar de inzetting van het pascha, en naar zijn wijze, alzo zal hij het houden; het zal enerlei inzetting voor u zijn, beiden voor de vreemdeling en voor de ingeborene van het land.
-
-
-De wolk- en vuurkolom boven de tabernakel
-=========================================
-
-
+=De wolk- en vuurkolom boven de tabernakel
 15 En op de dag van het oprichten van de tabernakel bedekte de wolk de tabernakel, op de tent der getuigenis; en in de avond was over de tabernakel als een gedaante des vuurs, tot aan de morgen.
-
 16 Alzo geschiedde het gedurig; de wolk bedekte hem, en des nachts was er een gedaante des vuurs.
-
 17 Maar nadat de wolk opgeheven werd van boven de tent, zo verreisden ook daarna de kinderen Israëls; en in de plaats, waar de wolk bleef, daar legerden zich de kinderen Israëls.
-
 18 Naar de mond des Heeren verreisden de kinderen Israëls, en naar de mond des Heeren legerden zij zich; al de dagen, in welke de wolk over de tabernakel bleef, legerden zij zich.
-
 19 En als de wolk vele dagen over de tabernakel verbleef, zo namen de kinderen Israëls de wacht des Heeren waar, en verreisden niet.
-
 20 Als het nu was, dat de wolk weinige dagen op de tabernakel was, dan legerden zij zich naar de mond des Heeren, en naar de mond des Heeren verreisden zij.
-
 21 Maar was het, dat de wolk van de avond tot de morgen daar was, en de wolk in de morgen opgeheven werd, zo verreisden zij; of des daags of des nachts, als de wolk opgeheven werd, zo verreisden zij.
-
 22 Of als de wolk twee dagen, of een maand, of vele dagen vertoefde op de tabernakel, daarop blijvende, zo legerden de kinderen Israëls zich, en verreisden niet; en als zij opgeheven werd, verreisden zij.
-
 23 Naar de mond des Heeren legerden zij zich, en naar de mond des Heeren verreisden zij; zij namen de wacht des Heeren waar, naar de mond des Heeren, door de hand van Mozes.
-
-
-
-
-
-
-
-De twee zilveren trompetten
-===========================
-
-
-
-
-10
-==
-
+=De twee zilveren trompetten
+#10
 1 Verder sprak de Heere tot Mozes, zeggende:
-
 2 Maak u twee zilveren trompetten; van dicht werk zult gij ze maken; en zij zullen u zijn voor het samenroepen van de vergadering, en voor het optrekken van de legers.
-
 3 Als zij daarmee zullen blazen, dan zal de gehele vergadering tot u vergaderd worden, aan de deur van de tent der samenkomst.
-
 4 Maar als zij met de éne zullen blazen, dan zullen tot u vergaderd worden de oversten, de hoofden van duizend van Israël.
-
 5 Als gij met een gebroken geklank blazen zult, dan zullen de legers, die tegen het oosten gelegerd zijn, optrekken.
-
 6 Maar als gij ten tweeden male met een gebroken geklank blazen zult, zullen de legers, die tegen het zuiden legeren, optrekken; met een gebroken geklank zullen zij blazen tot hun optrekken.
-
 7 Maar in het verzamelen van de gemeente, zult gij blazen, doch geen gebroken geklank maken.
-
 8 En de zonen van Aäron, de priesters, zullen met die trompetten blazen; en zij zullen u zijn tot een eeuwige inzetting bij uw geslachten.
-
 9 En wanneer gij in uw land ten strijde zult trekken tegen de vijand, die u benauwt, zult gij ook met die trompetten een gebroken klank maken; zo zal aan u gedacht worden voor het aangezicht van de Heere, uw God, en gij zult van uw vijanden verlost worden.
-
 10 Evenzo op de dag van uw vrolijkheid, en op uw gezette hoogtijden, en in het begin van uw maanden, zult gij ook met de trompetten blazen over uw brandoffers, en over uw dankoffers; en zij zullen u ter gedachtenis zijn voor het aangezicht van uw God; Ik ben de Heere, uw God!
-
-
-Israëls vertrek uit de woestijn Sinaï
-=====================================
-
-
+=Israëls vertrek uit de woestijn Sinaï
 11 En het geschiedde in het tweede jaar, in de tweede maand, op de twintigste van de maand, dat de wolk opgeheven werd van boven de tabernakel der getuigenis.
-
 12 En de kinderen Israëls trokken op, naar hun tochten, uit de woestijn Sinaï; en de wolk bleef in de woestijn Paran.
-
 13 Alzo trokken zij voor het eerst op, naar de mond des Heeren, door de hand van Mozes.
-
 14 Want eerst trok op de banier van het leger der kinderen van Juda, naar hun legers; en over zijn leger was Nahesson, de zoon van Amminádab.
-
 15 En over het leger van de stam van de kinderen van Issaschar was Netháneël, de zoon van Zuar.
-
 16 En over het leger van de stam van de kinderen van Zebulon was Elíab, de zoon van Helon.
-
 17 Toen werd de tabernakel afgenomen, en de zonen van Gerson, en de zonen van Merári trokken op, dragende de tabernakel.
-
 18 Daarna trok op de banier van het leger van Ruben, naar hun legers; en over zijn leger was Elízur, de zoon van Sedéür.
-
 19 En over het leger van de stam van de kinderen van Simeon was Selûmiël, de zoon van Zurísaddai.
-
 20 En over het leger van de stam van de kinderen van Gad was Eljasaf, de zoon van Dehuël.
-
 21 Toen trokken de Kohathieten op, dragende het heiligdom; en de anderen richtten de tabernakel op, tegen dat dezen kwamen.
-
 22 Daarna trok op de banier van het leger van de kinderen van Efraïm, naar hun legers; en over zijn leger was Elisáma, de zoon van Ammihud.
-
 23 En over het leger van de stam van de kinderen van Manasse was Gamáliël, de zoon van Pedázur.
-
 24 En over het leger van de stam van de kinderen van Benjamin was Abídan, de zoon van Gideóni.
-
 25 Toen trok op de banier van het leger van de kinderen van Dan, afsluitende al de legers, naar hun legers; en over zijn leger was Ahiëzer, de zoon van Ammísaddai.
-
 26 En over het leger van de stam van de kinderen van Aser was Págiël, de zoon van Ochran.
-
 27 En over het leger van de stam van de kinderen van Nafthali was Ahíra, de zoon van Enan.
-
 28 Dit waren de tochten van de kinderen Israëls, naar hun legers, toen zij reisden.
-
 29 Mozes nu zeide tot Hobab, de zoon van Rehuël, de Midianiet, de schoonvader van Mozes: Wij reizen naar die plaats, waarvan de Heere gezegd heeft: Ik zal u die geven; ga met ons, en wij zullen u weldoen, want de Heere heeft over Israël het goede gesproken.
-
 30 Doch hij zeide tot hem: Ik zal niet gaan; maar ik zal naar mijn land en naar mijn familie gaan.
-
 31 En hij zeide: Verlaat ons toch niet; want daar gij weet, dat wij ons legeren in de woestijn, zo zult gij ons tot ogen zijn.
-
 32 En het zal geschieden, als gij met ons zult gaan, en dat goede geschieden zal, waarmee de Heere bij ons weldoen zal, dat wij u ook weldoen zullen.
-
 33 Zo trokken zij drie dagreizen van de berg des Heeren; en de ark van het verbond des Heeren reisde voor hun aangezicht drie dagreizen, om voor hen een rustplaats uit te speuren.
-
 34 En de wolk des Heeren was des daags over hen, toen zij uit het leger verreisden.
-
 35 Het geschiedde nu in het optrekken van de ark, dat Mozes zeide: Sta op, Heere! en laat uw vijanden verstrooid worden, en Uw haters van Uw aangezicht vluchten!
-
 36 En als zij rustte, zeide hij: Kom weer, Heere! tot de tien duizenden der duizenden van Israël!
-
-
-
-
-
-
-
-Het volk mort en wordt gestraft
-===============================
-
-
-
-
-11
-==
-
+=Het volk mort en wordt gestraft
+#11
 1 En het geschiedde, toen het volk zich aan het beklagen was, dat het kwaad was in de oren des Heeren; want de Heere hoorde het, zodat Zijn toorn ontstak, en het vuur des Heeren onder hen ontbrandde, en verteerde, in het uiterste van het leger.
-
 2 Toen riep het volk tot Mozes; en Mozes bad tot de Heere; en het vuur werd gedoofd.
-
 3 Daarom noemde hij de naam van die plaats Thabeëra, omdat het vuur des Heeren onder hen gebrand had.
-
-
-De Israëlieten morren
-=====================
-
-
+=De Israëlieten morren
 4 En het vermengde volk, dat in het midden van hen was, werd met lust bevangen; daarom zo weenden ook de kinderen Israëls weer en zeiden: Wie zal ons vlees te eten geven?
-
 5 Wij gedenken aan de vissen, die wij in Egypte om niet aten; aan de komkommers, en aan de pompoenen, en aan het look, en aan de ajuinen, en aan het knoflook.
-
 6 Maar nu is onze ziel dor, er is niet met al, behalve dit Man voor onze ogen!
-
 7 Het Man nu was als korianderzaad, en zijn kleur was als de kleur van de bedólah.
-
 8 Het volk liep hier en daar, en verzamelde het, en maalde het met molens, of stiet het in mortieren, en kookte het in potten, en maakte daarvan koeken; en zijn smaak was als de smaak van de beste vochtigheid der olie.
-
 9 En wanneer de dauw des nachts op het leger neerviel, viel het Man erop neer.
-
 10 Toen hoorde Mozes het volk wenen door hun huisgezinnen, een ieder aan de deur van zijn hut; en de toorn des Heeren ontstak zeer; ook was het kwaad in de ogen van Mozes.
-
 11 En Mozes zeide tot de Heere: Waarom hebt Gij aan Uw knecht kwalijk gedaan, en waarom heb ik geen genade in Uw ogen gevonden, dat Gij de last van dit ganse volk op mij legt?
-
 12 Heb ik dan al dit volk ontvangen? Heb ik het gebaard, dat Gij tot mij zoudt zeggen: Draag het in uw schoot, zoals een voedstervader de zuigeling draagt, tot dat land, dat Gij hun vaderen gezworen hebt?
-
 13 Van waar zou ik het vlees hebben, om al dit volk te geven? Want zij wenen tegen mij, zeggende: Geef ons vlees, dat wij eten!
-
 14 Ik alleen kan al dit volk niet dragen, want het is mij te zwaar!
-
 15 En indien Gij alzo aan mij doet, dood mij toch slechts, indien ik genade in Uw ogen gevonden heb; en laat mij mijn ongeluk niet aanzien!
-
-
-Verkiezing van de zeventig oudsten
-==================================
-
-
+=Verkiezing van de zeventig oudsten
 16 En de Heere zeide tot Mozes: Verzamel Mij zeventig mannen uit de oudsten van Israël, van wie gij weet, dat zij de oudsten van het volk en zijn ambtlieden zijn; en gij zult hen brengen voor de tent der samenkomst, en zij zullen zich daar bij u stellen.
-
 17 Zo zal Ik afkomen en met u aldaar spreken; en van de Geest, die op u is, zal Ik afzonderen, en op hen leggen; en zij zullen met u de last van dit volk dragen, opdat gij die niet alleen draagt.
-
 18 En tot het volk zult gij zeggen: Heiligt u tegen morgen, en gij zult vlees eten; want gij hebt voor de oren des Heeren geweend, zeggende: Wie zal ons vlees te eten geven? Want het ging ons wel in Egypte! Daarom zal de Heere u vlees geven, en gij zult eten.
-
 19 Gij zult niet een dag, noch twee dagen eten, noch vijf dagen, noch tien dagen, noch twintig dagen;
-
 20 Tot een gehele maand toe, totdat het uit uw neus uitgaat, en u tot een walging is; omdat gij de Heere, Die in het midden van u is, verworpen hebt, en voor Zijn aangezicht geweend hebt, zeggende: Waarom nu zijn wij uit Egypte getrokken?
-
 21 En Mozes zeide: Zeshonderd duizend man te voet is dit volk, in welks midden ik ben; en Gij hebt gezegd: Ik zal hun vlees geven, en zij zullen een gehele maand eten!
-
 22 Zullen dan voor hen schapen en runderen geslacht worden, dat er voor hen genoeg is? Zullen al de vissen der zee voor hen verzameld worden, dat er voor hen genoeg is?
-
 23 Doch de Heere zeide tot Mozes: Zou dan de hand des Heeren verkort zijn? Gij zult nu zien, of Mijn woord u wedervaren zal, of niet.
-
 24 En Mozes ging uit, en sprak de woorden des Heeren tot het volk; en hij verzamelde zeventig mannen uit de oudsten van het volk, en stelde hen rondom de tent.
-
 25 Toen kwam de Heere af in de wolk, en sprak tot hem, en afzonderende van de Geest, die op hem was, legde Hij Hem op de zeventig mannen, die oudsten; en het geschiedde, toen de Geest op hen rustte, dat zij profeteerden, maar daarna niet meer.
-
-
-Eldad en Medad
-==============
-
-
+=Eldad en Medad
 26 Maar twee mannen waren in het leger overgebleven; de naam van de ene was Eldad, en de naam van de andere Medad; en die Geest rustte op hen (want zij waren onder de aangeschrevenen, hoewel zij tot de tent niet uitgegaan waren), en zij profeteerden in het leger.
-
 27 Toen liep een jongen heen, en boodschapte aan Mozes, en zeide: Eldad en Medad profeteren in het leger.
-
 28 En Jozua, de zoon van Nun, de dienaar van Mozes, een van zijn uitgelezen jongelingen, antwoordde en zeide: Mijn heer Mozes, verbied hun!
-
 29 Doch Mozes zeide tot hem: Zijt gij voor mij ijverende? Och, of al het volk des Heeren profeten waren, dat de Heere Zijn Geest over hen gave!
-
 30 Daarna verzamelde Mozes zich tot het leger, hij en de oudsten van Israël.
-
-
-God zendt de Israëlieten een menigte kwakkels
-=============================================
-
-
+=God zendt de Israëlieten een menigte kwakkels
 31 Toen voer een wind uit van de Heere, en raapte kwakkels van de zee, en strooide ze bij het leger, omtrent een dagreis herwaarts, en omtrent een dagreis derwaarts, rondom het leger; en zij waren omtrent twee ellen boven de aarde.
-
 32 Toen maakte zich het volk op, die gehele dag, en die ganse nacht, en de ganse volgende dag, en verzamelden de kwakkels; die het minst had, had tien homers verzameld; en zij spreidden ze voor zich van elkander rondom het leger.
-
 33 Dat vlees was nog tussen hun tanden, eer het gekauwd was, zo ontstak de toorn des Heeren tegen het volk, en de Heere sloeg het volk met een zeer grote plaag.
-
 34 Daarom noemt men de naam van die plaats Kibrôth-Tháäva; want daar begroeven zij het volk, dat belust was geweest.
-
 35 Van Kibrôth-Tháäva verreisde het volk naar Hazerôth; en zij bleven in Hazerôth.
-
-
-
-
-
-
-
-Mirjam en Aäron morren tegen Mozes
-==================================
-
-
-
-
-12
-==
-
+=Mirjam en Aäron morren tegen Mozes
+#12
 1 Mirjam nu sprak, en Aäron, tegen Mozes, naar aanleiding van de vrouw, de Kuschietische, die hij genomen had; want hij had een Kuschietische tot vrouw genomen.
-
 2 En zij zeiden: Heeft dan de Heere maar alleen door Mozes gesproken? Heeft Hij ook niet door ons gesproken? En de Heere hoorde het!
-
 3 Doch de man Mozes was zeer zachtmoedig, meer dan alle mensen, die op de aardbodem waren.
-
 4 Toen sprak de Heere haastig tot Mozes, en tot Aäron, en tot Mirjam: Gij drieën, komt uit tot de tent der samenkomst! En zij drieën kwamen uit.
-
 5 Toen kwam de Heere af in de wolkkolom, en stond aan de deur der tent; daarna riep Hij Aäron en Mirjam; en zij beiden kwamen uit.
-
 6 En Hij zeide: Hoort nu Mijn woorden! Zo er een profeet onder u is, Ik, de Heere, zal door een gezicht Mij aan hem bekend maken, door een droom zal Ik met hem spreken.
-
 7 Alzo is Mijn knecht Mozes niet, die in Mijn ganse huis getrouw is.
-
 8 Van mond tot mond spreek Ik met hem, en door aanzien, en niet door duistere woorden; en de gelijkenis des Heeren aanschouwt hij; waarom dan hebt gij niet gevreesd tegen Mijn knecht, tegen Mozes, te spreken?
-
 9 Zo ontstak de toorn des Heeren tegen hen, en Hij ging weg.
-
-
-Mirjam gestraft met melaatsheid
-===============================
-
-
+=Mirjam gestraft met melaatsheid
 10 En de wolk week van boven de tent; en ziet, Mirjam was melaats, wit als de sneeuw. En Aäron zag Mirjam aan, en ziet, zij was melaats.
-
 11 Daarom zeide Aäron tot Mozes: Och, mijn heer! leg toch niet op ons de zonde, waarmee wij dwaas gedaan, en waarmee wij gezondigd hebben!
-
 12 Laat zij toch niet zijn als een dode, van wiens vlees, als hij uit zijns moeders lijf uitgaat, de helft reeds verteerd is!
-
 13 Mozes dan riep tot de Heere, zeggende: O God! heel haar toch!
-
 14 En de Heere zeide tot Mozes: Zo haar vader smadelijk in haar aangezicht gespuwd had, zou zij niet zeven dagen beschaamd zijn? Laat haar zeven dagen buiten het leger gesloten, en daarna aangenomen worden!
-
 15 Zo werd Mirjam zeven dagen buiten het leger gesloten; en het volk verreisde niet, totdat Mirjam aangenomen werd.
-
 16 Maar daarna verreisde het volk van Hazerôth, en zij legerden zich in de woestijn van Paran.
-
-
-
-
-
-
-
-Bevel om twaalf verspieders te zenden
-=====================================
-
-
-
-
-13
-==
-
+=Bevel om twaalf verspieders te zenden
+#13
 1 En de Heere sprak tot Mozes, zeggende:
-
 2 Zend u mannen uit, die het land Kanaän verspieden, dat Ik de kinderen Israëls geven zal; van elke stam zijner vaderen zult gij een man zenden, zijnde ieder een overste onder hen.
-
 3 Mozes dan zond hen uit de woestijn van Paran, naar de mond des Heeren; al die mannen waren hoofden van de kinderen Israëls.
-
 4 En dit zijn hun namen: van de stam van Ruben, Sammua, de zoon van Zakkur.
-
 5 Van de stam van Simeon, Safat, de zoon van Hori.
-
 6 Van de stam van Juda, Kaleb, de zoon van Jefunne.
-
 7 Van de stam van Issaschar, Jigeal, de zoon van Jozef.
-
 8 Van de stam van Efraïm, Hoséa, de zoon van Nun.
-
 9 Van de stam van Benjamin, Palti, de zoon van Rafu.
-
 10 Van de stam van Zebulon, Gaddiël, de zoon van Sodi.
-
 11 Van de stam van Jozef, voor de stam van Manasse, Gaddi, de zoon van Susi.
-
 12 Van de stam van Dan, Ammiël, de zoon van Gemalli.
-
 13 Van de stam van Aser, Sethur, de zoon van Michaël.
-
 14 Van de stam van Nafthali, Nachbi, de zoon van Wofsi.
-
 15 Van de stam van Gad, Guël, de zoon van Machi.
-
 16 Dit zijn de namen van de mannen, die Mozes zond, om dat land te verspieden; en Mozes noemde, Hoséa, de zoon van Nun, Jozua.
-
 17 Mozes dan zond hen, om het land Kanaän te verspieden; en hij zeide tot hen: Trekt dit binnen tegen het zuiden, en klimt op het gebergte;
-
 18 En beziet het land, hoedanig het is, en het volk, dat daarin woont, of het sterk is of zwak, of het weinig is of veel;
-
 19 En hoedanig het land is, waarin het woont, of het goed is of kwaad; en hoedanig de steden zijn, waarin het woont, of in legers, of in sterkten;
-
 20 Ook hoedanig het land is, of het vet is of mager, of er bomen in zijn of niet; en versterkt u, en neemt van de vrucht van het land. Die dagen nu waren de dagen der eerste vruchten van de wijndruiven.
-
 21 Alzo trokken zij op, en verspiedden het land, van de woestijn Zin af tot Rechob toe, waar men gaat naar Hamath.
-
 22 En zij trokken op in het zuiden, en kwamen tot Hebron toe, en daar waren Ahíman, Sesai en Talmai, kinderen van Enak; Hebron nu was zeven jaren gebouwd vóór Zoan in Egypte.
-
 23 Daarna kwamen zij tot het dal Eskol, en sneden van daar een rank af, met een tros wijndruiven, die zij met hun tweeën droegen, op een draagstok; ook van de granaatappelen en van de vijgen.
-
 24 Die plaats noemde men het dal Eskol, naar aanleiding van de tros, die de kinderen Israëls van daar afgesneden hadden.
-
 25 Daarna keerden zij weer van het verspieden van het land, ten einde van veertig dagen.
-
 26 En zij gingen heen, en kwamen tot Mozes en tot Aäron, en tot de gehele vergadering van de kinderen Israëls, in de woestijn Paran, naar Kades; en brachten bescheid weder aan hen, en aan de gehele vergadering, en lieten hun de vrucht van het land zien.
-
 27 En zij vertelden hem, en zeiden: Wij zijn gekomen tot dat land, waarheen gij ons gezonden hebt; en voorwaar, het is vloeiende van melk en honing, en dit is zijn vrucht.
-
 28 Behalve dat het een sterk volk is, dat in dat land woont, en de steden zijn vast, en zeer groot; en ook hebben wij daar kinderen van Enak gezien.
-
 29 De Amalekieten wonen in het land van het zuiden; maar de Hethieten, en de Jebusieten, en de Amorieten wonen op het gebergte; en de Kanaänieten wonen aan de zee, en aan de oever van de Jordaan.
-
 30 Toen stilde Kaleb het volk voor Mozes, en zeide: Laat ons vrijmoedig optrekken, en dat erfelijk bezitten; want wij zullen dat voorzeker overweldigen!
-
 31 Maar de mannen, die met hem opgetrokken waren, zeiden: Wij zullen tot dat volk niet kunnen optrekken, want het is sterker dan wij.
-
 32 Alzo brachten zij een kwaad gerucht voort van het land, dat zij verspied hadden, aan de kinderen Israëls, zeggende: Dat land, waar wij doorgegaan zijn, om het te verspieden, is een land, dat zijn inwoners verteert; en al het volk, dat wij in het midden ervan gezien hebben, zijn mannen van grote lengte.
-
 33 Wij hebben ook daar de reuzen gezien, de kinderen van Enak, van de reuzen; en wij waren als sprinkhanen in onze ogen, alzo waren wij ook in hun ogen.
-
-
-
-
-
-
-
-Het morrende volk gestraft
-==========================
-
-
-
-
-14
-==
-
+=Het morrende volk gestraft
+#14
 1 Toen verhief de gehele vergadering zich, en zij hieven hun stem op, en het volk weende in die nacht.
-
 2 En al de kinderen Israëls murmureerden tegen Mozes en tegen Aäron; en de gehele vergadering zeide tot hen: Och, of wij in Egypteland gestorven waren! of, och, of wij in deze woestijn gestorven waren!
-
 3 En waarom brengt de Heere ons naar dat land, dat wij door het zwaard vallen, en onze vrouwen, en onze kinderkens tot een roof worden? Zou het ons niet goed zijn naar Egypte weer te keren?
-
 4 En zij zeiden de een tot de ander: Laat ons een hoofd opwerpen, en weerkeren naar Egypte!
-
 5 Toen vielen Mozes en Aäron op hun aangezichten, voor het aangezicht van de ganse gemeente van de vergadering van de kinderen Israëls.
-
 6 En Jozua, de zoon van Nun, en Kaleb, de zoon van Jefunne, zijnde van degenen, die dat land verspied hadden, scheurden hun klederen.
-
 7 En zij spraken tot de ganse vergadering van de kinderen Israëls, zeggende: Het land, waar wij doorgetrokken zijn, om het te verspieden, is een uitermate goed land.
-
 8 Indien de Heere een welgevallen aan ons heeft, zo zal Hij ons in dat land brengen, en zal ons dat geven; een land, dat van melk en honing vloeiende is.
-
 9 Alleen weest tegen de Heere niet weerspannig! en vreest gij niet het volk van dit land; want zij zijn ons brood! hun schaduw is van hen geweken, en de Heere is met ons; vreest hen niet!
-
 10 Toen zeide de ganse vergadering, dat men hen met stenen stenigen zou. Maar de heerlijkheid des Heeren verscheen in de tent der samenkomst, voor al de kinderen Israëls.
-
 11 En de Heere zeide tot Mozes: Hoe lang zal Mij dat volk tergen? En hoe lang zullen zij aan Mij niet geloven, door alle tekenen, die Ik in het midden van hen gedaan heb?
-
 12 Ik zal het met pestilentie slaan, en Ik zal het verstoten; en Ik zal u tot een groter en sterker volk maken, dan dit is.
-
 13 En Mozes zeide tot de Heere: Zo zullen de Egyptenaars het horen; want Gij hebt door Uw kracht dit volk uit het midden van hen doen optrekken;
-
 14 En zij zullen zeggen tot de inwoners van dit land, die gehoord hebben, dat Gij, Heere! in het midden van dit volk zijt; dat Gij, Heere! oog aan oog gezien wordt, dat Uw wolk over hen staat, en Gij in een wolkkolom voor hun aangezicht gaat des daags, en in een vuurkolom des nachts.
-
 15 En zoudt Gij dit volk als een enige man doden, zo zouden de heidenen, die Uw gerucht gehoord hebben, spreken, zeggende:
-
 16 Omdat de Heere dit volk niet kon brengen in dat land, dat Hij hun gezworen had, zo heeft Hij hen geslacht in de woestijn!
-
 17 Nu dan, laat toch de kracht des Heeren groot worden, zoals Gij gesproken hebt, zeggende:
-
 18 De Heere is lankmoedig en groot van weldadigheid, vergevende de ongerechtigheid en de overtreding, Die de schuldige geenszins onschuldig houdt, bezoekende de ongerechtigheid der vaderen aan de kinderen, in het derde en in het vierde geslacht.
-
 19 Vergeef toch de ongerechtigheid van dit volk, naar de grootte van Uw goedertierenheid, en gelijk Gij ze aan dit volk, van Egypteland af tot hiertoe, vergeven hebt!
-
 20 En de Heere zeide: Ik heb hun vergeven naar uw woord.
-
 21 Doch voorzeker, zo waarachtig als Ik leef, zo zal de ganse aarde met de heerlijkheid des Heeren vervuld worden!
-
 22 Want al de mannen, die gezien hebben Mijn heerlijkheid, en Mijn tekenen, die Ik in Egypte en in de woestijn gedaan heb, en Mij nu tienmaal verzocht hebben, en Mijn stem niet zijn gehoorzaam geweest;
-
 23 Zo zij het land, dat Ik aan hun vaderen gezworen heb, zien zullen Ja, geen van die Mij getergd hebben, zullen dat zien!
-
 24 Doch Mijn knecht Kaleb, omdat een andere geest met hem geweest is, en hij volhard heeft Mij na te volgen, zo zal Ik hem brengen tot het land, waarin hij gekomen was, en zijn zaad zal het erfelijk bezitten.
-
 25 De Amalekieten nu en de Kanaänieten wonen in het dal; wendt u morgen, en maakt uw reis naar de woestijn, op de weg naar de Schelfzee.
-
 26 Daarna sprak de Heere tot Mozes en tot Aäron, zeggende:
-
 27 Hoe lang zal Ik bij deze boze vergadering zijn, die tegen Mij zijn murmurerende? Ik heb gehoord de murmureringen van de kinderen Israëls, waarmee zij tegen Mij zijn murmurerende.
-
 28 Zeg tot hen: Zo waarachtig als Ik leef, spreekt de Heere, indien Ik u zo niet doe, zoals gij in Mijn oren gesproken hebt!
-
 29 Uw dode lichamen zullen in deze woestijn vallen; en al uw getelden, naar uw gehele getal, van twintig jaren oud en daarboven, gij, die tegen Mij gemurmureerd hebt.
-
 30 Zo gij in dat land komt, waarover Ik Mijn hand opgeheven heb, dat Ik u daarin zou doen wonen, behalve Kaleb, de zoon van Jefunne, en Jozua, de zoon van Nun.
-
 31 En uw kinderkens, waarvan gij zeidet: Zij zullen tot een roof worden! die zal Ik daarin brengen, en die zullen dat land leren kennen, dat gij smadelijk verworpen hebt.
-
 32 Maar u aangaande, uw dode lichamen zullen in deze woestijn vallen!
-
 33 En uw kinderen zullen gaan weiden in deze woestijn, veertig jaren, en zullen uw hoererijen dragen, totdat uw dode lichamen verteerd zijn in deze woestijn.
-
 34 Naar het getal der dagen, in welke gij dat land verspied hebt, veertig dagen, elke dag voor elk jaar, zult gij uw ongerechtigheden dragen, veertig jaren, en gij zult gewaar worden Mijn afbreken.
-
 35 Ik, de Heere, heb gesproken: Zo Ik dit aan deze ganse boze vergadering van hen, die zich tegen Mij verzameld hebben, niet doe, zij zullen in deze woestijn te niet worden, en zullen daar sterven!
-
 36 En die mannen, die Mozes gezonden had, om het land te verspieden, en weergekomen zijnde, de ganse vergadering tegen hem hadden doen murmureren, een kwaad gerucht over dat land voortbrengende;
-
 37 Diezelfde mannen, die een kwaad gerucht van dat land voortgebracht hadden stierven door een plaag, voor het aangezicht des Heeren.
-
 38 Maar Jozua, de zoon van Nun, en Kaleb, de zoon van Jefunne, bleven levend van de mannen, die heengegaan waren, om het land te verspieden.
-
 39 En Mozes sprak deze woorden tot al de kinderen Israëls. Toen treurde het volk zeer.
-
 40 En zij stonden des morgens vroeg op, en klommen op de hoogte van de berg, zeggende: Ziet, hier zijn wij, en wij zullen optrekken tot de plaats, die de Heere gezegd heeft; want wij hebben gezondigd!
-
 41 Maar Mozes zeide: Waarom overtreedt gij alzo het bevel des Heeren? Want dat zal geen voorspoed hebben.
-
 42 Trekt niet op, want de Heere zal in het midden van u niet zijn; opdat gij niet geslagen wordt, voor het aangezicht van uw vijanden.
-
 43 Want de Amalekieten en de Kanaänieten zijn daar voor uw aangezicht, en gij zult door het zwaard vallen; want, omdat gij u afgekeerd hebt van de Heere, zo zal de Heere met u niet zijn.
-
 44 Nochtans poogden zij vermetel, om op de hoogte van de berg te klimmen; maar de ark van het verbond des Heeren en Mozes scheidden niet uit het midden van het leger.
-
 45 Toen kwamen af de Amalekieten, en de Kanaänieten, die in dat gebergte woonden, en sloegen hen, en versmeten hen, tot Horma toe.
-
-
-
-
-
-
-
-Wetten voor verschillende offeranden
-====================================
-
-
-
-
-15
-==
-
+=Wetten voor verschillende offeranden
+#15
 1 Daarna sprak de Heere tot Mozes, zeggende:
-
 2 Spreek tot de kinderen Israëls, en zeg tot hen: Wanneer gij gekomen zult zijn in het land van uw woningen, dat Ik u geven zal;
-
 3 En gij een vuuroffer de Heere zult doen, een brandoffer, of slachtoffer, om af te zonderen een gelofte, of in een vrijwillig offer, of in uw gezette hoogtijden, om de Heere een liefelijke reuk te maken, van runderen of van klein vee;
-
 4 Zo zal hij, die zijn offerande de Heere offert, een spijsoffer offeren van een tiende meelbloem, gemengd met een vierendeel van een hin olie.
-
 5 En wijn ten drankoffer, een vierendeel van een hin, zult gij bereiden voor een brandoffer of voor een slachtoffer, voor een lam.
-
 6 Of voor een ram zult gij een spijsoffer bereiden, van twee tienden meelbloem, gemengd met olie, een derde deel van een hin.
-
 7 En wijn ten drankoffer, een derde deel van een hin, zult gij offeren tot een liefelijke reuk voor de Heere.
-
 8 En wanneer gij een jong rund zult bereiden tot een brandoffer of een slachtoffer, om een gelofte af te zonderen, of ten dankoffer voor de Heere;
-
 9 Zo zal hij bij een jong rund offeren een spijsoffer van drie tienden meelbloem, gemengd met olie, de helft van een hin.
-
 10 En wijn zult gij offeren ten drankoffer, de helft van een hin, tot een vuuroffer van liefelijke reuk voor de Heere.
-
 11 Alzo zal gedaan worden met de ene os, of met de ene ram, of met het klein vee, van de lammeren, of van de geiten.
-
 12 Naar het getal, dat gij bereiden zult, zult gij alzo doen met elkeen, naar hun getal.
-
 13 Elke ingeborene zal deze dingen alzo doen, offerende een vuuroffer tot een liefelijke reuk voor de Heere.
-
 14 Wanneer ook een vreemdeling bij u als vreemdeling verkeert, of die in het midden van u is, in uw geslachten, en hij een vuuroffer zal bereiden tot een liefelijke reuk voor de Heere; zoals gij zult doen, alzo zal hij doen.
-
 15 Gij, gemeente, het zij u en de vreemdeling, die als vreemdeling bij u verkeert, enerlei inzetting: tot een eeuwige inzetting bij uw geslachten, gelijk gij, alzo zal de vreemdeling voor het aangezicht des Heeren zijn.
-
 16 Enerlei wet en enerlei recht zal u zijn, en de vreemdeling, die bij u als vreemdeling verkeert.
-
 17 Voorts sprak de Heere tot Mozes, zeggende:
-
 18 Spreek tot de kinderen Israëls, en zeg tot hen: Als gij zult gekomen zijn in het land, waarheen Ik u inbrengen zal,
-
 19 Zo zal het geschieden, als gij van het brood des lands zult eten, dan zult gij de Heere een hefoffer offeren.
-
 20 De eerstelingen van uw deeg, een koek zult gij tot een hefoffer offeren; gelijk het hefoffer van de dorsvloer zult gij dat offeren.
-
 21 Van de eerstelingen van uw deeg zult gij de Heere een hefoffer geven, bij uw geslachten.
-
 22 Voorts wanneer gij afgedwaald zult zijn, en niet gedaan hebben al deze geboden, die de Heere tot Mozes gesproken heeft;
-
 23 Alles, wat de Heere u door de hand van Mozes geboden heeft; van die dag af, dat de Heere het geboden heeft, en voortaan bij uw geslachten;
-
 24 Zo zal het geschieden, indien iets bij dwaling gedaan, en voor de ogen van de vergadering verborgen is, dat de ganse vergadering een var, een jong rund, zal bereiden ten brandoffer, tot een liefelijke reuk voor de Heere, met zijn spijsoffer en zijn drankoffer, naar het gebruik; en een geitenbok ten zondoffer.
-
 25 En de priester zal de verzoening doen voor de ganse vergadering van de kinderen Israëls, en het zal hun vergeven worden; want het was een afdwaling, en zij hebben hun offerande gebracht, een vuuroffer voor de Heere, en hun zondoffer, voor het aangezicht des Heeren, over hun afdwaling.
-
 26 Het zal dan aan de ganse vergadering van de kinderen Israëls vergeven worden, ook de vreemdeling, die in het midden van hen als vreemdeling verkeert; want het is het ganse volk door dwaling overkomen.
-
 27 En indien een ziel door afdwaling gezondigd zal hebben, die zal een eenjarige geit ten zondoffer offeren.
-
 28 En de priester zal de verzoening doen over de dwalende ziel, als zij gezondigd heeft door afdwaling, voor het aangezicht des Heeren, doende de verzoening over haar; en het zal haar vergeven worden.
-
 29 De ingeborene van de kinderen Israëls, en de vreemdeling, die in hun midden als vreemdeling verkeert, enerlei wet zal u zijn voor hem, die het door afdwaling doet.
-
 30 Maar de ziel, die iets zal gedaan hebben met opgeheven hand, hetzij van ingeborenen of van vreemdelingen, die smaadt de Heere; en die ziel zal uitgeroeid worden uit het midden van haar volk;
-
 31 Want zij heeft het woord des Heeren veracht en Zijn gebod vernietigd; die ziel zal zeker uitgeroeid worden; haar ongerechtigheid is op haar.
-
-
-De sabbatschender gestraft
-==========================
-
-
+=De sabbatschender gestraft
 32 Toen nu de kinderen Israëls in de woestijn waren, zo vonden zij een man, hout lezende op de sabbatdag.
-
 33 En die hem vonden, hout lezende, brachten hem tot Mozes, en tot Aäron, en tot de ganse vergadering.
-
 34 En zij stelden hem in bewaring; want het was niet verklaard, wat hem gedaan zou worden.
-
 35 Zo zeide de Heere tot Mozes: Die man zal voorzeker gedood worden; de ganse vergadering zal hem met stenen stenigen buiten het leger.
-
 36 Toen bracht de ganse vergadering hem uit tot buiten het leger, en zij stenigden hem met stenen, dat hij stierf, zoals de Heere Mozes geboden had.
-
-
-Bevel om een teken aan de klederen te dragen
-============================================
-
-
+=Bevel om een teken aan de klederen te dragen
 37 En de Heere sprak tot Mozes, zeggende:
-
 38 Spreek tot de kinderen Israëls, en zeg tot hen: Dat zij zich snoertjes maken aan de hoeken van hun klederen, bij hun geslachten; en op de snoertjes van de hoek zullen zij een hemelsblauwe draad zetten.
-
 39 En hij zal u aan de snoertjes zijn, opdat gij het aanziet, en aan al de geboden des Heeren gedenkt, en die doet; en gij zult naar uw hart, en uw ogen niet navolgen, die gij zijt nahoererende;
-
 40 Opdat gij gedenkt en doet al Mijn geboden, en uw God heilig zijt.
-
 41 Ik ben de Heere, uw God, Die u uit Egypteland uitgevoerd heb, om u tot een God te zijn; Ik ben de Heere, uw God!
-
-
-
-
-
-
-
-Het oproer van Korach, Dathan en Abíram tegen Mozes en Aäron
-============================================================
-
-
-
-
-16
-==
-
+=Het oproer van Korach, Dathan en Abíram tegen Mozes en Aäron
+#16
 1 Korach nu, de zoon van Jizhar, zoon van Kohath, zoon van Levi, nam tot zich zowel Dathan als Abíram, zonen van Elíab, en On, de zoon van Peleth, zonen van Ruben.
-
 2 En zij stonden op voor het aangezicht van Mozes, alsmede tweehonderd vijftig mannen uit de kinderen Israëls, oversten van de vergadering, de geroepenen der samenkomst, mannen van naam.
-
 3 En zij vergaderden zich tegen Mozes, en tegen Aäron, en zeiden tot hen: Het is te veel voor u, want deze ganse vergadering, zij allen, zijn heilig, en de Heere is in het midden van hen; waarom dan verheft gij u over de gemeente des Heeren?
-
 4 Toen Mozes dit hoorde, zo viel hij op zijn aangezicht.
-
 5 En hij sprak tot Korach, en tot zijn ganse vergadering, zeggende: Morgen vroeg dan zal de Heere bekend maken, wie de Zijne, en de heilige is, die Hij tot Zich zal doen naderen; en wie Hij verkoren zal hebben, die zal Hij tot Zich doen naderen.
-
 6 Doet dit: Neemt u wierookvaten, Korach en zijn ganse vergadering;
-
 7 En doet morgen vuur daarin, legt reukwerk daarop voor het aangezicht des Heeren; en het zal geschieden, dat de man, die de Heere verkiezen zal, die zal heilig zijn. Het is te veel voor u, gij, kinderen van Levi!
-
 8 Voorts zeide Mozes tot Korach: Hoort toch, gij, kinderen van Levi!
-
 9 Is het u te weinig, dat de God van Israël u van de vergadering van Israël heeft afgescheiden, om u tot Zich te doen naderen; om de dienst van de tabernakel des Heeren te bedienen, en te staan voor het aangezicht van de vergadering, om hen te dienen?
-
 10 Daar Hij u, en al uw broeders, de kinderen van Levi, met u, heeft doen naderen; zoekt gij nu ook het priesterambt?
-
 11 Daarom gij, en uw ganse vergadering, gij zijt vergaderd tegen de Heere, want Aäron, wat is hij, dat gij tegen hem murmureert?
-
 12 En Mozes zond heen, om Dathan en Abíram, de zonen van Elíab, te roepen; maar zij zeiden: Wij zullen niet opkomen!
-
 13 Is het te weinig, dat gij ons uit een land, vloeiende van melk en honing, hebt opgevoerd, om ons te doden in de woestijn, dat gij ook uzelf ten enenmale over ons tot een heerser maakt?
-
 14 Ook hebt gij ons niet gebracht in een land, dat van melk en honing vloeit, noch ons akkers en wijngaarden ten erfdeel gegeven. Zult gij de ogen van deze mannen uitgraven? Wij zullen niet opkomen!
-
 15 Toen ontstak Mozes zeer, en hij zeide tot de Heere: Zie hun offer niet aan! Ik heb niet een ezel van hen genomen, en niet een van hen kwaad gedaan.
-
 16 Voorts zeide Mozes tot Korach: Gij, en uw ganse vergadering, weest voor het aangezicht des Heeren; gij, en zij, ook Aäron, tegen morgen.
-
 17 En neemt een ieder zijn wierookvat, en legt reukwerk daarin, en brengt voor het aangezicht des Heeren een ieder zijn wierookvat, tweehonderd vijftig wierookvaten; ook gij, en Aäron, een ieder zijn wierookvat.
-
 18 Zo namen zij een ieder zijn wierookvat, en deden vuur daarin, en legden reukwerk daarin; en zij stonden voor de deur van de tent der samenkomst, ook Mozes en Aäron.
-
 19 En Korach deed de ganse vergadering zich tegen hen verzamelen, aan de deur van de tent der samenkomst. Toen verscheen de heerlijkheid des Heeren aan deze ganse vergadering.
-
 20 En de Heere sprak tot Mozes en tot Aäron, zeggende:
-
 21 Scheidt u af uit het midden van deze vergadering, en Ik zal hen als in een ogenblik verteren!
-
 22 Maar zij vielen op hun aangezichten, en zeiden: O God! God der geesten van alle vlees! een enig man zal gezondigd hebben, en zult Gij U over deze ganse vergadering grotelijks vertoornen?
-
 23 En de Heere sprak tot Mozes, zeggende:
-
 24 Spreek tot deze vergadering, zeggende: Gaat op van rondom de woning van Korach, Dathan en Abíram.
-
 25 Toen stond Mozes op, en ging tot Dathan en Abíram; en achter hem gingen de oudsten van Israël.
-
 26 En hij sprak tot de vergadering, zeggende: Wijkt toch af van de tenten van deze goddeloze mannen, en roert niets aan van wat van hen is, opdat gij niet misschien verdelgd wordt in al hun zonden.
-
 27 Zo gingen zij op van de woning van Korach, Dathan en Abíram, van rondom; maar Dathan en Abíram gingen uit, staande in de deur van hun tenten, met hun vrouwen, en hun zonen, en hun kinderkens.
-
 28 Toen zeide Mozes: Hieraan zult gij bekennen, dat de Heere mij gezonden heeft, om al deze daden te doen, dat zij niet uit mijn eigen hart zijn.
-
 29 Indien dezen zullen sterven, gelijk alle mensen sterven, en over hen een bezoeking zal gedaan worden, naar de bezoeking van alle mensen, zo heeft de Heere mij niet gezonden.
-
 30 Maar indien de Heere wat nieuws zal scheppen, en het aardrijk zijn mond zal opendoen, en verslinden hen met alles wat het hunne is, en zij levend ter helle zullen neervaren, alsdan zult gij bekennen, dat deze mannen de Heere getergd hebben.
-
 31 En het geschiedde, toen hij geëindigd had al deze woorden te spreken, zo werd het aardrijk, dat onder hen was, gekloofd;
-
 32 En de aarde opende haar mond, en verslond hen met hun huizen, en alle mensen, die Korach toebehoorden, en al de have.
-
 33 En zij voeren neer, zij en alles wat het hunne was, levend ter helle; en de aarde overdekte hen, en zij kwamen om uit het midden der gemeente.
-
 34 En het ganse Israël, dat rondom hen was, vluchtte voor hun geschrei; want zij zeiden: Dat de aarde ons misschien niet verslinde!
-
 35 Daartoe ging een vuur uit van de Heere, en verteerde die tweehonderd vijftig mannen, die reukwerk offerden.
-
 36 En de Heere sprak tot Mozes, zeggende:
-
 37 Zeg tot Eleázar, de zoon van Aäron, de priester, dat hij de wierookvaten uit de brand opneemt; en strooi het vuur ver weg; want zij zijn heilig;
-
 38 Te weten de wierookvaten van dezen, die tegen hun zielen gezondigd hebben; dat men uitgerekte platen daarvan make, tot een overtreksel voor het altaar; want zij hebben ze gebracht voor het aangezicht des Heeren, daarom zijn zij heilig; en zij zullen de kinderen Israëls tot een teken zijn.
-
 39 En Eleázar, de priester, nam de koperen wierookvaten, die de verbranden gebracht hadden, en zij rekten ze uit tot een overtreksel voor het altaar;
-
 40 Ter nagedachtenis voor de kinderen Israëls, opdat geen vreemde, die niet uit het zaad van Aäron is, nadere om reukwerk aan te steken voor het aangezicht des Heeren; opdat hij niet worde als Korach, en zijn vergadering, zoals de Heere hem door de dienst van Mozes gesproken had.
-
 41 Maar de volgende dag murmureerde de ganse vergadering van de kinderen Israëls tegen Mozes en tegen Aäron, zeggende: Gij hebt het volk des Heeren gedood!
-
 42 En het geschiedde, toen de vergadering zich verzamelde tegen Mozes en Aäron, en zich wendde naar de tent der samenkomst, ziet, zo bedekte die wolk haar; en de heerlijkheid des Heeren verscheen.
-
 43 Mozes nu en Aäron kwamen tot voor de tent der samenkomst.
-
 44 Toen sprak de Heere tot Mozes, zeggende:
-
 45 Maak u op uit het midden van deze vergadering, en Ik zal hen verteren, als in een ogenblik! Toen vielen zij op hun aangezichten.
-
 46 En Mozes zeide tot Aäron: Neem het wierookvat, en doe vuur daarin van het altaar, en leg reukwerk daarop, haastig gaande tot de vergadering, doe over hen verzoening; want een grote toorn is van voor het aangezicht des Heeren uitgegaan, de plaag is aangevangen.
-
 47 En Aäron nam het, zoals Mozes gesproken had, en liep in het midden der gemeente, en ziet, de plaag was aangevangen onder het volk; en hij legde reukwerk daarin, en deed verzoening over het volk.
-
 48 En hij stond tussen de doden en tussen de levenden; alzo werd de plaag opgehouden.
-
 49 Die nu aan die plaag gestorven zijn, waren veertien duizend zevenhonderd, behalve die gestorven waren om de zaak van Korach.
-
 50 En Aäron keerde weer tot Mozes aan de deur van de tent der samenkomst; en de plaag was opgehouden.
-
-
-
-
-
-
-
-De staf van Aäron
-=================
-
-
-
-
-17
-==
-
+=De staf van Aäron
+#17
 1 Toen sprak de Heere tot Mozes, zeggende:
-
 2 Spreek tot de kinderen Israëls, en neem van hen voor elk vaderlijk huis een staf, van al hun oversten, naar het huis van hun vaderen, twaalf staven; eens ieders naam zult gij schrijven op zijn staf.
-
 3 Doch Aärons naam zult gij schrijven op de staf van Levi; want een staf zal er zijn voor het hoofd van het huis van hun vaderen.
-
 4 En gij zult ze wegleggen in de tent der samenkomst, voor de getuigenis, waarheen Ik met u samenkomen zal.
-
 5 En het zal geschieden, dat de staf van de man, die Ik zal verkoren hebben, zal bloeien; en Ik zal stillen de murmureringen van de kinderen Israëls tegen Mij, welke zij tegen u murmureerden.
-
 6 Mozes dan sprak tot de kinderen Israëls, en al hun oversten gaven aan hem een staf, voor elke overste een staf, naar het huis van hun vaderen, twaalf staven; Aärons staf was ook onder hun staven.
-
 7 En Mozes legde deze staven weg, voor het aangezicht des Heeren, in de tent der getuigenis.
-
 8 Het geschiedde nu de volgende dag, dat Mozes in de tent der getuigenis inging; en ziet, Aärons staf, voor het huis van Levi, bloeide; want hij bracht bloeisel voort, en bloesemde bloesem, en droeg amandelen.
-
 9 Toen bracht Mozes al deze staven uit, van voor het aangezicht des Heeren, tot al de kinderen Israëls, en zij zagen het, en namen elk zijn staf.
-
 10 Toen zeide de Heere tot Mozes: Breng de staf van Aäron weer voor de getuigenis, in bewaring, tot een teken voor de weerspannige kinderen; alzo zult gij een einde maken aan hun murmureringen tegen Mij, dat zij niet sterven.
-
 11 En Mozes deed het; zoals de Heere hem geboden had, alzo deed hij.
-
 12 Toen spraken de kinderen Israëls tot Mozes, zeggende: Zie, wij geven de geest, wij vergaan, wij allen vergaan!
-
 13 Al wie enigszins nadert tot de tabernakel des Heeren, zal sterven; zullen wij dan de geest gevende, verdelgd worden?
-
-
-
-
-
-
-
-Plichten en rechten van priesters en Levieten
-=============================================
-
-
-
-
-18
-==
-
+=Plichten en rechten van priesters en Levieten
+#18
 1 Zo zeide de Heere tot Aäron: Gij, en uw zonen, en het huis van uw vader met u, zult dragen de ongerechtigheid van het heiligdom; en gij, en uw zonen met u, zult dragen de ongerechtigheid van uw priesterambt.
-
 2 En ook zult gij uw broeders, de stam van Levi, de stam van uw vader, met u doen naderen, dat zij u bijgevoegd worden, en u dienen; maar gij, en uw zonen met u, zult zijn voor de tent der getuigenis.
-
 3 En zij zullen uw wacht waarnemen, en de wacht van de ganse tent; doch tot het gereedschap van het heiligdom en het altaar zullen zij niet naderen, opdat zij niet sterven, zowel zij als gij.
-
 4 Maar zij zullen u bijgevoegd worden, en de wacht van de tent der samenkomst waarnemen, in alle dienst der tent; en een vreemde zal tot u niet naderen.
-
 5 Gij nu zult waarnemen de wacht van het heiligdom, en de wacht van het altaar; opdat er geen verbolgenheid meer zij over de kinderen Israëls.
-
 6 Want Ik, zie, Ik heb uw broeders, de Levieten, uit het midden van de kinderen Israëls genomen; zij zijn u een gave, gegeven aan de Heere, om de dienst van de tent der samenkomst te bedienen.
-
 7 Maar gij, en uw zonen met u, zult uw priesterambt waarnemen in alle zaken van het altaar, en in hetgeen wat van binnen de voorhang is, dat zult gij bedienen; uw priesterambt geef Ik u tot een dienst als een geschenk; en de vreemde, die nadert, zal gedood worden.
-
 8 Voorts sprak de Heere tot Aäron: En Ik, zie, Ik heb u gegeven de wacht van Mijn hefoffers, met alle heilige dingen van de kinderen Israëls heb Ik ze u gegeven, om de zalving, en aan uw zonen, tot een eeuwige inzetting.
-
 9 Dit zult gij hebben van de heiligheid der heiligheden, uit het vuur: al hun offeranden, met al hun spijsoffer, en met al hun zondoffer, en met al hun schuldoffer, dat zij Mij zullen teruggeven; het zal u en uw zonen een heiligheid der heiligheden zijn.
-
 10 Aan het allerheiligste zult gij dat eten; al wat mannelijk is zal dat eten; het zal u een heiligheid zijn.
-
 11 Ook zal dit het uwe zijn: het hefoffer van hun gave, met alle beweegoffers van de kinderen Israëls; Ik heb ze aan u gegeven, en aan uw zonen, en aan uw dochters met u, tot een eeuwige inzetting; al wie in uw huis rein is, zal dat eten.
-
 12 Al het beste van de olie, en al het beste van most, en van koren, hun eerstelingen, die zij de Heere zullen geven, u heb Ik ze gegeven.
-
 13 De eerste vruchten van alles, wat in hun land is, die zij de Heere zullen brengen, zullen van u zijn; al wie in uw huis rein is, zal dat eten.
-
 14 Al het verbannene in Israël zal het uwe zijn.
-
 15 Al wat de baarmoeder opent, van alle vlees, dat zij de Heere zullen brengen, onder de mensen, en onder de beesten, zal het uwe zijn; doch de eerstgeborenen der mensen zult gij voorzeker lossen; ook zult gij lossen de eerstgeborenen der onreine beesten.
-
 16 Die nu onder hen gelost zullen worden, zult gij van een maand oud lossen, naar uw schatting, voor het geld van vijf sikkels, naar de sikkel van het heiligdom, die is twintig gera.
-
 17 Maar het eerstgeborene van een koe, of het eerstgeborene van een schaap, of het eerstgeborene van een geit zult gij niet lossen, zij zijn heilig; hun bloed zult gij sprengen op het altaar, en hun vet zult gij aansteken, tot een vuuroffer van liefelijke reuk voor de Heere.
-
 18 En hun vlees zal het uwe zijn; gelijk de beweegborst, en gelijk de rechterschouder, zal het uwe zijn.
-
 19 Alle hefoffers der heilige dingen, die de kinderen Israëls de Heere zullen offeren, heb Ik aan u gegeven, en aan uw zonen, en aan uw dochters met u, tot een eeuwige inzetting; het zal een eeuwig zoutverbond zijn, voor het aangezicht des Heeren, voor u en voor uw zaad met u.
-
 20 Ook zeide de Heere tot Aäron: Gij zult in hun land niet erven, en gij zult geen deel in het midden van hen hebben; Ik ben uw deel en uw erfenis, in het midden van de kinderen Israëls.
-
 21 En zie, aan de kinderen van Levi heb Ik alle tienden in Israël tot een erfenis gegeven, voor hun dienst, die zij bedienen, de dienst van de tent der samenkomst.
-
 22 En de kinderen Israëls zullen niet meer naderen tot de tent der samenkomst, om zonde te dragen en te sterven.
-
 23 Maar de Levieten, die zullen bedienen de dienst van de tent der samenkomst, en die zullen hun ongerechtigheid dragen; het zal een eeuwige inzetting zijn voor uw geslachten; en in het midden van de kinderen Israëls zullen zij geen erfenis erven.
-
 24 Want de tienden van de kinderen Israëls, die zij de Heere tot een hefoffer zullen offeren, heb Ik aan de Levieten tot een erfenis gegeven; daarom heb Ik tot hen gezegd: Zij zullen in het midden van de kinderen Israëls geen erfenis erven.
-
 25 En de Heere sprak tot Mozes, zeggende:
-
 26 Gij zult ook tot de Levieten spreken, en tot hen zeggen: Wanneer gij van de kinderen Israëls de tienden zult ontvangen hebben, die Ik u voor uw erfenis van hen gegeven heb, zo zult gij daarvan een hefoffer des Heeren offeren, de tienden van die tienden;
-
 27 En het zal u gerekend worden tot uw hefoffer, als koren van de dorsvloer, en als de volheid van de perskuip.
-
 28 Alzo zult gij ook een hefoffer des Heeren offeren van al uw tienden, die gij van de kinderen Israëls zult hebben ontvangen; en gij zult daarvan het hefoffer des Heeren geven aan de priester Aäron.
-
 29 Van al uw gaven zult gij alle hefoffer des Heeren offeren; van al het beste van die, van wat daarvan geheiligd is.
-
 30 Gij zult dan tot hen zeggen: Als gij het beste daarvan offert, zo zal het de Levieten toegerekend worden als een inkomen van de dorsvloer, en als een inkomen van de perskuip.
-
 31 En gij zult dat eten in alle plaatsen, gij en uw huis; want het is u een loon voor uw dienst in de tent der samenkomst.
-
 32 Zo zult gij daarover geen zonde dragen, als gij het beste daarvan offert; en gij zult de heilige dingen van de kinderen Israëls niet ontheiligen, opdat gij niet sterft.
-
-
-
-
-
-
-
-De verbrande rode koe en het water der ontzondiging
-===================================================
-
-
-
-
-19
-==
-
+=De verbrande rode koe en het water der ontzondiging
+#19
 1 Verder sprak de Heere tot Mozes en Aäron, zeggende:
-
 2 Dit is de inzetting van de wet, die de Heere geboden heeft, zeggende: Spreek tot de kinderen Israëls, dat zij tot u brengen een rode volkomen vaars, in welke geen gebrek is, op welke geen juk gekomen is.
-
 3 En gij zult die geven aan Eleázar, de priester; en hij zal ze uitbrengen tot buiten het leger, en men zal haar voor zijn aangezicht slachten.
-
 4 En Eleázar, de priester, zal van haar bloed met zijn vinger nemen, en hij zal van haar bloed recht tegenover de tent der samenkomst zevenmaal sprengen.
-
 5 Voorts zal men deze vaars voor zijn ogen verbranden; haar vel, en haar vlees, en haar bloed, met haar mest, zal men verbranden.
-
 6 En de priester zal nemen cederhout, en hysop, en scharlaken, en ze werpen in het midden van de brand van deze vaars.
-
 7 Dan zal de priester zijn klederen wassen, en zijn vlees met water baden, en daarna in het leger gaan; en de priester zal onrein zijn tot aan de avond.
-
 8 Ook die haar verbrand heeft, zal zijn klederen met water wassen, en zijn vlees met water baden, en onrein zijn tot aan de avond.
-
 9 En een rein man zal de as van deze vaars verzamelen, en buiten het leger in een reine plaats wegleggen; en het zal zijn ter bewaring voor de vergadering van de kinderen Israëls, tot het water der afzondering; het is ontzondiging.
-
 10 En die de as van deze vaars verzameld heeft, zal zijn klederen wassen, en onrein zijn tot aan de avond. Dit zal de kinderen Israëls, en de vreemdeling, die in het midden van hen als vreemdeling verkeert, tot een eeuwige inzetting zijn.
-
 11 Wie een dode, enig dood lichaam van een mens, aanroert, die zal zeven dagen onrein zijn.
-
 12 Op de derde dag zal hij zich daarmee ontzondigen, zo zal hij op de zevende dag rein zijn; maar indien hij zich op de derde dag niet ontzondigt, zo zal hij op de zevende dag niet rein zijn.
-
 13 Al wie een dode, het dode lichaam van een mens, die gestorven zal zijn, aanroert, en zich niet ontzondigd zal hebben, die verontreinigt de tabernakel des Heeren; daarom zal die ziel uitgeroeid worden uit Israël; omdat het water der afzondering op hem niet gesprengd is, zal hij onrein zijn; zijn onreinheid is nog in hem.
-
 14 Dit is de wet, wanneer een mens zal gestorven zijn in een tent: al wie in die tent ingaat, en al wie in die tent is, zal zeven dagen onrein zijn.
-
 15 Ook alle open gereedschap, waarop geen deksel gebonden is, dat is onrein.
-
 16 En al wie in het open veld een, die met het zwaard verslagen is, of een dode, of het gebeente van een mens, of een graf zal aangeroerd hebben, zal zeven dagen onrein zijn.
-
 17 Voor een onreine nu zullen zij nemen van het stof van de brand der ontzondiging, en daarop levend water doen in een vat.
-
 18 En een rein man zal hysop nemen, en in dat water dopen, en het sprengen aan die tent, en op al het gereedschap, en aan de zielen, die daar geweest zijn; evenzo aan hem, die een gebeente, of een verslagene, of een dode, of een graf aangeroerd heeft.
-
 19 En de reine zal de onreine op de derde dag, en op de zevende dag besprengen; en op de zevende dag zal hij hem ontzondigen; en hij zal zijn klederen wassen, en zich met water baden, en op de avond rein zijn.
-
 20 Wie daarentegen onrein zal zijn, en zich niet zal ontzondigen, die ziel zal uit het midden der gemeente uitgeroeid worden; want hij heeft het heiligdom des Heeren verontreinigd, het water der afzondering is op hem niet gesprengd, hij is onrein.
-
 21 Dit zal hun zijn tot een eeuwige inzetting. En die het water der afzondering sprengt, zal zijn klederen wassen; ook wie het water der afzondering aanroert, die zal onrein zijn tot aan de avond.
-
 22 Ja, al wat die onreine aangeroerd zal hebben, zal onrein zijn; en de ziel, die dat aangeroerd zal hebben, zal onrein zijn tot aan de avond.
-
-
-
-
-
-
-
-Dood van Mirjam
-===============
-
-
-
-
-20
-==
-
+=Dood van Mirjam
+#20
 1 Toen de kinderen Israëls, de ganse vergadering, in de woestijn Zin gekomen waren, in de eerste maand, zo bleef het volk te Kades. En Mirjam stierf aldaar, en zij werd aldaar begraven.
-
-
-De wateren van Meríba
-=====================
-
-
+=De wateren van Meríba
 2 En er was geen water voor de vergadering; toen vergaderden zij zich tegen Mozes en tegen Aäron.
-
 3 En het volk twistte met Mozes, en zij spraken, zeggende: Och, of wij de geest gegeven hadden, toen onze broeders voor het aangezicht des Heeren de geest gaven!
-
 4 Waarom toch hebt gij de gemeente des Heeren in deze woestijn gebracht, dat wij daar sterven zouden, wij en onze beesten?
-
 5 En waarom hebt gij ons doen optrekken uit Egypte, om ons te brengen in deze kwade plaats? Het is geen plaats van zaad, noch van vijgen, noch van wijnstokken, noch van granaatappelen; ook is er geen water om te drinken.
-
 6 Toen gingen Mozes en Aäron van het aangezicht der gemeente tot de deur van de tent der samenkomst, en zij vielen op hun aangezichten; en de heerlijkheid des Heeren verscheen hun.
-
 7 En de Heere sprak tot Mozes, zeggende:
-
 8 Neem die staf, en verzamel de vergadering, gij en Aäron, uw broeder, en spreekt gij tot de steenrots voor hun ogen, zo zal zij hun water geven; alzo zult gij hun water voortbrengen uit de steenrots, en gij zult de vergadering en haar beesten drenken.
-
 9 Toen nam Mozes de staf van voor het aangezicht des Heeren, zoals Hij hem geboden had.
-
 10 En Mozes en Aäron vergaderden de gemeente voor de steenrots, en hij zeide tot hen: Hoort toch, gij weerspannigen, zullen wij water voor u uit deze steenrots te voorschijn brengen?
-
 11 Toen hief Mozes zijn hand op, en hij sloeg de steenrots tweemaal met zijn staf; en er kwam veel water uit, zodat de vergadering dronk, en haar beesten.
-
 12 Derhalve zeide de Heere tot Mozes en tot Aäron: Omdat gij Mij niet geloofd hebt, dat gij Mij heiligdet voor de ogen der kinderen van Israël, daarom zult gij deze gemeente niet inbrengen in het land, dat Ik hun gegeven heb.
-
 13 Dit zijn de wateren van Meríba, waar de kinderen Israëls met de Heere om getwist hebben; en Hij werd aan hen geheiligd.
-
-
-De Edomieten weigeren Mozes de doortocht
-========================================
-
-
+=De Edomieten weigeren Mozes de doortocht
 14 Daarna zond Mozes boden uit Kades tot de koning van Edom, die zeiden: Alzo zegt uw broeder Israël: Gij weet al de moeite, die ons ontmoet is;
-
 15 Dat onze vaders naar Egypte afgetrokken zijn, en wij in Egypte vele dagen gewoond hebben; en dat de Egyptenaars aan ons en onze vaderen kwaad gedaan hebben.
-
 16 Toen riepen wij tot de Heere, en Hij hoorde onze stem, en Hij zond een Engel, en Hij leidde ons uit Egypte; en ziet, wij zijn te Kades, een stad aan het uiterste van uw gebied.
-
 17 Laat ons toch door uw land trekken; wij zullen niet trekken door de akker, noch door de wijngaarden, noch zullen het water der putten drinken; wij zullen de koninklijke weg gaan, wij zullen niet afwijken ter rechter- noch ter linkerhand, totdat wij door uw gebied zullen getrokken zijn.
-
 18 Doch Edom zeide tot hem: Gij zult door mij niet trekken, opdat ik niet misschien met het zwaard uitga u tegemoet!
-
 19 Toen zeiden de kinderen Israëls tot hem: Wij zullen door de gebaande weg optrekken, en indien wij van uw water drinken, ik en mijn vee, zo zal ik zijn prijs daarvoor geven; ik zal alleen, zonder iets anders te doen, te voet doortrekken.
-
 20 Doch hij zeide: Gij zult niet doortrekken! En Edom is hem tegemoet uitgetrokken, met een zwaar volk, en met een sterke hand.
-
 21 Alzo weigerde Edom Israël toe te laten door zijn gebied te trekken; daarom week Israël van hem af.
-
-
-Aärons dood
-===========
-
-
+=Aärons dood
 22 Toen reisden zij van Kades; en de kinderen Israëls kwamen, de ganse vergadering, aan de berg Hor.
-
 23 De Heere nu sprak tot Mozes, en tot Aäron, aan de berg Hor, aan de grens van het land van Edom, zeggende:
-
 24 Aäron zal tot zijn volken verzameld worden; want hij zal niet komen in het land, dat Ik aan de kinderen Israëls gegeven heb, omdat gij Mijn mond weerspannig geweest zijt bij de wateren van Meríba.
-
 25 Neem Aäron, en Eleázar, zijn zoon, en doe hen opklimmen tot de berg Hor.
-
 26 En trek Aäron zijn klederen uit, en trek ze Eleázar, zijn zoon, aan; want Aäron zal verzameld worden, en daar sterven.
-
 27 Mozes nu deed, zoals de Heere geboden had; want zij klommen tot op de berg Hor, voor de ogen van de ganse vergadering.
-
 28 En Mozes trok Aäron zijn klederen uit, en hij trok ze zijn zoon Eleázar aan; en Aäron stierf aldaar, op de hoogte van die berg. Toen kwam Mozes en Eleázar van die berg af.
-
 29 Toen de ganse vergadering zag, dat Aäron overleden was, zo beweenden zij Aäron dertig dagen, het ganse huis van Israël.
-
-
-
-
-
-
-
-De koperen slang
-================
-
-
-
-
-21
-==
-
+=De koperen slang
+#21
 1 Toen de Kanaäniet, de koning van Harad, wonende tegen het zuiden, hoorde, dat Israël door de weg der verspieders kwam, zo streed hij tegen Israël, en hij voerde enige gevangenen uit hen gevankelijk weg.
-
 2 Toen beloofde Israël de Heere een gelofte, en zeide: Indien Gij dit volk geheel in mijn hand geeft, zo zal ik hun steden verbannen.
-
 3 De Heere dan verhoorde de stem van Israël, en gaf de Kanaänieten over; en hij verbande hen en hun steden; en hij noemde de naam van die plaats Horma.
-
 4 Toen reisden zij van de berg Hor, op de weg van de Schelfzee, dat zij om het land van de Edomieten heentrokken, doch de ziel van het volk werd verdrietig op deze weg.
-
 5 En het volk sprak tegen God en tegen Mozes: Waarom hebt gij ons doen optrekken uit Egypte, opdat wij sterven zouden in de woestijn? Want hier is geen brood, ook geen water, en onze ziel walgt van dit zeer lichte brood.
-
 6 Toen zond de Heere vurige slangen onder het volk, die beten het volk; en er stierf veel volk van Israël.
-
 7 Daarom kwam het volk tot Mozes, en zij zeiden: Wij hebben gezondigd, omdat wij tegen de Heere en tegen u gesproken hebben; bid de Heere, dat Hij deze slangen van ons wegneemt. Toen bad Mozes voor het volk.
-
 8 En de Heere zeide tot Mozes: Maak u een vurige slang, en stel ze op een stang; en het zal geschieden, dat al wie gebeten is, als hij haar aanziet, zo zal hij leven.
-
 9 En Mozes maakte een koperen slang, en stelde ze op een stang; en het geschiedde, als een slang iemand beet, zo zag hij de koperen slang aan, en hij bleef levend.
-
-
-Verscheidene tochten van het volk Israëls
-=========================================
-
-
+=Verscheidene tochten van het volk Israëls
 10 Toen verreisden de kinderen Israëls, en zij legerden zich te Oboth.
-
 11 Daarna reisden zij van Oboth, en legerden zich aan de heuvels van Abárim in de woestijn, die tegenover Moab is, tegen de opgang der zon.
-
 12 Van daar reisden zij, en legerden zich bij de beek Zered.
-
 13 Van daar reisden zij, en legerden zich aan de zijde van de Arnon, die in de woestijn is, uitgaande uit het gebied van de Amorieten; want de Arnon is de grens van Moab, tussen Moab en tussen de Amorieten.
-
 14 (Daarom wordt gezegd in het boek van de oorlogen des Heeren: Tegen Waheb, in een wervelwind, en tegen de beken Arnon,
-
 15 En de afloop der beken, die zich wendt naar de plaats, waar Ar gelegen is, en leunt aan de grens met Moab.)
-
 16 En van daar reisden zij naar Beër. Dit is de put, waarvan de Heere tot Mozes zeide: Verzamel het volk, zo zal Ik hun water geven.
-
 17 (Toen zong Israël dit lied: Spring op, gij put, zingt daarvan bij beurte!
-
 18 Gij put, die de vorsten gegraven hebben, die de edelen van het volk gedolven hebben, door de wetgever, met hun staven.) En van de woestijn reisden zij naar Mattana;
-
 19 En van Mattana tot Naháliël; en van Naháliël tot Bamoth;
-
 20 En van Bamoth tot het dal, dat in het veld van Moab is, aan de hoogte van Pisga, en dat tegen de wildernis ziet.
-
 21 Toen zond Israël boden tot Sihon, de koning der Amorieten, zeggende:
-
 22 Laat mij door uw land trekken. Wij zullen niet af wijken in de akkers, noch in de wijngaarden; wij zullen het water van de putten niet drinken; wij zullen op de koninklijke weg gaan, totdat wij uw gebied doorgetrokken zijn.
-
 23 Doch Sihon liet Israël niet toe, door zijn gebied door te trekken; maar Sihon vergaderde al zijn volk, en hij ging uit, Israël tegemoet, naar de woestijn, en hij kwam te Jahza, en streed tegen Israël.
-
-
-Israël slaat Sihon en Og
-========================
-
-
+=Israël slaat Sihon en Og
 24 Maar Israël sloeg hem met de scherpte des zwaards, en nam zijn land in erfelijke bezitting, van de Arnon af tot de Jabbok toe, tot aan de kinderen Ammons; want de grens van de kinderen Ammons was vast.
-
 25 Alzo nam Israël woonde in al de steden der Amorieten, te Hesbon, en in al zijn onderhorige plaatsen.
-
 26 Want Hesbon was de stad van Sihon, de koning der Amorieten; en hij had gestreden tegen de vorige koning der Moabieten, en hij had al zijn land uit zijn hand genomen, tot aan de Arnon.
-
 27 Daarom zeggen zij, die spreekwoorden gebruiken: Komt tot Hesbon; men bouwe en bevestige de stad van Sihon!
-
 28 Want er is een vuur uitgegaan uit Hesbon; een vlam uit de stad van Sihon; zij heeft verteerd Ar der Moabieten, en de heren der hoogten van de Arnon.
-
 29 Wee u, Moab! Gij, volk van Kamoz zijt verloren! Hij heeft zijn zonen aan de vlucht en zijn dochters aan de gevangenis overgeleverd, voor Sihon, de koning der Amorieten.
-
 30 En wij hebben hen neergeveld! Hesbon is verloren tot Dihon toe; en wij hebben hen verwoest tot Nofat toe, dat tot Médeba toe reikt.
-
 31 Alzo woonde Israël in het land van de Amoriet.
-
 32 Daarna zond Mozes om Jáëzer te verspieden; en zij namen zijn onderhorige plaatsen in; en hij dreef de Amorieten, die er waren, uit de bezitting.
-
 33 Toen wendden zij zich en trokken op de weg van Basan; en Og, de koning van Basan, ging uit hun tegemoet, hij en al zijn volk, tot de strijd, in Edréï.
-
 34 De Heere nu zeide tot Mozes: Vrees hem niet; want Ik heb hem in uw hand gegeven, en al zijn volk, ook zijn land; en gij zult hem doen, zoals gij Sihon, de koning der Amorieten, die te Hesbon waoonde, gedaan hebt.
-
 35 En zij sloegen hem, en zijn zonen, en al zijn volk, alzo dat hem niemand overbleef; en zij namen zijn land in erfelijke bezitting.
-
-
-
-
-
-
-
-Balak roept Bíleam
-==================
-
-
-
-
-22
-==
-
+=Balak roept Bíleam
+#22
 1 Daarna reisden de kinderen van Israël, en legerden zich in de vlakke velden van Moab, aan deze zijde van de Jordaan van Jericho.
-
 2 Toen Balak, de zoon van Zippor, zag al wat Israël aan de Amorieten gedaan had;
-
 3 Zo vreesde Moab zeer voor het aangezicht van dit volk, want het was veel; en Moab was beangstigd voor het aangezicht van de kinderen Israëls.
-
 4 Derhalve zeide Moab tot de oudsten der Midianieten: Nu zal deze gemeente oplikken al wat rondom ons is, gelijk de os het groen des velds oplikt. In die tijd nu was Balak, de zoon van Zippor, koning der Moabieten.
-
 5 Die zond boden aan Bíleam, de zoon van Beor, te Pethor, dat aan de rivier is, in het land van de kinderen zijns volks, om hem te roepen, zeggende: Zie, er is een volk uit Egypte getrokken; zie, het heeft het gezicht des lands bedekt, en het blijft liggen recht tegenover mij.
-
 6 En nu, kom toch, vervloek mij dit volk, want het is machtiger dan ik; misschien zal ik het kunnen slaan, of zal het uit het land verdrijven; want ik weet, dat, wie gij zegent, die zal gezegend zijn, en wie gij vervloekt, die zal vervloekt zijn.
-
 7 Toen gingen de oudsten der Moabieten, en de oudsten der Midianieten, en hadden het loon der waarzeggingen in hun hand; alzo kwamen zij tot Bíleam, en spraken tot hem de woorden van Balak.
-
 8 Hij dan zeide tot hen: Vernacht hier deze nacht, zo zal ik u een antwoord wederbrengen, zoals de Heere tot mij zal gesproken hebben. Toen bleven de vorsten der Moabieten bij Bíleam.
-
 9 En God kwam tot Bíleam en zeide: Wie zijn die mannen, die bij u zijn?
-
 10 Toen zeide Bíleam tot God: Balak, de zoon van Zippor, de koning der Moabieten, heeft hen tot mij gezonden, zeggende:
-
 11 Zie, er is een volk uit Egypte getrokken, en het heeft het gezicht des lands bedekt; kom nu, vervloek het mij; misschien zal ik ertegen kunnen strijden, of het uitdrijven.
-
 12 Toen zeide God tot Bíleam: Gij zult met hen niet trekken; gij zult dat volk niet vloeken, want het is gezegend.
-
 13 Toen stond Bíleam des morgens op, en zeide tot de vorsten van Balak: Gaat naar uw land; want de Heere weigert mij toe te laten met u te gaan.
-
 14 Zo stonden dan de vorsten der Moabieten op, en kwamen tot Balak, en zij zeiden: Bíleam heeft geweigerd met ons te gaan.
-
 15 Doch Balak voer nog voort vorsten te zenden, meer en aanzienlijker, dan die waren;
-
 16 Die tot Bíleam kwamen, en hem zeiden: Alzo zegt Balak, de zoon van Zippor: Laat u toch niet beletten tot mij te komen!
-
 17 Want ik zal u zeer hoog vereren, en al wat gij tot mij zeggen zult, dat zal ik doen; zo kom toch, vervloek mij dit volk!
-
 18 Toen antwoordde Bíleam, en zeide tot de dienaren van Balak: Wanneer Balak mij zijn huis vol zilver en goud gaf, zo vermocht ik niet het bevel van de Heere mijn God te overtreden, om te doen klein of groot.
-
 19 En nu, blijft gij toch ook hier deze nacht, opdat ik wete, wat de Heere tot mij verder spreken zal.
-
 20 God nu kwam tot Bíleam des nachts, en zeide tot hem: Omdat die mannen gekomen zijn, om u te roepen, sta op, ga met hen; en nochtans zult gij dat doen, wat Ik tot u spreken zal.
-
 21 Toen stond Bíleam des morgens op, en zadelde zijn ezelin, en hij trok heen met de vorsten van Moab.
-
 22 Doch de toorn van God werd ontstoken, omdat hij heentrok; en de Engel des Heeren stelde Zich in de weg, hem tot een tegenpartij; hij nu reed op zijn ezelin, en twee van zijn jongens waren bij hem.
-
 23 De ezelin nu zag de Engel des Heeren staande in de weg, met Zijn uitgetrokken zwaard in Zijn hand; daarom week de ezelin uit de weg, en ging in het veld. Toen sloeg Bíleam de ezelin, om haar naar de weg te doen wenden.
-
 24 Maar de Engel des Heeren stond in een pad der wijngaarden, terwijl er een muur aan deze, en een muur aan gene zijde was.
-
 25 Toen de ezelin de Engel des Heeren zag, zo klemde zij zich aan de wand, en klemde Bíleams voet aan de wand; daarom voer hij voort haar te slaan.
-
 26 Toen ging de Engel des Heeren nog verder, en Hij stond in een enge plaats, waar geen weg was om te wijken ter rechter- noch ter linkerhand.
-
 27 Toen de ezelin de Engel des Heeren zag, zo legde zij zich neer onder Bíleam; en de toorn van Bíleam ontstak, en hij sloeg de ezelin met een stok.
-
 28 De Heere nu opende de mond van de ezelin, die tot Bíleam zeide: Wat heb ik u gedaan, dat gij mij nu driemaal geslagen hebt?
-
 29 Toen zeide Bíleam tot de ezelin: Omdat gij mij bespot hebt; och, of ik een zwaard in mijn hand had! want ik zou u nu doden.
-
 30 De ezelin nu zeide tot Bíleam: Ben ik niet uw ezelin, waarop gij gereden hebt van toen af, dat gij mijn heer geweest zijt, tot op deze dag? Ben ik ooit gewend geweest u alzo te doen? Hij dan zeide: Neen!
-
 31 Toen opende de Heere de ogen van Bíleam, zodat hij de Engel des Heeren zag, staande in de weg, en Zijn uitgetrokken zwaard in Zijn hand; daarom neigde hij het hoofd en boog zich op zijn aangezicht.
-
 32 Toen zeide de Engel des Heeren tot hem: Waarom hebt gij uw ezelin nu driemaal geslagen? Zie, Ik ben uitgegaan u tot een tegenpartij, omdat deze weg van Mij afwijkt.
-
 33 Maar de ezelin heeft Mij gezien, en zij is nu driemaal voor Mijn aangezicht geweken; indien zij voor Mijn aangezicht niet geweken was, voorzeker Ik zou u nu ook gedood, en haar bij het leven behouden hebben.
-
 34 Toen zeide Bíleam tot de Engel des Heeren: Ik heb gezondigd, want ik heb niet geweten, dat Gij tegenover mij op deze weg stondt; en nu, is het kwaad in Uw ogen, ik zal weerkeren.
-
 35 De Engel des Heeren nu zeide tot Bíleam: Ga heen met deze mannen; maar alleen dat woord, wat Ik tot u spreken zal, dat zult gij spreken. Alzo trok Bíleam met de vorsten van Balak.
-
 36 Toen Balak hoorde, dat Bíleam kwam, zo ging hij uit, hem tegemoet, tot de stad der Moabieten, die aan de grens van de Arnon ligt, die aan het uiterste van de grens is.
-
 37 En Balak zeide tot Bíleam: Heb ik niet ernstig tot u gezonden, om u te roepen? Waarom zijt gij niet tot mij gekomen? Kan ik u niet terecht vereren?
-
 38 Toen zeide Bíleam tot Balak: Zie, ik ben tot u gekomen; zal ik nu enigszins iets kunnen spreken? Het woord, dat God in mijn mond leggen zal, dat zal ik spreken.
-
 39 En Bíleam ging met Balak; en zij kwamen te Kirjath-Huzzoth.
-
 40 Toen slachtte Balak runderen en schapen; en hij zond aan Bíleam, en aan de vorsten, die bij hem waren.
-
 41 En het geschiedde des morgens, dat Balak Bíleam nam, en hem voerde op de hoogten van Baäl, dat hij van daar het uiterste van het volk zag.
-
-
-
-
-
-
-
-Bíleam zegent Israël
-====================
-
-
-
-
-23
-==
-
+=Bíleam zegent Israël
+#23
 1 Toen zeide Bíleam tot Balak: Bouw mij hier zeven altaren, en bereid mij hier zeven varren en zeven rammen.
-
 2 Balak nu deed, zoals Bíleam gesproken had; en Balak en Bíleam offerden een var en een ram, op elk altaar.
-
 3 Toen zeide Bíleam tot Balak: Blijf staan bij uw brandoffer, en ik zal heengaan; misschien zal de Heere mij tegemoet komen; en wat Hij wijzen zal, dat zal ik u bekend maken. Toen ging hij op de hoogte.
-
 4 Toen God Bíleam ontmoet was, zo zeide hij tot Hem: Zeven altaren heb ik toegericht, en heb een var en een ram op elk altaar geofferd.
-
 5 Toen legde de Heere het woord in de mond van Bíleam, en zeide: Keer weer tot Balak, en spreek aldus.
-
 6 Toen hij nu tot hem weerkeerde, ziet, zo stond hij bij zijn brandoffer, hij en al de vorsten der Moabieten.
-
 7 Toen hief hij zijn spreuk op, en zeide: Uit Syrië heeft mij Balak, de koning der Moabieten, laten halen, van het gebergte tegen het oosten, zeggende: Kom, vervloek mij Jakob, en kom, scheld Israël!
-
 8 Wat zal ik vloeken, die God niet vloekt; en wat zal ik schelden, waar de Heere niet scheldt?
-
 9 Want van de hoogte der steenrotsen zie ik hem, en van de heuvels aanschouw ik hem; ziet, dat volk zal alleen wonen, en het zal onder de heidenen niet gerekend worden.
-
 10 Wie zal het stof van Jakob tellen, en het getal, ja, het vierde deel van Israël? Mijn ziel sterve de dood der oprechten, en mijn uiterste zij gelijk het zijne!
-
 11 Toen zeide Balak tot Bíleam: Wat hebt gij mij gedaan? Ik heb u genomen, om mijn vijanden te vloeken; maar zie, gij hebt hen aanhoudend gezegend!
-
 12 Hij nu antwoordde en zeide: Zal ik dat niet in acht nemen te spreken, wat de Heere in mijn mond gelegd heeft?
-
 13 Toen zeide Balak tot hem: Kom toch met mij aan een andere plaats, van waar gij hem zult zien; gij zult niet dan zijn einde zien, maar hem niet helemaal zien; en vervloek hem mij van daar!
-
 14 Alzo nam hij hem mee tot het veld Zofim, op de hoogte van Pisga; en hij bouwde zeven altaren, en hij offerde een var en een ram op elk altaar.
-
 15 Toen zeide hij tot Balak: Blijf hier staan bij uw brandoffer, en ik zal Hem aldaar ontmoeten.
-
 16 Toen de Heere Bíleam ontmoet was, zo legde Hij het woord in zijn mond, en Hij zeide: Keer weer tot Balak, en spreek alzo.
-
 17 Toen hij tot hem kwam, ziet, zo stond hij bij zijn brandoffer, en de vorsten der Moabieten bij hem. Balak nu zeide tot hem: Wat heeft de Heere gesproken?
-
 18 Toen hief hij zijn spreuk op, en zeide: Sta op, Balak, en hoor! Neig uw oren tot mij, gij, zoon van Zippor!
-
 19 God is geen man, dat Hij liegen zou, noch een mensenkind, dat het Hem berouwen zou; zou Hij het zeggen, en niet doen, of spreken, en niet bestendig maken?
-
 20 Zie, ik heb ontvangen te zegenen; omdat Hij zegent, zo zal ik het niet keren.
-
 21 Hij schouwt niet aan de ongerechtigheid in Jakob; ook ziet Hij niet aan de boosheid in Israël. De Heere, zijn God, is met hem, en het geklank des Konings is bij hem.
-
 22 God heeft hen uit Egypte uitgevoerd; zijn krachten zijn als van een eenhoorn.
-
 23 Want er is geen toverij tegen Jakob, noch waarzeggerij tegen Israël. Te dezer tijd zal van Jakob gezegd worden, en van Israël, wat God gewerkt heeft.
-
 24 Zie, het volk zal opstaan als een oude leeuw, en het zal zich verheffen als een leeuw; het zal zich niet neerleggen, totdat het de roof gegeten, en het bloed der verslagenen gedronken zal hebben!
-
 25 Toen zeide Balak tot Bíleam: Gij zult het in het geheel niet vloeken, en ook geenszins zegenen.
-
 26 Doch Bíleam antwoordde en zeide tot Balak: Heb ik niet tot u gesproken, zeggende: Al wat de Heere spreken zal, dat zal ik doen?
-
 27 Verder zeide Balak tot Bíleam: Kom toch, ik zal u aan een andere plaats meenemen; misschien zal het recht zijn in de ogen van die God, dat gij het mij van daar vervloekt.
-
 28 Toen nam Balak Bíleam mee tot de hoogte van Peor, die tegen de woestijn ziet.
-
 29 En Bíleam zeide tot Balak: Bouw mij hier zeven altaren, en bereid mij hier zeven varren en zeven rammen.
-
 30 Balak nu deed, zoals Bíleam gezegd had; en hij offerde een var en een ram op elk altaar.
-
-
-
-
-
-
-
-Bíleam zegent Israël nogmaals
-=============================
-
-
-
-
-24
-==
-
+=Bíleam zegent Israël nogmaals
+#24
 1 Toen Bíleam zag, dat het goed was in de ogen des Heeren, dat hij Israël zegende, zo ging hij ditmaal niet heen, gelijk meermalen, tot de toverijen; maar hij stelde zijn aangezicht naar de woestijn.
-
 2 Toen Bíleam zijn ogen ophief, en Israël zag, wonende naar zijn stammen, zo was de Geest van God op hem.
-
 3 En hij hief zijn spreuk op, en zeide: Bíleam, de zoon van Beor, spreekt, en de man, wie de ogen geopend zijn, spreekt!
-
 4 De hoorder van de redenen Gods spreekt, die het gezicht van de Almachtige ziet; die verrukt wordt, en wie de ogen geopend worden!
-
 5 Hoe goed zijn uw tenten, Jakob! uw woningen, Israël!
-
 6 Gelijk de beken breiden zij zich uit, als de hoven aan de rivieren; de Heere heeft ze geplant, als de sandelbomen, als de cederbomen aan het water.
-
 7 Er zal water uit zijn emmers vloeien, en zijn zaad zal in vele wateren zijn; en zijn koning zal boven Agag verheven worden, en zijn koninkrijk zal verhoogd worden.
-
 8 God heeft hem uit Egypte uitgevoerd; zijn krachten zijn als van een eenhoorn; hij zal de heidenen, zijn vijanden, verteren, en hun gebeente breken, en met zijn pijlen doorschieten.
-
 9 Hij heeft zich gekromd, hij heeft zich neergelegd, gelijk een leeuw, en als een oude leeuw; wie zal hem doen opstaan? Zo wie u zegent, die zij gezegend, en vervloekt zij, wie u vervloekt!
-
 10 Toen ontstak de toorn van Balak tegen Bíleam, en hij sloeg zijn handen samen; en Balak zeide tot Bíleam: Ik heb u geroepen, om mijn vijanden te vloeken; maar zie, gij hebt hen nu driemaal gedurig gezegend!
-
 11 En nu, pak u weg naar uw plaats! Ik had gezegd, dat ik u hoog vereren zou; maar zie, de Heere heeft die eer van u geweerd!
-
 12 Toen zeide Bíleam tot Balak: Heb ik ook niet tot uw boden, die gij tot mij gezonden hebt, gesproken, zeggende:
-
 13 Wanneer mij Balak zijn huis vol zilver en goud gaf, zo kan ik het bevel des Heeren niet overtreden, doende goed of kwaad uit mijn eigen hart; wat de Heere spreken zal, dat zal ik spreken.
-
 14 En nu, zie, ik ga tot mijn volk; kom, ik zal u raad geven, en zeggen wat dit volk uw volk doen zal in de laatste dagen.
-
 15 Toen hief hij zijn spreuk op, en zeide: Bíleam, de zoon van Beor, spreekt, en die man, wie de ogen geopend zijn, spreekt!
-
 16 De hoorder van de redenen Gods spreekt, en die de wetenschap van de Allerhoogste weet; die het gezicht van de Almachtige ziet, die verrukt wordt, en wie de ogen geopend worden.
-
 17 Ik zal hem zien, maar nu niet; ik zal hem aanschouwen, maar niet nabij. Er zal een ster voortgaan uit Jakob, en er zal een scepter uit Israël opkomen; die zal de grenzen der Moabieten verslaan, en zal al de kinderen van Seth verstoren.
-
 18 En Edom zal een erfelijke bezitting zijn; en Seïr zal zijn vijanden een erfelijke bezitting zijn; doch Israël zal kracht doen.
-
 19 En er zal één uit Jakob heersen, en hij zal de overigen uit de steden ombrengen.
-
 20 Toen hij de Amalekieten zag, zo hief hij zijn spreuk op, en zeide: Amalek is de eersteling der heidenen; maar zijn uiterste is ten verderve!
-
 21 Toen hij de Kenieten zag, zo hief hij zijn spreuk op, en zeide: Uw woning is vast, en gij hebt uw nest in een steenrots gelegd.
-
 22 Evenwel zal Kaïn verteerd worden, totdat u Assur gevankelijk wegvoeren zal!
-
 23 Voorts hief hij zijn spreuk op, en zeide: Och, wie zal leven, als God dit doen zal!
-
 24 En de schepen van de oever der Kitteërs, die zullen Assur plagen, zij zullen ook Heber plagen; en hij zal ook ten verderve zijn.
-
 25 Toen stond Bíleam op, en ging heen, en keerde weer tot zijn plaats. Balak ging ook zijn weg.
-
-
-
-
-
-
-
-De Israëlieten plegen te Sittim ontucht en afgoderij
-====================================================
-
-
-
-
-25
-==
-
+=De Israëlieten plegen te Sittim ontucht en afgoderij
+#25
 1 En Israël verbleef te Sittim, en het volk begon te hoereren met de dochters van de Moabieten.
-
 2 En zij nodigden het volk tot de slachtoffers van hun goden; en het volk at, en boog zich voor hun goden.
-
 3 Toen Israël zich nu koppelde aan Baäl-Peor, ontstak de toorn des Heeren tegen Israël.
-
 4 En de Heere zeide tot Mozes: Neem al de hoofden des volks, en hang ze de Heere tegen de zon, zo zal de hittigheid van de toorn des Heeren gekeerd worden van Israël.
-
 5 Toen zeide Mozes tot de rechters van Israël: Een ieder dode zijn mannen, die zich aan Baäl-Peor gekoppeld hebben!
-
 6 En ziet, een man uit de kinderen Israëls kwam, en bracht een Midianietische tot zijn broeders voor de ogen van Mozes, en voor de ogen van de ganse vergadering van de kinderen Israëls, toen zij weenden voor de deur van de tent der samenkomst.
-
 7 Toen Pínehas, de zoon van Eleázar, de zoon van Aäron, de priester, dat zag, zo stond hij op uit het midden der vergadering, en nam een spies in zijn hand;
-
 8 En hij ging de Israëlietische man na in het hoerenvertrek, en doorstak hen beiden, de Israëlietische man en de vrouw, door hun buik. Toen werd de plaag van over de kinderen Israëls opgehouden.
-
 9 Zij nu, die aan de plaag stierven, waren vier en twintig duizend.
-
 10 Toen sprak de Heere tot Mozes, zeggende:
-
 11 Pínehas, de zoon van Eleázar, de zoon van Aäron, de priester, heeft Mijn grimmigheid van over de kinderen Israëls afgewend, daar hij Mijn ijver geijverd heeft in het midden van hen, zodat Ik de kinderen Israëls in Mijn ijver niet vernield heb.
-
 12 Daarom spreek: Zie, Ik geef hem Mijn verbond des vredes.
-
 13 En hij zal hebben, en zijn zaad na hem, het verbond van het eeuwige priesterdom, daarom dat hij voor zijn God geijverd, en verzoening gedaan heeft voor de kinderen Israëls.
-
 14 De naam nu van de verslagen Israëlietische man, die verslagen was met de Midianietische, was Zimri, de zoon van Salu, een overste van een vaderlijk huis van de Simeonieten.
-
 15 En de naam van de verslagen Midianietische vrouw was Kozbi, een dochter van Zur, die een hoofd was der volken van een vaderlijk huis onder de Midianieten.
-
 16 Verder sprak de Heere tot Mozes, zeggende:
-
 17 Handel vijandig met de Midianieten, en versla hen;
-
 18 Want zij hebben vijandig tegen u gehandeld door hun listen, die zij listig tegen u bedacht hebben in de zaak van Peor, en in de zaak van Kozbi, de dochter van de overste der Midianieten, hun zuster, die verslagen is, ten dage van de plaag, om de zaak van Peor.
-
-
-
-
-
-
-
-Telling van de strijdbare Israëlieten
-=====================================
-
-
-
-
-26
-==
-
+=Telling van de strijdbare Israëlieten
+#26
 1 Het geschiedde nu na die plaag, dat de Heere sprak tot Mozes, en tot Eleázar, de zoon van Aäron, de priester, zeggende:
-
 2 Neem de som van de gehele vergadering van de kinderen Israëls op, van twintig jaren oud en daarboven, naar het huis van hun vaderen, al wie ten strijde in Israël uittrekt.
-
 3 Mozes dan en Eleázar, de priester, spraken hen aan, in de vlakke velden van Moab, aan de Jordaan van Jericho, zeggende:
-
 4 Dat men opneme van twintig jaren oud en daarboven; zoals de Heere Mozes geboden had, en de kinderen Israëls, die uit Egypteland uitgetrokken waren.
-
 5 Ruben was de eerstgeborene van Israël. De zonen van Ruben waren: Hanoch, van wie was het geslacht der Hanochieten; van Pallu het geslacht der Palluïeten;
-
 6 Van Hezron het geslacht der Hezronieten; van Karmi het geslacht der Karmieten.
-
 7 Dit zijn de geslachten der Rubenieten; en hun getelden waren drie en veertig duizend zevenhonderd dertig.
-
 8 En de zonen van Pallu waren Elíab.
-
 9 En de zonen van Elíab waren Nemuël, en Dathan, en Abíram; deze Dathan en Abíram waren de geroepenen der vergadering, die gekijf maakten tegen Mozes en tegen Aäron, in de vergadering van Korach, toen zij gekijf tegen de Heere maakten.
-
 10 En de aarde haar mond opendeed, en verslond hen met Korach, toen die vergadering stierf, toen het vuur tweehonderd vijftig mannen verteerde, en werden tot een teken.
-
 11 Maar de kinderen van Korach stierven niet.
-
 12 De zonen van Simeon, naar hun geslachten: van Nemuël, het geslacht der Nemuëlieten; van Jamin het geslacht der Jaminieten; van Jachin het geslacht der Jachinieten;
-
 13 Van Zerah het geslacht der Zerahieten; van Saul het geslacht der Saulieten.
-
 14 Dit zijn de geslachten der Simeonieten: twee en twintig duizend tweehonderd.
-
 15 De zonen van Gad, naar hun geslachten: van Zefon het geslacht der Zefonieten; van Haggi het geslacht der Haggieten; van Suni het geslacht der Sunieten.
-
 16 Van Ozni het geslacht der Oznieten; van Heri het geslacht der Herieten;
-
 17 Van Arod het geslacht der Arodieten; van Aréli het geslacht der Arélieten.
-
 18 Dat zijn de geslachten van de zonen van Gad, naar hun getelden: veertig duizend vijfhonderd.
-
 19 De zonen van Juda waren Er en Onan; maar Er en Onan stierven in het land Kanaän.
-
 20 Alzo waren de zonen van Juda naar hun geslachten: van Sela het geslacht der Selanieten; van Perez het geslacht der Perezieten; van Zerah het geslacht der Zerahieten.
-
 21 En de zonen van Perez waren: van Hezron het geslacht der Hezronieten; van Hamul, het geslacht der Hamulieten.
-
 22 Dat zijn de geslachten van Juda, naar hun getelden: zes en zeventig duizend vijfhonderd.
-
 23 De zonen van Issaschar, naar hun geslachten, waren: van Tola het geslacht der Tolaïeten; van Pua het geslacht der Punieten.
-
 24 Van Jasub het geslacht der Jasubieten; van Simron het geslacht der Simronieten.
-
 25 Dat zijn de geslachten van Issaschar, naar hun getelden: vier en zestig duizend driehonderd.
-
 26 De zonen van Zebulon, naar hun geslachten, waren: van Sered het geslacht der Seredieten; van Elon het geslacht der Elonieten; van Jahleël het geslacht der Jahleëlieten.
-
 27 Dat zijn de geslachten der Zebulonieten, naar hun getelden: zestig duizend vijfhonderd.
-
 28 De zonen van Jozef, naar hun geslachten, waren Manasse en Efraïm.
-
 29 De zonen van Manasse waren: van Machir het geslacht der Machirieten; Machir nu gewon Gilead; van Gilead was het geslacht der Gileadieten.
-
 30 Dit zijn de zonen van Gilead: van Jezer het geslacht der Jezerieten; van Helek het geslacht der Helekieten;
-
 31 En van Asriël het geslacht der Asriëlieten; en van Sechem het geslacht der Sechemieten;
-
 32 En van Semída het geslacht der Semídaïeten; en van Hefer het geslacht der Heferieten.
-
 33 Doch Zeláfead, de zoon van Hefer, had geen zonen, maar dochters; en de namen van de dochters van Zeláfead waren: Machla en Noa, Hogla, Milka en Tirza.
-
 34 Dat zijn de geslachten van Manasse; en hun getelden waren twee en vijftig duizend zevenhonderd.
-
 35 Dit zijn de zonen van Efraïm, naar hun geslachten: van Sutélah het geslacht der Sutélahieten; van Becher het geslacht der Becherieten; van Tahan het geslacht der Tahanieten.
-
 36 En dit zijn de zonen van Sutélah; van Eran het geslacht der Eranieten.
-
 37 Dat zijn de geslachten der zonen van Efraïm, naar hun getelden: twee en dertig duizend vijfhonderd. Dat zijn de zonen van Jozef, naar hun geslachten.
-
 38 De zonen van Benjamin, naar hun geslachten: van Bela het geslacht der Belaïeten; van Asbel het geslacht der Asbelieten; van Ahíram het geslacht der Ahíramieten;
-
 39 Van Sefúfam het geslacht der Sufamieten; van Hufam het geslacht der Hufamieten.
-
 40 En de zonen van Bela waren Ard en Naäman; van Ard het geslacht der Ardieten; van Naäman het geslacht der Naämieten.
-
 41 Dat zijn de zonen van Benjamin, naar hun geslachten; en hun getelden waren vijf en veertig duizend zeshonderd.
-
 42 Dit zijn de zonen van Dan, naar hun geslachten: van Suham het geslacht der Suhamieten; dat zijn de geslachten van Dan, naar hun geslachten.
-
 43 Al de geslachten der Suhamieten, naar hun getelden, waren vier en zestig duizend vierhonderd.
-
 44 De zonen van Aser, naar hun geslachten waren: van Imna het geslacht der Imnaïeten; van Isvi het geslacht der Isvieten; van Bería het geslacht der Beríïeten.
-
 45 Van de zonen van Bería waren: van Heber het geslacht der Heberieten; van Malchiël het geslacht der Malchiëlieten.
-
 46 En de naam van de dochter van Aser was Serah.
-
 47 Dat zijn de geslachten der zonen van Aser, naar hun getelden: drie en vijftig duizend vierhonderd.
-
 48 De zonen van Nafthali, naar hun geslachten: van Jáhzeël het geslacht der Jáhzeëlieten; van Guni het geslacht der Gunieten;
-
 49 Van Jezer het geslacht der Jezerieten; van Sillem het geslacht der Sillemieten.
-
 50 Dat zijn de geslachten van Nafthali, naar hun geslachten; en hun getelden waren vijf en veertig duizend vierhonderd.
-
 51 Dat zijn de getelden van de zonen Israëls: zeshonderd een duizend zevenhonderd dertig.
-
 52 En de Heere sprak tot Mozes, zeggende:
-
 53 Aan dezen zal het land uitgedeeld worden ter erfenis, naar het getal der namen.
-
 54 Aan hen, die veel zijn, zult gij hun erfenis meerder maken, en aan hen, die weinig zijn, zult gij hun erfenis minder maken; aan een ieder zal, naar zijn getelden, zijn erfenis gegeven worden.
-
 55 Het land nochtans zal door het lot gedeeld worden; naar de namen der stammen van hun vaderen zullen zij erven.
-
 56 Naar het lot zal elks erfenis gedeeld worden, tussen de velen en de weinigen.
-
 57 Dit zijn nu de getelden van Levi, naar hun geslachten: van Gerson het geslacht der Gersonieten; van Kohath het geslacht der Kohathieten; van Merári het geslacht der Merárieten.
-
 58 Dit zijn de geslachten van Levi: het geslacht der Libnieten, het geslacht der Hebronieten, het geslacht der Machlieten, het geslacht der Muzieten, het geslacht der Korachieten. En Kohath gewon Amram.
-
 59 En de naam van de vrouw van Amram was Jochébed, de dochter van Levi, die de vrouw van Levi baarde in Egypte; en deze baarde aan Amram, Aäron en Mozes, en Mirjam, hun zuster.
-
 60 En aan Aäron werden geboren Nadab en Abíhu, Eleázar en Ithamar.
-
 61 Nadab nu en Abíhu waren gestorven, toen zij vreemd vuur brachten voor het aangezicht des Heeren.
-
 62 En hun getelden waren drie en twintig duizend, al wat mannelijk is, van een maand oud en daarboven; want dezen werden niet geteld onder de kinderen Israëls, omdat hun geen erfenis gegeven werd onder de kinderen Israëls.
-
 63 Dat zijn de getelden van Mozes en Eleázar, de priester, die de kinderen Israëls telden in de vlakke velden van Moab, aan de Jordaan van Jericho.
-
 64 En onder dezen was niemand uit de getelden van Mozes en Aäron, de priester, toen zij de kinderen Israëls telden in de woestijn van Sinaï.
-
 65 Want de Heere had van die gezegd, dat zij in de woestijn gewis zouden sterven; en er was niemand van hen overgebleven, dan Kaleb, de zoon van Jefunne, en Jozua, de zoon van Nun.
-
-
-
-
-
-
-
-Wet van het erfrecht
-====================
-
-
-
-
-27
-==
-
+=Wet van het erfrecht
+#27
 1 Toen naderden de dochters van Zeláfead, de zoon van Hefer, de zoon van Gilead, de zoon van Machir, de zoon van Manasse, onder de geslachten van Manasse, de zoon van Jozef (en dit zijn de namen van zijn dochters: Machla, Noa, en Hogla, en Milka, en Tirza);
-
 2 En zij stonden voor het aangezicht van Mozes, en voor het aangezicht van Eleázar, de priester, en voor het aangezicht van de oversten, en van de ganse vergadering, aan de deur van de tent der samenkomst, zeggende:
-
 3 Onze vader is gestorven in de woestijn, en hij is niet geweest in het midden van de vergadering van hen, die zich tegen de Heere vergaderd hebben in de vergadering van Korach; maar hij is in zijn zonde gestorven, en had geen zonen.
-
 4 Waarom zou de naam van onze vader uit het midden van zijn geslacht weggenomen worden, omdat hij geen zoon heeft? Geef ons een bezitting in het midden van de broeders van onze vader.
-
 5 En Mozes bracht hun rechtzaak voor het aangezicht des Heeren.
-
 6 En de Heere sprak tot Mozes, zeggende:
-
 7 De dochters van Zeláfead spreken recht; gij zult hun voorzeker geven de bezitting van een erfenis, in het midden van de broeders van hun vader; en gij zult de erfenis van hun vader op hen doen komen.
-
 8 En tot de kinderen Israëls zult gij spreken, zeggende: Wanneer iemand sterft, en geen zoon heeft, zo zult gij zijn erfenis op zijn dochter doen komen.
-
 9 En indien hij geen dochter heeft, zo zult gij zijn erfenis aan zijn broeders geven.
-
 10 Indien hij nu geen broeders heeft, zo zult gij zijn erfenis aan de broeders van zijn vader geven.
-
 11 Indien ook zijn vader geen broeders heeft, zo zult gij zijn erfenis geven aan zijn naastbestaande, die hem de naaste van zijn geslacht is, dat hij het erfelijk bezitte. Dit zal de kinderen Israëls tot een rechtsinzetting zijn, zoals de Heere Mozes geboden heeft.
-
-
-Jozua als opvolger van Mozes aangewezen
-=======================================
-
-
+=Jozua als opvolger van Mozes aangewezen
 12 Daarna zeide de Heere tot Mozes: Klim op deze berg Abárim, en zie dat land, dat Ik de kinderen Israëls gegeven heb.
-
 13 Wanneer gij dat gezien zult hebben, dan zult gij tot uw volken verzameld worden, gij ook, gelijk als uw broeder Aäron verzameld geworden is;
-
 14 Omdat gij Mijn mond weerspannig zijt geweest in de woestijn Zin, in het twisten van de vergadering, om Mij aan de wateren voor hun ogen te heiligen. Dat zijn de wateren van Meríba, van Kades, in de woestijn Zin.
-
 15 Toen sprak Mozes tot de Heere, zeggende:
-
 16 Dat de Heere, de God der geesten van alle vlees, een man stelle over deze vergadering,
-
 17 Die voor hun aangezicht uitga, en die voor hun aangezicht inga, en die hen uitleide, en die hen inleide; opdat de vergadering des Heeren niet zij als schapen, die geen herder hebben.
-
 18 Toen zeide de Heere tot Mozes: Neem tot u Jozua, de zoon van Nun, een man, in wie de Geest is; en leg uw hand op hem;
-
 19 En stel hem voor het aangezicht van Eleázar, de priester, en voor het aangezicht van de ganse vergadering; en geef hem bevel voor hun ogen;
-
 20 En leg op hem van uw heerlijkheid, opdat zij horen, te weten de ganse vergadering van de kinderen Israëls.
-
 21 En hij zal voor het aangezicht van Eleázar, de priester, staan, die voor hem raad vragen zal, naar de wijze van de Urim, voor het aangezicht des Heeren; naar zijn mond zullen zij uitgaan, en naar zijn mond zullen zij ingaan, hij, en al de kinderen Israëls met hem, en de ganse vergadering.
-
 22 En Mozes deed, zoals de Heere hem geboden had; want hij nam Jozua, en stelde hem voor het aangezicht van Eleázar, de priester, en voor het aangezicht van de ganse vergadering.
-
 23 En hij legde zijn handen op hem, en gaf hem bevel; zoals de Heere door de dienst van Mozes gesproken had.
-
-
-
-
-
-
-
-Wetten voor de dagelijkse offeranden
-====================================
-
-
-
-
-28
-==
-
+=Wetten voor de dagelijkse offeranden
+#28
 1 Verder sprak de Heere tot Mozes, zeggende:
-
 2 Gebied de kinderen Israëls, en zeg tot hen: Mijn offerande, Mijn spijs voor Mijn vuuroffers, Mijn liefelijke reuk, zult gij waarnemen, om Mij te offeren op zijn gezette tijd.
-
 3 En gij zult tot hen zeggen: Dit is het vuuroffer, dat gij de Heere offeren zult: twee volkomen eenjarige lammeren des daags, tot een gedurig brandoffer.
-
 4 Het ene lam zult gij bereiden des morgens; en het andere lam zult gij bereiden tussen de twee avonden.
-
 5 En een tiende deel van een efa meelbloem, ten spijsoffer, gemengd met het vierendeel van een hin van gestoten olie.
-
 6 Het is het gedurig brandoffer, dat op de berg Sinaï ingesteld was tot een liefelijke reuk, een vuuroffer voor de Heere.
-
 7 En zijn drankoffer zal zijn het vierendeel van een hin, voor het ene lam; in het heiligdom zult gij het drankoffer van sterke drank de Heere offeren.
-
 8 En het andere lam zult gij bereiden tussen de twee avonden; gelijk het spijsoffer des morgens, en gelijk zijn drankoffer zult gij het bereiden, tot een vuuroffer van liefelijke reuk voor de Heere.
-
-
-Wetten voor het sabbatoffer en voor de nieuwe maand
-===================================================
-
-
+=Wetten voor het sabbatoffer en voor de nieuwe maand
 9 Maar op de sabbatdag twee volkomen eenjarige lammeren, en twee tienden meelbloem, tot een spijsoffer, met olie gemengd, alsook zijn drankoffer.
-
 10 Het is het brandoffer van de sabbat op elke sabbat, boven het gedurig brandoffer, en zijn drankoffer.
-
 11 En in het begin van uw maanden zult gij een brandoffer de Heere offeren: twee jonge varren, en een ram, zeven volkomen eenjarige lammeren;
-
 12 En drie tienden meelbloem tot een spijsoffer, met olie gemengd, voor de ene var; en twee tienden meelbloem tot een spijsoffer, met olie gemengd, voor de ene ram;
-
 13 En telkens een tiende deel meelbloem tot een spijsoffer, met olie gemengd, voor het ene lam; het is een brandoffer tot een liefelijke reuk, een vuuroffer, voor de Heere.
-
 14 En hun drankoffers zullen zijn de helft van een hin voor een var, en een derde deel van een hin voor een ram, en een vierendeel van een hin van wijn voor een lam; dat is het brandoffer van de nieuwe maan in elke maand, naar de maanden van het jaar.
-
 15 Daartoe zal een geitenbok ten zondoffer voor de Heere, boven het gedurig brandoffer, bereid worden, met zijn drankoffer.
-
-
-Wetten voor de feesttijden
-==========================
-
-
+=Wetten voor de feesttijden
 16 En in de eerste maand, op de veertiende dag van de maand, is het pascha voor de Heere.
-
 17 En op de vijftiende dag van die maand is het feest; zeven dagen zullen ongezuurde broden gegeten worden.
-
 18 Op de eerste dag zal een heilige samenroeping zijn; geen dienstwerk zult gij doen;
-
 19 Maar gij zult een vuuroffer tot een brandoffer aan de Heere offeren: twee jonge varren, en een ram, daartoe zeven eenjarige lammeren; volkomen zullen zij u zijn.
-
 20 En hun spijsoffer zal zijn meelbloem, met olie gemengd; drie tienden voor een var, en twee tienden voor een ram zult gij bereiden.
-
 21 Telkens zult gij een tiende deel bereiden voor een lam, tot die zeven lammeren toe.
-
 22 Daarna een bok ten zondoffer, om over u verzoening te doen.
-
 23 Behalve het morgenbrandoffer, dat tot een gedurig brandoffer is, zult gij deze dingen bereiden.
-
 24 Overeenkomstig deze dingen zult gij des daags, zeven dagen lang, de spijs van het vuuroffer bereiden tot een liefelijke reuk voor de Heere; boven dat gedurig brandoffer zal het bereid worden, met zijn drankoffer.
-
 25 En op de zevende dag zult gij een heilige samenroeping hebben; geen dienstwerk zult gij doen.
-
 26 Evenzo op de dag der eerstelingen, als gij een nieuw spijsoffer aan de Heere zult offeren naar uw weken, zult gij een heilige samenroeping hebben; geen dienstwerk zult gij doen.
-
 27 Dan zult gij de Heere een brandoffer tot een liefelijke reuk offeren: twee jonge varren, een ram, zeven eenjarige lammeren;
-
 28 En hun spijsoffer van meelbloem, met olie gemengd: drie tienden voor een var, twee tienden voor een ram;
-
 29 Telkens een tiende voor een lam, tot die zeven lammeren toe;
-
 30 Een geitenbok, om voor u verzoening te doen.
-
 31 Behalve het gedurig brandoffer, en zijn spijsoffer, zult gij ze bereiden; zij zullen u volkomen zijn met hun drankoffers.
-
-
-
-
-
-
-
-De offers in de zevende maand
-=============================
-
-
-
-
-29
-==
-
+=De offers in de zevende maand
+#29
 1 Evenzo in de zevende maand, op de eerste van de maand, zult gij een heilige samenroeping hebben; geen dienstwerk zult gij doen; het zal u een dag des geklanks zijn.
-
 2 Dan zult gij een brandoffer, tot een liefelijke reuk, voor de Heere bereiden: een jonge var, een ram, zeven volkomen eenjarige lammeren;
-
 3 En hun spijsoffer van meelbloem, met olie gemengd; drie tienden voor de var, twee tienden voor de ram.
-
 4 En een tiende voor een lam, tot die zeven lammeren toe;
-
 5 En een geitenbok ten zondoffer, om over u verzoening te doen;
-
 6 Behalve het brandoffer van de maand, en zijn spijsoffer, en het gedurig brandoffer, en zijn spijsoffer, met hun drankoffers, naar hun wijze, tot een liefelijke reuk, tot een vuuroffer voor de Heere.
-
 7 En op de tiende van deze zevende maand zult gij een heilige samenroeping hebben, en gij zult uw zielen verootmoedigen; geen werk zult gij doen;
-
 8 Maar gij zult brandoffer, tot een liefelijke reuk, aan de Heere offeren: een jonge var, een ram, zeven eenjarige lammeren; volkomen zullen zij u zijn.
-
 9 En hun spijsoffer van meelbloem, met olie gemengd: drie tienden voor de var, twee tienden voor de ene ram;
-
 10 Telkens een tiende voor een lam, tot die zeven lammeren toe;
-
 11 Een geitenbok ten zondoffer, behalve het zondoffer der verzoeningen, en het gedurig brandoffer; en zijn spijsoffer, met hun drankoffers.
-
 12 Evenzo op de vijftiende dag van deze zevende maand, zult gij een heilige samenroeping hebben; geen dienstwerk zult gij doen; maar zeven dagen zult gij de Heere een feest vieren.
-
 13 En gij zult een brandoffer tot een vuuroffer offeren, tot een liefelijke reuk voor de Heere: dertien jonge varren, twee rammen, veertien eenjarige lammeren; zij zullen volkomen zijn;
-
 14 En hun spijsoffer van meelbloem, met olie gemengd: drie tienden voor een var, tot die dertien varren toe; twee tienden voor een ram, onder die twee rammen;
-
 15 En telkens een tiende voor een lam, tot die veertien lammeren toe;
-
 16 En een geitenbok ten zondoffer; behalve het gedurig brandoffer, zijn spijsoffer, en zijn drankoffer.
-
 17 Daarna op de tweede dag: twaalf jonge varren, twee rammen, veertien volkomen eenjarige lammeren;
-
 18 En hun spijsoffer, en hun drankoffers voor de varren, voor de rammen, en voor de lammeren, in hun getal, naar de wijze;
-
 19 En een geitenbok tot een zondoffer; behalve het gedurig brandoffer, en zijn spijsoffer, met hun drankoffers.
-
 20 En op de derde dag: elf varren, twee rammen, veertien volkomen eenjarige lammeren;
-
 21 En hun spijsoffers, en hun drankoffers voor de varren, voor de rammen, en voor de lammeren, in hun getal, naar de wijze;
-
 22 En een bok ten zondoffer; behalve het gedurig brandoffer, en zijn spijsoffer, en zijn drankoffer.
-
 23 Verder op de vierde dag: tien varren, twee rammen, veertien volkomen eenjarige lammeren;
-
 24 Hun spijsoffer, en hun drankoffers voor de varren, voor de rammen, en voor de lammeren, in hun getal, naar de wijze;
-
 25 En een geitenbok ten zondoffer; behalve het gedurig brandoffer, zijn spijsoffer, en zijn drankoffer.
-
 26 En op de vijfde dag: negen varren, twee rammen, en veertien volkomen eenjarige lammeren;
-
 27 En hun spijsoffer, en hun drankoffers voor de varren, voor de rammen, en voor de lammeren, in hun getal, naar de wijze;
-
 28 En een bok ten zondoffer; behalve het gedurig brandoffer, en zijn spijsoffer, en zijn drankoffer.
-
 29 Daarna op de zesde dag: acht varren, twee rammen, veertien volkomen eenjarige lammeren;
-
 30 En hun spijsoffer, en hun drankoffers voor de varren, voor de rammen, en voor de lammeren, in hun getal, naar de wijze;
-
 31 En een bok ten zondoffer; behalve het gedurig brandoffer, zijn spijsoffer, en zijn drankoffers.
-
 32 En op de zevende dag: zeven varren, twee rammen, veertien volkomen eenjarige lammeren;
-
 33 En hun spijsoffer, en hun drankoffers voor de varren, voor de rammen, en voor de lammeren, in hun getal, naar hun wijze;
-
 34 En een bok ten zondoffer; behalve het gedurig brandoffer, zijn spijsoffer, en zijn drankoffer.
-
 35 Op de achtste dag zult gij een verbodsdag hebben; geen dienstwerk zult gij doen.
-
 36 En gij zult een brandoffer ten vuuroffer offeren, tot een liefelijke reuk voor de Heere: een var, een ram, zeven volkomen eenjarige lammeren;
-
 37 Hun spijsoffer, en hun drankoffers voor de var, voor de ram, en voor de lammeren, in hun getal, naar de wijze;
-
 38 En een bok ten zondoffer; behalve het gedurig brandoffer, en zijn spijsoffer, en zijn drankoffer.
-
 39 Deze dingen zult gij de Heere doen op uw gezette hoogtijden; behalve uw geloften, en uw vrijwillige offers, met uw brandoffers, en met uw spijsoffers, en met uw drankoffers, en met uw dankoffers.
-
 40 En Mozes sprak tot de kinderen Israëls naar al wat de Heere Mozes geboden had.
-
-
-
-
-
-
-
-Wetten der geloften
-===================
-
-
-
-
-30
-==
-
+=Wetten der geloften
+#30
 1 En Mozes sprak tot de hoofden der stammen van de kinderen Israëls, zeggende: Dit is de zaak, die de Heere geboden heeft:
-
 2 Wanneer een man de Heere een gelofte zal beloofd, of een eed zal gezworen hebben, zijn ziel met een verbintenis verbindende, zijn woord zal hij niet ontheiligen; naar alles, wat uit zijn mond gegaan is, zal hij doen.
-
 3 Maar als een vrouw de Heere een gelofte zal beloofd hebben, en zich met een verbintenis in het huis van haar vader in haar jonkheid zal verbonden hebben;
-
 4 En haar vader haar gelofte, en haar verbintenis, waarmee zij haar ziel verbonden heeft, zal horen, en haar vader tegen haar zal stilzwijgen, zo zullen al haar geloften bestaan, en elke verbintenis, waarmee zij haar ziel verbonden heeft, zal bestaan.
-
 5 Maar indien haar vader dat zal breken, ten dage als hij het hoort, al haar geloften, en haar verbintenissen, waarmee zij haar ziel verbonden heeft, zullen niet bestaan; maar de Heere zal het haar vergeven; want haar vader heeft ze haar doen breken.
-
 6 Doch indien zij immers een man heeft, en haar geloften op haar zijn, of de uitspraak van haar lippen, waarmee zij haar ziel verbonden heeft;
-
 7 En haar man dat zal horen, en ten dage als hij het hoort, tegen haar zal stilzwijgen, zo zullen haar geloften bestaan, en haar verbintenissen, waarmee zij haar ziel verbonden heeft, zullen bestaan.
-
 8 Maar indien haar man ten dage, toen hij het hoorde, dat zal breken, en haar gelofte, die op haar was, te niet zal maken, alsook de uitspraak van haar lippen, waarmee zij haar ziel verbonden heeft, zo zal de Heere het haar vergeven.
-
 9 Aangaande de gelofte van een weduwe, of van een verstotene: alles, waarmee zij haar ziel verbonden heeft, zal over haar bestaan.
-
 10 Maar indien zij in het huis van haar man gelofte gedaan heeft, of met een eed door verbintenis haar ziel verbonden heeft;
-
 11 En haar man dat gehoord, en tegen haar stilgezwegen zal hebben, dat niet brekende; zo zullen al haar geloften bestaan, alsook elke verbintenis, waarmee zij haar ziel verbonden heeft, zal bestaan.
-
 12 Maar indien haar man die dingen geheel te niet maakt, ten dage als hij het hoort, niets van al wat uit haar lippen gegaan is, van haar gelofte, en van de verbintenis van haar ziel, zal bestaan; haar man heeft ze te niet gemaakt, en de Heere zal het haar vergeven.
-
 13 Elke gelofte, en elke eed der verbintenis, om de ziel te verootmoedigen, die zal haar man bevestigen, of die zal haar man te niet maken.
-
 14 Maar zo haar man van dag tot dag volkomen stilzwijgt tegen haar, zo bevestigt hij al haar geloften, of al haar verbintenissen, die op haar zijn; hij heeft ze bevestigd, omdat hij tegen haar stilgezwegen heeft, ten dage toen hij het hoorde.
-
 15 Doch zo hij ze geheel te niet maken zal, nadat hij het gehoord zal hebben, zo zal hij haar ongerechtigheid dragen.
-
 16 Dat zijn de inzettingen, die de Heere Mozes geboden heeft, tussen een man en zijn vrouw, tussen een vader en zijn dochter, zijnde in haar jonkheid, in het huis van haar vader.
-
-
-
-
-
-
-
-Strijd van de Israëlieten tegen de Midianieten
-==============================================
-
-
-
-
-31
-==
-
+=Strijd van de Israëlieten tegen de Midianieten
+#31
 1 En de Heere sprak tot Mozes, zeggende:
-
 2 Neem de wraak van de kinderen Israëls op de Midianieten; daarna zult gij verzameld worden tot uw volken.
-
 3 Mozes dan sprak tot het volk, zeggende: Dat zich mannen uit u ten strijde toerusten, en dat zij tegen de Midianieten zijn, om de wraak des Heeren te doen aan de Midianieten.
-
 4 Van elke stam onder alle stammen Israëls zult gij er duizend ten strijde zenden.
-
 5 Alzo werden geleverd uit de duizenden van Israël, duizend van elke stam, twaalf duizend toegerusten tot de strijd.
-
 6 En Mozes zond hen ten strijde, duizend van elke stam, hen en Pínehas, de zoon van Eleázar, de priester, ten strijde, met de heilige vaten, en de trompetten des geklanks in zijn hand.
-
 7 En zij streden tegen de Midianieten, zoals de Heere Mozes geboden had, en zij doodden al wat mannelijk was.
-
 8 Daartoe doodden zij boven hun verslagenen, de koningen der Midianieten, Evi, en Rekem, en Zur, en Hur, en Reba, vijf koningen der Midianieten; ook doodden zij met het zwaard Bíleam, de zoon van Beor.
-
 9 Maar de kinderen Israëls namen de vrouwen der Midianieten, en hun kinderkens gevangen; zij roofden ook al hun beesten, en al hun vee, en al hun vermogen.
-
 10 Voorts al hun steden met hun woonplaatsen, en al hun burchten verbrandden zij met vuur.
-
 11 En zij namen al de roof, en al de buit, van mensen en van beesten.
-
 12 Daarna brachten zij de gevangenen, en de buit, en de roof, tot Mozes en tot Eleázar, de priester, en tot de vergadering van de kinderen Israëls, in het leger, in de vlakke velden van Moab, die zijn aan de Jordaan van Jericho.
-
 13 Maar Mozes en Eleázar, de priester, en alle oversten der vergadering, gingen uit hun tegemoet, tot buiten voor het leger.
-
 14 En Mozes werd grotelijks vertoornd tegen de bevelhebbers van het leger, de hoofdlieden van duizend, en de hoofdlieden van honderd, die uit de strijd van die oorlog kwamen.
-
 15 En Mozes zeide tot hen: Hebt gij dan alle vrouwen laten leven?
-
 16 Ziet, deze waren, door de raad van Bíleam, om de kinderen Israëls oorzaak van overtreding tegen de Heere te geven, in de zaak van Peor; waardoor die plaag ontstond onder de vergadering des Heeren.
-
 17 Nu dan, doodt al wat mannelijk is onder de kinderkens; en doodt alle vrouw, die door bijligging van de man een man bekend heeft.
-
 18 Doch laat al de kinderkens van vrouwelijk geslacht, die de bijligging van de man niet bekend hebben, voor u leven.
-
 19 En gij, legert u buiten het leger zeven dagen; gij en uw gevangenen, een ieder, die een mens gedood, en een ieder, die een verslagene zult aangeroerd hebben, zult u op de derde dag en op de zevende dag ontzondigen.
-
 20 Ook zult gij alle kleding, en alle gereedschap van leer, en alle werk van geitehaar, en alle gereedschap van hout, ontzondigen.
-
 21 En Eleázar, de priester, zeide tot de krijgslieden, die tot die strijd getrokken waren: Dit is de inzetting van de wet, die de Heere Mozes geboden heeft.
-
 22 Alleen het goud en het zilver, het koper, het ijzer, het tin en het lood;
-
 23 Elk ding, dat het vuur verdraagt, zult gij door het vuur laten doorgaan, dat het rein worde; evenwel zal het door het water der afzondering ontzondigd worden; maar al wat het vuur niet verdraagt, zult gij door het water laten doorgaan.
-
 24 Gij zult ook uw klederen op de zevende dag wassen, dat gij rein wordt; en daarna zult gij in het leger komen.
-
 25 Verder sprak de Heere tot Mozes, zeggende:
-
 26 Neem op de som van de buit der gevangenen van mensen en van beesten; gij en Eleázar, de priester, en de hoofden van de vaderen der vergadering.
-
 27 En deel de buit in twee helften tussen hen, die de strijd aangegrepen hebben, die tot de krijg uitgegaan zijn, en tussen de ganse vergadering.
-
 28 Daarna zult gij een schatting voor de Heere heffen, van de krijgslieden, die tot deze krijg uitgetrokken zijn, op vijfhonderd één ziel, uit de mensen, en uit de runderen, en uit de ezels, en uit de schapen.
-
 29 Van hun helft zult gij het nemen, en aan de priester Eleázar geven tot een heffing des Heeren.
-
 30 Maar van de helft van de kinderen Israëls zult gij één gevangene op vijftig nemen, uit de mensen, uit de runderen, uit de ezels, en uit de schapen, uit al de beesten; en gij zult ze aan de Levieten geven, die de wacht van de tabernakel des Heeren waarnemen.
-
 31 En Mozes en Eleázar, de priester, deden, zoals de Heere Mozes geboden had.
-
 32 De buit nu, het overschot van de roof, dat het krijgsvolk geroofd had, was zeshonderd vijf en zeventig duizend schapen;
-
 33 En twee en zeventig duizend runderen;
-
 34 En een en zestig duizend ezels;
-
 35 En de zielen der mensen, uit de vrouwen, die geen bijligging van de man bekend hadden, alle zielen waren twee en dertig duizend.
-
 36 En de helft, te weten het deel van hen, die tot deze krijg uitgetrokken waren, was in getal driehonderd zeven en dertig duizend vijfhonderd schapen.
-
 37 En de schatting voor de Heere van schapen was zeshonderd vijf en zeventig.
-
 38 En de runderen waren zes en dertig duizend, en hun schatting voor de Heere twee en zeventig.
-
 39 En de ezels waren dertig duizend vijfhonderd, en hun schatting voor de Heere was een en zestig.
-
 40 En de zielen der mensen waren zestien duizend, en hun schatting voor de Heere twee en dertig zielen.
-
 41 En Mozes gaf Eleázar, de priester, de schatting van de heffing des Heeren, zoals de Heere Mozes geboden had.
-
 42 En van de helft van de kinderen Israëls, die Mozes afgedeeld had, van de mannen, die gestreden hadden;
-
 43 (Het halve deel nu van de vergadering was, uit de schapen, driehonderd zeven en dertig duizend vijfhonderd;
-
 44 En de runderen waren zes en dertig duizend;
-
 45 En de ezels dertig duizend vijfhonderd;
-
 46 En de zielen der mensen zestien duizend;)
-
 47 Van die helft van de kinderen Israëls nam Mozes één gevangene uit vijftig, van mensen en van beesten; en hij gaf ze aan de Levieten, die de wacht van de tabernakel des Heeren waarnamen, zoals de Heere Mozes geboden had.
-
 48 Toen traden tot Mozes de bevelhebbers, die over de duizenden van het heer waren, de hoofdlieden van duizend, en de hoofdlieden van honderd;
-
 49 En zij zeiden tot Mozes: Uw knechten hebben opgenomen de som van de krijgslieden, die onder onze hand geweest zijn; en uit ons ontbreekt niet één man.
-
 50 Daarom hebben wij een offerande des Heeren gebracht, een ieder wat hij gekregen heeft, een gouden vat, een keten, of een armring, een vingerring, een oorring, of een afhangende gordel, om voor onze zielen verzoening te doen voor het aangezicht des Heeren.
-
 51 Zo nam Mozes en Eleázar, de priester, van hen het goud, alle welgemaakte vaten.
-
 52 En al het goud der heffing, dat zij de Heere offerden, was zestien duizend zevenhonderd vijftig sikkels, van de hoofdlieden van duizend, en van de hoofdlieden van honderd.
-
 53 Aangaande de krijgslieden, een ieder had geroofd voor zichzelf.
-
 54 Zo nam Mozes en Eleázar, de priester, dat goud van de hoofdlieden van duizend en van honderd, en zij brachten het in de tent der samenkomst, ter gedachtenis voor de kinderen Israëls, voor het aangezicht des Heeren.
-
-
-
-
-
-
-
-Ruben en Gad verzoeken hun erfdeel
-==================================
-
-
-
-
-32
-==
-
+=Ruben en Gad verzoeken hun erfdeel
+#32
 1 De kinderen van Ruben nu hadden veel vee, en de kinderen van Gad hadden machtig veel; en zij bezagen het land van Jáëzer, en het land van Gilead, en ziet, deze plaats was een plaats voor vee.
-
 2 Zo kwamen de kinderen van Gad en de kinderen van Ruben, en spraken tot Mozes, en tot Eleázar, de priester, en tot de oversten der vergadering, zeggende:
-
 3 Atarôth, en Dibon, en Jáëzer, en Nimra, en Hesbon, en Eleále, en Schebam, en Nebo, en Behon;
-
 4 Dit land, dat de Heere voor het aangezicht van de vergadering van Israël geslagen heeft, is een land voor vee; en uw knechten hebben vee.
-
 5 Voorts zeiden zij: Indien wij genade in uw ogen gevonden hebben, dat dit land aan uw knechten gegeven worde tot een bezitting; en doe ons niet over de Jordaan trekken.
-
 6 Maar Mozes zeide tot de kinderen van Gad en tot de kinderen van Ruben: Zullen uw broeders ten strijde gaan, en zult gij hier blijven?
-
 7 Waarom toch zult gij het hart van de kinderen Israëls breken, dat zij niet overtrekken naar het land, dat de Heere hun gegeven heeft?
-
 8 Zo deden uw vaders, toen ik hen van Kades-Barnéa zond, om dit land te bezien.
-
 9 Toen zij opgekomen waren tot aan het dal Eskol, en dit land bezagen, zo braken zij het hart van de kinderen Israëls, dat zij niet gingen naar het land, dat de Heere hun gegeven had.
-
 10 Toen ontstak de toorn des Heeren te dien dage, en Hij zwoer, zeggende:
-
 11 Indien deze mannen, die uit Egypte opgetrokken zijn, van twintig jaren oud en daarboven, het land zullen zien, dat Ik Abraham, Izak en Jakob gezworen heb! Want zij hebben niet volhard Mij na te volgen;
-
 12 Behalve Kaleb, de zoon van Jefunne, de Keniziet, en Jozua, de zoon van Nun; want zij hebben volhard de Heere na te volgen.
-
 13 Alzo ontstak de toorn des Heeren tegen Israël, en Hij deed hen omzwerven in de woestijn, veertig jaren, totdat verteerd was het ganse geslacht, dat gedaan had, wat kwaad was in de ogen des Heeren.
-
 14 En ziet, gij zijt opgestaan in de plaats van uw vaderen, een menigte van zondige mensen, om de hittigheid van de toorn des Heeren tegen Israël te vermeerderen.
-
 15 Wanneer gij van achter Hem u zult afkeren, zo zal Hij verder voortvaren het te laten in de woestijn; en gij zult al dit volk verderven.
-
 16 Toen traden zij toe tot hem, en zeiden: Wij zullen hier schaapskooien bouwen voor ons vee, en steden voor onze kinderen.
-
 17 Maar wij zelf zullen ons toerusten, haastende voor het aangezicht van de kinderen Israëls, totdat wij hen aan hun plaats zullen gebracht hebben; en onze kinderen zullen blijven in de vaste steden, vanwege de inwoners des lands.
-
 18 Wij zullen niet weerkeren tot onze huizen, totdat de kinderen Israëls zich tot erfelijke bezitters zullen gesteld hebben, een ieder van zijn erfenis.
-
 19 Want wij zullen met hen niet erven aan gene zijde van de Jordaan, en verder heen, als onze erfenis ons toegekomen zal zijn aan deze zijde van de Jordaan, tegen de opgang.
-
 20 Toen zeide Mozes tot hen: Indien gij deze zaak doen zult, indien gij u voor het aangezicht des Heeren zult toerusten ten strijde,
-
 21 En een ieder van u, die toegerust is, over de Jordaan zal trekken voor het aangezicht des Heeren, totdat Hij Zijn vijanden voor Zijn aangezicht uit de bezitting zal verdreven hebben,
-
 22 En het land voor het aangezicht des Heeren ten ondergebracht is; zo zult gij daarna weerkeren, en onschuldig zijn voor de Heere en voor Israël, en dit land zal u ter bezitting zijn voor het aangezicht des Heeren.
-
 23 Indien gij daarentegen alzo niet zult doen, ziet, zo hebt gij tegen de Heere gezondigd; doch gij zult uw zonde gewaar worden, als zij u vinden zal!
-
 24 Bouwt u steden voor uw kinderen, en kooien voor uw schapen; en doet, wat uit uw mond uitgegaan is.
-
 25 Toen spraken de kinderen van Gad en de kinderen van Ruben tot Mozes, zeggende: Uw knechten zullen doen, zoals mijn heer gebiedt.
-
 26 Onze kinderen, onze vrouwen, onze have en al onze beesten zullen aldaar zijn in de steden van Gilead;
-
 27 Maar uw knechten zullen overtrekken, al wie ten strijde toegerust is, voor het aangezicht des Heeren tot de strijd, zoals mijn heer gesproken heeft.
-
 28 Toen gebood Mozes, aangaande hen, de priester Eleázar, en Jozua, de zoon van Nun, en de hoofden der vaderen van de stammen van de kinderen Israëls;
-
 29 En Mozes zeide tot hen: Indien de kinderen van Gad, en de kinderen van Ruben, met u over de Jordaan zullen trekken, een ieder, die toegerust is ten oorlog, voor het aangezicht des Heeren, als het land voor uw aangezicht zal ten ondergebracht zijn; zo zult gij hun het land Gilead ter bezitting geven.
-
 30 Maar indien zij niet toegerust met u zullen overtrekken, zo zullen zij tot bezitters gesteld worden in het midden van u in het land Kanaän.
-
 31 En de kinderen van Gad en de kinderen van Ruben antwoordden, zeggende: Wat de Heere tot uw knechten gesproken heeft, zullen wij alzo doen.
-
 32 Wij zullen toegerust overtrekken voor het aangezicht des Heeren naar het land Kanaän; en de bezitting van onze erfenis zullen wij hebben aan deze zijde van de Jordaan.
-
 33 Alzo gaf Mozes hun, de kinderen van Gad, en de kinderen van Ruben, en de halve stam van Manasse, de zoon van Jozef, het koninkrijk van Sihon, koning der Amorieten, en het koninkrijk van Og, koning van Bazan; het land met de steden ervan in de gebieden, de steden van het land rondom.
-
 34 En de kinderen van Gad bouwden Dibon, en Atarôth, en Aroër,
-
 35 En Atroth-Sofan, en Jáëzer, en Jógbeha,
-
 36 En Beth-Nimra, en Beth-Háran, vaste steden en schaapskooien.
-
 37 En de kinderen van Ruben bouwden Hezbon, en Eleále, en Kirjatháïm,
-
 38 En Nebo, en Baäl-Meon, veranderd zijnde van naam, en Sibma; en zij noemden de namen der steden, die zij bouwden, met andere namen.
-
 39 En de kinderen van Machir, de zoon van Manasse, gingen naar Gilead, en namen dat in, en zij verdreven de Amorieten, die daarin waren, uit de bezitting.
-
 40 Zo gaf Mozes Gilead aan Machir, de zoon van Manasse; en hij woonde daarin.
-
 41 Jaïr nu, de zoon van Manasse, ging heen en nam hun dorpen in, en hij noemde die Havvôth-Jaïr.
-
 42 En Nobah ging heen, en nam Kenath in, met zijn onderhorige plaatsen, en noemde het Nobah naar zijn naam.
-
-
-
-
-
-
-
-Verhaal van de reizen en legerplaatsen van de kinderen Israëls, van Egypte af tot aan het land Kanaän
-=====================================================================================================
-
-
-
-
-33
-==
-
+=Verhaal van de reizen en legerplaatsen van de kinderen Israëls, van Egypte af tot aan het land Kanaän
+#33
 1 Dit zijn de reizen van de kinderen Israëls, die uit Egypteland uitgetrokken zijn, naar hun legers, door de hand van Mozes en Aäron.
-
 2 En Mozes schreef hun uittochten, naar hun reizen, naar de mond des Heeren; en dit zijn hun reizen, naar hun uittochten.
-
 3 Zij reisden dan van Raméses; in de eerste maand, op de vijftiende dag van de eerste maand, de dag na het pascha, trokken de kinderen Israëls uit door een hoge hand, voor de ogen van alle Egyptenaars;
-
 4 Toen de Egyptenaars begroeven hen, die de Heere onder hen geslagen had, alle eerstgeborenen; ook had de Heere gerichten geoefend aan hun goden.
-
 5 Toen de kinderen Israëls van Raméses verreisd waren, zo legerden zij zich te Sukkoth.
-
 6 En zij verreisden van Sukkoth, en legerden zich in Etham, dat aan het einde van de woestijn is.
-
 7 En zij verreisden van Etham, en keerden weer naar Pi-Hachirôth, dat tegenover Baäl-Sefon is, en zij legerden zich voor Migdol.
-
 8 En zij verreisden van Hachirôth, en gingen over, door het midden van de zee, naar de woestijn, en zij gingen drie dagreizen in de woestijn Etham, en legerden zich in Mara.
-
 9 En zij verreisden van Mara, en kwamen te Elim; in Elim nu waren twaalf waterfonteinen en zeventig palmbomen, en zij legerden zich aldaar.
-
 10 En zij verreisden van Elim, en legerden zich aan de Schelfzee.
-
 11 En zij verreisden van de Schelfzee, en legerden zich in de woestijn Sin.
-
 12 En zij verreisden uit de woestijn Sin, en zij legerden zich in Dofka.
-
 13 En zij verreisden van Dofka, en legerden zich in Aluz.
-
 14 En zij verreisden van Aluz, en legerden zich in Rafidîm; doch daar was geen water voor het volk om te drinken.
-
 15 Zo verreisden zij van Rafidîm, en legerden zich in de woestijn van Sinaï.
-
 16 En zij verreisden uit de woestijn van Sinaï, en legerden zich in Kibroth-Tháäva.
-
 17 En zij verreisden van Kibroth-Tháäva, en legerden zich in Hazerôth.
-
 18 En zij verreisden van Hazerôth, en legerden zich in Rithma.
-
 19 En zij verreisden van Rithma, en legerden zich in Rimmon-Perez.
-
 20 En zij verreisden van Rimmon-Perez, en legerden zich in Libna.
-
 21 En zij verreisden van Libna, en legerden zich in Rissa.
-
 22 En zij verreisden van Rissa, en legerden zich in Kehelátha.
-
 23 En zij verreisden van Kehelátha, en legerden zich in het gebergte van Safer.
-
 24 En zij verreisden van het gebergte Safer, en legerden zich in Hádara.
-
 25 En zij verreisden van Hádara, en legerden zich in Makhelôth.
-
 26 En zij verreisden van Makhelôth, en legerden zich in Tachath.
-
 27 En zij verreisden van Tachath, en legerden zich in Tharah.
-
 28 En zij verreisden van Tharah, en legerden zich in Mithka.
-
 29 En zij verreisden van Mithka, en legerden zich in Hasmóna.
-
 30 En zij verreisden van Hasmóna, en legerden zich in Moséroth.
-
 31 En zij verreisden van Moséroth, en legerden zich in Bene-Jáäkan.
-
 32 En zij verreisden van Bene-Jáäkan, en legerden zich in Hor-Gidgad.
-
 33 En zij verreisden van Hor-Gidgad, en legerden zich in Jotbátha.
-
 34 En zij verreisden van Jotbátha, en legerden zich in Abróna.
-
 35 En zij verreisden van Abróna, en legerden zich in Ezeon-Geber.
-
 36 En zij verreisden van Ezeon-Geber, en legerden zich in de woestijn Zin, dat is Kades.
-
 37 En zij verreisden van Kades, en legerden zich aan de berg Hor, aan het einde van het land van Edom.
-
 38 Toen ging de priester Aäron op de berg Hor, naar de mond des Heeren, en stierf aldaar, in het veertigste jaar na de uittocht van de kinderen Israëls uit Egypteland, in de vijfde maand, op de eerste van de maand.
-
 39 Aäron nu was honderd drie en twintig jaren oud, toen hij stierf op de berg Hor.
-
 40 En de Kanaäniet, de koning van Harad, die in het zuiden woonde in het land Kanaän, hoorde, dat de kinderen Israëls aankwamen.
-
 41 En zij verreisden van de berg Hor, en legerden zich in Zálmona.
-
 42 En zij verreisden van Zálmona, en legerden zich in Funon.
-
 43 En zij verreisden van Funon, en legerden zich in Oboth.
-
 44 En zij verreisden van Oboth, en legerden zich aan de heuvels van Abárim, in het gebied van Moab.
-
 45 En zij verreisden van de heuvels van Abárim, en legerden zich in Dibon-Gad.
-
 46 En zij verreisden van Dibon-Gad, en legerden zich in Almon-Diblatháïm.
-
 47 En zij verreisden van Almon-Diblatháïm, en legerden zich in de bergen Abárim, tegen Nebo.
-
 48 En zij verreisden van de bergen Abárim, en legerden zich in de vlakke velden der Moabieten, aan de Jordaan van Jericho.
-
 49 En zij legerden zich aan de Jordaan van Beth-Jesimôth, tot aan Abel-Sittim, in de vlakke velden der Moabieten.
-
 50 En de Heere sprak tot Mozes, in de vlakke velden der Moabieten, aan de Jordaan van Jericho, zeggende:
-
 51 Spreek tot de kinderen Israëls, en zeg tot hen: Wanneer gij over de Jordaan zult gegaan zijn in het land Kanaän;
-
 52 Zo zult gij alle inwoners van het land voor uw aangezicht uit de bezitting verdrijven, en al hun beeltenissen verderven; ook zult gij al hun gegoten beelden verderven, en al hun hoogten verdelgen.
-
 53 En gij zult het land in erfelijke bezitting nemen, en daarin wonen; want Ik heb u dat land gegeven, om het erfelijk te bezitten.
-
 54 En gij zult het land in erfelijke bezitting nemen door het lot, naar uw geslachten; hun, die veel zijn, zult gij hun erfenis meerder maken, en hun, die weinig zijn, zult gij hun erfenis minder maken; waarheen voor iemand het lot zal uitgaan, dat zal hij hebben; naar de stammen van uw vaderen zult gij de erfenis nemen.
-
 55 Maar indien gij de inwoners des lands niet voor uw aangezicht uit de bezitting zult verdrijven, zo zal het geschieden, dat, die gij van hen zult laten overblijven, tot doornen zullen zijn in uw ogen, en tot prikkels in uw zijden, en u zullen benauwen op het land, waarin gij woont.
-
 56 En het zal geschieden, dat Ik u zal doen, zoals Ik hun dacht te doen.
-
-
-
-
-
-
-
-De grenzen van Kanaän
-=====================
-
-
-
-
-34
-==
-
+=De grenzen van Kanaän
+#34
 1 Voorts sprak de Heere tot Mozes, zeggende:
-
 2 Gebied de kinderen Israëls, en zeg tot hen: Wanneer gij in het land Kanaän ingaat, zo zal dit het land zijn, dat u ter erfenis vallen zal, het land Kanaän, naar zijn grenzen.
-
 3 De zuiderhoek nu zal u zijn van de woestijn Zin, aan de zijden van Edom; en de zuidgrens zal u zijn van het einde van de Zoutzee tegen het oosten;
-
 4 En deze grens zal rond u gaan van het zuiden naar de opgang van Akrábbim, en doorgaan naar Zin; en haar uitgangen zullen zijn, van het zuiden naar Kades-Barnéa; en zij zal uitgaan naar Hazar-Addar, en doorgaan naar Azmon.
-
 5 Voorts zal deze grens rondgaan van Azmon naar de rivier van Egypte, en haar uitgangen zullen zijn naar de zee.
-
 6 Aangaande de grens van het westen, daar zal u de grote zee de grens zijn; dit zal uw grens van het westen zijn.
-
 7 Voorts zal u de grens van het noorden deze zijn: van de grote zee af zult gij u de berg Hor aftekenen.
-
 8 Van de berg Hor zult gij aftekenen tot waar men komt te Hamath; en de uitgangen van deze grens zullen zijn naar Zedad.
-
 9 En deze grens zal uitgaan naar Zifron, en haar uitgangen zullen zijn te Hazar-Enan; dit zal u de noordgrens zijn.
-
 10 Voorts zult gij u tot een grens tegen het oosten aftekenen van Hazar-Enan naar Sefam.
-
 11 En deze grens zal afgaan van Sefam naar Ribla, tegen het oosten van Ain; daarna zal deze grens afgaan en strekken langs de oever van de zee Kinnereth oostwaarts.
-
 12 Voorts zal deze grens afgaan langs de Jordaan, en haar uitgangen zullen zijn aan de Zoutzee. Dit zal u zijn het land naar zijn grens rondom.
-
-
-Verdeling van het land
-======================
-
-
+=Verdeling van het land
 13 En Mozes gebood de kinderen Israëls, zeggende: Dit is het land, dat gij door het lot ten erve innemen zult, hetwelk de Heere aan de negen stammen en aan de halve stam te geven geboden heeft.
-
 14 Want de stam van de kinderen der Rubenieten, naar het huis van hun vaderen, en de stam van de kinderen der Gadieten, naar het huis van hun vaderen, hebben ontvangen; alsook de halve stam van Manasse heeft zijn erfenis ontvangen.
-
 15 Twee stammen en een halve stam hebben hun erfenis ontvangen aan deze zijde van de Jordaan, van Jericho oostwaarts tegen de opgang.
-
-
-Benoeming van hen, die het land verdelen zullen
-===============================================
-
-
+=Benoeming van hen, die het land verdelen zullen
 16 Voorts sprak de Heere tot Mozes, zeggende:
-
 17 Dit zijn de namen van de mannen, die u het land ten erve zullen uitdelen: Eleázar, de priester, en Jozua, de zoon van Nun.
-
 18 Daartoe zult gij uit elke stam een overste nemen, om het land ten erve uit te delen.
-
 19 En dit zijn de namen van deze mannen: van de stam van Juda, Kaleb, zoon van Jefunne;
-
 20 En van de stam van de kinderen van Simeon, Semuël, zoon van Ammihud;
-
 21 Van de stam van Benjamin, Elídad, zoon van Chislon;
-
 22 En van de stam van de kinderen van Dan, de overste Bukki, zoon van Jogli;
-
 23 Van de kinderen van Jozef: van de stam van de kinderen van Manasse, de overste Hanniël, zoon van Efod;
-
 24 En van de stam van de kinderen van Efraïm, de overste Kemuël, zoon van Siftan;
-
 25 En van de stam van de kinderen van Zebulon, de overste Elízafan, zoon van Parnach;
-
 26 En van de stam van de kinderen van Issaschar, de overste Paltiël, zoon van Azzan;
-
 27 En van de stam van de kinderen van Aser, de overste Achíhud, zoon van Selómi;
-
 28 En van de stam van de kinderen van Nafthali, de overste Pedáël, zoon van Ammihud.
-
 29 Dit zijn ze, die de Heere geboden heeft, de kinderen Israëls de erfenissen uit te delen, in het land Kanaän.
-
-
-
-
-
-
-
-De steden voor de Levieten, en de zes vrijsteden
-================================================
-
-
-
-
-35
-==
-
+=De steden voor de Levieten, en de zes vrijsteden
+#35
 1 En de Heere sprak tot Mozes, in de vlakke velden der Moabieten, aan de Jordaan van Jericho, zeggende:
-
 2 Gebied de kinderen Israëls, dat zij van de erfenis van hun bezitting aan de Levieten steden zullen geven om te bewonen; daartoe zult gij aan de Levieten weidegronden geven, aan de steden, rondom deze.
-
 3 En die steden zullen zij hebben om te bewonen; maar hun weidegronden zullen zijn voor hun beesten, en voor hun have, en voor al hun gedierte,
-
 4 En de weidegronden der steden, die gij aan de Levieten zult geven, zullen van de stadsmuur af, en naar buiten, van duizend ellen zijn rondom.
-
 5 En gij zult meten van buiten de stad, aan de hoek tegen het oosten, twee duizend ellen, en aan de hoek van het zuiden, twee duizend ellen, en aan de hoek van het westen, twee duizend ellen, en aan de hoek van het noorden, twee duizend ellen; dat de stad in het midden zij. Dit zullen zij hebben tot weidegronden van de steden.
-
 6 De steden nu, die gij aan de Levieten zult geven, zullen zijn zes vrijsteden, die gij geven zult, opdat de doodslager daarheen vluchte; en daarenboven zult gij hun twee en veertig steden geven.
-
 7 Al de steden, die gij aan de Levieten geven zult, zullen zijn acht en veertig steden, deze met hun weidegronden.
-
 8 De steden, die gij van de bezitting van de kinderen Israëls geven zult, gij zult van hem, die er veel heeft, veel nemen, en van hem, die er weinig heeft, weinig nemen; een ieder zal naar zijn erfenis, die zij zullen erven, van zijn steden aan de Levieten geven.
-
 9 Voorts sprak de Heere tot Mozes, zeggende:
-
 10 Spreek tot de kinderen Israëls, en zeg tot hen: Wanneer gij over de Jordaan gaat naar het land Kanaän,
-
 11 Zo zult gij maken, dat u steden tegemoet liggen, die u tot vrijsteden zullen zijn; opdat de doodslager daarheen vluchte, die een ziel zonder opzet geslagen heeft.
-
 12 En deze steden zullen u tot een toevlucht zijn voor de bloedwreker; opdat de doodslager niet sterve, totdat hij voor de vergadering in het gericht gestaan heeft.
-
 13 En deze steden, die gij geven zult, zullen zes vrijsteden voor u zijn.
-
 14 Drie van deze steden zult gij geven op deze zijde van de Jordaan, en drie van deze steden zult gij geven in het land Kanaän; vrijsteden zullen het zijn.
-
 15 Die zes steden zullen voor de kinderen Israëls, en voor de vreemdeling, en de bijwoner in het midden van hen, tot een toevlucht zijn; opdat daarheen vluchte, wie een ziel zonder opzet slaat.
-
 16 Maar indien hij hem met een ijzeren instrument geslagen heeft, dat hij gestorven is, een doodslager is hij; deze doodslager zal voorzeker gedood worden.
-
 17 Of indien hij hem met een handsteen, waarvan men zou kunnen sterven, geslagen heeft, dat hij gestorven is, een doodslager is hij; deze doodslager zal voorzeker gedood worden.
-
 18 Of indien hij hem met een houten handinstrument, waarvan men zou kunnen sterven, geslagen heeft, dat hij gestorven is, een doodslager is hij; deze doodslager zal voorzeker gedood worden.
-
 19 De bloedwreker, die zal de doodslager doden; als hij hem ontmoet, zal hij hem doden.
-
 20 Indien hij hem ook door haat zal gestoten hebben, of met opzet op hem geworpen heeft, dat hij gestorven is;
-
 21 Of hem door vijandschap met zijn hand geslagen heeft, dat hij gestorven is; hij, die geslagen heeft zal voorzeker gedood worden, een doodslager is hij; de bloedwreker zal deze doodslager doden, als hij hem ontmoet.
-
 22 Maar indien hij hem metterhaast, zonder vijandschap gestoten heeft, of enig instrument zonder opzet op hem geworpen heeft;
-
 23 Of zonder opzet met enige steen, waarvan men zou kunnen sterven, en hij die op hem heeft doen vallen, dat hij gestorven is, zo hij toch zijn vijand niet was, noch zijn kwaad zoekende;
-
 24 Zo zal de vergadering richten tussen hem, die geslagen heeft, en tussen de bloedwreker, naar deze rechten.
-
 25 En de vergadering zal de doodslager redden uit de hand van de bloedwreker, en de vergadering zal hem doen weerkeren tot zijn vrijstad, waarheen hij gevlucht was; en hij zal daarin blijven tot de dood van de hogepriester, die men met de heilige olie gezalfd heeft.
-
 26 Doch indien de doodslager enigszins zal gaan uit het gebied van zijn vrijstad, waarheen hij gevlucht was,
-
 27 En de bloedwreker hem zal vinden buiten het gebied van zijn vrijstad; zo de bloedwreker de doodslager zal doden, het zal hem geen bloedschuld zijn.
-
 28 Want hij behoorde in zijn vrijstad gebleven te zijn tot de dood van de hogepriester; maar na de dood van de hogepriester zal de doodslager weerkeren tot het land van zijn bezitting.
-
 29 En deze dingen zullen u zijn tot een inzetting van recht, bij uw geslachten, in al uw woningen.
-
 30 Al wie een ziel slaat, naar de mond der getuigen zal men de doodslager doden, maar een enkele getuige zal niet getuigen tegen een ziel, dat zij sterft.
-
 31 En gij zult geen verzoening nemen voor de ziel van de doodslager, die schuldig is te sterven; want hij zal voorzeker gedood worden.
-
 32 Ook zult gij geen verzoening nemen voor hem, die gevlucht is naar zijn vrijstad, dat hij zou weerkeren, om te wonen in het land, tot de dood van de hogepriester.
-
 33 Zo zult gij niet ontheiligen het land, waarin gij zijt; want het bloed ontheiligt het land; en voor het land zal geen verzoening gedaan worden over het bloed, dat daarin vergoten is, dan door het bloed van hem, die dat vergoten heeft.
-
 34 Verontreinigt dan het land niet, waarin gij gaat wonen, in welks midden Ik wonen zal; want Ik ben de Heere, wonende in het midden van de kinderen Israëls.
-
-
-
-
-
-
-
-Huwelijksverbod aan erfdochters buiten hun stam
-===============================================
-
-
-
-
-36
-==
-
+=Huwelijksverbod aan erfdochters buiten hun stam
+#36
 1 En de hoofden der vaderen van het geslacht van de kinderen van Gilead, de zoon van Machir, de zoon van Manasse, uit de geslachten van de kinderen van Jozef, traden toe, en spraken voor het aangezicht van Mozes, en voor het aangezicht van de oversten, hoofden van de vaderen van de kinderen Israëls.
-
 2 En zeiden: De Heere heeft mijn heer geboden, dat land door het lot aan de kinderen Israëls in erfenis te geven; en mijn heer is door de Heere geboden, de erfenis van onze broeder Zeláfead te geven aan zijn dochters.
-
 3 Wanneer zij een van de zonen van de andere stammen van de kinderen Israëls tot vrouwen zouden worden, zo zou hun erfenis van de erfenis van onze vaderen afgetrokken worden, en toegedaan tot de erfenis van die stam, waaraan zij geworden zouden; alzo zou van het lot van onze erfenis worden afgetrokken.
-
 4 Als ook de kinderen Israëls een jubeljaar zullen hebben, zo zou hun erfenis toegedaan zijn tot de erfenis van die stam, waaraan zij zouden geworden zijn; alzo zou hun erfenis van de erfenis van de stam van onze vaderen afgetrokken worden.
-
 5 Toen gebood Mozes de kinderen Israëls, naar de mond des Heeren, zeggende: De stam van de kinderen van Jozef spreekt recht.
-
 6 Dit is het woord, dat de Heere over de dochters van Zeláfead geboden heeft, zeggende: Laat zij die tot vrouwen worden, die in hun ogen goed zal zijn; alleen, dat zij aan het geslacht van de stam van hun vader tot vrouwen worden.
-
 7 Zo zal de erfenis van de kinderen Israëls niet omgewend worden van stam tot stam; want de kinderen Israëls zullen vasthouden, een ieder aan de erfenis van de stam van zijn vaderen.
-
 8 Voorts zal elke dochter, die een erfenis erft, van de stammen van de kinderen Israëls, tot vrouw worden aan één van het geslacht van de stam van haar vader; opdat de kinderen Israëls erfelijk bezitten, een ieder de erfenis van zijn vaderen.
-
 9 Zo zal de erfenis niet omgewend worden van de ene stam tot de andere; want de stammen van de kinderen Israëls zullen vasthouden, een ieder aan zijn erfenis.
-
 10 Zoals de Heere Mozes geboden had, alzo deden de dochters van Zeláfead;
-
 11 Want Machla, Tirza, en Hogla, en Milka, en Noa, dochters van Zeláfead, zijn de zonen van hun oom tot vrouwen geworden.
-
 12 Onder de geslachten van de kinderen van Manasse, de zoon van Jozef, zijn zij tot vrouwen geworden; alzo bleef hun erfenis aan de stam van het geslacht van hun vader.
-
 13 Dat zijn de geboden en de rechten, die de Heere door de dienst van Mozes aan de kinderen Israëls geboden heeft, in de vlakke velden der Moabieten, aan de Jordaan van Jericho.
-
-
-
-
