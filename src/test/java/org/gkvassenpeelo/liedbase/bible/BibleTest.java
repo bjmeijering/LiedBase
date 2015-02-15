@@ -41,10 +41,20 @@ public class BibleTest {
 			fail("Something went wrong: " + e.getMessage());
 		}
 	}
+	
+	@Test
+	public void getBiblePartTestFromHtml() throws Exception {
+		List<BiblePartFragment> bp = Bible.getBiblePartFromHtml("bgt", "genesis", 1, 1, 2);
+		
+		assertEquals("superScript", bp.get(0).getDisplayType().toString());
+		assertEquals("1", bp.get(0).getContent());
+		assertEquals("normal", bp.get(1).getDisplayType().toString());
+		assertEquals("In het begin maakte God de hemel en de aarde. ", bp.get(1).getContent());
+	}
 
 	@Test
-	public void getBiblePartTest() throws Exception {
-		List<BiblePartFragment> bp = Bible.getBiblePartFromHtml("bgt", "genesis", 1, 1, 2);
+	public void getBiblePartTestFromText() throws Exception {
+		List<BiblePartFragment> bp = Bible.getBiblePartFromText("bgt", "genesis", 1, 1, 2);
 
 		assertEquals("superScript", bp.get(0).getDisplayType().toString());
 		assertEquals("1", bp.get(0).getContent());

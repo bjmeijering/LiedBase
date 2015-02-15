@@ -160,7 +160,6 @@ public class Bible {
 
 		Scanner s = null;
 
-		Document doc;
 		try {
 			s = new Scanner(ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".txt"));
 		} catch (NullPointerException e) {
@@ -171,12 +170,18 @@ public class Bible {
 
 			String line = s.nextLine();
 
-			if (line.matches(String.format("#%s", book))) {
+			if (line.matches(String.format("#%s", chapter))) {
 				// we have the line number on which the book starts
-				// continue reading from that line again until we end up on
+				// continue reading from that line, char by char, until we end up on
 				// the right verse
 				while (s.hasNextLine()) {
-					String songLine = s.nextLine();
+					line = s.nextLine();
+
+					// check to see if we are reading the next chapter, if so, return the BiblePartFragment List
+					if (line.startsWith(String.format("#%s", chapter + 1))) {
+						s.close();
+						return fragmentList;
+					}
 
 					StringBuilder sb = new StringBuilder();
 					CharType prevCharType = null;
@@ -185,66 +190,51 @@ public class Bible {
 					// determine the versenumber at the start of the line and continue reading character by character
 					for (Character c : line.toCharArray()) {
 
-						// handle first round
+						// handle first char and determine displayType
 						if (prevCharType == null) {
 							sb.append(Character.toUpperCase(c));
 							prevCharType = getCharType(c);
 							continue;
 						}
 
-						if (prevCharType == CharType.number && getCharType(c) == CharType.number) {
+						// reading a multidigit number
+						if (prevCharType == CharType.number && getCharType(c) == CharType.dash) {
+							// TODO handle multi verse indicator
 							sb.append(c);
 							continue;
 						}
 
+						// reading a string
 						if (prevCharType == CharType.character && getCharType(c) == CharType.character) {
 							sb.append(c);
 							continue;
 						}
 
+						// end of a verse
 						if (prevCharType == CharType.character && getCharType(c) == CharType.number) {
-							sb.append(" ");
-							sb.append(c);
+							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
 							prevCharType = getCharType(c);
+							sb = new StringBuilder();
+							sb.append(c);
 							continue;
 						}
 
+						// end of a versenumber
 						if (prevCharType == CharType.number && getCharType(c) == CharType.character) {
-							sb.append(" ");
-							if (line.indexOf(c) < 3) {
-								sb.append(Character.toUpperCase(c));
-							} else {
-								sb.append(c);
-
-							}
+							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
 							prevCharType = getCharType(c);
-							continue;
-						}
-
-						if (getCharType(c) == CharType.colon) {
+							sb = new StringBuilder();
 							sb.append(c);
-							sb.append(" ");
-							prevCharType = getCharType(c);
 							continue;
 						}
-
-						if (getCharType(c) == CharType.comma) {
-							sb.append(c);
-							sb.append(" ");
-							prevCharType = getCharType(c);
-							continue;
-						}
-
-						sb.append(c);
-
 					}
-					
-					fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
 				}
 			}
 		}
-		
-		return fragmentList;
+
+		s.close();
+
+		return null;
 	}
 
 	private String extractBibleChapterFromHtml(String result) {
@@ -598,17 +588,17 @@ public class Bible {
 			// do nothing
 		}
 
-		if ("-".equals(String.valueOf(c))) {
-			return CharType.dash;
-		}
-
-		if (",".equals(String.valueOf(c))) {
-			return CharType.comma;
-		}
-
-		if (":".equals(String.valueOf(c))) {
-			return CharType.colon;
-		}
+		// if ("-".equals(String.valueOf(c))) {
+		// return CharType.dash;
+		// }
+		//
+		// if (",".equals(String.valueOf(c))) {
+		// return CharType.comma;
+		// }
+		//
+		// if (":".equals(String.valueOf(c))) {
+		// return CharType.colon;
+		// }
 
 		return CharType.character;
 	}
