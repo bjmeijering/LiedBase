@@ -54,12 +54,21 @@ public class BibleTest {
 
 	@Test
 	public void getBiblePartTestFromText() throws Exception {
+		// test getfirst verse of a first chapter
 		List<BiblePartFragment> bp = Bible.getBiblePartFromText("bgt", "genesis", 1, 1, 2);
-
+		
 		assertEquals("superScript", bp.get(0).getDisplayType().toString());
 		assertEquals("1", bp.get(0).getContent());
 		assertEquals("normal", bp.get(1).getDisplayType().toString());
-		assertEquals("In het begin maakte God de hemel en de aarde. ", bp.get(1).getContent());
+		assertEquals("In het begin maakte God de hemel en de aarde.", bp.get(1).getContent());
+		
+		// test a verse from the middle of a chapter
+		bp = Bible.getBiblePartFromText("bgt", "genesis", 1, 13, 17);
+
+		assertEquals("superScript", bp.get(0).getDisplayType().toString());
+		assertEquals("13", bp.get(0).getContent());
+		assertEquals("normal", bp.get(1).getDisplayType().toString());
+		assertEquals("Toen werd het avond en het werd ochtend. Dat was de derde dag.", bp.get(1).getContent());
 	}
 
 	@Test

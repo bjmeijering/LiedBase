@@ -3,7 +3,7 @@ package org.gkvassenpeelo.liedbase.bible;
 public class BiblePartFragment {
 
     public enum DisplayType {
-        normal, superScript, italic
+        normal, superScript, italic, line_end
     };
 
     private DisplayType displayType;

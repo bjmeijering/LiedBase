@@ -267,7 +267,7 @@ public class LiedBase {
 			int toVerse = Bible.getEndVerseFromLine(line);
 			String translation = Bible.getTranslationFromLine(line);
 
-			List<BiblePartFragment> biblePart = Bible.getBiblePartFromHtml(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
+			List<BiblePartFragment> biblePart = Bible.getBiblePartFromText(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
 
 			line = format(line, LiturgyPart.Type.scripture);
 

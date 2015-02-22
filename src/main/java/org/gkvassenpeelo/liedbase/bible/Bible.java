@@ -35,7 +35,7 @@ public class Bible {
 	private String url = "https://www.debijbel.nl/bijbel/zoeken/%s/%s+%s";
 
 	private enum CharType {
-		number, character, dash, colon, comma
+		number, character, dash, colon, comma, space
 	}
 
 	private static String LINE_END = System.getProperty("line.separator");
@@ -158,6 +158,7 @@ public class Bible {
 		book = book.replaceAll("ï", "i");
 		book = book.replaceAll("ü", "u");
 
+		boolean addVerse = false;
 		Scanner s = null;
 
 		try {
@@ -198,6 +199,12 @@ public class Bible {
 						}
 
 						// reading a multidigit number
+						if (prevCharType == CharType.number && getCharType(c) == CharType.number) {
+							sb.append(c);
+							continue;
+						}
+
+						// reading a multidigit number
 						if (prevCharType == CharType.number && getCharType(c) == CharType.dash) {
 							// TODO handle multi verse indicator
 							sb.append(c);
@@ -212,22 +219,60 @@ public class Bible {
 
 						// end of a verse
 						if (prevCharType == CharType.character && getCharType(c) == CharType.number) {
-							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
+							if (addVerse) {
+								fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
+							}
 							prevCharType = getCharType(c);
 							sb = new StringBuilder();
 							sb.append(c);
 							continue;
 						}
 
-						// end of a versenumber
+						// end of a verse number
 						if (prevCharType == CharType.number && getCharType(c) == CharType.character) {
-							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
-							prevCharType = getCharType(c);
-							sb = new StringBuilder();
+
+							if (!String.valueOf(c).equals(" ")) {
+								// determine verse number to see if we should start or stop adding stuff to the fragment list
+								try {
+									if (Integer.parseInt(sb.toString()) >= fromVerse && Integer.parseInt(sb.toString()) <= toVerse) {
+										fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
+										addVerse = true;
+									}
+									if (Integer.parseInt(sb.toString()) > toVerse) {
+										s.close();
+										return fragmentList;
+									}
+								} catch (NumberFormatException e) {
+									// TODO verse number probably contains a dash, handle it!
+								}
+								prevCharType = getCharType(c);
+								sb = new StringBuilder();
+							} else {
+								// the previous 'verse number' appeared to be a textual number. Rebuild the StringBuilder with the last added verse text, remove it from the
+								// fragment list and create a new stringbuilder from it. 
+								// 'nothing to see here people, move on!'
+								StringBuilder tmpSb = new StringBuilder();
+								tmpSb.append(fragmentList.get(fragmentList.size()-1).getContent());
+								tmpSb.append(sb);
+								sb = tmpSb;
+								fragmentList.remove(fragmentList.size()-1);
+								prevCharType = CharType.character;
+							}
 							sb.append(c);
 							continue;
 						}
 					}
+
+					// new line encountered
+					if (addVerse) {
+						if (prevCharType == CharType.character) {
+							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
+							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.line_end, LINE_END));
+						} else {
+							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
+						}
+					}
+
 				}
 			}
 		}
@@ -587,14 +632,6 @@ public class Bible {
 		} catch (NumberFormatException e) {
 			// do nothing
 		}
-
-		// if ("-".equals(String.valueOf(c))) {
-		// return CharType.dash;
-		// }
-		//
-		// if (",".equals(String.valueOf(c))) {
-		// return CharType.comma;
-		// }
 		//
 		// if (":".equals(String.valueOf(c))) {
 		// return CharType.colon;

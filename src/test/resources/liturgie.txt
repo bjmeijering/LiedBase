@@ -1,7 +1,4 @@
-agenda
-psalmen 92
-Psalmen 92: 1-16
-opwekking 595
-opwekking 614
-2 petrus 1: 1-3
-3 johannes 1
+psalm 100:2
+genesis 5: 3-6
+genesis 2: 22-24
+#3 johannes 1

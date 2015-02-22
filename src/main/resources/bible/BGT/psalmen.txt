@@ -62,7 +62,7 @@ Gelukkig zijn mensen die hulp zoeken bij de Heer.
 =Psalm 3
 #3
 1Een lied van David.
-David maakte dit lied toen hij moest vluchten voor zijn zoon Absalom.2Heer, mijn vijanden vallen mij aan,
+David maakte dit lied toen hij moest vluchten voor zijn zoon Absalom. 2Heer, mijn vijanden vallen mij aan,
 het zijn er ontelbaar veel.
 3Ze zeggen tegen mij:
 'God zal je niet redden!'
@@ -198,7 +198,7 @@ Plotseling zijn ze verdwenen.
 =Psalm 7
 #7
 1Een klaaglied van David.
-David heeft dit lied voor de Heer gezongen. Het gaat over Kus, een man uit de stam Benjamin.2Heer, mijn God, bescherm mij,
+David heeft dit lied voor de Heer gezongen. Het gaat over Kus, een man uit de stam Benjamin. 2Heer, mijn God, bescherm mij,
 help mij, red mij!
 Want mijn vijanden jagen op mij.
 3Ze willen me grijpen,
@@ -613,7 +613,7 @@ elke ochtend weer.
 =Psalm 18
 #18
 1Een lied van David, de dienaar van de Heer. Voor de zangleider.
-David zong dit lied om de Heer te danken. Want de Heer had hem gered van Saul en van zijn andere vijanden.2Ik heb u lief, Heer.
+David zong dit lied om de Heer te danken. Want de Heer had hem gered van Saul en van zijn andere vijanden. 2Ik heb u lief, Heer.
 U geeft mij kracht.
 3U beschermt me, bij u ben ik veilig.
 God, bij u kan ik me verbergen.
@@ -1263,7 +1263,7 @@ hij zal zijn volk vrede geven.
 =Psalm 30
 #30
 1Een lied van David.
-Dit lied is gemaakt toen de tempel in gebruik genomen werd.2Heer, ik breng u eer.
+Dit lied is gemaakt toen de tempel in gebruik genomen werd. 2Heer, ik breng u eer.
 U hebt mijn leven gered!
 Daarom konden mijn vijanden niet juichen,
 ze konden niet juichen over mijn dood.
@@ -1486,7 +1486,7 @@ Op u vertrouwen wij.
 =Psalm 34
 #34
 1Een lied van David.
-David maakte dit lied toen hij bij koning Abimelech was. David deed daar alsof hij gek was. Toen stuurde Abimelech hem weg.2Altijd wil ik de Heer danken,
+David maakte dit lied toen hij bij koning Abimelech was. David deed daar alsof hij gek was. Toen stuurde Abimelech hem weg. 2Altijd wil ik de Heer danken,
 elke dag zing ik een lied voor hem.
 3Ik zal juichen voor de Heer
 vanuit het diepst van mijn hart.
@@ -2688,7 +2688,7 @@ Maar ik, ik mag op God vertrouwen.
 =Psalm 56
 #56
 1Een gebed van David. Voor de zangleider. Op de wijs van het lied 'Een stille duif in de verte'.
-David sprak dit gebed uit toen de Filistijnen hem gevangennamen in de stad Gat.2Help mij, God,
+David sprak dit gebed uit toen de Filistijnen hem gevangennamen in de stad Gat. 2Help mij, God,
 want mijn vijanden achtervolgen mij.
 Steeds vallen ze me aan,
 3telkens proberen ze me te grijpen.
@@ -2731,7 +2731,7 @@ Ik mag leven in uw licht.
 =Psalm 57
 #57
 1Een gebed van David. Voor de zangleider. Op de wijs van het lied 'Vernietig mij niet'.
-David sprak dit gebed uit toen hij voor koning Saul gevlucht was en zich in een grot verstopt had.2Help mij, God, help mij,
+David sprak dit gebed uit toen hij voor koning Saul gevlucht was en zich in een grot verstopt had. 2Help mij, God, help mij,
 want bij u ben ik veilig.
 U zult mij beschermen
 totdat het gevaar voorbij is.
@@ -2805,7 +2805,7 @@ Er is een God die eerlijk rechtspreekt op aarde.'
 =Psalm 59
 #59
 1Een gebed van David. Voor de zangleider. Op de wijs van het lied 'Vernietig mij niet'.
-David sprak dit gebed uit toen koning Saul bewakers naar Davids huis gestuurd had. Zij moesten David doden als hij naar buiten kwam.2God, bescherm mij tegen mijn vijanden,
+David sprak dit gebed uit toen koning Saul bewakers naar Davids huis gestuurd had. Zij moesten David doden als hij naar buiten kwam. 2God, bescherm mij tegen mijn vijanden,
 red mij van mijn tegenstanders.
 3Red mij van die misdadigers,
 houd die moordenaars tegen!
@@ -2867,7 +2867,7 @@ u blijft mij trouw.
 =Psalm 60
 #60
 1Een gebed van David, een les. Voor de zangleider. Op de wijs van het lied 'De lelie van de wet'.
-2David sprak dit gebed uit toen hij oorlog voerde tegen de Arameeërs uit Naharaïm en Soba. Joab leidde het leger van David. Op de terugweg naar Israël versloeg hij in het Zoutdal 12.000 mannen uit Edom.
+2David sprak dit gebed uit toen hij oorlog voerde tegen de Arameeërs uit Naharaïm en Soba. Joab leidde het leger van David. Op de terugweg naar Israël versloeg hij in het Zoutdal 12. 000 mannen uit Edom.
 =De koning bidt voor zijn volk
 3God, u wilt ons niet meer zien!
 U hebt ons alle kanten op gejaagd,
@@ -2977,7 +2977,7 @@ U geeft aan ieder mens wat hij verdient.
 =Psalm 63
 #63
 1Een lied van David.
-David maakte dit lied toen hij gevlucht was naar de woestijn van Juda.2God, u bent mijn God!
+David maakte dit lied toen hij gevlucht was naar de woestijn van Juda. 2God, u bent mijn God!
 Ik zoek u,
 met heel mijn hart verlang ik naar u,
 mijn hele lichaam verlangt naar u.
@@ -7137,7 +7137,7 @@ en laat mij ontsnappen.
 =Psalm 142
 #142
 1Een lied van David.
-David sprak dit gebed uit toen hij gevlucht was en zich in een grot verstopt had.2Ik roep naar de Heer,
+David sprak dit gebed uit toen hij gevlucht was en zich in een grot verstopt had. 2Ik roep naar de Heer,
 ik smeek hem om hulp.
 3Al mijn zorgen spreek ik uit,
 ik vertel hem over mijn ellende.
