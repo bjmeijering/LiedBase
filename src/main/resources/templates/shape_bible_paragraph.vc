@@ -1,0 +1,15 @@
+<w:p xmlns:w ="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+#foreach(${fragment} in ${fragments})
+	<w:r>
+#if(${fragment.getDisplayType()} == "superScript")
+		<w:rPr>
+			<w:vertAlign w:val="superscript"/>
+		</w:rPr>
+#end
+#if(${fragment.getDisplayType()} == "line_end")
+		<w:br/>
+#end
+		<w:t>${fragment.getContent()}</w:t>
+	</w:r>
+#end
+</w:p>
