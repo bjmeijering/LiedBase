@@ -279,7 +279,7 @@ public class Bible {
 
 		s.close();
 
-		return null;
+		return fragmentList;
 	}
 
 	private String extractBibleChapterFromHtml(String result) {
