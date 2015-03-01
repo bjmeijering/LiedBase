@@ -44,6 +44,22 @@ public class SongBook {
 
 		Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiedBase.ENCODING);
 
+		int songInteger = 0;
+		int verseInteger = 0;
+		String songNumberPostfix = "";
+		String nextSongNumberPostfix = "";
+
+		verseInteger = Integer.parseInt(verse);
+
+		if (songNumber.matches("^[0-9]+$")) {
+			songInteger = Integer.parseInt(songNumber);
+		} else if (songNumber.matches("^[0-9]+[a-z]{1}$")) {
+			songInteger = Integer.parseInt(songNumber.substring(0, songNumber.length() - 1));
+			songNumberPostfix = songNumber.substring(songNumber.length() - 1, songNumber.length());
+			int charValue = songNumberPostfix.charAt(0);
+			nextSongNumberPostfix = String.valueOf((char) (charValue + 1));
+		}
+
 		while (s.hasNextLine()) {
 
 			String line = s.nextLine();
@@ -53,18 +69,37 @@ public class SongBook {
 				// continue reading from that line again until we end up on
 				// the right verse
 				while (s.hasNextLine()) {
-					String songLine = s.nextLine();
+					line = s.nextLine();
 
-					if (songLine.equals(verse)) {
+					if (line.equals(verse)) {
 						while (s.hasNextLine()) {
-							String verseLine = s.nextLine();
-							if (StringUtils.isEmpty(verseLine)) {
+							line = s.nextLine();
+							// reading next song, return
+							if (line.matches(String.format("^%s %s%s:.*$", songIdentifier, songInteger + 1, songNumberPostfix))) {
 								s.close();
+
+								cleanup(songText);
 								return songText;
 							}
-							songText.add(new SongLine(SongLine.DisplayType.normal, verseLine));
+							if (line.matches(String.format("^%s %s%s:.*$", songIdentifier, songInteger, nextSongNumberPostfix))) {
+								s.close();
+
+								cleanup(songText);
+								return songText;
+							}
+							// reading next verse, return
+							if (line.equals("" + (verseInteger + 1))) {
+								s.close();
+
+								cleanup(songText);
+								return songText;
+							}
+							songText.add(new SongLine(SongLine.DisplayType.normal, line));
 						}
 						s.close();
+
+						// remove last white line
+						cleanup(songText);
 						return songText;
 					}
 				}
@@ -75,6 +110,12 @@ public class SongBook {
 
 		songText.add(new SongLine(SongLine.DisplayType.normal, String.format("Geen tekst gevonden voor %s %s: %s", type.toString(), songNumber, verse)));
 		return songText;
+	}
+
+	private static void cleanup(List<SongLine> songText) {
+		if (((SongLine) songText.get(songText.size() - 1)).getContent().equals("")) {
+			songText.remove(songText.size() - 1);
+		}
 	}
 
 	public static List<List<SongLine>> getOpwekkingSongTekst(String songNumber) {
