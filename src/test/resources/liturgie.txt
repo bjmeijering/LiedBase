@@ -2,7 +2,7 @@ agenda
 gezang 179a
 gezang 39
 efeziers 6: 10-24
-psalm 100:2
-genesis 5: 3-6
+psalm 100
+genesis 5
 genesis 1: 28-31
 #3 johannes 1
