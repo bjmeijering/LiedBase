@@ -26,7 +26,7 @@ import org.jsoup.select.Elements;
 
 public class Bible {
 
-	static final Logger logger = Logger.getLogger(BibleTest.class);
+	static final Logger logger = Logger.getLogger(Bible.class);
 
 	private static final String ENCODING = "UTF-8";
 
