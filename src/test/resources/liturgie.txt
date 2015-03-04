@@ -45,6 +45,8 @@ opwekking 13
 ezechiel 2:1-3
 #voorbeeld2: genereert 1 sheet met alle tekst uit hoofdstuk 2 van het boek Marcus uit de BGT
 marcus 2 (BGT)
+#voorbeeld2: genereert 1 sheet met alle tekst uit hoofdstuk 1 van het boek 3 Johannes uit de SV77
+3 johannes 1 (SV77)
 
 #gebed - genereert een sheet met de 2 handen
 gebed

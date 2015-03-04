@@ -162,7 +162,7 @@ public class Bible {
 		Scanner s = null;
 
 		try {
-			s = new Scanner(ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".txt"));
+			s = new Scanner(ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book.replace(" ", "_") + ".txt"));
 		} catch (NullPointerException e) {
 			throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
 		}
@@ -352,14 +352,14 @@ public class Bible {
 	}
 
 	public static String getTranslationFromLine(String line) throws BibleException {
-		if (line.trim().matches(".*\\([a-zA-Z]{1,3}\\)$")) {
+		if (line.trim().matches(".*\\([a-zA-Z7]{1,4}\\)$")) {
 			if (line.toLowerCase().trim().endsWith("(nbv)")) {
 				return "NBV";
 			} else if (line.toLowerCase().trim().endsWith("(bgt)")) {
 				return "BGT";
 			} else if (line.toLowerCase().trim().endsWith("(nbg)")) {
 				return "NBG51";
-			} else if (line.toLowerCase().trim().endsWith("(sv)")) {
+			} else if (line.toLowerCase().trim().endsWith("(sv77)")) {
 				return "SV77";
 			} else {
 				throw new BibleException("Onbekende vertaling in regel: " + line);

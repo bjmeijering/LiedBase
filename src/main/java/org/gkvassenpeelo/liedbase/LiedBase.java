@@ -292,15 +292,30 @@ public class LiedBase {
 		// replace incorrect characters
 		line = replaceForbiddenChars(line);
 
+		boolean justCopy = false;
+
 		CharType prevCharType = null;
 
 		for (Character c : line.toCharArray()) {
+
+			if (justCopy) {
+				sb.append(c);
+				continue;
+			}
 
 			// handle first round
 			if (prevCharType == null) {
 				sb.append(Character.toUpperCase(c));
 				prevCharType = getCharType(c);
 				continue;
+			}
+
+			// handle braces
+			if (String.valueOf(c).equals(")")) {
+				justCopy = false;
+			}
+			if (String.valueOf(c).equals("(")) {
+				justCopy = true;
 			}
 
 			if (prevCharType == CharType.number && getCharType(c) == CharType.number) {
