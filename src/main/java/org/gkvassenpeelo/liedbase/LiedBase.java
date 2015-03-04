@@ -156,7 +156,7 @@ public class LiedBase {
 
 		while (st.hasMoreTokens()) {
 			String line = st.nextToken();
-			if (!line.startsWith("#") && !StringUtils.isEmpty(line.trim())) {
+			if (!line.trim().startsWith("#") && !StringUtils.isEmpty(line.trim())) {
 				parseLiturgyScriptLine(line);
 			}
 		}

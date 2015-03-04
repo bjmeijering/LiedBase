@@ -37,9 +37,7 @@
                                 <a:r>
 									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
 										<a:solidFill>
-											<a:schemeClr val="tx1">
-												<a:lumMod val="95000"/>
-											</a:schemeClr>
+											<a:srgbClr val="000000"/>
 										</a:solidFill>
 										<a:effectLst/>
 									</a:rPr>
@@ -75,9 +73,7 @@
                                 <a:r>
 									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
 										<a:solidFill>
-											<a:schemeClr val="tx1">
-												<a:lumMod val="95000"/>
-											</a:schemeClr>
+											<a:srgbClr val="000000"/>
 										</a:solidFill>
 										<a:effectLst/>
 									</a:rPr>
@@ -113,9 +109,7 @@
                                 <a:r>
 									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
 										<a:solidFill>
-											<a:schemeClr val="tx1">
-												<a:lumMod val="95000"/>
-											</a:schemeClr>
+											<a:srgbClr val="000000"/>
 										</a:solidFill>
 										<a:effectLst/>
 									</a:rPr>
@@ -151,9 +145,7 @@
                                 <a:r>
 									<a:rPr lang="nl-NL" dirty="false" smtClean="false">
 										<a:solidFill>
-											<a:schemeClr val="tx1">
-												<a:lumMod val="95000"/>
-											</a:schemeClr>
+											<a:srgbClr val="000000"/>
 										</a:solidFill>
 										<a:effectLst/>
 									</a:rPr>
