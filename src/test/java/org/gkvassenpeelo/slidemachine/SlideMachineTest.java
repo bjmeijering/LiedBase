@@ -6,8 +6,6 @@ import java.util.List;
 import javax.xml.bind.JAXBException;
 
 import org.docx4j.XmlUtils;
-import org.docx4j.dml.CTTextBody;
-import org.docx4j.dml.CTTextParagraph;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
@@ -63,18 +61,18 @@ public class SlideMachineTest {
 				System.out.println(indent + o.getClass().getName());
 			}
 
-			if (o instanceof org.pptx4j.pml.Shape) {
-				CTTextBody txBody = ((org.pptx4j.pml.Shape) o).getTxBody();
-				if (txBody != null) {
-					for (CTTextParagraph tp : txBody.getP()) {
-
-						// System.out.println(indent
-						// + XmlUtils.marshaltoString(tp, true, true, org.pptx4j.jaxb.Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "txBody",
-						// CTTextParagraph.class));
-
-					}
-				}
-			}
+//			if (o instanceof org.pptx4j.pml.Shape) {
+//				CTTextBody txBody = ((org.pptx4j.pml.Shape) o).getTxBody();
+//				if (txBody != null) {
+//					for (CTTextParagraph tp : txBody.getP()) {
+//
+//						// System.out.println(indent
+//						// + XmlUtils.marshaltoString(tp, true, true, org.pptx4j.jaxb.Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "txBody",
+//						// CTTextParagraph.class));
+//
+//					}
+//				}
+//			}
 		}
 	}
 

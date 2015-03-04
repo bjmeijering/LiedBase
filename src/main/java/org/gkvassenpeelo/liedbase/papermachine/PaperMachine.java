@@ -22,7 +22,6 @@ import org.docx4j.wml.ObjectFactory;
 import org.docx4j.wml.P;
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
@@ -78,6 +77,7 @@ public class PaperMachine {
 		}
 	}
 
+	@SuppressWarnings("deprecation")
 	private void addLiturgyPartToDocument(LiturgyPart lp) throws JAXBException {
 		if (!liturgyPartsToPrint.contains(lp.getType())) {
 			return;
