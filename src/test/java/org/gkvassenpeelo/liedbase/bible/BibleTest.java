@@ -43,6 +43,7 @@ public class BibleTest {
 	}
 	
 	@Test
+	@Ignore // bible text from html is not that important anymore...
 	public void getBiblePartTestFromHtml() throws Exception {
 		List<BiblePartFragment> bp = Bible.getBiblePartFromHtml("bgt", "genesis", 1, 1, 2);
 		

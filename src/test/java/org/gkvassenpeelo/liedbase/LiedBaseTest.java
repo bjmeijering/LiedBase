@@ -11,6 +11,7 @@ import org.gkvassenpeelo.liedbase.papermachine.PaperMachineException;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class LiedBaseTest {
@@ -23,6 +24,7 @@ public class LiedBaseTest {
 	}
 
 	@Test
+	@Ignore
 	public void liedBasetest() throws LiedBaseError, Docx4JException, BibleException, SlideMachineException, PaperMachineException {
 
 		lb.setSourceFile(new File("src/test/resources/liturgie.txt"));
