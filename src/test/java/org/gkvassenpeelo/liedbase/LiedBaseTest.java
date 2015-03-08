@@ -36,7 +36,7 @@ public class LiedBaseTest {
 
 		PaperMachine pm = new PaperMachine(lb.getLiturgy());
 		pm.createDocument();
-		pm.save("D:/Projects/LiedBase/target/LiturgieBoekje.docx");
+		pm.save();
 	}
 
 	@Test

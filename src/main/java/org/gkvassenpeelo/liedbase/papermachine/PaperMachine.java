@@ -1,5 +1,6 @@
 package org.gkvassenpeelo.liedbase.papermachine;
 
+import java.io.File;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +36,8 @@ public class PaperMachine {
 	private MainDocumentPart mainDocumentPart;
 
 	private WordprocessingMLPackage wordMLPackage;
+
+	private File targetFile = new File("LiturgieBoekje.docx");
 
 	private VelocityEngine velocityEngine;
 
@@ -165,9 +168,9 @@ public class PaperMachine {
 		return velocityEngine;
 	}
 
-	public void save(String location) throws PaperMachineException {
+	public void save() throws PaperMachineException {
 		try {
-			wordMLPackage.save(new java.io.File(location));
+			wordMLPackage.save(targetFile);
 		} catch (Docx4JException e) {
 			throw new PaperMachineException(String.format("Error while saving paper machine: %s", e.getMessage()), e);
 		}

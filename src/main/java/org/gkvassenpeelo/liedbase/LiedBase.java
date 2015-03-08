@@ -459,7 +459,7 @@ public class LiedBase {
 
 			PaperMachine pm = new PaperMachine(lb.getLiturgy());
 			pm.createDocument();
-			pm.save("D:/Projects/LiedBase/target/HelloWord.docx");
+			pm.save();
 
 		} catch (Exception e) {
 			logger.error(e.getMessage(), e);
