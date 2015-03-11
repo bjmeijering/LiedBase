@@ -8,7 +8,6 @@
 		<connection>scm:git:git@github.com:hdoedens/LiedBase.git</connection>
 		<url>scm:git:git@github.com:hdoedens/LiedBase.git</url>
 		<developerConnection>scm:git:git@github.com:hdoedens/LiedBase.git</developerConnection>
-    <tag>liedbase-2.2</tag>
   </scm>
 
 	<distributionManagement>
