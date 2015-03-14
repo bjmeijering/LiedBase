@@ -33,11 +33,12 @@ public class LiedBaseTest {
 
 		SlideMachine slideMachine = new SlideMachine(lb.getLiturgy(), lb.getLiturgyView());
 		slideMachine.createSlides();
-		slideMachine.setTargetFile(new File("D:/Projects/LiedBase/target/Presentatie.pptx"));
+		slideMachine.setTargetFile(new File("target/Presentatie.pptx"));
 		slideMachine.save();
 
 		PaperMachine pm = new PaperMachine(lb.getLiturgy());
 		pm.createDocument();
+		pm.setTargetFile(new File("target/LiturgieBoekje.docx"));
 		pm.save();
 	}
 

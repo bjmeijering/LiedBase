@@ -17,15 +17,11 @@
 			<a:r>
 #if(${biblePartFragment.getDisplayType()} == "superScript")
 				<a:rPr lang="nl-NL" baseline="30000" dirty="false" smtClean="false">
-					<a:solidFill>
-						<a:schemeClr val="tx1">
-							<a:lumMod val="95000"/>
-						</a:schemeClr>
-					</a:solidFill>
-					<a:effectLst/>
-				</a:rPr>
+#elseif(${biblePartFragment.getDisplayType()} == "italic")
+				<a:rPr i="1" lang="nl-NL" dirty="false" smtClean="false">
 #else
 				<a:rPr lang="nl-NL" dirty="false" smtClean="false">
+#end
 					<a:solidFill>
 						<a:schemeClr val="tx1">
 							<a:lumMod val="95000"/>
@@ -33,7 +29,6 @@
 					</a:solidFill>
 					<a:effectLst/>
 				</a:rPr>
-#end
 				<a:t>${biblePartFragment.getContent()}</a:t>
 			</a:r>
 #end

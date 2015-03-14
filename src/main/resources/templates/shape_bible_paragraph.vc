@@ -1,11 +1,15 @@
 <w:p xmlns:w ="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
 #foreach(${fragment} in ${fragments})
 	<w:r>
-#if(${fragment.getDisplayType()} == "superScript")
 		<w:rPr>
-			<w:vertAlign w:val="superscript"/>
-		</w:rPr>
+#if(${fragment.getDisplayType()} == "italic")
+			<w:i/>
 #end
+#if(${fragment.getDisplayType()} == "superScript")
+			<w:vertAlign w:val="superscript"/>
+#end
+			<w:lang w:val="nl-NL"/>
+		</w:rPr>
 #if(${fragment.getDisplayType()} == "line_end")
 		<w:br/>
 #end

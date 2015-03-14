@@ -176,4 +176,8 @@ public class PaperMachine {
 		}
 	}
 
+	public void setTargetFile(File file) {
+		this.targetFile = file;
+	}
+
 }

@@ -171,6 +171,8 @@ public class Bible {
 
 			String line = s.nextLine();
 
+			boolean buildingTitle = false;
+
 			if (line.matches(String.format("#%s", chapter))) {
 				// we have the line number on which the book starts
 				// continue reading from that line, char by char, until we end up on
@@ -182,6 +184,15 @@ public class Bible {
 					if (line.startsWith(String.format("#%s", chapter + 1))) {
 						s.close();
 						return fragmentList;
+					}
+
+					// title encountered, print italic
+					if (line.startsWith("=")) {
+						buildingTitle = true;
+						// start line reading after equals sign
+						line = line.substring(1);
+					} else {
+						buildingTitle = false;
 					}
 
 					StringBuilder sb = new StringBuilder();
@@ -249,13 +260,13 @@ public class Bible {
 								sb = new StringBuilder();
 							} else {
 								// the previous 'verse number' appeared to be a textual number. Rebuild the StringBuilder with the last added verse text, remove it from the
-								// fragment list and create a new stringbuilder from it. 
+								// fragment list and create a new stringbuilder from it.
 								// 'nothing to see here people, move on!'
 								StringBuilder tmpSb = new StringBuilder();
-								tmpSb.append(fragmentList.get(fragmentList.size()-1).getContent());
+								tmpSb.append(fragmentList.get(fragmentList.size() - 1).getContent());
 								tmpSb.append(sb);
 								sb = tmpSb;
-								fragmentList.remove(fragmentList.size()-1);
+								fragmentList.remove(fragmentList.size() - 1);
 								prevCharType = CharType.character;
 							}
 							sb.append(c);
@@ -265,11 +276,14 @@ public class Bible {
 
 					// new line encountered
 					if (addVerse) {
-						if (prevCharType == CharType.character) {
+						if (prevCharType == CharType.character && !buildingTitle) {
 							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
 							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.line_end, LINE_END));
-						} else {
+						} else if (!buildingTitle) {
 							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
+						} else {
+							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.italic, sb.toString()));
+							fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.line_end, LINE_END));
 						}
 					}
 
