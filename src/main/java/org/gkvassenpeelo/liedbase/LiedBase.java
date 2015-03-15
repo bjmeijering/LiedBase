@@ -450,6 +450,7 @@ public class LiedBase {
 	public static void main(String[] args) throws Docx4JException, BibleException {
 
 		try {
+		    
 			LiedBase lb = new LiedBase();
 			lb.parseLiturgyScript();
 
