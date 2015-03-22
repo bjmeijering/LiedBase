@@ -13,6 +13,7 @@ import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
@@ -40,9 +41,9 @@ public class SlideMachine {
 
 	private Liturgy liturgy;
 
-	public SlideMachine(Liturgy liturgy, List<String> liturgyView) throws SlideMachineException {
-		this.liturgy = liturgy;
-		this.liturgyView = liturgyView;
+	public SlideMachine(LiturgyModel model) throws SlideMachineException {
+		this.liturgy = model.getLiturgy();
+		this.liturgyView = model.getLiturgyView();
 
 		try {
 			presentationMLPackage = (PresentationMLPackage) OpcPackage.load(ClassLoader.getSystemResourceAsStream("template.pptx"));

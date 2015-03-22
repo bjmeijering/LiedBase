@@ -17,7 +17,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyBuilder;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -590,7 +590,7 @@ public class Bible {
 
     public static int getChapterFromLine(String line) {
 
-        line = LiturgyBuilder.format(line, LiturgyPart.Type.scripture);
+        line = LiturgyModel.format(line, LiturgyPart.Type.scripture);
 
         if (line.contains(":")) {
             String s = StringUtils.substringBefore(line, ":");

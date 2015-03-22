@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyBuilder;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 
 public class SongBook {
@@ -42,7 +42,7 @@ public class SongBook {
             songIdentifier = "lied";
         }
 
-        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyBuilder.ENCODING);
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyModel.ENCODING);
 
         int songInteger = 0;
         int verseInteger = 0;
@@ -124,7 +124,7 @@ public class SongBook {
         String songBookName = "opwekking.txt";
         String songIdentifier = "opwekking";
 
-        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyBuilder.ENCODING);
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyModel.ENCODING);
 
         while (s.hasNextLine()) {
 
@@ -203,7 +203,7 @@ public class SongBook {
             songIdentifier = "lied";
         }
 
-        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyBuilder.ENCODING);
+        Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyModel.ENCODING);
 
         while (s.hasNextLine()) {
 

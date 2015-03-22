@@ -27,7 +27,7 @@ public class SlideMachineTest {
 
 	@Ignore
 	public void testSlideMachine() throws Docx4JException, Pptx4jException, JAXBException, SlideMachineException {
-		SlideMachine sm = new SlideMachine(null, null);
+		SlideMachine sm = new SlideMachine(null);
 		sm.setTargetFile(new File("/target/presentation.pptx"));
 
 		Song song = new Song();
@@ -61,18 +61,18 @@ public class SlideMachineTest {
 				System.out.println(indent + o.getClass().getName());
 			}
 
-//			if (o instanceof org.pptx4j.pml.Shape) {
-//				CTTextBody txBody = ((org.pptx4j.pml.Shape) o).getTxBody();
-//				if (txBody != null) {
-//					for (CTTextParagraph tp : txBody.getP()) {
-//
-//						// System.out.println(indent
-//						// + XmlUtils.marshaltoString(tp, true, true, org.pptx4j.jaxb.Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "txBody",
-//						// CTTextParagraph.class));
-//
-//					}
-//				}
-//			}
+			// if (o instanceof org.pptx4j.pml.Shape) {
+			// CTTextBody txBody = ((org.pptx4j.pml.Shape) o).getTxBody();
+			// if (txBody != null) {
+			// for (CTTextParagraph tp : txBody.getP()) {
+			//
+			// // System.out.println(indent
+			// // + XmlUtils.marshaltoString(tp, true, true, org.pptx4j.jaxb.Context.jcPML, "http://schemas.openxmlformats.org/presentationml/2006/main", "txBody",
+			// // CTTextParagraph.class));
+			//
+			// }
+			// }
+			// }
 		}
 	}
 

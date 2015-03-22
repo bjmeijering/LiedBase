@@ -6,7 +6,7 @@ import java.io.File;
 
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyBuilder;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
 import org.gkvassenpeelo.liedbase.papermachine.PaperMachineException;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
@@ -17,7 +17,7 @@ import org.junit.Test;
 
 public class LiturgyBuilderTest {
 
-    LiturgyBuilder lb = new LiturgyBuilder();
+	LiturgyModel lb = new LiturgyModel(null);
 
 	@Before
 	public void setUp() throws Exception {
@@ -25,22 +25,22 @@ public class LiturgyBuilderTest {
 	}
 
 	@Test
-//	@Ignore
+	@Ignore
 	public void liedBasetest() throws LiedBaseError, Docx4JException, BibleException, SlideMachineException, PaperMachineException {
 
 		lb.setSourceFile(new File("src/test/resources/liturgie.txt"));
 
 		lb.parseLiturgyScript();
 
-		SlideMachine slideMachine = new SlideMachine(lb.getLiturgy(), lb.getLiturgyView());
+		SlideMachine slideMachine = new SlideMachine(lb);
 		slideMachine.createSlides();
 		slideMachine.setTargetFile(new File("target/Presentatie.pptx"));
 		slideMachine.save();
 
-//		PaperMachine pm = new PaperMachine(lb.getLiturgy());
-//		pm.createDocument();
-//		pm.setTargetFile(new File("target/LiturgieBoekje.docx"));
-//		pm.save();
+		PaperMachine pm = new PaperMachine(lb.getLiturgy());
+		pm.createDocument();
+		pm.setTargetFile(new File("target/LiturgieBoekje.docx"));
+		pm.save();
 	}
 
 	@Test
