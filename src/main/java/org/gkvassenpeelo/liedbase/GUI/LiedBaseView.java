@@ -1,42 +1,38 @@
 package org.gkvassenpeelo.liedbase.GUI;
 
-import java.awt.BorderLayout;
 import java.awt.Font;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
 
 import javax.swing.JButton;
-import javax.swing.JEditorPane;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JSplitPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import org.gkvassenpeelo.liedbase.LiedBaseController;
 import net.miginfocom.swing.MigLayout;
+
+import org.gkvassenpeelo.liedbase.LiedBaseController;
 
 public class LiedBaseView {
 
 	private JFrame frame;
 	private LiedBaseController controller;
 
+	// buttons
+	JButton btnGeneratePptx = new JButton();
+	JButton btnGenerateDocx = new JButton();
+
+	JTextArea taLiturgy = new JTextArea();
+	JTextArea console = new JTextArea();
+
 	/**
-	 * Create the application.
-	 * 
-	 * 
+	 * Create the view of the application.
 	 * 
 	 * @param controller
-	 * @throws UnsupportedLookAndFeelException
-	 * @throws IllegalAccessException
-	 * @throws InstantiationException
-	 * @throws ClassNotFoundException
 	 */
 	public LiedBaseView(LiedBaseController controller) {
 		this.controller = controller;
+		controller.setLiedBaseView(this);
 	}
 
 	/**
@@ -53,36 +49,51 @@ public class LiedBaseView {
 		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 
 		frame = new JFrame();
-		frame.setBounds(100, 100, 400, 300);
+		frame.setBounds(100, 100, 800, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new MigLayout("wrap 2", "[][grow]", "[grow][grow][grow][grow]"));
 
-		JTextArea taLiturgy = new JTextArea();
 		frame.getContentPane().add(taLiturgy, "w 300::800,h 400::700,span 1 3");
 
-		JButton btnLiturgyControleren = new JButton("Liturgy controleren");
+		JButton btnLiturgyControleren = new JButton();
+		btnLiturgyControleren.setAction(controller);
+		btnLiturgyControleren.setText("Liturgie controleren");
 		frame.getContentPane().add(btnLiturgyControleren, "");
 		btnLiturgyControleren.setActionCommand("checkLiturgy");
 
-		JButton btnGeneratePptx = new JButton();
 		frame.getContentPane().add(btnGeneratePptx, "");
 		btnGeneratePptx.setAction(controller);
+		btnGeneratePptx.setEnabled(false);
 		btnGeneratePptx.setText("Presentatie maken");
 		btnGeneratePptx.setActionCommand("generatePptx");
 
-		JButton btnGenerateDocx = new JButton();
 		frame.getContentPane().add(btnGenerateDocx, "");
 		btnGenerateDocx.setAction(controller);
+		btnGenerateDocx.setEnabled(false);
 		btnGenerateDocx.setText("Boekje maken");
 		btnGenerateDocx.setActionCommand("generateDocx");
 		btnGenerateDocx.setFont(new Font("Tahoma", Font.PLAIN, 13));
 
-		JTextArea console = new JTextArea();
-		frame.getContentPane().add(console, "span,w 500::1000,h 100::, growx");
+		console.setEditable(false);
+		JScrollPane scrollPane = new JScrollPane(console, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		frame.getContentPane().add(scrollPane, "spanx ,growx,width 500::1000,hmin 100,aligny baseline");
+	}
+
+	public void enableGenerateButtons() {
+		btnGenerateDocx.setEnabled(true);
+		btnGeneratePptx.setEnabled(true);
+	}
+
+	public void writeLineToConsole(String message) {
+		console.append(message + System.getProperty("line.separator"));
 	}
 
 	public void setVisible(boolean b) {
 		frame.setVisible(true);
 		frame.pack();
+	}
+	
+	public String getLiturgyText() {
+		return taLiturgy.getText();
 	}
 }

@@ -1,6 +1,5 @@
 package org.gkvassenpeelo.liedbase.liturgy;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +7,6 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gkvassenpeelo.liedbase.LiedBaseError;
@@ -31,8 +29,6 @@ public class LiturgyModel {
 
 	private Liturgy liturgy = new Liturgy();
 
-	private File sourceFile = new File("liturgie.txt");
-
 	public static final String ENCODING = "UTF-8";
 
 	private List<String> liturgyView = new ArrayList<String>();
@@ -44,7 +40,7 @@ public class LiturgyModel {
 
 	public LiturgyModel(Logger logger) {
 		this.logger = logger;
-		
+
 		// all following liturgy part types will appear on liturgy overview
 		// slides
 		litugyOverViewItems.add(LiturgyPart.Type.scripture);
@@ -120,23 +116,15 @@ public class LiturgyModel {
 	 * @throws BibleException
 	 * @throws IOException
 	 */
-	public void parseLiturgyScript() throws BibleException {
+	public LiturgyParseResult parseLiturgyScript(String liturgyText) throws BibleException {
 
-		String inputString = null;
+		LiturgyParseResult parseResult = new LiturgyParseResult();
 
-		try {
-			inputString = FileUtils.readFileToString(getSourceFile());
-		} catch (IOException e) {
-			logger.error(String.format("Invoerbestand '%s' niet gevonden", getSourceFile().getAbsolutePath()));
-			System.exit(1);
+		if (StringUtils.isEmpty(liturgyText)) {
+			parseResult.addError("Liturgie is leeg, niets te doen...");
 		}
 
-		if (StringUtils.isEmpty(inputString)) {
-			logger.info("liturgie is leeg, niets te doen...");
-			System.exit(0);
-		}
-
-		StringTokenizer st = new StringTokenizer(inputString, System.getProperty("line.separator"));
+		StringTokenizer st = new StringTokenizer(liturgyText, System.getProperty("line.separator"));
 
 		while (st.hasMoreTokens()) {
 			String line = st.nextToken();
@@ -145,14 +133,8 @@ public class LiturgyModel {
 			}
 		}
 
-	}
+		return parseResult;
 
-	private File getSourceFile() {
-		return sourceFile;
-	}
-
-	public void setSourceFile(File file) {
-		this.sourceFile = file;
 	}
 
 	/**

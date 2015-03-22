@@ -28,9 +28,7 @@ public class LiturgyBuilderTest {
 	@Ignore
 	public void liedBasetest() throws LiedBaseError, Docx4JException, BibleException, SlideMachineException, PaperMachineException {
 
-		lb.setSourceFile(new File("src/test/resources/liturgie.txt"));
-
-		lb.parseLiturgyScript();
+		lb.parseLiturgyScript("");
 
 		SlideMachine slideMachine = new SlideMachine(lb);
 		slideMachine.createSlides();

@@ -5,8 +5,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 
 import org.docx4j.openpackaging.exceptions.Docx4JException;
+import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyParseResult;
 import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
 import org.gkvassenpeelo.liedbase.papermachine.PaperMachineException;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
@@ -16,12 +18,12 @@ import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 public class LiedBaseController extends AbstractAction {
 
 	private LiturgyModel model;
+	private LiedBaseView view;
 	private SlideMachine slideMachine;
 	private PaperMachine paperMachine;
 
-	public LiedBaseController(LiturgyModel model) throws SlideMachineException, PaperMachineException {
+	public LiedBaseController(LiturgyModel model) {
 		this.model = model;
-
 	}
 
 	@Override
@@ -41,7 +43,14 @@ public class LiedBaseController extends AbstractAction {
 
 		if ("checkLiturgy".equals(event.getActionCommand())) {
 			try {
-				model.parseLiturgyScript();
+				LiturgyParseResult result = model.parseLiturgyScript(view.getLiturgyText());
+				if (!result.hasErrors()) {
+					view.enableGenerateButtons();
+				} else {
+					for (String message : result.getErrors()) {
+						view.writeLineToConsole(message);
+					}
+				}
 			} catch (BibleException e) {
 				e.printStackTrace();
 			}
@@ -59,8 +68,8 @@ public class LiedBaseController extends AbstractAction {
 
 	}
 
-	public void setLiturgyBuilder(LiturgyModel lb) {
-		this.model = lb;
+	public void setLiedBaseView(LiedBaseView view) {
+		this.view = view;
 	}
 
 }
