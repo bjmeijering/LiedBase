@@ -5,6 +5,7 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
 
+import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
@@ -14,16 +15,13 @@ import javax.swing.JTextArea;
 import javax.swing.JTextPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import javax.swing.AbstractAction;
 
-import java.awt.event.ActionEvent;
-
-import javax.swing.Action;
+import org.gkvassenpeelo.liedbase.LiedBaseController;
 
 public class LiedbaseWindow {
 
     private JFrame frame;
-    private final Action action = new SwingAction();
+    private final Action action = new LiedBaseController();
     JTextArea console;
 
     /**
@@ -35,6 +33,7 @@ public class LiedbaseWindow {
      */
     public LiedbaseWindow() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
         initialize();
+        setVisible(true);
     }
 
     /**
@@ -82,6 +81,7 @@ public class LiedbaseWindow {
         panel.add(btnGeneratePptx, gbc_btnGeneratePptx);
         
         JButton btnGenerateDocx = new JButton("Boekje maken");
+        btnGenerateDocx.setAction(action);
         GridBagConstraints gbc_btnGenerateDocx = new GridBagConstraints();
         gbc_btnGenerateDocx.fill = GridBagConstraints.BOTH;
         gbc_btnGenerateDocx.insets = new Insets(0, 0, 0, 0);
@@ -101,16 +101,5 @@ public class LiedbaseWindow {
 
     public void setVisible(boolean b) {
         frame.setVisible(true);
-    }
-
-    @SuppressWarnings("serial")
-    private class SwingAction extends AbstractAction {
-        public SwingAction() {
-            putValue(NAME, "SwingAction");
-            putValue(SHORT_DESCRIPTION, "Some short description");
-        }
-        public void actionPerformed(ActionEvent e) {
-            console.setText("wheee!");
-        }
     }
 }
