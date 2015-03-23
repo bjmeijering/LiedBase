@@ -1,0 +1,19 @@
+<w:p xmlns:w ="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+#foreach(${line} in ${lines})
+	<w:r>
+		<w:rPr>
+#if(${line.getDisplayType()} == "italic")
+			<w:i/>
+#end
+#if(${line.getDisplayType()} == "superScript")
+			<w:vertAlign w:val="superscript"/>
+#end
+			<w:lang w:val="nl-NL"/>
+		</w:rPr>
+#if(${line.getDisplayType()} != "first_line")
+		<w:br/>
+#end
+		<w:t>${line.getContent()}</w:t>
+	</w:r>
+#end
+</w:p>

@@ -18,7 +18,6 @@ import org.docx4j.openpackaging.exceptions.InvalidFormatException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
 import org.docx4j.openpackaging.parts.WordprocessingML.MainDocumentPart;
 import org.docx4j.wml.Body;
-import org.docx4j.wml.Br;
 import org.docx4j.wml.ObjectFactory;
 import org.docx4j.wml.P;
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
@@ -105,51 +104,42 @@ public class PaperMachine {
 
 		if (lp.getType() == LiturgyPart.Type.song) {
 
-			mainDocumentPart.addStyledParagraphOfText("", lp.getLine());
-
 			for (SlideContents sc : lp.getSlides()) {
 
+				mainDocumentPart.addParagraphOfText(lp.getLine());
+
 				// Create the paragraph
-				org.docx4j.wml.P para = factory.createP();
+				org.docx4j.wml.P para = getSongShape(((Song) sc).getSongText());
 
-				// Create the run
-				org.docx4j.wml.R run = factory.createR();
-
-				// Add the current verse above the verse text
-				org.docx4j.wml.Text t1 = factory.createText();
-				t1.setValue(((Song) sc).getVerseNumber());
-				run.getRunContent().add(t1);
-				Br br1 = factory.createBr(); // this Br element is used break the current and go for next line
-				run.getContent().add(br1);
-
-				for (SongLine line : ((Song) sc).getSongText()) {
-
-					// Add the verse line followed by a line break
-					org.docx4j.wml.Text t = factory.createText();
-					t.setValue(line.getContent());
-					run.getRunContent().add(t);
-
-					Br br = factory.createBr(); // this Br element is used break the current and go for next line
-					run.getContent().add(br);
-
-				}
-
-				para.getParagraphContent().add(run);
 				// Now add our paragraph to the document body
 				Body body = mainDocumentPart.getJaxbElement().getBody();
 				body.getEGBlockLevelElts().add(para);
 
 			}
+			return;
 		}
 	}
 
 	private P getScriptureShape(List<BiblePartFragment> list) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
 		vc.put("fragments", list);
+		vc.put("nol", list.size());
 
 		StringWriter ow = new StringWriter();
 
-		getVelocityEngine().getTemplate("/templates/shape_bible_paragraph.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/docx/shape_bible_paragraph.vc", ENCODING).merge(vc, ow);
+
+		org.docx4j.wml.P shape = (P) XmlUtils.unmarshalString(ow.toString());
+		return shape;
+	}
+
+	private P getSongShape(List<SongLine> list) throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+		vc.put("lines", list);
+
+		StringWriter ow = new StringWriter();
+
+		getVelocityEngine().getTemplate("/templates/docx/shape_song.vc", ENCODING).merge(vc, ow);
 
 		org.docx4j.wml.P shape = (P) XmlUtils.unmarshalString(ow.toString());
 		return shape;

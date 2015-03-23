@@ -28,7 +28,12 @@ public class LiturgyBuilderTest {
 	@Ignore
 	public void liedBasetest() throws LiedBaseError, Docx4JException, BibleException, SlideMachineException, PaperMachineException {
 
-		lb.parseLiturgyScript("");
+		lb.parseLiturgyScript("Gezang 90:1\r\n"
+				+ "wet\r\n"
+				+ "Psalm 18:9\r\n"
+				+ "Gebed\r\n"
+				+ "Marcus 15:22-32\r\n"
+				+ "Lucas 23:39-43\r\n");
 
 		SlideMachine slideMachine = new SlideMachine(lb);
 		slideMachine.createSlides();

@@ -3,7 +3,7 @@ package org.gkvassenpeelo.liedbase.songbook;
 public class SongLine {
 	
 	public enum DisplayType {
-        normal, chorusTitle, chorusLine
+        normal, chorusTitle, chorusLine, first_line
     };
 
     private DisplayType displayType;
