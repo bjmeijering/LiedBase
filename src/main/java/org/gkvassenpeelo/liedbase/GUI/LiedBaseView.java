@@ -53,35 +53,23 @@ public class LiedBaseView {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(new MigLayout("wrap 2", "[][grow]", "[grow][grow][grow][grow]"));
 
-		frame.getContentPane().add(taLiturgy, "w 300::800,h 400::700,span 1 3");
-
-		JButton btnLiturgyControleren = new JButton();
-		btnLiturgyControleren.setAction(controller);
-		btnLiturgyControleren.setText("Liturgie controleren");
-		frame.getContentPane().add(btnLiturgyControleren, "");
-		btnLiturgyControleren.setActionCommand("checkLiturgy");
+		JScrollPane taScrollPane = new JScrollPane(taLiturgy, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		frame.getContentPane().add(taScrollPane, "w 300::800,h 400::700,span 1 2");
 
 		frame.getContentPane().add(btnGeneratePptx, "");
 		btnGeneratePptx.setAction(controller);
-		btnGeneratePptx.setEnabled(false);
 		btnGeneratePptx.setText("Presentatie maken");
 		btnGeneratePptx.setActionCommand("generatePptx");
 
 		frame.getContentPane().add(btnGenerateDocx, "");
 		btnGenerateDocx.setAction(controller);
-		btnGenerateDocx.setEnabled(false);
 		btnGenerateDocx.setText("Boekje maken");
 		btnGenerateDocx.setActionCommand("generateDocx");
 		btnGenerateDocx.setFont(new Font("Tahoma", Font.PLAIN, 13));
 
 		console.setEditable(false);
-		JScrollPane scrollPane = new JScrollPane(console, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		frame.getContentPane().add(scrollPane, "spanx ,growx,width 500::1000,hmin 100,aligny baseline");
-	}
-
-	public void enableGenerateButtons() {
-		btnGenerateDocx.setEnabled(true);
-		btnGeneratePptx.setEnabled(true);
+		JScrollPane consoleScrollPane = new JScrollPane(console, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		frame.getContentPane().add(consoleScrollPane, "spanx ,growx,width 500::1000,hmin 100,aligny baseline");
 	}
 
 	public void writeLineToConsole(String message) {

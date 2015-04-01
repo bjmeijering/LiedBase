@@ -13,6 +13,7 @@ import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
 import org.gkvassenpeelo.liedbase.papermachine.PaperMachineException;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
+import org.gkvassenpeelo.liedbase.songbook.SongBookException;
 
 @SuppressWarnings("serial")
 public class LiedBaseController extends AbstractAction {
@@ -31,38 +32,45 @@ public class LiedBaseController extends AbstractAction {
 
 		if ("generatePptx".equals(event.getActionCommand())) {
 			try {
-				slideMachine = new SlideMachine(model);
-				slideMachine.createSlides();
-				slideMachine.save();
-			} catch (Docx4JException e) {
-				e.printStackTrace();
-			} catch (SlideMachineException e) {
-				e.printStackTrace();
-			}
-		}
-
-		if ("checkLiturgy".equals(event.getActionCommand())) {
-			try {
 				LiturgyParseResult result = model.parseLiturgyScript(view.getLiturgyText());
 				if (!result.hasErrors()) {
-					view.enableGenerateButtons();
+					slideMachine = new SlideMachine(model);
+					slideMachine.createSlides();
+					slideMachine.save();
 				} else {
 					for (String message : result.getErrors()) {
 						view.writeLineToConsole(message);
 					}
 				}
+			} catch (Docx4JException e) {
+				view.writeLineToConsole(e.getMessage());
+			} catch (SlideMachineException e) {
+				view.writeLineToConsole(e.getMessage());
 			} catch (BibleException e) {
-				e.printStackTrace();
+				view.writeLineToConsole(e.getMessage());
+			} catch (SongBookException e) {
+				view.writeLineToConsole(e.getMessage());
 			}
 		}
 
 		if ("generateDocx".equals(event.getActionCommand())) {
 			try {
-				paperMachine = new PaperMachine(model.getLiturgy());
-				paperMachine.createDocument();
-				paperMachine.save();
+				LiturgyParseResult result = model.parseLiturgyScript(view.getLiturgyText());
+				if (!result.hasErrors()) {
+					paperMachine = new PaperMachine(model.getLiturgy());
+					paperMachine.createDocument();
+					paperMachine.save();
+				} else {
+					for (String message : result.getErrors()) {
+						view.writeLineToConsole(message);
+					}
+				}
 			} catch (PaperMachineException e) {
-				e.printStackTrace();
+				view.writeLineToConsole(e.getLocalizedMessage());
+			} catch (BibleException e) {
+				view.writeLineToConsole(e.getMessage());
+			} catch (SongBookException e) {
+				view.writeLineToConsole(e.getMessage());
 			}
 		}
 

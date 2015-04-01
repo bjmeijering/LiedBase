@@ -25,7 +25,7 @@ public class SlideMachine {
 
 	private MainPresentationPart targetPresentationPart;
 
-	private File targetFile = new File("Presentatie.pptx");
+	private String targetFilename = "Presentatie.pptx";
 
 	private PresentationMLPackage presentationMLPackage;
 
@@ -77,15 +77,15 @@ public class SlideMachine {
 	}
 
 	// Where will we save our new .pptx?
-	public void setTargetFile(File filename) {
-		targetFile = filename;
+	public void setTargetFilename(String filename) {
+		targetFilename = filename;
 	}
 
 	public void createSlides() {
 
 		try {
 			// Liturgy parsed and created, time to create Slides
-			setTargetFile(getTargetFile());
+			setTargetFilename(getTargetFilename());
 
 			for (LiturgyPart lp : liturgy.getLiturgyParts()) {
 
@@ -161,12 +161,12 @@ public class SlideMachine {
 
 	}
 
-	private File getTargetFile() {
-		return targetFile;
+	private String getTargetFilename() {
+		return targetFilename;
 	}
 
 	public void save() throws Docx4JException {
-		presentationMLPackage.save(targetFile);
+		presentationMLPackage.save(new File(targetFilename));
 	}
 
 }

@@ -1,6 +1,5 @@
 package org.gkvassenpeelo.slidemachine;
 
-import java.io.File;
 import java.util.List;
 
 import javax.xml.bind.JAXBException;
@@ -28,7 +27,7 @@ public class SlideMachineTest {
 	@Ignore
 	public void testSlideMachine() throws Docx4JException, Pptx4jException, JAXBException, SlideMachineException {
 		SlideMachine sm = new SlideMachine(null);
-		sm.setTargetFile(new File("/target/presentation.pptx"));
+		sm.setTargetFilename("/target/presentation.pptx");
 
 		Song song = new Song();
 		song.setHeader("Samen in de naam van Jezus");

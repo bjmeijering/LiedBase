@@ -69,31 +69,24 @@ public class SongBook {
 				// continue reading from that line again until we end up on
 				// the right verse
 				while (s.hasNextLine()) {
+
 					line = s.nextLine();
+
+					// reading next song, return
+					if (readingNextSong(songIdentifier, songInteger, songNumberPostfix, nextSongNumberPostfix, line)) {
+						s.close();
+						return cleanup(songText);
+					}
 
 					int index = 0;
 					if (line.equals(verse)) {
 						while (s.hasNextLine()) {
 							line = s.nextLine();
-							// reading next song, return
-							if (line.matches(String.format("^%s %s%s:.*$", songIdentifier, songInteger + 1, songNumberPostfix))) {
-								s.close();
-
-								cleanup(songText);
-								return songText;
-							}
-							if (line.matches(String.format("^%s %s%s:.*$", songIdentifier, songInteger, nextSongNumberPostfix))) {
-								s.close();
-
-								cleanup(songText);
-								return songText;
-							}
 							// reading next verse, return
-							if (line.equals("" + (verseInteger + 1))) {
+							// check for next verse AND next song!
+							if (line.equals("" + (verseInteger + 1)) || readingNextSong(songIdentifier, songInteger, songNumberPostfix, nextSongNumberPostfix, line)) {
 								s.close();
-
-								cleanup(songText);
-								return songText;
+								return cleanup(songText);
 							}
 
 							if (index == 0) {
@@ -106,9 +99,7 @@ public class SongBook {
 						}
 						s.close();
 
-						// remove last white line
-						cleanup(songText);
-						return songText;
+						return cleanup(songText);
 					}
 				}
 			}
@@ -116,14 +107,37 @@ public class SongBook {
 
 		s.close();
 
-		songText.add(new SongLine(SongLine.DisplayType.normal, String.format("Geen tekst gevonden voor %s %s: %s", type.toString(), songNumber, verse)));
-		return songText;
+		// no text found
+		return null;
 	}
 
-	private static void cleanup(List<SongLine> songText) {
-		if (((SongLine) songText.get(songText.size() - 1)).getContent().equals("")) {
-			songText.remove(songText.size() - 1);
+	private static boolean readingNextSong(String songIdentifier, int songInteger, String songNumberPostfix, String nextSongNumberPostfix, String line) {
+		if (line.matches(String.format("^%s %s%s:.*$", songIdentifier, songInteger + 1, songNumberPostfix))) {
+			return true;
 		}
+		if (line.matches(String.format("^%s %s%s:.*$", songIdentifier, songInteger, nextSongNumberPostfix))) {
+			return true;
+		}
+
+		return false;
+	}
+
+	// private boolean readingNextSong(String line)
+
+	private static List<SongLine> cleanup(List<SongLine> songText) {
+
+		if (songText.size() > 0) {
+
+			if (((SongLine) songText.get(songText.size() - 1)).getContent().equals("")) {
+				songText.remove(songText.size() - 1);
+			}
+
+			return songText;
+
+		} else {
+			return null;
+		}
+
 	}
 
 	public static List<List<SongLine>> getOpwekkingSongTekst(String songNumber) {

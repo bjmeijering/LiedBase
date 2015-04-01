@@ -4,13 +4,9 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 
-import org.docx4j.openpackaging.exceptions.Docx4JException;
-import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
-import org.gkvassenpeelo.liedbase.papermachine.PaperMachineException;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
-import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -26,7 +22,7 @@ public class LiturgyBuilderTest {
 
 	@Test
 	@Ignore
-	public void liedBasetest() throws LiedBaseError, Docx4JException, BibleException, SlideMachineException, PaperMachineException {
+	public void liedBasetest() throws Exception {
 
 		lb.parseLiturgyScript("Gezang 90:1\r\n"
 				+ "wet\r\n"
@@ -37,7 +33,7 @@ public class LiturgyBuilderTest {
 
 		SlideMachine slideMachine = new SlideMachine(lb);
 		slideMachine.createSlides();
-		slideMachine.setTargetFile(new File("target/Presentatie.pptx"));
+		slideMachine.setTargetFilename("target/Presentatie.pptx");
 		slideMachine.save();
 
 		PaperMachine pm = new PaperMachine(lb.getLiturgy());

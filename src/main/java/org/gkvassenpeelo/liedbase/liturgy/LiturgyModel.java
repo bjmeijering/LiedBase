@@ -14,6 +14,7 @@ import org.gkvassenpeelo.liedbase.bible.Bible;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.songbook.SongBook;
+import org.gkvassenpeelo.liedbase.songbook.SongBookException;
 import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 public class LiturgyModel {
@@ -27,11 +28,11 @@ public class LiturgyModel {
 	private static final String regex_opwekking = "([oO]pwekking?)";
 	private static final String regex_voorganger = "([vV]oorganger|[dD]ominee|[wW]el[ck]om)";
 
-	private Liturgy liturgy = new Liturgy();
+	private Liturgy liturgy;
 
 	public static final String ENCODING = "UTF-8";
 
-	private List<String> liturgyView = new ArrayList<String>();
+	private List<String> liturgyView;
 	private List<LiturgyPart.Type> litugyOverViewItems = new ArrayList<LiturgyPart.Type>();
 
 	private enum CharType {
@@ -114,11 +115,14 @@ public class LiturgyModel {
 	 * 
 	 * @param inputString
 	 * @throws BibleException
+	 * @throws SongBookException 
 	 * @throws IOException
 	 */
-	public LiturgyParseResult parseLiturgyScript(String liturgyText) throws BibleException {
+	public LiturgyParseResult parseLiturgyScript(String liturgyText) throws BibleException, SongBookException {
 
 		LiturgyParseResult parseResult = new LiturgyParseResult();
+		liturgy = new Liturgy();
+		liturgyView = new ArrayList<String>();
 
 		if (StringUtils.isEmpty(liturgyText)) {
 			parseResult.addError("Liturgie is leeg, niets te doen...");
@@ -141,8 +145,9 @@ public class LiturgyModel {
 	 * 
 	 * @param line
 	 * @throws BibleException
+	 * @throws SongBookException 
 	 */
-	private String parseLiturgyScriptLine(String line) throws BibleException {
+	private String parseLiturgyScriptLine(String line) throws BibleException, SongBookException {
 
 		LiturgyPart.Type type = null;
 
@@ -205,7 +210,13 @@ public class LiturgyModel {
 				StringTokenizer st = new StringTokenizer(StringUtils.substringAfter(line, ":"), ",");
 				while (st.hasMoreTokens()) {
 					String currentVerse = st.nextToken().trim();
-					Song song = new Song(line, SongBook.getSongText(scType, SongBook.getSongNumber(line), currentVerse));
+					List<SongLine> songText = SongBook.getSongText(scType, SongBook.getSongNumber(line), currentVerse);
+					
+					if(songText == null) {
+						throw new SongBookException(String.format("Vers %s van %s %s niet gevonden", currentVerse, scType, SongBook.getSongNumber(line)));
+					}
+					
+					Song song = new Song(line, songText);
 					song.setVerseNumber(currentVerse);
 					lp.addSlide(song);
 				}
