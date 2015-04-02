@@ -73,7 +73,7 @@ public class BibleTest {
 	}
 
 	@Test
-	public void getChapterFromLineTest() {
+	public void getChapterFromLineTest() throws Exception {
 		assertEquals(2, Bible.getChapterFromLine("genesis 2: 13"));
 		assertEquals(2, Bible.getChapterFromLine(" genesis 2 : 13"));
 		assertEquals(2, Bible.getChapterFromLine("2 johannes 2 : 13"));

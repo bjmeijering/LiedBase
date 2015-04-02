@@ -73,6 +73,30 @@ public class LiedBaseController extends AbstractAction {
 				view.writeLineToConsole(e.getMessage());
 			}
 		}
+		
+		if ("welkom".equals(event.getActionCommand())) {
+			view.addToLiturgy("welkom");
+		}
+		
+		if ("psalm".equals(event.getActionCommand())) {
+			view.addToLiturgy("psalm 1:1-2");
+		}
+		
+		if ("gezang".equals(event.getActionCommand())) {
+			view.addToLiturgy("gezang 1:1-2");
+		}
+		
+		if ("lied".equals(event.getActionCommand())) {
+			view.addToLiturgy("liedboek 1:1-2");
+		}
+		
+		if ("opwekking".equals(event.getActionCommand())) {
+			view.addToLiturgy("opwekking 1");
+		}
+		
+		if ("bible".equals(event.getActionCommand())) {
+			view.addToLiturgy("genesis 1:1-2");
+		}
 
 	}
 

@@ -1,9 +1,10 @@
 package org.gkvassenpeelo.liedbase.GUI;
 
-import java.awt.Font;
+import java.awt.Dimension;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.UIManager;
@@ -49,12 +50,38 @@ public class LiedBaseView {
 		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 
 		frame = new JFrame();
-		frame.setBounds(100, 100, 800, 600);
+		frame.setBounds(100, 100, 1024, 768);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(new MigLayout("wrap 2", "[][grow]", "[grow][grow][grow][grow]"));
+		frame.getContentPane().setLayout(new MigLayout("wrap 3", "[][grow]", "[grow][grow][grow][grow]"));
 
+		JPanel liturgyPartButtons = new JPanel();
+		liturgyPartButtons.setLayout(new MigLayout("wrap 1", "[]", "[]"));
+		frame.add(liturgyPartButtons, "w 200::800,h 400::700,span 1 2");
+		
+		JButton addWelkom = new JButton();
+		addWelkom.setMinimumSize(new Dimension(160, 10));
+		addWelkom.setAction(controller);
+		addWelkom.setText("welkom");
+		addWelkom.setActionCommand("welkom");
+		
+		JButton addPsalm = new JButton();
+		addPsalm.setMinimumSize(new Dimension(160, 10));
+		addPsalm.setAction(controller);
+		addPsalm.setText("Psalm");
+		addPsalm.setActionCommand("psalm");
+		
+		JButton addBible = new JButton();
+		addBible.setMinimumSize(new Dimension(160, 10));
+		addBible.setAction(controller);
+		addBible.setText("Bijbel gedeelte");
+		addBible.setActionCommand("bible");
+		
+		liturgyPartButtons.add(addWelkom, "");
+		liturgyPartButtons.add(addPsalm, "");
+		liturgyPartButtons.add(addBible, "");
+		
 		JScrollPane taScrollPane = new JScrollPane(taLiturgy, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		frame.getContentPane().add(taScrollPane, "w 300::800,h 400::700,span 1 2");
+		frame.getContentPane().add(taScrollPane, "w 400::800,h 400::700,span 1 2");
 
 		frame.getContentPane().add(btnGeneratePptx, "");
 		btnGeneratePptx.setAction(controller);
@@ -65,7 +92,6 @@ public class LiedBaseView {
 		btnGenerateDocx.setAction(controller);
 		btnGenerateDocx.setText("Boekje maken");
 		btnGenerateDocx.setActionCommand("generateDocx");
-		btnGenerateDocx.setFont(new Font("Tahoma", Font.PLAIN, 13));
 
 		console.setEditable(false);
 		JScrollPane consoleScrollPane = new JScrollPane(console, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -83,5 +109,10 @@ public class LiedBaseView {
 	
 	public String getLiturgyText() {
 		return taLiturgy.getText();
+	}
+
+	public void addToLiturgy(String text) {
+		int position = taLiturgy.getCaretPosition();
+		taLiturgy.insert(text, position);
 	}
 }
