@@ -1,9 +1,12 @@
 package org.gkvassenpeelo.liedbase;
 
 import java.awt.event.ActionEvent;
+import java.io.File;
+import java.io.IOException;
 
 import javax.swing.AbstractAction;
 
+import org.apache.commons.io.FileUtils;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
@@ -73,35 +76,21 @@ public class LiedBaseController extends AbstractAction {
 				view.writeLineToConsole(e.getMessage());
 			}
 		}
-		
-		if ("welkom".equals(event.getActionCommand())) {
-			view.addToLiturgy("welkom");
-		}
-		
-		if ("psalm".equals(event.getActionCommand())) {
-			view.addToLiturgy("psalm 1:1-2");
-		}
-		
-		if ("gezang".equals(event.getActionCommand())) {
-			view.addToLiturgy("gezang 1:1-2");
-		}
-		
-		if ("lied".equals(event.getActionCommand())) {
-			view.addToLiturgy("liedboek 1:1-2");
-		}
-		
-		if ("opwekking".equals(event.getActionCommand())) {
-			view.addToLiturgy("opwekking 1");
-		}
-		
-		if ("bible".equals(event.getActionCommand())) {
-			view.addToLiturgy("genesis 1:1-2");
-		}
 
 	}
 
 	public void setLiedBaseView(LiedBaseView view) {
 		this.view = view;
+
+		// on startup set the liturgy
+		try {
+			view.writeLineToConsole("Proberen om liturgie.txt te laden...");
+			view.setLiturgy(FileUtils.readFileToString(new File("liturgie.txt")));
+			view.writeLineToConsole("liturgie.txt geladen");
+		} catch (IOException e) {
+			view.writeLineToConsole("Laden van liturgie.txt is mislukt: " + e.getMessage());
+		}
+
 	}
 
 }
