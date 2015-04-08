@@ -11,6 +11,7 @@ import javax.swing.AbstractAction;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.UIManager;
@@ -20,7 +21,6 @@ import net.miginfocom.swing.MigLayout;
 
 import org.apache.commons.io.FileUtils;
 import org.gkvassenpeelo.liedbase.LiedBaseController;
-import javax.swing.JProgressBar;
 
 public class LiedBaseView {
 
@@ -93,7 +93,7 @@ public class LiedBaseView {
 		btnGeneratePptx.setActionCommand("generatePptx");
 		btnGeneratePptx.setPreferredSize(new Dimension(140, 20));
 
-		frame.getContentPane().add(btnGenerateDocx, "");
+		// frame.getContentPane().add(btnGenerateDocx, "");
 		btnGenerateDocx.setAction(controller);
 		btnGenerateDocx.setText("Boekje maken");
 		btnGenerateDocx.setActionCommand("generateDocx");
@@ -101,24 +101,24 @@ public class LiedBaseView {
 
 		console.setEditable(false);
 		JScrollPane consoleScrollPane = new JScrollPane(console, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		frame.getContentPane().add(consoleScrollPane, "spanx ,growx,width 500::1000,hmin 100,aligny baseline");
-		
+		frame.getContentPane().add(consoleScrollPane, "cell 0 2, spanx, growx, width 500::1000, hmin 100, aligny baseline");
+
 		pptxProgressBar = new JProgressBar();
 		frame.getContentPane().add(pptxProgressBar, "cell 2 0");
 
 		docxProgressBar = new JProgressBar();
-		frame.getContentPane().add(docxProgressBar, "cell 2 1");
+		// frame.getContentPane().add(docxProgressBar, "cell 2 1");
 	}
 
 	public void writeLineToConsole(String message) {
 		console.append(message + System.getProperty("line.separator"));
 	}
-	
+
 	public void pptxBuildStart() {
 		btnGeneratePptx.setEnabled(false);
 		pptxProgressBar.setIndeterminate(true);
 	}
-	
+
 	public void pptxBuildStop() {
 		btnGeneratePptx.setEnabled(true);
 		pptxProgressBar.setIndeterminate(false);
