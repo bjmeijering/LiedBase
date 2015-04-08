@@ -19,8 +19,9 @@ public class SongBook {
 	 * @param songNumber
 	 * @param verse
 	 * @return
+	 * @throws SongBookException
 	 */
-	public static List<SongLine> getSongText(SlideContents.Type type, String songNumber, String verse) {
+	public static List<SongLine> getSongText(SlideContents.Type type, String songNumber, String verse) throws SongBookException {
 
 		List<SongLine> songText = new ArrayList<SongLine>();
 
@@ -49,7 +50,12 @@ public class SongBook {
 		String songNumberPostfix = "";
 		String nextSongNumberPostfix = "";
 
-		verseInteger = Integer.parseInt(verse);
+		try {
+			verseInteger = Integer.parseInt(verse);
+		} catch (NumberFormatException e) {
+			s.close();
+			throw new SongBookException(String.format("'%s' is geen geldig nummer", verse));
+		}
 
 		if (songNumber.matches("^[0-9]+$")) {
 			songInteger = Integer.parseInt(songNumber);

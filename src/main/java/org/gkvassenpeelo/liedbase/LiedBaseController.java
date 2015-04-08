@@ -1,30 +1,26 @@
 package org.gkvassenpeelo.liedbase;
 
 import java.awt.event.ActionEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
 
 import javax.swing.AbstractAction;
+import javax.swing.SwingWorker;
 
 import org.apache.commons.io.FileUtils;
-import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
 import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyParseResult;
-import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
-import org.gkvassenpeelo.liedbase.papermachine.PaperMachineException;
-import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
-import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 import org.gkvassenpeelo.liedbase.songbook.SongBookException;
 
 @SuppressWarnings("serial")
-public class LiedBaseController extends AbstractAction {
+public class LiedBaseController extends AbstractAction implements PropertyChangeListener {
 
 	private LiturgyModel model;
 	private LiedBaseView view;
-	private SlideMachine slideMachine;
-	private PaperMachine paperMachine;
 
 	public LiedBaseController(LiturgyModel model) {
 		this.model = model;
@@ -37,18 +33,14 @@ public class LiedBaseController extends AbstractAction {
 			try {
 				LiturgyParseResult result = model.parseLiturgyScript(view.getLiturgyText());
 				if (!result.hasErrors()) {
-					slideMachine = new SlideMachine(model);
-					slideMachine.createSlides();
-					slideMachine.save();
+					view.pptxBuildStart();
+					SwingWorker<Void, Void> task = new CreatePptxTask(model, view);
+					task.execute();
 				} else {
 					for (String message : result.getErrors()) {
 						view.writeLineToConsole(message);
 					}
 				}
-			} catch (Docx4JException e) {
-				view.writeLineToConsole(e.getMessage());
-			} catch (SlideMachineException e) {
-				view.writeLineToConsole(e.getMessage());
 			} catch (BibleException e) {
 				view.writeLineToConsole(e.getMessage());
 			} catch (SongBookException e) {
@@ -60,16 +52,14 @@ public class LiedBaseController extends AbstractAction {
 			try {
 				LiturgyParseResult result = model.parseLiturgyScript(view.getLiturgyText());
 				if (!result.hasErrors()) {
-					paperMachine = new PaperMachine(model.getLiturgy());
-					paperMachine.createDocument();
-					paperMachine.save();
+					view.docxBuildStart();
+					SwingWorker<Void, Void> task = new CreateDocxTask(model, view);
+					task.execute();
 				} else {
 					for (String message : result.getErrors()) {
 						view.writeLineToConsole(message);
 					}
 				}
-			} catch (PaperMachineException e) {
-				view.writeLineToConsole(e.getLocalizedMessage());
 			} catch (BibleException e) {
 				view.writeLineToConsole(e.getMessage());
 			} catch (SongBookException e) {
@@ -91,6 +81,11 @@ public class LiedBaseController extends AbstractAction {
 			view.writeLineToConsole("Laden van liturgie.txt is mislukt: " + e.getMessage());
 		}
 
+	}
+
+	@Override
+	public void propertyChange(PropertyChangeEvent evt) {
+		// noop
 	}
 
 }

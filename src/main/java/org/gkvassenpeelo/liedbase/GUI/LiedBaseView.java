@@ -20,6 +20,7 @@ import net.miginfocom.swing.MigLayout;
 
 import org.apache.commons.io.FileUtils;
 import org.gkvassenpeelo.liedbase.LiedBaseController;
+import javax.swing.JProgressBar;
 
 public class LiedBaseView {
 
@@ -27,11 +28,14 @@ public class LiedBaseView {
 	private LiedBaseController controller;
 
 	// buttons
-	JButton btnGeneratePptx = new JButton();
-	JButton btnGenerateDocx = new JButton();
+	private JButton btnGeneratePptx = new JButton();
+	private JButton btnGenerateDocx = new JButton();
 
-	JTextArea taLiturgy = new JTextArea();
-	JTextArea console = new JTextArea();
+	private JTextArea taLiturgy = new JTextArea();
+	private JTextArea console = new JTextArea();
+
+	private JProgressBar pptxProgressBar;
+	private JProgressBar docxProgressBar;
 
 	/**
 	 * Create the view of the application.
@@ -64,7 +68,7 @@ public class LiedBaseView {
 
 		JPanel liturgyPartButtons = new JPanel();
 		liturgyPartButtons.setLayout(new MigLayout("wrap 1", "[]", "[]"));
-		frame.add(liturgyPartButtons, "w 180::800,h 400::700,span 1 2");
+		frame.getContentPane().add(liturgyPartButtons, "w 180::800,h 400::700,span 1 2");
 		liturgyPartButtons.add(createLiturgyButton("Agenda", "agenda"));
 		liturgyPartButtons.add(createLiturgyButton("Welkom", "welkom: [naam voorganger]"));
 		liturgyPartButtons.add(createLiturgyButton("Votum", "votum"));
@@ -83,7 +87,7 @@ public class LiedBaseView {
 		JScrollPane taScrollPane = new JScrollPane(taLiturgy, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		frame.getContentPane().add(taScrollPane, "w 400::1920,h 400::1080,span 1 2");
 
-		frame.getContentPane().add(btnGeneratePptx, "");
+		frame.getContentPane().add(btnGeneratePptx, "flowx");
 		btnGeneratePptx.setAction(controller);
 		btnGeneratePptx.setText("Presentatie maken");
 		btnGeneratePptx.setActionCommand("generatePptx");
@@ -98,10 +102,36 @@ public class LiedBaseView {
 		console.setEditable(false);
 		JScrollPane consoleScrollPane = new JScrollPane(console, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		frame.getContentPane().add(consoleScrollPane, "spanx ,growx,width 500::1000,hmin 100,aligny baseline");
+		
+		pptxProgressBar = new JProgressBar();
+		frame.getContentPane().add(pptxProgressBar, "cell 2 0");
+
+		docxProgressBar = new JProgressBar();
+		frame.getContentPane().add(docxProgressBar, "cell 2 1");
 	}
 
 	public void writeLineToConsole(String message) {
 		console.append(message + System.getProperty("line.separator"));
+	}
+	
+	public void pptxBuildStart() {
+		btnGeneratePptx.setEnabled(false);
+		pptxProgressBar.setIndeterminate(true);
+	}
+	
+	public void pptxBuildStop() {
+		btnGeneratePptx.setEnabled(true);
+		pptxProgressBar.setIndeterminate(false);
+	}
+
+	public void docxBuildStart() {
+		btnGenerateDocx.setEnabled(false);
+		docxProgressBar.setIndeterminate(true);
+	}
+
+	public void docxBuildStop() {
+		btnGenerateDocx.setEnabled(true);
+		docxProgressBar.setIndeterminate(false);
 	}
 
 	public void setVisible(boolean b) {
