@@ -63,7 +63,7 @@ public class PaperMachine {
 
 	public void createDocument() throws PaperMachineException {
 		try {
-			wordMLPackage = WordprocessingMLPackage.createPackage();
+			wordMLPackage = WordprocessingMLPackage.load(this.getClass().getClassLoader().getResourceAsStream("template.docx"));
 			mainDocumentPart = wordMLPackage.getMainDocumentPart();
 
 			for (LiturgyPart lp : liturgy.getLiturgyParts()) {
@@ -76,6 +76,8 @@ public class PaperMachine {
 
 		} catch (InvalidFormatException e) {
 			throw new PaperMachineException(String.format("Error while creating paper machine: %s", e.getMessage()), e);
+		} catch (Docx4JException e) {
+			throw new PaperMachineException(String.format("Error while loading paper template: %s", e.getMessage()), e);
 		}
 	}
 
@@ -85,39 +87,137 @@ public class PaperMachine {
 			return;
 		}
 
+		// Get the body of the document
+		Body body = mainDocumentPart.getJaxbElement().getBody();
+
+		if (lp.getType() != LiturgyPart.Type.votum) {
+			// an empty line
+			body.getEGBlockLevelElts().add(getEmptyParagraphShape());
+		}
+
 		if (lp.getType() == LiturgyPart.Type.scripture) {
 
 			for (SlideContents sc : lp.getSlides()) {
 
-				mainDocumentPart.addStyledParagraphOfText("", lp.getLine());
+				// Create the heading text
+				org.docx4j.wml.P title = getTitleTextShape("Schriftlezing: " + lp.getLine());
+				body.getEGBlockLevelElts().add(title);
 
 				// Create the paragraph
 				org.docx4j.wml.P para = getScriptureShape(((Scripture) sc).getBiblePart());
 
 				// Now add our paragraph to the document body
-				Body body = mainDocumentPart.getJaxbElement().getBody();
 				body.getEGBlockLevelElts().add(para);
 
 			}
-			return;
-		}
 
-		if (lp.getType() == LiturgyPart.Type.song) {
+			return;
+
+		} else if (lp.getType() == LiturgyPart.Type.song) {
+
+			// Create the heading text
+			org.docx4j.wml.P title = getTitleTextShape("Zingen: " + lp.getSlides().get(0).getHeader());
+			body.getEGBlockLevelElts().add(title);
 
 			for (SlideContents sc : lp.getSlides()) {
 
-				mainDocumentPart.addParagraphOfText(lp.getLine());
+				String songNumber = ((Song) sc).getVerseNumber();
 
-				// Create the paragraph
-				org.docx4j.wml.P para = getSongShape(((Song) sc).getSongText());
+				for (SongLine line : ((Song) sc).getSongText()) {
 
-				// Now add our paragraph to the document body
-				Body body = mainDocumentPart.getJaxbElement().getBody();
-				body.getEGBlockLevelElts().add(para);
+					if (songNumber != null) {
+						// an empty line
+						body.getEGBlockLevelElts().add(getEmptyParagraphShape());
+					}
+
+					// Create the paragraph
+					org.docx4j.wml.P para = getSongShape(songNumber, line);
+
+					// add the songnumber only to the first line
+					songNumber = null;
+
+					body.getEGBlockLevelElts().add(para);
+
+				}
 
 			}
+
 			return;
+
+		} else if (lp.getType() == LiturgyPart.Type.votum) {
+
+			// Create the paragraph
+			org.docx4j.wml.P para = getTitleTextShape("Votum/zegengroet");
+
+			// Now add our paragraph to the document body
+			body.getEGBlockLevelElts().add(para);
+
+		} else if (lp.getType() == LiturgyPart.Type.prair) {
+
+			// Create the paragraph
+			org.docx4j.wml.P para = getTitleTextShape("Gebed");
+
+			// Now add our paragraph to the document body
+			body.getEGBlockLevelElts().add(para);
+
+		} else if (lp.getType() == LiturgyPart.Type.law) {
+
+			// Create the paragraph
+			org.docx4j.wml.P para = getTitleTextShape("Wet");
+
+			// Now add our paragraph to the document body
+			body.getEGBlockLevelElts().add(para);
+
+		} else if (lp.getType() == LiturgyPart.Type.lecture) {
+
+			// Create the paragraph
+			org.docx4j.wml.P para = getTitleTextShape("Preek");
+
+			// Now add our paragraph to the document body
+			body.getEGBlockLevelElts().add(para);
+
+		} else if (lp.getType() == LiturgyPart.Type.gathering) {
+
+			// Create the paragraph
+			org.docx4j.wml.P para = getTitleTextShape("Collecte");
+
+			// Now add our paragraph to the document body
+			body.getEGBlockLevelElts().add(para);
+
+		} else if (lp.getType() == LiturgyPart.Type.amen) {
+
+			// Create the paragraph
+			org.docx4j.wml.P para = getTitleTextShape("Zegen");
+
+			// Now add our paragraph to the document body
+			body.getEGBlockLevelElts().add(para);
+
 		}
+	}
+
+	private Object getEmptyParagraphShape() throws JAXBException {
+		VelocityContext vc = new VelocityContext();
+
+		StringWriter ow = new StringWriter();
+
+		getVelocityEngine().getTemplate("/templates/docx/shape_empty_paragraph.vc", ENCODING).merge(vc, ow);
+
+		org.docx4j.wml.P shape = (P) XmlUtils.unmarshalString(ow.toString());
+		return shape;
+	}
+
+	private P getTitleTextShape(String titleText) throws JAXBException {
+
+		VelocityContext vc = new VelocityContext();
+		vc.put("titleText", titleText);
+
+		StringWriter ow = new StringWriter();
+
+		getVelocityEngine().getTemplate("/templates/docx/shape_title.vc", ENCODING).merge(vc, ow);
+
+		org.docx4j.wml.P shape = (P) XmlUtils.unmarshalString(ow.toString());
+		return shape;
+
 	}
 
 	private P getScriptureShape(List<BiblePartFragment> list) throws JAXBException {
@@ -133,9 +233,10 @@ public class PaperMachine {
 		return shape;
 	}
 
-	private P getSongShape(List<SongLine> list) throws JAXBException {
+	private P getSongShape(String songNumber, SongLine line) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
-		vc.put("lines", list);
+		vc.put("songNumber", songNumber);
+		vc.put("line", line.getContent());
 
 		StringWriter ow = new StringWriter();
 

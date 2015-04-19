@@ -80,7 +80,7 @@ public class LiedBaseView {
 		liturgyPartButtons.add(createLiturgyButton("Gebed", "gebed"));
 		liturgyPartButtons.add(createLiturgyButton("Preek", "preek"));
 		liturgyPartButtons.add(createLiturgyButton("Collecte", "collecte: doel 1, doel 2"));
-		liturgyPartButtons.add(createLiturgyButton("Amen", "amen"));
+		liturgyPartButtons.add(createLiturgyButton("Amen/Zegen", "amen"));
 		liturgyPartButtons.add(createLiturgyButton("Einde morgendienst", "einde morgendienst: [aanvangstijd middagdienst], [naam voorganger]"));
 		liturgyPartButtons.add(createLiturgyButton("Einde middagdienst", "einde middagdienst"));
 
@@ -93,7 +93,7 @@ public class LiedBaseView {
 		btnGeneratePptx.setActionCommand("generatePptx");
 		btnGeneratePptx.setPreferredSize(new Dimension(140, 20));
 
-		// frame.getContentPane().add(btnGenerateDocx, "");
+		frame.getContentPane().add(btnGenerateDocx, "");
 		btnGenerateDocx.setAction(controller);
 		btnGenerateDocx.setText("Boekje maken");
 		btnGenerateDocx.setActionCommand("generateDocx");
@@ -107,7 +107,7 @@ public class LiedBaseView {
 		frame.getContentPane().add(pptxProgressBar, "cell 2 0");
 
 		docxProgressBar = new JProgressBar();
-		// frame.getContentPane().add(docxProgressBar, "cell 2 1");
+		frame.getContentPane().add(docxProgressBar, "cell 2 1");
 	}
 
 	public void writeLineToConsole(String message) {

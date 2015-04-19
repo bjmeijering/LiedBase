@@ -2,9 +2,11 @@ package org.gkvassenpeelo.liedbase;
 
 import javax.swing.SwingWorker;
 
+import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
+import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 
 public class CreatePptxTask extends SwingWorker<Void, Void> {
 
@@ -17,10 +19,17 @@ public class CreatePptxTask extends SwingWorker<Void, Void> {
 	}
 
 	@Override
-	protected Void doInBackground() throws Exception {
-		SlideMachine slideMachine = new SlideMachine(model);
-		slideMachine.createSlides();
-		slideMachine.save();
+	protected Void doInBackground() {
+		SlideMachine slideMachine;
+		try {
+			slideMachine = new SlideMachine(model);
+			slideMachine.createSlides();
+			slideMachine.save();
+		} catch (SlideMachineException e) {
+			view.writeLineToConsole(e.getMessage());
+		} catch (Docx4JException e) {
+			view.writeLineToConsole(e.getMessage());
+		}
 		return null;
 	}
 

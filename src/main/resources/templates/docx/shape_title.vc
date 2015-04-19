@@ -1,0 +1,19 @@
+<w:p xmlns:w ="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+	<w:pPr>
+		<w:rPr>
+			<w:b/>
+			<w:sz w:val="22"/>
+			<w:szCs w:val="22"/>
+			<w:lang w:val="nl-NL" w:eastAsia="nl-NL" w:bidi="ar-SA"/>
+		</w:rPr>
+	</w:pPr>
+	<w:r w:rsidR="00B60298" w:rsidRPr="00D054A5">
+		<w:rPr>
+			<w:b/>
+			<w:sz w:val="22"/>
+			<w:szCs w:val="22"/>
+			<w:lang w:val="nl-NL" w:eastAsia="nl-NL" w:bidi="ar-SA"/>
+		</w:rPr>
+		<w:t>${titleText}</w:t>
+	</w:r>
+</w:p>
