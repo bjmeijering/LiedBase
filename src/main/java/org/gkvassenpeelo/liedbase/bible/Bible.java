@@ -3,8 +3,6 @@ package org.gkvassenpeelo.liedbase.bible;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.CookieHandler;
 import java.net.CookieManager;
@@ -21,8 +19,6 @@ import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 public class Bible {
 
@@ -42,108 +38,6 @@ public class Bible {
 
 	public Bible() {
 
-	}
-
-	public static List<BiblePartFragment> getBiblePartFromHtml(String translation, String book, int chapter, int fromVerse, int toVerse) throws BibleException {
-
-		translation = translation.toUpperCase();
-
-		book = book.toLowerCase();
-
-		book = book.replaceAll("ë", "e");
-		book = book.replaceAll("ï", "i");
-		book = book.replaceAll("ü", "u");
-
-		Document doc;
-		try {
-			InputStream in = ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book + ".html");
-
-			doc = Jsoup.parse(in, ENCODING, "");
-			doc.outputSettings().charset(ENCODING);
-			in.close();
-
-		} catch (IOException e) {
-			throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
-		} catch (NullPointerException e) {
-			throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
-		}
-
-		Element bibleChapter = doc.select("div[id=scroller]").get(chapter - 1);
-
-		// remove h3 tags
-
-		Elements removals = bibleChapter.select("h3.s");
-		removals.addAll(bibleChapter.select("span.chapterStart"));
-		for (Element header : removals) {
-			header.remove();
-		}
-
-		List<BiblePartFragment> bp = new ArrayList<BiblePartFragment>();
-
-		logger.info(bibleChapter.text());
-
-		String chapterText = bibleChapter.text().trim();
-
-		StringBuilder sb = new StringBuilder();
-
-		boolean parsingVerse = true;
-		boolean buildingVerse = true;
-
-		int currentStartVerse = 0;
-		int currentEndVerse = 0;
-
-		for (int i = 0; i < chapterText.length(); i++) {
-			char c = chapterText.charAt(i);
-
-			try {
-				Integer.parseInt(String.valueOf(c));
-				parsingVerse = true;
-			} catch (NumberFormatException e) {
-				parsingVerse = false;
-			}
-
-			try {
-				Integer.parseInt(sb.toString());
-				buildingVerse = true;
-			} catch (NumberFormatException e) {
-				buildingVerse = false;
-			}
-
-			// End of building verse Number. Add contents of StringBuilder with superscript
-			if (buildingVerse && !parsingVerse) {
-
-				currentEndVerse = Integer.parseInt(sb.toString());
-
-				// try to capture verse number
-				String verseId = sb.toString();
-				if (!StringUtils.isEmpty(verseId)) {
-					if (verseId.contains("-")) {
-						currentStartVerse = Integer.parseInt(StringUtils.substringBefore(verseId, "-"));
-						currentEndVerse = Integer.parseInt(StringUtils.substringAfter(verseId, "-"));
-					} else {
-						currentStartVerse = currentEndVerse = Integer.parseInt(verseId);
-					}
-				}
-
-				if (!StringUtils.isEmpty(sb.toString()) && currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
-					bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.superScript, sb.toString()));
-				}
-				sb = new StringBuilder();
-				sb.append(String.valueOf(c));
-			}
-			// End of text building. Add contents of stringbuilder with normal script
-			else if (!buildingVerse && parsingVerse) {
-				if (!StringUtils.isEmpty(sb.toString()) && currentStartVerse >= fromVerse && currentEndVerse <= toVerse) {
-					bp.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
-				}
-				sb = new StringBuilder();
-				sb.append(String.valueOf(c));
-			} else {
-				sb.append(String.valueOf(c));
-			}
-		}
-
-		return bp;
 	}
 
 	public static List<BiblePartFragment> getBiblePartFromText(String translation, String book, int chapter, int fromVerse, int toVerse) throws BibleException {
@@ -183,7 +77,7 @@ public class Bible {
 					// check to see if we are reading the next chapter, if so, return the BiblePartFragment List
 					if (line.startsWith(String.format("#%s", chapter + 1))) {
 						s.close();
-						return fragmentList;
+						return clean(fragmentList);
 					}
 
 					// title encountered, print italic
@@ -229,7 +123,7 @@ public class Bible {
 						}
 
 						// end of a verse
-						if (prevCharType == CharType.character && getCharType(c) == CharType.number) {
+						if (prevCharType == CharType.character && getCharType(c) == CharType.number && !buildingTitle) {
 							if (addVerse) {
 								fragmentList.add(new BiblePartFragment(BiblePartFragment.DisplayType.normal, sb.toString()));
 							}
@@ -251,7 +145,7 @@ public class Bible {
 									}
 									if (Integer.parseInt(sb.toString()) > toVerse) {
 										s.close();
-										return fragmentList;
+										return clean(fragmentList);
 									}
 								} catch (NumberFormatException e) {
 									// TODO verse number probably contains a dash, handle it!
@@ -293,6 +187,17 @@ public class Bible {
 
 		s.close();
 
+		return clean(fragmentList);
+	}
+
+	// strip all last entries if they are italic or line ends.
+	private static List<BiblePartFragment> clean(List<BiblePartFragment> fragmentList) {
+
+		while (fragmentList.get(fragmentList.size() - 1).getDisplayType() == BiblePartFragment.DisplayType.line_end
+				|| fragmentList.get(fragmentList.size() - 1).getDisplayType() == BiblePartFragment.DisplayType.italic) {
+			fragmentList.remove(fragmentList.size() - 1);
+			clean(fragmentList);
+		}
 		return fragmentList;
 	}
 

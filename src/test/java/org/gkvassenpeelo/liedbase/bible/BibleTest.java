@@ -41,17 +41,6 @@ public class BibleTest {
 			fail("Something went wrong: " + e.getMessage());
 		}
 	}
-	
-	@Test
-	@Ignore // bible text from html is not that important anymore...
-	public void getBiblePartTestFromHtml() throws Exception {
-		List<BiblePartFragment> bp = Bible.getBiblePartFromHtml("bgt", "genesis", 1, 1, 2);
-		
-		assertEquals("superScript", bp.get(0).getDisplayType().toString());
-		assertEquals("1", bp.get(0).getContent());
-		assertEquals("normal", bp.get(1).getDisplayType().toString());
-		assertEquals("In het begin maakte God de hemel en de aarde. ", bp.get(1).getContent());
-	}
 
 	@Test
 	public void getBiblePartTestFromText() throws Exception {
@@ -89,7 +78,7 @@ public class BibleTest {
 	public void getBiblePartNonExistentTest() throws Exception {
 
 		try {
-			Bible.getBiblePartFromHtml("nbv", "Exoddus", 2, 1, 5);
+			Bible.getBiblePartFromText("nbv", "Exoddus", 2, 1, 5);
 		} catch (BibleException e) {
 			assertEquals("Boek exoddus in vertaling NBV niet gevonden", e.getMessage());
 		}
