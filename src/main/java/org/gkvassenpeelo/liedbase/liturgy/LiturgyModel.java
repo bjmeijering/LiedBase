@@ -115,7 +115,7 @@ public class LiturgyModel {
 	 * 
 	 * @param inputString
 	 * @throws BibleException
-	 * @throws SongBookException 
+	 * @throws SongBookException
 	 * @throws IOException
 	 */
 	public LiturgyParseResult parseLiturgyScript(String liturgyText) throws BibleException, SongBookException {
@@ -145,7 +145,7 @@ public class LiturgyModel {
 	 * 
 	 * @param line
 	 * @throws BibleException
-	 * @throws SongBookException 
+	 * @throws SongBookException
 	 */
 	private String parseLiturgyScriptLine(String line) throws BibleException, SongBookException {
 
@@ -211,11 +211,11 @@ public class LiturgyModel {
 				while (st.hasMoreTokens()) {
 					String currentVerse = st.nextToken().trim();
 					List<SongLine> songText = SongBook.getSongText(scType, SongBook.getSongNumber(line), currentVerse);
-					
-					if(songText == null) {
+
+					if (songText == null) {
 						throw new SongBookException(String.format("Vers %s van %s %s niet gevonden", currentVerse, scType, SongBook.getSongNumber(line)));
 					}
-					
+
 					Song song = new Song(line, songText);
 					song.setVerseNumber(currentVerse);
 					lp.addSlide(song);
@@ -277,6 +277,9 @@ public class LiturgyModel {
 
 			if (justCopy) {
 				sb.append(c);
+				if (String.valueOf(c).equals(")")) {
+					justCopy = false;
+				}
 				continue;
 			}
 
@@ -288,10 +291,8 @@ public class LiturgyModel {
 			}
 
 			// handle braces
-			if (String.valueOf(c).equals(")")) {
-				justCopy = false;
-			}
 			if (String.valueOf(c).equals("(")) {
+				sb.append(" ");
 				justCopy = true;
 			}
 
