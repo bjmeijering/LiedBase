@@ -6,41 +6,52 @@ import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 
 public class Scripture extends SlideContents {
 
-    private List<BiblePartFragment> biblePart;
+	private List<BiblePartFragment> biblePart;
 
-    private String bibleBook;
+	private String bibleBook;
 
-    private int chapter;
+	private String translation;
 
-    private int fromVerse;
+	private int chapter;
 
-    private int toVerse;
+	private int fromVerse;
 
-    public Scripture(List<BiblePartFragment> biblePart, String bibleBook, int chapter, int fromVerse, int toVerse) {
-        this.biblePart = biblePart;
-        this.bibleBook = bibleBook;
-        this.chapter = chapter;
-        this.fromVerse = fromVerse;
-        this.toVerse = toVerse;
-    }
+	private int toVerse;
 
-    public List<BiblePartFragment> getBiblePart() {
-        return this.biblePart;
-    }
+	public Scripture(List<BiblePartFragment> biblePart, String bibleBook, String translation, int chapter, int fromVerse, int toVerse) {
+		this.biblePart = biblePart;
+		this.bibleBook = bibleBook;
+		this.chapter = chapter;
+		this.fromVerse = fromVerse;
+		this.toVerse = toVerse;
+		this.translation = translation;
+	}
 
-    public String getBibleBook() {
-        return bibleBook;
-    }
+	public List<BiblePartFragment> getBiblePart() {
+		return this.biblePart;
+	}
 
-    public int getChapter() {
-        return chapter;
-    }
+	public String getBibleBook() {
+		return bibleBook;
+	}
 
-    public int getFromVerse() {
-        return fromVerse;
-    }
+	public int getChapter() {
+		return chapter;
+	}
 
-    public int getToVerse() {
-        return toVerse;
-    }
+	public int getFromVerse() {
+		return fromVerse;
+	}
+
+	public int getToVerse() {
+		return toVerse;
+	}
+
+	public String getTranslation() {
+		return translation;
+	}
+
+	public void setTranslation(String translation) {
+		this.translation = translation;
+	}
 }

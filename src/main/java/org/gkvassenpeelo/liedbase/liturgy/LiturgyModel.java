@@ -247,7 +247,7 @@ public class LiturgyModel {
 
 			line = format(line, LiturgyPart.Type.scripture);
 
-			lp.addSlide(new Scripture(biblePart, bibleBook, chapter, fromVerse, toVerse));
+			lp.addSlide(new Scripture(biblePart, bibleBook, translation, chapter, fromVerse, toVerse));
 		}
 
 		lp.setLine(line);

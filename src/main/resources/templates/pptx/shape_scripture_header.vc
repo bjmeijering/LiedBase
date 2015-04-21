@@ -23,11 +23,11 @@
 					<a:effectLst/>
 				</a:rPr>
 #if(${verseStart} == ${verseEnd})
-				<a:t>${bibleBook} ${chapter}: ${verseStart}</a:t>
+				<a:t>${bibleBook} ${chapter}: ${verseStart} ${translation}</a:t>
 #elseif(${verseStart} == 0 && ${verseEnd} == 999) 
-				<a:t>${bibleBook} ${chapter}</a:t>
+				<a:t>${bibleBook} ${chapter} ${translation}</a:t>
 #else
-				<a:t>${bibleBook} ${chapter}: ${verseStart} - ${verseEnd}</a:t>
+				<a:t>${bibleBook} ${chapter}: ${verseStart} - ${verseEnd} ${translation}</a:t>
 #end
 			</a:r>
 			<a:endParaRPr lang="nl-NL" dirty="false"/>

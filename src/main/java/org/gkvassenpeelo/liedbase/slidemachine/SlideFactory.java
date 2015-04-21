@@ -169,6 +169,11 @@ public class SlideFactory {
 		vc.put("chapter", ((Scripture) content).getChapter());
 		vc.put("verseStart", ((Scripture) content).getFromVerse());
 		vc.put("verseEnd", ((Scripture) content).getToVerse());
+		if (!((Scripture) content).getTranslation().equals("NBV")) {
+			vc.put("translation", "(" + ((Scripture) content).getTranslation() + ")");
+		} else {
+			vc.put("translation", "");
+		}
 
 		StringWriter ow = new StringWriter();
 
