@@ -1,12 +1,13 @@
 package org.gkvassenpeelo.liedbase;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 import javax.swing.SwingWorker;
 
-import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
-import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 
 public class CreatePptxTask extends SwingWorker<Void, Void> {
 
@@ -25,10 +26,13 @@ public class CreatePptxTask extends SwingWorker<Void, Void> {
 			slideMachine = new SlideMachine(model);
 			slideMachine.createSlides();
 			slideMachine.save();
-		} catch (SlideMachineException e) {
+		} catch (Exception e) {
+			StringWriter sw = new StringWriter();
+			PrintWriter pw = new PrintWriter(sw);
+			e.printStackTrace(pw);
+			view.writeLineToConsole("Oeps... Er is iets fout gegaan.");
 			view.writeLineToConsole(e.getMessage());
-		} catch (Docx4JException e) {
-			view.writeLineToConsole(e.getMessage());
+			view.writeLineToConsole(sw.toString());
 		}
 		return null;
 	}

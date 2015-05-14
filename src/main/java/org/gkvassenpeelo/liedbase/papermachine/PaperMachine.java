@@ -70,7 +70,9 @@ public class PaperMachine {
 				try {
 					addLiturgyPartToDocument(lp);
 				} catch (JAXBException e) {
-					throw new PaperMachineException(e.getMessage());
+					throw new PaperMachineException(e.getMessage(), e);
+				} catch (Exception e) {
+					throw new PaperMachineException(e.getMessage(), e);
 				}
 			}
 
@@ -99,15 +101,18 @@ public class PaperMachine {
 
 			for (SlideContents sc : lp.getSlides()) {
 
-				// Create the heading text
-				org.docx4j.wml.P title = getTitleTextShape("Schriftlezing: " + lp.getLine());
-				body.getEGBlockLevelElts().add(title);
+				// Only add when there is actually text to display
+				if (((Scripture) sc).getBiblePart() != null) {
+					// Create the heading text
+					org.docx4j.wml.P title = getTitleTextShape("Schriftlezing: " + lp.getLine());
+					body.getEGBlockLevelElts().add(title);
 
-				// Create the paragraph
-				org.docx4j.wml.P para = getScriptureShape(((Scripture) sc).getBiblePart());
+					// Create the paragraph
+					org.docx4j.wml.P para = getScriptureShape(((Scripture) sc).getBiblePart());
 
-				// Now add our paragraph to the document body
-				body.getEGBlockLevelElts().add(para);
+					// Now add our paragraph to the document body
+					body.getEGBlockLevelElts().add(para);
+				}
 
 			}
 
@@ -222,8 +227,10 @@ public class PaperMachine {
 
 	private P getScriptureShape(List<BiblePartFragment> list) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
-		vc.put("fragments", list);
-		vc.put("nol", list.size());
+		if (list != null) {
+			vc.put("fragments", list);
+			vc.put("nol", list.size());
+		}
 
 		StringWriter ow = new StringWriter();
 

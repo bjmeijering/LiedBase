@@ -1,5 +1,8 @@
 package org.gkvassenpeelo.liedbase;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
 import javax.swing.SwingWorker;
 
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
@@ -18,9 +21,20 @@ public class CreateDocxTask extends SwingWorker<Void, Void> {
 
 	@Override
 	protected Void doInBackground() throws Exception {
-		PaperMachine paperMachine = new PaperMachine(model.getLiturgy());
-		paperMachine.createDocument();
-		paperMachine.save();
+		try {
+			PaperMachine paperMachine = new PaperMachine(model.getLiturgy());
+			paperMachine.createDocument();
+			paperMachine.save();
+		} catch (Exception e) {
+			StringWriter sw = new StringWriter();
+			PrintWriter pw = new PrintWriter(sw);
+			e.printStackTrace(pw);
+			view.writeLineToConsole("Oeps... Er is iets fout gegaan.");
+			if (e.getMessage() != null) {
+				view.writeLineToConsole(e.getMessage());
+			}
+			view.writeLineToConsole(sw.toString());
+		}
 		return null;
 	}
 

@@ -81,7 +81,7 @@ public class SlideMachine {
 		targetFilename = filename;
 	}
 
-	public void createSlides() {
+	public void createSlides() throws SlideMachineException {
 
 		try {
 			// Liturgy parsed and created, time to create Slides
@@ -102,20 +102,18 @@ public class SlideMachine {
 			}
 
 		} catch (JAXBException e) {
-			logger.error(e.getMessage(), e);
-			System.exit(1);
+			throw new SlideMachineException(e.getMessage(), e);
 		} catch (Pptx4jException e) {
-			logger.error(e.getMessage(), e);
-			System.exit(1);
+			throw new SlideMachineException(e.getMessage(), e);
 		} catch (Docx4JException e) {
-			logger.error(e.getMessage(), e);
-			System.exit(1);
+			throw new SlideMachineException(e.getMessage(), e);
 		}
 	}
 
 	private void addIntermediateSlide(LiturgyPart lp) throws JAXBException, Pptx4jException, Docx4JException {
 		// after some liturgy parts, add an overview slide, except for
 		// the last one!
+
 		if (followedByLiturgyOverview.contains(lp.getType()) && showLiturgyOverview) {
 			LiturgyOverview lo = new LiturgyOverview();
 

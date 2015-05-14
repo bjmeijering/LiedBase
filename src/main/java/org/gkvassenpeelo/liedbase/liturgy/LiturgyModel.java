@@ -56,6 +56,8 @@ public class LiturgyModel {
 	 */
 	private LiturgyPart.Type getLiturgyPartTypeFromLiturgyLine(String line) throws LiedBaseError {
 
+		String regex_extended_scripture = "bijbeltekst vervolg";
+		String regex_empty_with_logo = "leeg met logo";
 		String regex_end_of_morning_service = "(([eE]inde)?.*[mM]orgendienst)";
 		String regex_end_of_afternoon_service = "(([eE]inde)?.*[mM]iddagdienst)";
 		String regex_amen = "(([gG]ezongen)?.*[aA]men)";
@@ -65,8 +67,9 @@ public class LiturgyModel {
 		String regex_law = "([wW]et)";
 		String regex_lecture = "([pP]reek)";
 		String regex_agenda = "([aA]genda)";
-		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_agenda, regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen,
-				regex_votum, regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_gebed, regex_collecte, regex_voorganger, regex_law, regex_lecture);
+		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_extended_scripture, regex_empty_with_logo, regex_agenda,
+				regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_gebed,
+				regex_collecte, regex_voorganger, regex_law, regex_lecture);
 
 		// check liturgy part type
 		Pattern liturgyPattern = Pattern.compile(regex);
@@ -106,6 +109,10 @@ public class LiturgyModel {
 			return LiturgyPart.Type.endOfMorningService;
 		} else if (m.group(1).matches(regex_end_of_afternoon_service)) {
 			return LiturgyPart.Type.endOfAfternoonService;
+		} else if (m.group(1).matches(regex_extended_scripture)) {
+			return LiturgyPart.Type.extendedScripture;
+		} else if (m.group(1).matches(regex_empty_with_logo)) {
+			return LiturgyPart.Type.emptyWithLogo;
 		}
 
 		return null;
@@ -225,9 +232,12 @@ public class LiturgyModel {
 
 		} else if (type == LiturgyPart.Type.prair) {
 			// nothing to do
+		} else if (type == LiturgyPart.Type.extendedScripture) {
+			// nothing to do
+		} else if (type == LiturgyPart.Type.emptyWithLogo) {
+			// nothing to do
 		} else if (type == LiturgyPart.Type.gathering) {
 			lp.addSlide(new Gathering(getGatheringBenificiaries(line)));
-
 			line = "Collecte";
 		} else if (type == LiturgyPart.Type.welcome) {
 			lp.addSlide(new Welcome(getVicarName(line)));
@@ -248,6 +258,8 @@ public class LiturgyModel {
 			line = format(line, LiturgyPart.Type.scripture);
 
 			lp.addSlide(new Scripture(biblePart, bibleBook, translation, chapter, fromVerse, toVerse));
+			lp.addSlide(new Scripture(null, bibleBook, translation, chapter, fromVerse, toVerse));
+			
 		}
 
 		lp.setLine(line);

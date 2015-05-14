@@ -83,6 +83,7 @@ public class LiedBaseView {
 		liturgyPartButtons.add(createLiturgyButton("Amen/Zegen", "amen"));
 		liturgyPartButtons.add(createLiturgyButton("Einde morgendienst", "einde morgendienst: [aanvangstijd middagdienst], [naam voorganger]"));
 		liturgyPartButtons.add(createLiturgyButton("Einde middagdienst", "einde middagdienst"));
+		liturgyPartButtons.add(createLiturgyButton("Leeg met logo", "leeg met logo"));
 
 		JScrollPane taScrollPane = new JScrollPane(taLiturgy, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		frame.getContentPane().add(taScrollPane, "w 400::1920,h 400::1080,span 1 2");

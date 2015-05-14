@@ -146,7 +146,7 @@ public class SongBook {
 
 	}
 
-	public static List<List<SongLine>> getOpwekkingSongTekst(String songNumber) {
+	public static List<List<SongLine>> getOpwekkingSongTekst(String songNumber) throws SongBookException {
 		List<List<SongLine>> verses = new ArrayList<List<SongLine>>();
 
 		String songBookName = "opwekking.txt";
@@ -197,6 +197,9 @@ public class SongBook {
 						}
 						verseText.add(new SongLine(SongLine.DisplayType.normal, verseLine));
 					}
+					
+					// add the last verse
+					verses.add(verseText);
 
 					return verses;
 				}
@@ -206,8 +209,9 @@ public class SongBook {
 			}
 		}
 
+		// song not found
 		s.close();
-		return verses;
+		throw new SongBookException("Opwekking " + songNumber + " niet gevonden");
 	}
 
 	public static List<String> getVersesFromSong(SlideContents.Type type, String songNumber) {

@@ -6,13 +6,13 @@ import java.util.List;
 public class LiturgyPart {
 
 	public enum Type {
-		welcome, blank, song, gathering, prair, law, lecture, votum, amen, endOfMorningService, endOfAfternoonService, scripture, agenda, liturgyOverview
+		welcome, blank, song, gathering, prair, law, lecture, votum, amen, endOfMorningService, endOfAfternoonService, scripture, agenda, liturgyOverview, extendedScripture, emptyWithLogo
 	};
 
 	private Type type;
 
 	private String line;
-	
+
 	private List<SlideContents> slides = new ArrayList<SlideContents>();
 
 	public LiturgyPart(Type type) {
