@@ -365,6 +365,9 @@ public class LiturgyModel {
 
 		// strip weird dash
 		line = line.replace("–", "-");
+		
+		// URLencode ampersand
+		line = line.replace("&", "&amp;");
 
 		return line;
 	}

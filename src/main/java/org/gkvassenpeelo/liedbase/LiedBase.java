@@ -10,15 +10,18 @@ import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 
 /**
  * TODO: voetnoten zoals in markus 15:28
+ * TODO: knop voeg sheet met logo toe werkt niet
+ * TODO: log files weglaten
  * 
  * @author hdo20043
  *
  */
 public class LiedBase {
 
-    static final Logger logger = Logger.getLogger(LiedBase.class);
+	static final Logger logger = Logger.getLogger(LiedBase.class);
 
-	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, SlideMachineException, PaperMachineException {
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, SlideMachineException,
+			PaperMachineException {
 
 		LiturgyModel model = new LiturgyModel(logger);
 		LiedBaseController controller = new LiedBaseController(model);
@@ -26,9 +29,8 @@ public class LiedBase {
 
 		view.initialize();
 		view.setVisible(true);
-		
 
-        logger.info("LiedBase gestart");
+		logger.info("LiedBase gestart");
 
 	}
 }
