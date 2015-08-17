@@ -68,10 +68,23 @@ public class BibleTest {
 		assertEquals(2, Bible.getChapterFromLine("2 johannes 2 : 13"));
 		assertEquals(2, Bible.getChapterFromLine("nietb estaadn 2 : 13"));
 	}
+	
+	@Test
+	public void getStartVerseFromLineTest() {
+	    assertEquals(13, Bible.getStartVerseFromLine("genesis 2: 13 (BGT)"));
+	    assertEquals(13, Bible.getStartVerseFromLine("genesis 2: 13"));
+	    assertEquals(2, Bible.getStartVerseFromLine("genesis 2: 2-13"));
+	    assertEquals(2, Bible.getStartVerseFromLine("genesis 2: 2 - 13"));
+	    assertEquals(2, Bible.getStartVerseFromLine("genesis 2: 2 - 13 "));
+	}
 
 	@Test
 	public void getEndVerseFromLineTest() {
-		assertEquals(13, Bible.getEndVerseFromLine("genesis 2: 13"));
+	    assertEquals(13, Bible.getEndVerseFromLine("genesis 2: 13 (BGT)"));
+	    assertEquals(13, Bible.getEndVerseFromLine("genesis 2: 13"));
+	    assertEquals(13, Bible.getEndVerseFromLine("genesis 2: 2-13"));
+	    assertEquals(13, Bible.getEndVerseFromLine("genesis 2: 2 - 13"));
+		assertEquals(13, Bible.getEndVerseFromLine("genesis 2: 2 - 13 "));
 	}
 
 	@Test
