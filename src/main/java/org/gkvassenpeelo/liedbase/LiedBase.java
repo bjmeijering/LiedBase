@@ -24,12 +24,12 @@ public class LiedBase {
     public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, SlideMachineException,
             PaperMachineException {
 
-//        // Configure logger
-//        BasicConfigurator.configure();
-//        logger.debug("Hello World!");
-//        logger.info("Info");
-//        logger.warn("warning!");
-//        logger.error("error");
+        // // Configure logger
+        // BasicConfigurator.configure();
+        // logger.debug("Hello World!");
+        // logger.info("Info");
+        // logger.warn("warning!");
+        // logger.error("error");
 
         LiturgyModel model = new LiturgyModel(logger);
         LiedBaseController controller = new LiedBaseController(model);
@@ -37,8 +37,6 @@ public class LiedBase {
 
         view.initialize();
         view.setVisible(true);
-
-        logger.info("LiedBase gestart");
 
     }
 }
