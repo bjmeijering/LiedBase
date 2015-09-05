@@ -1,6 +1,7 @@
 package org.gkvassenpeelo.liedbase.slidemachine;
 
 import java.io.StringWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,8 +50,8 @@ public class SlideFactory {
 	private static final String ENCODING = "UTF-8";
 
 	/**
-     * 
-     */
+	 * 
+	 */
 	public SlideFactory() {
 		// fill the slide layout map
 		slideLayoutMap.put(LiturgyPart.Type.song, "/ppt/slideLayouts/slideLayout4.xml");
@@ -68,7 +69,7 @@ public class SlideFactory {
 		slideLayoutMap.put(LiturgyPart.Type.agenda, "/ppt/slideLayouts/slideLayout2.xml");
 		slideLayoutMap.put(LiturgyPart.Type.liturgyOverview, "/ppt/slideLayouts/slideLayout20.xml");
 		slideLayoutMap.put(LiturgyPart.Type.extendedScripture, "/ppt/slideLayouts/slideLayout5.xml");
-		slideLayoutMap.put(LiturgyPart.Type.emptyWithLogo, "/ppt/slideLayouts/slideLayout19.xml");
+		slideLayoutMap.put(LiturgyPart.Type.emptyWithLogo, "/ppt/slideLayouts/slideLayout4.xml");
 
 		// init velocity with defaults
 		Velocity.init();
@@ -90,7 +91,7 @@ public class SlideFactory {
 		// add Slide layout part
 		slidePart.addTargetPart(layoutPart);
 
-		// Add contents to layout if neccesary
+		// Add contents to layout if necessary
 		if (type == LiturgyPart.Type.song) {
 			// Create and add header
 			if (!StringUtils.isEmpty(content.getHeader())) {

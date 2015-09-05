@@ -235,7 +235,7 @@ public class LiturgyModel {
 		} else if (type == LiturgyPart.Type.extendedScripture) {
 			// nothing to do
 		} else if (type == LiturgyPart.Type.emptyWithLogo) {
-			// nothing to do
+			// noop
 		} else if (type == LiturgyPart.Type.gathering) {
 			lp.addSlide(new Gathering(getGatheringBenificiaries(line)));
 			line = "Collecte";
