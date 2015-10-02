@@ -18,7 +18,7 @@
 				<a:rPr lang="nl-NL" dirty="false" smtClean="false">
 					<a:solidFill>
 						<a:schemeClr val="tx1">
-							<a:lumMod val="50000"/>
+							<a:lumMod val="25000"/>
 						</a:schemeClr>
 					</a:solidFill>
 					<a:effectLst/>
