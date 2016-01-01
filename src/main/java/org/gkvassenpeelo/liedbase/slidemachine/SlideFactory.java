@@ -69,6 +69,7 @@ public class SlideFactory {
 		slideLayoutMap.put(LiturgyPart.Type.liturgyOverview, "/ppt/slideLayouts/slideLayout20.xml");
 		slideLayoutMap.put(LiturgyPart.Type.extendedScripture, "/ppt/slideLayouts/slideLayout5.xml");
 		slideLayoutMap.put(LiturgyPart.Type.emptyWithLogo, "/ppt/slideLayouts/slideLayout19.xml");
+		slideLayoutMap.put(LiturgyPart.Type.video, "/ppt/slideLayouts/slideLayout21.xml");
 
 		// init velocity with defaults
 		Velocity.init();

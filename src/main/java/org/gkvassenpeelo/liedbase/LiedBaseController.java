@@ -72,7 +72,7 @@ public class LiedBaseController extends AbstractAction implements PropertyChange
     public void setLiedBaseView(LiedBaseView view) {
         this.view = view;
 
-        view.writeLineToConsole("Welkom bij LiedBase versie: 3.0");
+        view.writeLineToConsole("Welkom bij LiedBase versie: 3.2");
 
         // on startup set the liturgy
         try {

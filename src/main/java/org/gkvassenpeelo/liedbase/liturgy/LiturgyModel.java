@@ -22,6 +22,7 @@ public class LiturgyModel {
 	private Logger logger;
 
 	// re-used
+	private static final String regex_video = "([Vv]ideo)";
 	private static final String regex_psalm = "([pP]salm )";
 	private static final String regex_gezang = "([gG]ezang(en)?)";
 	private static final String regex_lied = "([lL]ied([bB]oek)?)";
@@ -56,6 +57,7 @@ public class LiturgyModel {
 	 */
 	private LiturgyPart.Type getLiturgyPartTypeFromLiturgyLine(String line) throws LiedBaseError {
 
+	    String regex_video = "video";
 		String regex_extended_scripture = "bijbeltekst vervolg";
 		String regex_empty_with_logo = "leeg met logo";
 		String regex_end_of_morning_service = "(([eE]inde)?.*[mM]orgendienst)";
@@ -67,7 +69,7 @@ public class LiturgyModel {
 		String regex_law = "([wW]et)";
 		String regex_lecture = "([pP]reek)";
 		String regex_agenda = "([aA]genda)";
-		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_extended_scripture, regex_empty_with_logo, regex_agenda,
+		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_video, regex_extended_scripture, regex_empty_with_logo, regex_agenda,
 				regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_gebed,
 				regex_collecte, regex_voorganger, regex_law, regex_lecture);
 
@@ -82,7 +84,9 @@ public class LiturgyModel {
 		m.find();
 
 		if (m.group(1).matches(regex_psalm)) {
-			return LiturgyPart.Type.song;
+		    return LiturgyPart.Type.song;
+		} else if (m.group(1).matches(regex_video)) {
+			return LiturgyPart.Type.video;
 		} else if (m.group(1).matches(regex_gezang)) {
 			return LiturgyPart.Type.song;
 		} else if (m.group(1).matches(regex_lied)) {
