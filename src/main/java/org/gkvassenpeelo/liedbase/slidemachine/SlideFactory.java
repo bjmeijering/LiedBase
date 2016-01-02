@@ -70,6 +70,7 @@ public class SlideFactory {
 		slideLayoutMap.put(LiturgyPart.Type.extendedScripture, "/ppt/slideLayouts/slideLayout5.xml");
 		slideLayoutMap.put(LiturgyPart.Type.emptyWithLogo, "/ppt/slideLayouts/slideLayout19.xml");
 		slideLayoutMap.put(LiturgyPart.Type.video, "/ppt/slideLayouts/slideLayout21.xml");
+		slideLayoutMap.put(LiturgyPart.Type.schoonmaak, "/ppt/slideLayouts/slideLayout22.xml");
 
 		// init velocity with defaults
 		Velocity.init();
@@ -133,8 +134,13 @@ public class SlideFactory {
 
 		}
 		if (type == LiturgyPart.Type.agenda) {
+		    
+		    slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
+		    
+		}
+		if (type == LiturgyPart.Type.schoonmaak) {
 
-			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
+			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createSchoonmaakShape());
 
 		}
 		if (type == LiturgyPart.Type.liturgyOverview) {
@@ -155,13 +161,23 @@ public class SlideFactory {
 		Shape shape = ((Shape) XmlUtils.unmarshalString(ow.toString(), Context.jcPML));
 		return shape;
 	}
-
+	
 	private CTGraphicalObjectFrame createAgendaShape() throws JAXBException {
+	    VelocityContext vc = new VelocityContext();
+	    
+	    StringWriter ow = new StringWriter();
+	    
+	    getVelocityEngine().getTemplate("/templates/pptx/shape_agenda_table.vc", ENCODING).merge(vc, ow);
+	    
+	    return (CTGraphicalObjectFrame) XmlUtils.unmarshalString(ow.toString(), Context.jcPML, CTGraphicalObjectFrame.class);
+	}
+
+	private CTGraphicalObjectFrame createSchoonmaakShape() throws JAXBException {
 		VelocityContext vc = new VelocityContext();
 
 		StringWriter ow = new StringWriter();
 
-		getVelocityEngine().getTemplate("/templates/pptx/shape_agenda_table.vc", ENCODING).merge(vc, ow);
+		getVelocityEngine().getTemplate("/templates/pptx/shape_schoonmaak.vc", ENCODING).merge(vc, ow);
 
 		return (CTGraphicalObjectFrame) XmlUtils.unmarshalString(ow.toString(), Context.jcPML, CTGraphicalObjectFrame.class);
 	}
