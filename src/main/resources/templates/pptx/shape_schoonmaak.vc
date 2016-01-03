@@ -1,0 +1,540 @@
+<p:graphicFrame xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xdr="http://schemas.openxmlformats.org/drawingml/2006/spreadsheetDrawing" xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture" xmlns:ns12="http://schemas.openxmlformats.org/drawingml/2006/lockedCanvas" xmlns:ns6="http://schemas.openxmlformats.org/drawingml/2006/chartDrawing" xmlns:ns11="http://schemas.openxmlformats.org/drawingml/2006/compatibility" xmlns:dgm="http://schemas.openxmlformats.org/drawingml/2006/diagram">
+	<p:nvGraphicFramePr>
+		<p:cNvPr id="2" name="Tabel 5"/>
+		<p:cNvGraphicFramePr>
+			<a:graphicFrameLocks noGrp="1"/>
+		</p:cNvGraphicFramePr>
+		<p:nvPr>
+			<p:extLst>
+				<p:ext uri="{D42A27DB-BD31-4B8C-83A1-F6EECF244321}">
+					<p14:modId xmlns:p14="http://schemas.microsoft.com/office/powerpoint/2010/main" val="1333630646"/>
+				</p:ext>
+			</p:extLst>
+		</p:nvPr>
+	</p:nvGraphicFramePr>
+	<p:xfrm>
+		<a:off x="179388" y="1881823"/>
+		<a:ext cx="8640762" cy="2490066"/>
+	</p:xfrm>
+	<a:graphic>
+		<a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/table">
+			<a:tbl>
+				<a:tblPr firstRow="1" bandRow="1">
+					<a:tableStyleId>{5C22544A-7EE6-4342-B048-85BDC9FD1C3A}</a:tableStyleId>
+				</a:tblPr>
+				<a:tblGrid>
+					<a:gridCol w="1963448"/>
+					<a:gridCol w="2493819"/>
+					<a:gridCol w="2767322"/>
+					<a:gridCol w="1416173"/>
+				</a:tblGrid>
+				<a:tr h="830022">
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:srgbClr val="000000"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>Datum</a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:srgbClr val="000000"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:solidFill>
+								<a:schemeClr val="bg2">
+									<a:lumMod val="85000"/>
+								</a:schemeClr>
+							</a:solidFill>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:srgbClr val="000000"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>Kring</a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:srgbClr val="000000"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:solidFill>
+								<a:schemeClr val="bg2">
+									<a:lumMod val="85000"/>
+								</a:schemeClr>
+							</a:solidFill>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:srgbClr val="000000"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>Locatie</a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:srgbClr val="000000"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:solidFill>
+								<a:schemeClr val="bg2">
+									<a:lumMod val="85000"/>
+								</a:schemeClr>
+							</a:solidFill>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:srgbClr val="000000"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>Tijd</a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:srgbClr val="000000"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:solidFill>
+								<a:schemeClr val="bg2">
+									<a:lumMod val="85000"/>
+								</a:schemeClr>
+							</a:solidFill>
+						</a:tcPr>
+					</a:tc>
+				</a:tr>
+				<a:tr h="830022">
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t></a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:schemeClr val="bg1"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:pPr marL="0" marR="0" indent="0" algn="l" defTabSz="914400" rtl="0" eaLnBrk="1" fontAlgn="auto" latinLnBrk="0" hangingPunct="1">
+									<a:lnSpc>
+										<a:spcPct val="100000"/>
+									</a:lnSpc>
+									<a:spcBef>
+										<a:spcPts val="0"/>
+									</a:spcBef>
+									<a:spcAft>
+										<a:spcPts val="0"/>
+									</a:spcAft>
+									<a:buClrTx/>
+									<a:buSzTx/>
+									<a:buFontTx/>
+									<a:buNone/>
+									<a:tabLst/>
+									<a:defRPr/>
+								</a:pPr>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t></a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+									<a:solidFill>
+										<a:schemeClr val="bg1"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:pPr marL="0" indent="0"/>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>Het Noorderlicht</a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:schemeClr val="bg1"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>19:00</a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:schemeClr val="bg1"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+				</a:tr>
+				<a:tr h="830022">
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t></a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:schemeClr val="bg1"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:pPr marL="0" marR="0" indent="0" algn="l" defTabSz="914400" rtl="0" eaLnBrk="1" fontAlgn="auto" latinLnBrk="0" hangingPunct="1">
+									<a:lnSpc>
+										<a:spcPct val="100000"/>
+									</a:lnSpc>
+									<a:spcBef>
+										<a:spcPts val="0"/>
+									</a:spcBef>
+									<a:spcAft>
+										<a:spcPts val="0"/>
+									</a:spcAft>
+									<a:buClrTx/>
+									<a:buSzTx/>
+									<a:buFontTx/>
+									<a:buNone/>
+									<a:tabLst/>
+									<a:defRPr/>
+								</a:pPr>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t></a:t>
+								</a:r>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:pPr marL="0" marR="0" indent="0" algn="l" defTabSz="914400" rtl="0" eaLnBrk="1" fontAlgn="auto" latinLnBrk="0" hangingPunct="1">
+									<a:lnSpc>
+										<a:spcPct val="100000"/>
+									</a:lnSpc>
+									<a:spcBef>
+										<a:spcPts val="0"/>
+									</a:spcBef>
+									<a:spcAft>
+										<a:spcPts val="0"/>
+									</a:spcAft>
+									<a:buClrTx/>
+									<a:buSzTx/>
+									<a:buFontTx/>
+									<a:buNone/>
+									<a:tabLst/>
+									<a:defRPr/>
+								</a:pPr>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>Het Noorderlicht</a:t>
+								</a:r>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+					<a:tc>
+						<a:txBody>
+							<a:bodyPr/>
+							<a:lstStyle/>
+							<a:p>
+								<a:r>
+									<a:rPr lang="nl-NL" sz="2400" dirty="0" smtClean="0">
+										<a:solidFill>
+											<a:schemeClr val="bg1"/>
+										</a:solidFill>
+										<a:effectLst>
+											<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+												<a:srgbClr val="000000">
+													<a:alpha val="43137"/>
+												</a:srgbClr>
+											</a:outerShdw>
+										</a:effectLst>
+									</a:rPr>
+									<a:t>19:00</a:t>
+								</a:r>
+								<a:endParaRPr lang="nl-NL" sz="2400" dirty="0">
+									<a:solidFill>
+										<a:schemeClr val="bg1"/>
+									</a:solidFill>
+									<a:effectLst>
+										<a:outerShdw blurRad="38100" dist="38100" dir="2700000" algn="tl">
+											<a:srgbClr val="000000">
+												<a:alpha val="43137"/>
+											</a:srgbClr>
+										</a:outerShdw>
+									</a:effectLst>
+								</a:endParaRPr>
+							</a:p>
+						</a:txBody>
+						<a:tcPr marL="91438" marR="91438" marT="45734" marB="45734">
+							<a:noFill/>
+						</a:tcPr>
+					</a:tc>
+				</a:tr>
+			</a:tbl>
+		</a:graphicData>
+	</a:graphic>
+</p:graphicFrame>
