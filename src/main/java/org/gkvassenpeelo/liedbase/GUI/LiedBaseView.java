@@ -76,6 +76,7 @@ public class LiedBaseView {
 		liturgyPartButtons.add(createLiturgyButton("Gezang", "gezang 1:1,2"));
 		liturgyPartButtons.add(createLiturgyButton("Lied", "liedboek 1:1,2"));
 		liturgyPartButtons.add(createLiturgyButton("Opwekking", "opwekking 1"));
+		liturgyPartButtons.add(createLiturgyButton("Levenslied", "levenslied 1:1,2"));
 		liturgyPartButtons.add(createLiturgyButton("Schriftlezing", "genesis 1:1-2 (BGT)"));
 		liturgyPartButtons.add(createLiturgyButton("Gebed", "gebed"));
 		liturgyPartButtons.add(createLiturgyButton("Preek", "preek"));

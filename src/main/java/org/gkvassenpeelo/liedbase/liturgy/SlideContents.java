@@ -7,7 +7,7 @@ public abstract class SlideContents {
     private String body;
     
     public enum Type {
-        psalm, gezang, lied, opwekking, gathering, prair, blank, bible_start, bible_continued
+        psalm, gezang, lied, levenslied, opwekking, gathering, prair, blank, bible_start, bible_continued
     };
 
     public SlideContents(String header, String body) {

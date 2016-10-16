@@ -42,16 +42,26 @@ public class SongBookTest {
     
     @Test
     public void getGezang111Text() {
-        try {
-            List<SongLine> songText = SongBook.getSongText(SlideContents.Type.gezang, "111", "1");
+    	try {
+    		List<SongLine> songText = SongBook.getSongText(SlideContents.Type.gezang, "111", "1");
+    		
+    		// assert first line
+    		assertEquals("refrein", songText.get(0).getContent());
+    		// assert last line
+    		assertEquals("Hij is de Heer van mijn leven.", songText.get(songText.size() - 1).getContent());
+    		
+    	} catch (SongBookException e) {
+    		fail("test failed with error: " + e.getMessage());
+    	}
+    }
+    
+    @Test
+    public void getLevenslied1Text() throws SongBookException {
+            List<SongLine> songText = SongBook.getSongText(SlideContents.Type.levenslied, "1", "2");
             
             // assert first line
-            assertEquals("refrein", songText.get(0).getContent());
+            assertEquals("Hij is te vergelijken met een boom,", songText.get(0).getContent());
             // assert last line
-            assertEquals("Hij is de Heer van mijn leven.", songText.get(songText.size() - 1).getContent());
-            
-        } catch (SongBookException e) {
-            fail("test failed with error: " + e.getMessage());
-        }
+            assertEquals("de HEER is hem in alles goedgezind.", songText.get(songText.size() - 1).getContent());
     }
 }

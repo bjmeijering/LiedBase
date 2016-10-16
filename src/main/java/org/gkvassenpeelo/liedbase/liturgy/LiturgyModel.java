@@ -26,6 +26,7 @@ public class LiturgyModel {
 	private static final String regex_gezang = "([gG]ezang(en)?)";
 	private static final String regex_lied = "([lL]ied([bB]oek)?)";
 	private static final String regex_opwekking = "([oO]pwekking?)";
+	private static final String regex_levenslied = "([lL]evenslied?)";
 	private static final String regex_voorganger = "([vV]oorganger|[dD]ominee|[wW]el[ck]om)";
 
 	private Liturgy liturgy;
@@ -67,8 +68,8 @@ public class LiturgyModel {
 		String regex_law = "([wW]et)";
 		String regex_lecture = "([pP]reek)";
 		String regex_agenda = "([aA]genda)";
-		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_extended_scripture, regex_empty_with_logo, regex_agenda,
-				regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_gebed,
+		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_extended_scripture, regex_empty_with_logo, regex_agenda,
+				regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_levenslied, regex_gebed,
 				regex_collecte, regex_voorganger, regex_law, regex_lecture);
 
 		// check liturgy part type
@@ -88,6 +89,8 @@ public class LiturgyModel {
 		} else if (m.group(1).matches(regex_lied)) {
 			return LiturgyPart.Type.song;
 		} else if (m.group(1).matches(regex_opwekking)) {
+			return LiturgyPart.Type.song;
+		} else if (m.group(1).matches(regex_levenslied)) {
 			return LiturgyPart.Type.song;
 		} else if (m.group(1).matches(regex_gebed)) {
 			return LiturgyPart.Type.prair;
@@ -180,7 +183,7 @@ public class LiturgyModel {
 			SlideContents.Type scType = null;
 
 			// determine songtype
-			String regex = String.format("^[ ]*(%s|%s|%s|%s).*", regex_psalm, regex_gezang, regex_lied, regex_opwekking);
+			String regex = String.format("^[ ]*(%s|%s|%s|%s|%s).*", regex_psalm, regex_gezang, regex_lied, regex_levenslied, regex_opwekking);
 			Pattern songPattern = Pattern.compile(regex);
 			java.util.regex.Matcher m = songPattern.matcher(line);
 
@@ -191,6 +194,8 @@ public class LiturgyModel {
 				scType = SlideContents.Type.gezang;
 			} else if (m.group(1).matches(regex_lied)) {
 				scType = SlideContents.Type.lied;
+			} else if (m.group(1).matches(regex_levenslied)) {
+				scType = SlideContents.Type.levenslied;
 			} else if (m.group(1).matches(regex_opwekking)) {
 				scType = SlideContents.Type.opwekking;
 			}

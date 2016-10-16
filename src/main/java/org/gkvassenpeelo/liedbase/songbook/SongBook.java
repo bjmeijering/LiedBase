@@ -37,10 +37,15 @@ public class SongBook {
             songBookName = "gezangen.txt";
             songIdentifier = "gereformeerd kerkboek";
         }
-
+        
         if (type == SlideContents.Type.lied) {
-            songBookName = "liedboek.txt";
-            songIdentifier = "lied";
+        	songBookName = "liedboek.txt";
+        	songIdentifier = "lied";
+        }
+
+        if (type == SlideContents.Type.levenslied) {
+            songBookName = "levensliederen.txt";
+            songIdentifier = "levenslied";
         }
 
         Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyModel.ENCODING);
@@ -203,6 +208,7 @@ public class SongBook {
                         verses.add(verseText);
                     }
 
+                    s.close();
                     return verses;
                 }
 
@@ -231,10 +237,15 @@ public class SongBook {
             songBookName = "gezangen.txt";
             songIdentifier = "gereformeerd kerkboek";
         }
-
+        
         if (type == SlideContents.Type.lied) {
-            songBookName = "liedboek.txt";
-            songIdentifier = "lied";
+        	songBookName = "liedboek.txt";
+        	songIdentifier = "lied";
+        }
+
+        if (type == SlideContents.Type.levenslied) {
+            songBookName = "levensliederen.txt";
+            songIdentifier = "levenslied";
         }
 
         Scanner s = new Scanner(ClassLoader.getSystemResourceAsStream("songs/" + songBookName), LiturgyModel.ENCODING);
@@ -255,7 +266,7 @@ public class SongBook {
                         tempSongNumber = songNumber.substring(0, songNumber.length() - 1);
                     }
                     // next song in integers
-                    if (songLine.matches(String.format("^%s %s[a-z]*:.*$", songIdentifier, Integer.parseInt(tempSongNumber) + 1))) {
+                    if (songLine.matches(String.format("^%s %s[a-z]*:?.*$", songIdentifier, Integer.parseInt(tempSongNumber) + 1))) {
                         s.close();
                         return verses;
                     }
