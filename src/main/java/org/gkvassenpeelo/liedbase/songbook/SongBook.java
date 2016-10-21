@@ -139,7 +139,7 @@ public class SongBook {
 
         if (songText.size() > 0) {
 
-            if (((SongLine) songText.get(songText.size() - 1)).getContent().equals("")) {
+            if (songText.get(songText.size() - 1).getContent().equals("")) {
                 songText.remove(songText.size() - 1);
             }
 
