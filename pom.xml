@@ -2,13 +2,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.gkvassenpeelo</groupId>
 	<artifactId>liedbase</artifactId>
-	<version>2.6</version>
+	<version>3.5</version>
 
 	<scm>
 		<connection>scm:git:git@github.com:hdoedens/LiedBase.git</connection>
 		<url>scm:git:git@github.com:hdoedens/LiedBase.git</url>
 		<developerConnection>scm:git:git@github.com:hdoedens/LiedBase.git</developerConnection>
-	  <tag>liedbase-2.6</tag>
+	  <tag>liedbase-3.5</tag>
   </scm>
 
 	<distributionManagement>
