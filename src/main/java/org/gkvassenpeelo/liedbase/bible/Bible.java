@@ -541,7 +541,11 @@ public class Bible {
 					return Integer.parseInt(StringUtils.substringAfterLast(line, "-").trim());
 				}
 			} else {
-				return Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+			    if (line.contains("(")) {
+                    return Integer.parseInt(StringUtils.substringBetween(line, ":", "(").trim());
+                } else {
+                    return Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+                }
 			}
 		} else {
 			return 999;

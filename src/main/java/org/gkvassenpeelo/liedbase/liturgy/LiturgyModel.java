@@ -57,6 +57,8 @@ public class LiturgyModel {
 	 */
 	private LiturgyPart.Type getLiturgyPartTypeFromLiturgyLine(String line) throws LiedBaseError {
 
+		String regex_video = "([Vv]ideo)";
+		String regex_schoonmaak = "([Ss]choonmaak)";
 		String regex_extended_scripture = "bijbeltekst vervolg";
 		String regex_empty_with_logo = "leeg met logo";
 		String regex_end_of_morning_service = "(([eE]inde)?.*[mM]orgendienst)";
@@ -68,9 +70,11 @@ public class LiturgyModel {
 		String regex_law = "([wW]et)";
 		String regex_lecture = "([pP]reek)";
 		String regex_agenda = "([aA]genda)";
-		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_extended_scripture, regex_empty_with_logo, regex_agenda,
-				regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied, regex_opwekking, regex_levenslied, regex_gebed,
-				regex_collecte, regex_voorganger, regex_law, regex_lecture);
+		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_schoonmaak,
+				regex_extended_scripture, regex_empty_with_logo, regex_agenda, regex_end_of_morning_service,
+				regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied,
+				regex_opwekking, regex_levenslied, regex_gebed, regex_collecte, regex_voorganger, regex_law,
+				regex_lecture);
 
 		// check liturgy part type
 		Pattern liturgyPattern = Pattern.compile(regex);
@@ -84,6 +88,10 @@ public class LiturgyModel {
 
 		if (m.group(1).matches(regex_psalm)) {
 			return LiturgyPart.Type.song;
+		} else if (m.group(1).matches(regex_video)) {
+			return LiturgyPart.Type.video;
+		} else if (m.group(1).matches(regex_schoonmaak)) {
+			return LiturgyPart.Type.schoonmaak;
 		} else if (m.group(1).matches(regex_gezang)) {
 			return LiturgyPart.Type.song;
 		} else if (m.group(1).matches(regex_lied)) {
@@ -183,7 +191,8 @@ public class LiturgyModel {
 			SlideContents.Type scType = null;
 
 			// determine songtype
-			String regex = String.format("^[ ]*(%s|%s|%s|%s|%s).*", regex_psalm, regex_gezang, regex_lied, regex_levenslied, regex_opwekking);
+			String regex = String.format("^[ ]*(%s|%s|%s|%s|%s).*", regex_psalm, regex_gezang, regex_lied,
+					regex_levenslied, regex_opwekking);
 			Pattern songPattern = Pattern.compile(regex);
 			java.util.regex.Matcher m = songPattern.matcher(line);
 
@@ -225,7 +234,8 @@ public class LiturgyModel {
 					List<SongLine> songText = SongBook.getSongText(scType, SongBook.getSongNumber(line), currentVerse);
 
 					if (songText == null) {
-						throw new SongBookException(String.format("Vers %s van %s %s niet gevonden", currentVerse, scType, SongBook.getSongNumber(line)));
+						throw new SongBookException(String.format("Vers %s van %s %s niet gevonden", currentVerse,
+								scType, SongBook.getSongNumber(line)));
 					}
 
 					Song song = new Song(line, songText);
@@ -258,13 +268,14 @@ public class LiturgyModel {
 			int toVerse = Bible.getEndVerseFromLine(line);
 			String translation = Bible.getTranslationFromLine(line);
 
-			List<BiblePartFragment> biblePart = Bible.getBiblePartFromText(translation, Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
+			List<BiblePartFragment> biblePart = Bible.getBiblePartFromText(translation,
+					Bible.getBibleBookFromLine(line), chapter, fromVerse, toVerse);
 
 			line = format(line, LiturgyPart.Type.scripture);
 
 			lp.addSlide(new Scripture(biblePart, bibleBook, translation, chapter, fromVerse, toVerse));
 			lp.addSlide(new Scripture(null, bibleBook, translation, chapter, fromVerse, toVerse));
-			
+
 		}
 
 		lp.setLine(line);
@@ -330,7 +341,8 @@ public class LiturgyModel {
 				continue;
 			}
 
-			if (prevCharType == CharType.number && getCharType(c) == CharType.character && type == LiturgyPart.Type.scripture) {
+			if (prevCharType == CharType.number && getCharType(c) == CharType.character
+					&& type == LiturgyPart.Type.scripture) {
 				sb.append(" ");
 				if (line.indexOf(c) < 3) {
 					sb.append(Character.toUpperCase(c));
@@ -370,7 +382,7 @@ public class LiturgyModel {
 
 		// strip weird dash
 		line = line.replace("–", "-");
-		
+
 		// URLencode ampersand
 		line = line.replace("&", "&amp;");
 

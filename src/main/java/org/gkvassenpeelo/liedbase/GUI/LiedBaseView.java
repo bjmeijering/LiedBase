@@ -70,6 +70,8 @@ public class LiedBaseView {
 		liturgyPartButtons.setLayout(new MigLayout("wrap 1", "[]", "[]"));
 		frame.getContentPane().add(liturgyPartButtons, "w 180::800,h 400::700,span 1 2");
 		liturgyPartButtons.add(createLiturgyButton("Agenda", "agenda"));
+		liturgyPartButtons.add(createLiturgyButton("Kerkschoonmaak", "schoonmaak"));
+		liturgyPartButtons.add(createLiturgyButton("Video melding", "video"));
 		liturgyPartButtons.add(createLiturgyButton("Welkom", "welkom: [naam voorganger]"));
 		liturgyPartButtons.add(createLiturgyButton("Votum", "votum"));
 		liturgyPartButtons.add(createLiturgyButton("Psalm", "psalm 1:1,2"));
@@ -87,7 +89,7 @@ public class LiedBaseView {
 		liturgyPartButtons.add(createLiturgyButton("Leeg met logo", "leeg met logo"));
 
 		JScrollPane taScrollPane = new JScrollPane(taLiturgy, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-		frame.getContentPane().add(taScrollPane, "w 400::1920,h 400::1080,span 1 2");
+		frame.getContentPane().add(taScrollPane, "w 400::1920,h 580::1080,span 1 2");
 
 		frame.getContentPane().add(btnGeneratePptx, "flowx");
 		btnGeneratePptx.setAction(controller);

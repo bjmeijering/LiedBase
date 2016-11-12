@@ -138,7 +138,6 @@ public class SongBook {
     private static List<SongLine> cleanup(List<SongLine> songText) {
 
         if (songText.size() > 0) {
-
             if (songText.get(songText.size() - 1).getContent().equals("")) {
                 songText.remove(songText.size() - 1);
             }
@@ -207,7 +206,6 @@ public class SongBook {
                     if (!nextSong) {
                         verses.add(verseText);
                     }
-
                     s.close();
                     return verses;
                 }
