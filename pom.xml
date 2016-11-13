@@ -12,14 +12,6 @@
 		<tag>master</tag>
 	</scm>
 
-	<distributionManagement>
-		<repository>
-			<id>myrepository</id>
-			<url>file:${project.build.directory}</url>
-		</repository>
-	</distributionManagement>
-
-
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.directory.studio</groupId>
