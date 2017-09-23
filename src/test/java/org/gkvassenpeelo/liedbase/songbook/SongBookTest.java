@@ -16,7 +16,7 @@ public class SongBookTest {
 			List<List<SongLine>> songText = SongBook.getOpwekkingSongTekst("194");
 
 			// assert first line
-			assertEquals("U maakt ons één.", songText.get(0).get(0).getContent());
+			assertEquals("U maakt ons Ã©Ã©n.", songText.get(0).get(0).getContent());
 			// assert last line
 			assertEquals("Ned. tekst: JmeO",
 					songText.get(songText.size() - 1).get(songText.get(songText.size() - 1).size() - 1).getContent());

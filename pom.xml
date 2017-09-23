@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.gkvassenpeelo</groupId>
 	<artifactId>liedbase</artifactId>
-	<version>3.6-SNAPSHOT</version>
+	<version>3.7-SNAPSHOT</version>
 
 	<scm>
 		<connection>scm:git:git@github.com:hdoedens/LiedBase.git</connection>
