@@ -71,7 +71,6 @@ public class LiedBaseView {
 		frame.getContentPane().add(liturgyPartButtons, "w 180::800,h 400::700,span 1 2");
 		liturgyPartButtons.add(createLiturgyButton("Agenda", "agenda"));
 		liturgyPartButtons.add(createLiturgyButton("Kerkschoonmaak", "schoonmaak"));
-		liturgyPartButtons.add(createLiturgyButton("Video melding", "video"));
 		liturgyPartButtons.add(createLiturgyButton("Welkom", "welkom: [naam voorganger]"));
 		liturgyPartButtons.add(createLiturgyButton("Votum", "votum"));
 		liturgyPartButtons.add(createLiturgyButton("Psalm", "psalm 1:1,2"));
