@@ -1,7 +1,7 @@
 
 =De strekking der spreuken
 #1
-1De Spreuken van Salomo, de zoon van David, de koning van Israël, om wijsheid en tucht te verkrijgen, 2om verstandige woorden te verstaan, om de tucht aan te nemen, 3die verstandig maakt, gerechtigheid en recht en rechtschapenheid; 4om de onverstandigen schranderheid, de jongeling kennis en bedachtzaamheid te geven.
+1De Spreuken van Salomo, de zoon van David, de koning van IsraÃ«l, om wijsheid en tucht te verkrijgen, 2om verstandige woorden te verstaan, om de tucht aan te nemen, 3die verstandig maakt, gerechtigheid en recht en rechtschapenheid; 4om de onverstandigen schranderheid, de jongeling kennis en bedachtzaamheid te geven.
 5De wijze hore en vermeerdere inzicht
 en wie verstandig is, verwerve overleg,
 6om te verstaan spreuk en beeldspraak,
@@ -22,7 +22,7 @@ met huid en haar, gelijk degenen die in de groeve nederdalen;
 13wij zullen allerlei kostbare dingen vinden,
 wij zullen onze huizen vullen met buit;
 14gij zult met ons uw aandeel krijgen,
-één buidel zal er zijn voor ons allen -
+Ã©Ã©n buidel zal er zijn voor ons allen -
 15mijn zoon, ga niet met hen op weg;
 weerhoud uw voet van hun pad;
 16want hun voeten snellen naar het kwaad
@@ -103,7 +103,7 @@ van de onbekende die gladde woorden spreekt,
 en het verbond van haar God vergeet;
 18want haar huis zinkt weg naar de dood,
 haar paden voeren naar de schimmen;
-19niet één van allen die tot haar gaan, keert weder,
+19niet Ã©Ã©n van allen die tot haar gaan, keert weder,
 en zij bereiken de paden des levens niet;
 20opdat gij de weg der goeden bewandelt
 en de paden der rechtvaardigen bewaart.
@@ -181,7 +181,7 @@ maar met de oprechten gaat Hij vertrouwelijk om.
 maar de woning der rechtvaardigen zegent Hij.
 34Wanneer Hij met spotters te doen heeft, spot Hij zelf,
 maar de nederigen geeft Hij genade.
-35De wijzen beërven eer,
+35De wijzen beÃ«rven eer,
 maar de dwazen laden schande op zich.
 =Vermaning tot wijsheid
 #4
@@ -405,7 +405,7 @@ om u te zoeken, en ik heb u gevonden.
 16Met dekens heb ik mijn bed bedekt,
 met bonte spreien van Egyptisch linnen.
 17Ik heb mijn leger besprenkeld
-met mirre, aloë en kaneel.
+met mirre, aloÃ« en kaneel.
 18Kom, laat ons zwelgen in minne tot de morgen toe,
 en genieten van liefde.
 19Want mijn man is niet thuis,
@@ -471,17 +471,17 @@ duurzaam goed en gerechtigheid.
 mijn opbrengst meer dan uitgelezen zilver.
 20Ik wandel op het pad van de gerechtigheid,
 midden op de wegen van het recht,
-21om hen die mij liefhebben, bezit te doen beërven;
+21om hen die mij liefhebben, bezit te doen beÃ«rven;
 hun schatkamers zal ik vullen.
 22De Here heeft mij tot aanzijn geroepen
 als het begin van zijn wegen,
-vóór zijn werken van ouds af.
+vÃ³Ã³r zijn werken van ouds af.
 23Van eeuwigheid aan ben ik geformeerd,
 van den beginne, eer de aarde bestond.
 24Toen er nog geen oceaan was, ben ik geboren,
 toen er nog geen bronnen waren, rijk aan water.
 25Eer de bergen omlaaggezonken waren,
-vóór de heuvelen ben ik geboren;
+vÃ³Ã³r de heuvelen ben ik geboren;
 26toen Hij het aardrijk en de velden nog niet had gemaakt,
 noch de eerste stofdeeltjes der wereld.
 27Toen Hij de hemel bereidde, was ik daar;
@@ -647,7 +647,7 @@ maar er is redding, als er vele raadgevers zijn.
 maar wie de handslag vermijdt, gaat veilig.
 16Een bevallige vrouw verkrijgt eer,
 zo verkrijgen de geweldigen rijkdom.
-17Een weldadig man doet zichzelf wèl,
+17Een weldadig man doet zichzelf wÃ¨l,
 maar wie onbarmhartig is, kwelt zijn eigen vlees.
 18De goddeloze maakt winst die niet gedijt,
 maar wie gerechtigheid zaait, heeft blijvend gewin.
@@ -772,7 +772,7 @@ maar een zot kraamt dwaasheid uit.
 17Een goddeloos gezant valt in het ongeluk,
 maar een betrouwbare bode brengt genezing.
 18Armoede en schande treffen hem die de tucht in de wind slaat,
-maar wie de terechtwijzing in acht neemt, wordt geëerd.
+maar wie de terechtwijzing in acht neemt, wordt geÃ«erd.
 19Een vervulde begeerte is zoet voor de ziel,
 het is de dwazen een gruwel van het kwaad af te wijken.
 20Wie met wijzen omgaat, wordt wijs;
@@ -858,7 +858,7 @@ maar de rechtvaardige vindt zelfs in zijn dood een schuilplaats.
 33In het hart van de verstandige rust de wijsheid,
 zelfs te midden der zotten wordt zij onderkend.
 34Gerechtigheid verhoogt een volk,
-maar zonde is een schandvlek der natiën.
+maar zonde is een schandvlek der natiÃ«n.
 35Het welgevallen des konings valt een verstandig dienaar ten deel,
 maar hem die zich schandelijk gedraagt, treft zijn verbolgenheid.
 #15
@@ -1077,7 +1077,7 @@ is reeds een broeder van de verderver.
 de rechtvaardige ijlt daarheen en is onaantastbaar.
 11Het bezit van de rijke is zijn sterke stad,
 en als een hoge muur - in zijn verbeelding.
-12Vóór de val is het hart van de mens hoogmoedig,
+12VÃ³Ã³r de val is het hart van de mens hoogmoedig,
 maar ootmoed gaat vooraf aan de eer.
 13Wie antwoord geeft, voordat hij hoort,
 die is het tot dwaasheid en smaad.
@@ -1183,7 +1183,7 @@ welzalig zijn zijn kinderen na hem.
 weet reeds met zijn ogen al het boze te schiften.
 9Wie kan zeggen: Ik heb mijn hart rein bewaard,
 ik ben rein van zonde?
-10Tweeërlei gewicht, tweeërlei maat,
+10TweeÃ«rlei gewicht, tweeÃ«rlei maat,
 beide zijn de Here een gruwel.
 11Reeds een knaap laat zich door zijn handelingen kennen,
 of zijn doen zuiver is en recht.
@@ -1209,12 +1209,12 @@ diens lamp wordt uitgeblust ten tijde der dichte duisternis.
 zal ten slotte niet tot zegen zijn.
 22Zeg niet: Ik zal het kwaad vergelden;
 wacht op de Here, Hij zal u helpen.
-23Tweeërlei gewicht is de Here een gruwel,
+23TweeÃ«rlei gewicht is de Here een gruwel,
 en een valse weegschaal is verkeerd.
 24Van de Here zijn de schreden eens mans,
 maar een mens - hoe zal hij zijn weg doorzien?
 25Het is een valstrik voor een mens
-ondoordacht „heilig" te roepen,
+ondoordacht Â„heilig" te roepen,
 en pas na gedane geloften te overwegen.
 26Een wijs koning zuivert de goddelozen uit
 en doet het rad over hen heengaan.
@@ -1353,7 +1353,7 @@ hij zal ten dienste van koningen gesteld worden;
 ten dienste van onaanzienlijken wordt hij niet gesteld.
 #23
 1Wanneer gij bij een heerser tafelt,
-bepaal dan uw aandacht alleen bij wat vóór u staat,
+bepaal dan uw aandacht alleen bij wat vÃ³Ã³r u staat,
 2en zet u het mes op de keel,
 als gij een gulzig mens zijt.
 3Begeer zijn lekkernijen niet,
@@ -1366,7 +1366,7 @@ als een arend vliegt hij ten hemel.
 6Eet niet het brood van wie boos van oog is,
 begeer zijn lekkernijen niet;
 7want als iemand die zijn eigen plannen maakt, zo is hij;
-„eet en drink!" zegt hij tot u, maar zijn hart is niet met u;
+Â„eet en drink!" zegt hij tot u, maar zijn hart is niet met u;
 8de bete die gij gegeten hebt, zult gij uitspuwen,
 en uw vriendelijke woorden hebt gij verspild.
 9Spreek niet ten aanhoren van een dwaas,
@@ -1453,7 +1453,7 @@ en Hij, die op uw ziel let, het niet weten,
 en de mens naar zijn doen vergelden?
 13Eet honig, mijn zoon, want dat is goed,
 honigzeem is zoet voor uw gehemelte;
-14erken, dat de wijsheid zó is voor uw ziel.
+14erken, dat de wijsheid zÃ³ is voor uw ziel.
 Als gij haar gevonden hebt, dan is er toekomst
 en uw verwachting wordt niet afgesneden.
 15Gij goddelozen, belaagt de woning van de rechtvaardige niet,
@@ -1476,7 +1476,7 @@ en wie weet, hoe hun jaren in ongeluk vergaan!
 Aanzien des persoons in het gericht is verkeerd.
 24Wie tot de schuldige zegt: Gij zijt onschuldig -
 hem zullen volken vloeken,
-natiën zullen hem verwensen,
+natiÃ«n zullen hem verwensen,
 25maar hun die recht oordelen, gaat het goed,
 over hen komt de zegen van de voorspoed.
 26Wie juiste antwoorden geeft,
@@ -1654,7 +1654,7 @@ en zijn rechterhand zou olie ontmoeten.
 17Zoals men ijzer met ijzer scherpt,
 zo scherpt de ene mens de ander.
 18Wie de vijgeboom verzorgt, geniet zijn vrucht;
-wie voor zijn heer zorgt, wordt geëerd.
+wie voor zijn heer zorgt, wordt geÃ«erd.
 19Zoals het water het gelaat weerspiegelt,
 zo weerspiegelt het hart van de mens de mens.
 20Dodenrijk en verderf zijn onverzadelijk;
@@ -1697,7 +1697,7 @@ verzamelt het voor hem die zich over de geringen ontfermt.
 diens gebed zelfs is een gruwel.
 10Wie de oprechten op een slechte weg voert,
 zal in zijn eigen kuil vallen,
-maar de rechtschapenen zullen geluk beërven.
+maar de rechtschapenen zullen geluk beÃ«rven.
 11Een rijk man moge wijs zijn in eigen ogen,
 een arme die verstandig is, doorziet hem wel.
 12Als de rechtvaardigen juichen, is de heerlijkheid groot,
@@ -1878,14 +1878,14 @@ hetzij wel overwogen: de hand op de mond!
 33Want drukking van de melk brengt boter voort,
 en drukking op de neus brengt bloed voort,
 en drukking van toorn brengt twist voort.
-=De lessen van Lemuëls moeder
+=De lessen van LemuÃ«ls moeder
 #31
-1Woorden van Lemuël, de koning van Massa, waarmee zijn moeder hem vermaande.
+1Woorden van LemuÃ«l, de koning van Massa, waarmee zijn moeder hem vermaande.
 2Wat, mijn zoon, (zal ik u zeggen)? ja wat, zoon van mijn schoot?
 ja wat, zoon van mijn geloften?
 3Geef uw kracht niet aan de vrouwen,
 noch uw omgang aan haar die koningen verderven.
-4Het past koningen niet, o Lemuël,
+4Het past koningen niet, o LemuÃ«l,
 het past koningen niet wijn te drinken,
 noch machthebbers bedwelmende drank te begeren,
 5opdat hij niet drinke en de inzettingen vergete

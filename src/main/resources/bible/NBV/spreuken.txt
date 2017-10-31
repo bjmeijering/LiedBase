@@ -1,6 +1,6 @@
 
 #1
-1Hier volgen de spreuken van Salomo, zoon van David en koning van Israël. 2Ze bieden wijsheid en zijn een leidraad in het leven, verdiepen het inzicht 3en bevatten wijze lessen over recht, rechtvaardigheid en eerlijkheid. 4Ze vormen het ongeoefende verstand en geven de jeugd kennis en bezonnenheid. 5Laat wie wijs is goed naar deze spreuken luisteren en nog wijzer worden. Laat wie verstandig is meer en meer de vaardigheid verwerven 6deze spreuken en diepzinnigheden te begrijpen, deze woorden en scherpzinnigheden van de wijzen te doorgronden. 7Het begin van alle kennis is ontzag voor de HEER; een dwaas veracht de wijsheid en weigert elk onderricht.
+1Hier volgen de spreuken van Salomo, zoon van David en koning van IsraÃ«l. 2Ze bieden wijsheid en zijn een leidraad in het leven, verdiepen het inzicht 3en bevatten wijze lessen over recht, rechtvaardigheid en eerlijkheid. 4Ze vormen het ongeoefende verstand en geven de jeugd kennis en bezonnenheid. 5Laat wie wijs is goed naar deze spreuken luisteren en nog wijzer worden. Laat wie verstandig is meer en meer de vaardigheid verwerven 6deze spreuken en diepzinnigheden te begrijpen, deze woorden en scherpzinnigheden van de wijzen te doorgronden. 7Het begin van alle kennis is ontzag voor de HEER; een dwaas veracht de wijsheid en weigert elk onderricht.
 =Hoed je voor slecht gezelschap
 8Mijn zoon, luister naar de lessen van je vader,
 verwaarloos niet wat je moeder je leert.
@@ -411,7 +411,7 @@ ik ging op zoek naar jou, nu heb ik je gevonden.
 16Ik heb mijn bed al opgemaakt met kostbaar linnen,
 met bontgekleurde dekens uit Egypte.
 17Ik heb het besprenkeld met mirre,
-met aloë en kaneel.
+met aloÃ« en kaneel.
 18Kom, laten we dronken worden van de liefde,
 laten we genieten van het minnespel tot in de morgen.
 19Mijn man is niet thuis,
@@ -480,7 +480,7 @@ ik bied iets dat meer is dan het fijnste zilver.
 ik volg de paden van het recht
 21om rijk te maken wie mij liefheeft,
 om zijn schatkamers te vullen.
-22De HEER heeft mij vóór al het andere verworven,
+22De HEER heeft mij vÃ³Ã³r al het andere verworven,
 toen hij zijn scheppingswerk begon, schiep hij eerst mij.
 23Ik ben in het begin gemaakt, nog voor alles er was,
 nog voor de aarde vorm kreeg.
@@ -494,7 +494,7 @@ geen korrel zand was nog gemaakt.
 en een cirkel om het water trok,
 28de wolken aan de hemelkoepel plaatste,
 de oceanen bruisend op liet wellen,
-29toen hij aan de zeeën grenzen stelde,
+29toen hij aan de zeeÃ«n grenzen stelde,
 het water met zijn woord zijn plaats gaf,
 de fundamenten van de aarde legde.
 30Ik was zijn lieveling,
@@ -584,7 +584,7 @@ een dwaas verdient de stok.
 14Een wijze loopt niet met zijn kennis te koop,
 het gebazel van een dwaas leidt tot een ramp.
 15Het bezit van een rijkaard is zijn vesting,
-de armoede van een arme een ruïne.
+de armoede van een arme een ruÃ¯ne.
 16Het loon van een rechtvaardige is een gelukkig leven,
 goddeloosheid leidt alleen tot zonde.
 17Wie zich laat terechtwijzen, is op weg naar een gelukkig leven,
@@ -738,7 +738,7 @@ de goddeloze volgt een dwaalspoor.
 27Een luie jager vangt nooit wild,
 een vlijtig mens verwerft een kostbaar vermogen.
 28De weg van de rechtvaardigheid leidt naar het leven,
-een geëffend pad is het, vrij van de dood.
+een geÃ«ffend pad is het, vrij van de dood.
 #13
 1Een wijze zoon luistert naar de lessen van zijn vader,
 een spotter sluit zijn oren voor berispingen.
@@ -775,7 +775,7 @@ een dwaas spreidt onverstand tentoon.
 17Een onbetrouwbare bode brengt onheil teweeg,
 een betrouwbare boodschapper redt.
 18Wie zich niet laat terechtwijzen, wachten armoede en schande,
-wie berispingen aanvaardt, wordt geëerd.
+wie berispingen aanvaardt, wordt geÃ«erd.
 19Vervuld verlangen is een groot genot,
 een dwaas gruwt als hij zich niet inlaat met het kwaad.
 20Wie met wijzen omgaat, wordt zelf wijs,
@@ -899,7 +899,7 @@ dan een vetgemeste os en haat.
 18Een driftkop wakkert ruzie aan,
 wie kalm is sust een twistgesprek.
 19Het pad van een luiaard is vol dorens,
-de weg van de oprechten is geëffend.
+de weg van de oprechten is geÃ«ffend.
 20Een wijze zoon geeft zijn vader veel vreugde,
 een dwaas veracht zijn moeder.
 21Voor wie geen verstand heeft, is dwaasheid een vreugde,
@@ -1057,7 +1057,7 @@ men denkt dat hij wijs is als hij zijn mond houdt.
 #18
 1Een zelfzuchtig iemand volgt alleen zijn eigen wil,
 hij gaat de strijd met alle wijsheid aan.
-2Een dwaas is niet geïnteresseerd in inzicht,
+2Een dwaas is niet geÃ¯nteresseerd in inzicht,
 hij wil alleen zijn eigen mening kwijt.
 3Waar goddeloosheid is, is verachting,
 een schanddaad gaat gepaard met smaad.
@@ -1101,7 +1101,7 @@ wie zijn tong koestert, plukt daarvan de vruchten.
 hij ontvangt de gunst van de HEER.
 23Een verschoppeling bidt en smeekt,
 de rijkaard antwoordt hem hooghartig.
-24Wie veel vrienden heeft, raakt snel geruïneerd,
+24Wie veel vrienden heeft, raakt snel geruÃ¯neerd,
 een echte vriend is meer waard dan een broer.
 #19
 1Beter een arme die onberispelijk leeft
@@ -1244,7 +1244,7 @@ ze weigeren het recht in acht te nemen.
 8Een bedrieger volgt slinkse wegen,
 een eerlijk mens handelt oprecht.
 9Je kunt beter in een hoekje op het dak wonen
-dan in één huis met een vrouw die ruzie zoekt.
+dan in Ã©Ã©n huis met een vrouw die ruzie zoekt.
 10Een goddeloze is uit op het kwaad,
 hij toont geen medelijden met zijn medemens.
 11Als je een spotter terechtwijst, trekt die onervarene daar lering uit,
@@ -1560,7 +1560,7 @@ en de HEER zal je belonen.
 23Zoals de noordenwind een striemende regen brengt,
 zo brengt geroddel woedende blikken.
 24Je kunt beter in een hoekje op het dak wonen
-dan in één huis met een vrouw die ruzie zoekt.
+dan in Ã©Ã©n huis met een vrouw die ruzie zoekt.
 25Een goed bericht uit een ver land
 is als koel water voor een dorstige keel.
 26Een rechtvaardige die een goddeloze niet weerstaat,
