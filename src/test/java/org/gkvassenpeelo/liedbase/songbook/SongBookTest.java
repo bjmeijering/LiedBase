@@ -3,6 +3,7 @@ package org.gkvassenpeelo.liedbase.songbook;
 import static org.junit.Assert.fail;
 import static org.junit.Assert.assertEquals;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
@@ -11,7 +12,7 @@ import org.junit.Test;
 public class SongBookTest {
 
 	@Test
-	public void getOpwekking194Text() {
+	public void getOpwekking194Text() throws UnsupportedEncodingException {
 		try {
 			List<List<SongLine>> songText = SongBook.getOpwekkingSongTekst("194");
 

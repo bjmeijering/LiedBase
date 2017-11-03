@@ -25,6 +25,19 @@ public class Bible {
 
     }
 
+    public static String formatLine(String bibleBook, String translation, int chapter, int fromVerse, int toVerse) {
+        if (translation != null && translation.equals("NBV"))
+            translation = "";
+        else
+            translation = String.format("(%s)", translation);
+        if (fromVerse == toVerse)
+            return String.format("%s %s: %s %s", bibleBook, chapter, fromVerse, translation);
+        if (fromVerse == 0 && toVerse == 999)
+            return String.format("%s %s %s", bibleBook, chapter, translation);
+
+        return String.format("%s %s: %s - %s %s", bibleBook, chapter, fromVerse, toVerse, translation);
+    }
+
     public static List<BiblePartFragment> getBiblePartFromText(String translation, String book, int chapter, int fromVerse, int toVerse) throws BibleException {
 
         List<BiblePartFragment> fragmentList = new ArrayList<BiblePartFragment>();
@@ -33,9 +46,9 @@ public class Bible {
 
         book = book.toLowerCase();
 
-        book = book.replaceAll("�", "e");
-        book = book.replaceAll("�", "i");
-        book = book.replaceAll("�", "u");
+        book = book.replaceAll("ë", "e");
+        book = book.replaceAll("ï", "i");
+        book = book.replaceAll("ü", "u");
 
         boolean addVerse = false;
         Scanner s = null;
@@ -235,10 +248,10 @@ public class Bible {
             return "Ruth";
         }
         if (line.toLowerCase().matches("^1 ?sam.*")) {
-            return "1 Samu�l";
+            return "1 Samuël";
         }
         if (line.toLowerCase().matches("^2 ?sam.*")) {
-            return "2 Samu�l";
+            return "2 Samuël";
         }
         if (line.toLowerCase().matches("^1 ?kon.*")) {
             return "1 Koningen";
@@ -286,16 +299,16 @@ public class Bible {
             return "Klaagliederen";
         }
         if (line.toLowerCase().startsWith("ezec")) {
-            return "Ezechi�l";
+            return "Ezechiël";
         }
         if (line.toLowerCase().startsWith("dani")) {
-            return "Dani�l";
+            return "Daniël";
         }
         if (line.toLowerCase().startsWith("hose")) {
             return "Hosea";
         }
         if (line.toLowerCase().startsWith("joel")) {
-            return "Jo�l";
+            return "Joël";
         }
         if (line.toLowerCase().startsWith("amos")) {
             return "Amos";
@@ -328,7 +341,7 @@ public class Bible {
             return "Maleachi";
         }
         if (line.toLowerCase().matches("matt?h?e.*")) {
-            return "Matte�s";
+            return "Matteüs";
         }
         if (line.toLowerCase().startsWith("marcu")) {
             return "Marcus";
@@ -346,16 +359,16 @@ public class Bible {
             return "Romeinen";
         }
         if (line.toLowerCase().matches("^1 ?kor.*")) {
-            return "1 Korinti�rs";
+            return "1 Korintiërs";
         }
         if (line.toLowerCase().matches("^2 ?kor.*")) {
-            return "2 Korinti�rs";
+            return "2 Korintiërs";
         }
         if (line.toLowerCase().startsWith("galat")) {
             return "Galaten";
         }
         if (line.toLowerCase().startsWith("efezi")) {
-            return "Efezi�rs";
+            return "Efeziërs";
         }
         if (line.toLowerCase().startsWith("filip")) {
             return "Filippenzen";
@@ -370,10 +383,10 @@ public class Bible {
             return "2 Tessalonicenzen";
         }
         if (line.toLowerCase().matches("^1 ?tim.*")) {
-            return "1 Timote�s";
+            return "1 Timoteüs";
         }
         if (line.toLowerCase().matches("^2 ?tim.*")) {
-            return "2 Timote�s";
+            return "2 Timoteüs";
         }
         if (line.toLowerCase().startsWith("titus")) {
             return "Titus";
@@ -382,7 +395,7 @@ public class Bible {
             return "Filemon";
         }
         if (line.toLowerCase().startsWith("hebre")) {
-            return "Hebree�n";
+            return "Hebreeën";
         }
         if (line.toLowerCase().startsWith("jakob")) {
             return "Jakobus";
