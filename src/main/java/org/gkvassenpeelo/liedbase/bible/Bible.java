@@ -18,6 +18,7 @@ public class Bible {
     private enum CharType {
         number, character, dash, colon, comma, space
     }
+    public static final String ENCODING = "UTF-8";
 
     private static String LINE_END = System.getProperty("line.separator");
 
@@ -54,7 +55,7 @@ public class Bible {
         Scanner s = null;
 
         try {
-            s = new Scanner(ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book.replace(" ", "_") + ".txt"));
+            s = new Scanner(ClassLoader.getSystemResourceAsStream("bible/" + translation + "/" + book.replace(" ", "_") + ".txt"), ENCODING);
         } catch (NullPointerException e) {
             throw new BibleException(String.format("Boek %s in vertaling %s niet gevonden", book, translation));
         }

@@ -4,6 +4,10 @@
 	<artifactId>liedbase</artifactId>
 	<version>3.11-SNAPSHOT</version>
 
+	<properties>
+		<encoding>UTF-8</encoding>
+	</properties>
+
 	<scm>
 		<connection>scm:git:git@github.com:hdoedens/LiedBase.git</connection>
 		<url>scm:git:git@github.com:hdoedens/LiedBase.git</url>
@@ -95,5 +99,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
 </project>
