@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.gkvassenpeelo</groupId>
 	<artifactId>liedbase</artifactId>
-	<version>3.14</version>
+	<version>3.15-SNAPSHOT</version>
 
 	<properties>
 		<encoding>UTF-8</encoding>
@@ -12,7 +12,7 @@
 		<connection>scm:git:git@github.com:hdoedens/LiedBase.git</connection>
 		<url>scm:git:git@github.com:hdoedens/LiedBase.git</url>
 		<developerConnection>scm:git:git@github.com:hdoedens/LiedBase.git</developerConnection>
-		<tag>liedbase-3.14</tag>
+		<tag>master</tag>
 	</scm>
 
 	<dependencies>
