@@ -31,7 +31,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -50,3 +51,5 @@ target
 *.1
 *.log
 /dependency-reduced-pom.xml
+.settings/
+release.properties
