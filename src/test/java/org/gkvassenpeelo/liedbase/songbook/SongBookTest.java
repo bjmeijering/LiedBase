@@ -67,4 +67,16 @@ public class SongBookTest {
 		// assert last line
 		assertEquals("de HEER is hem in alles goedgezind.", songText.get(songText.size() - 1).getContent());
 	}
+
+	@Test
+	public void readingNextSong() {
+		assert (SongBook.readingNextSong(178, "", "gereformeerd kerkboek 179a: 1"));
+		assert (SongBook.readingNextSong(178, "", "gereformeerd kerkboek 179b: 1"));
+		assert (SongBook.readingNextSong(179, "a", "gereformeerd kerkboek 179b: 1"));
+		assert (SongBook.readingNextSong(179, "a", "gereformeerd kerkboek 179c: 1"));
+		assert (SongBook.readingNextSong(179, "a", "gereformeerd kerkboek 181b: 1"));
+		assert (SongBook.readingNextSong(179, "", "gereformeerd kerkboek 180: 1-5"));
+		assert (SongBook.readingNextSong(179, "", "gereformeerd kerkboek 182: 1-5"));
+		assert !(SongBook.readingNextSong(179, "", "gereformeerd kerkboek 118: 1-5"));
+	}
 }
