@@ -15,7 +15,7 @@ import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.pptx4j.Pptx4jException;
 
@@ -29,7 +29,7 @@ public class SlideMachine {
 
 	private PresentationMLPackage presentationMLPackage;
 
-	private List<LiturgyPart.Type> followedByLiturgyOverview = new ArrayList<LiturgyPart.Type>();
+	private List<LiturgyItem.Type> followedByLiturgyOverview = new ArrayList<LiturgyItem.Type>();
 
 	private int currentLiturgyPartIndex = 0;
 
@@ -61,14 +61,14 @@ public class SlideMachine {
 
 			// fill list containing slide types after which a liturgy overview slide
 			// must be added
-			followedByLiturgyOverview.add(LiturgyPart.Type.welcome);
-			followedByLiturgyOverview.add(LiturgyPart.Type.law);
-			followedByLiturgyOverview.add(LiturgyPart.Type.song);
-			followedByLiturgyOverview.add(LiturgyPart.Type.lecture);
-			followedByLiturgyOverview.add(LiturgyPart.Type.votum);
-			followedByLiturgyOverview.add(LiturgyPart.Type.prair);
-			followedByLiturgyOverview.add(LiturgyPart.Type.scripture);
-			followedByLiturgyOverview.add(LiturgyPart.Type.gathering);
+			followedByLiturgyOverview.add(LiturgyItem.Type.welcome);
+			followedByLiturgyOverview.add(LiturgyItem.Type.law);
+			followedByLiturgyOverview.add(LiturgyItem.Type.song);
+			followedByLiturgyOverview.add(LiturgyItem.Type.lecture);
+			followedByLiturgyOverview.add(LiturgyItem.Type.votum);
+			followedByLiturgyOverview.add(LiturgyItem.Type.prair);
+			followedByLiturgyOverview.add(LiturgyItem.Type.scripture);
+			followedByLiturgyOverview.add(LiturgyItem.Type.gathering);
 		} catch (Docx4JException e) {
 			throw new SlideMachineException(e.getMessage(), e);
 		} catch (Pptx4jException e) {
@@ -87,7 +87,7 @@ public class SlideMachine {
 			// Liturgy parsed and created, time to create Slides
 			setTargetFilename(getTargetFilename());
 
-			for (LiturgyPart lp : liturgy.getLiturgyParts()) {
+			for (LiturgyItem lp : liturgy.getLiturgyParts()) {
 
 				if (lp.getSlides().size() == 0) {
 					addSlide(null, lp.getType());
@@ -110,7 +110,7 @@ public class SlideMachine {
 		}
 	}
 
-	private void addIntermediateSlide(LiturgyPart lp) throws JAXBException, Pptx4jException, Docx4JException {
+	private void addIntermediateSlide(LiturgyItem lp) throws JAXBException, Pptx4jException, Docx4JException {
 		// after some liturgy parts, add an overview slide, except for
 		// the last one!
 
@@ -142,15 +142,15 @@ public class SlideMachine {
 
 			lo.setHeader("Liturgie:");
 			lo.setBody(builder.toString());
-			addSlide(lo, LiturgyPart.Type.liturgyOverview);
+			addSlide(lo, LiturgyItem.Type.liturgyOverview);
 		} else {
-			if (lp.getType() != LiturgyPart.Type.endOfMorningService && lp.getType() != LiturgyPart.Type.endOfAfternoonService) {
-				addSlide(null, LiturgyPart.Type.blank);
+			if (lp.getType() != LiturgyItem.Type.endOfMorningService && lp.getType() != LiturgyItem.Type.endOfAfternoonService) {
+				addSlide(null, LiturgyItem.Type.blank);
 			}
 		}
 	}
 
-	public void addSlide(SlideContents content, LiturgyPart.Type type) throws JAXBException, Pptx4jException, Docx4JException {
+	public void addSlide(SlideContents content, LiturgyItem.Type type) throws JAXBException, Pptx4jException, Docx4JException {
 
 		SlidePart slidePart = slideFactory.createSlide(targetPresentationPart.getSlideCount());
 		targetPresentationPart.addSlide(slidePart);

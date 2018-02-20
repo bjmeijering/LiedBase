@@ -21,20 +21,20 @@ public class CreateDocxTask extends SwingWorker<Void, Void> {
 
 	@Override
 	protected Void doInBackground() throws Exception {
-		try {
-			PaperMachine paperMachine = new PaperMachine(model.getLiturgy());
-			paperMachine.createDocument();
-			paperMachine.save();
-		} catch (Exception e) {
-			StringWriter sw = new StringWriter();
-			PrintWriter pw = new PrintWriter(sw);
-			e.printStackTrace(pw);
-			view.writeLineToConsole("Oeps... Er is iets fout gegaan.");
-			if (e.getMessage() != null) {
-				view.writeLineToConsole(e.getMessage());
-			}
-			view.writeLineToConsole(sw.toString());
-		}
+//		try {
+//			PaperMachine paperMachine = new PaperMachine(model.getLiturgy());
+//			paperMachine.createDocument();
+//			paperMachine.save();
+//		} catch (Exception e) {
+//			StringWriter sw = new StringWriter();
+//			PrintWriter pw = new PrintWriter(sw);
+//			e.printStackTrace(pw);
+//			view.writeLineToConsole("Oeps... Er is iets fout gegaan.");
+//			if (e.getMessage() != null) {
+//				view.writeLineToConsole(e.getMessage());
+//			}
+//			view.writeLineToConsole(sw.toString());
+//		}
 		return null;
 	}
 

@@ -11,83 +11,80 @@ import javax.swing.SwingWorker;
 
 import org.apache.commons.io.FileUtils;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
-import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyParseResult;
-import org.gkvassenpeelo.liedbase.songbook.SongBookException;
+import org.gkvassenpeelo.liedbase.liturgy.Parser;
 
 @SuppressWarnings("serial")
 public class LiedBaseController extends AbstractAction implements PropertyChangeListener {
 
-    private LiturgyModel model;
-    private LiedBaseView view;
+	private LiturgyModel model;
+	private LiedBaseView view;
+	private Parser parser = new Parser();
 
-    public LiedBaseController(LiturgyModel model) {
-        this.model = model;
-    }
+	public LiedBaseController() {
+		this.model = new LiturgyModel();
+	}
 
-    @Override
-    public void actionPerformed(ActionEvent event) {
+	@Override
+	public void actionPerformed(ActionEvent event) {
 
-        if ("generatePptx".equals(event.getActionCommand())) {
-            try {
-                LiturgyParseResult result = model.parseLiturgyScript(view.getLiturgyText());
-                if (!result.hasErrors()) {
-                    view.pptxBuildStart();
-                    SwingWorker<Void, Void> task = new CreatePptxTask(model, view);
-                    task.execute();
-                } else {
-                    for (String message : result.getErrors()) {
-                        view.writeLineToConsole(message);
-                    }
-                }
-            } catch (BibleException e) {
-                view.writeLineToConsole(e.getMessage());
-            } catch (SongBookException e) {
-                view.writeLineToConsole(e.getMessage());
-            }
-        }
+		if ("generatePptx".equals(event.getActionCommand())) {
+			parser.setText(view.getLiturgyText());
 
-        if ("generateDocx".equals(event.getActionCommand())) {
-            try {
-                LiturgyParseResult result = model.parseLiturgyScript(view.getLiturgyText());
-                if (!result.hasErrors()) {
-                    view.docxBuildStart();
-                    SwingWorker<Void, Void> task = new CreateDocxTask(model, view);
-                    task.execute();
-                } else {
-                    for (String message : result.getErrors()) {
-                        view.writeLineToConsole(message);
-                    }
-                }
-            } catch (BibleException e) {
-                view.writeLineToConsole(e.getMessage());
-            } catch (SongBookException e) {
-                view.writeLineToConsole(e.getMessage());
-            }
-        }
+			LiturgyParseResult result = parser.parseLiturgyScript();
+			if (!result.hasErrors()) {
+				view.pptxBuildStart();
+				SwingWorker<Void, Void> task = new CreatePptxTask(model, view);
+				task.execute();
+			} else {
+				for (String message : result.getErrors()) {
+					view.writeLineToConsole(message);
+				}
+			}
+		}
 
-    }
+		// if ("generateDocx".equals(event.getActionCommand())) {
+		// try {
+		// LiturgyParseResult result =
+		// model.parseLiturgyScript(view.getLiturgyText());
+		// if (!result.hasErrors()) {
+		// view.docxBuildStart();
+		// SwingWorker<Void, Void> task = new CreateDocxTask(model, view);
+		// task.execute();
+		// } else {
+		// for (String message : result.getErrors()) {
+		// view.writeLineToConsole(message);
+		// }
+		// }
+		// } catch (BibleException e) {
+		// view.writeLineToConsole(e.getMessage());
+		// } catch (SongBookException e) {
+		// view.writeLineToConsole(e.getMessage());
+		// }
+		// }
 
-    public void setLiedBaseView(LiedBaseView view) {
-        this.view = view;
+	}
 
-        view.writeLineToConsole("Welkom bij LiedBase versie: 3.4");
+	public void setLiedBaseView(LiedBaseView view) {
+		this.view = view;
 
-        // on startup set the liturgy
-        try {
-            File liturgyFile = new File("liturgie.txt");
-            view.setLiturgy(FileUtils.readFileToString(liturgyFile));
-            view.writeLineToConsole("Liturgie is geladen vanuit: " + liturgyFile.getAbsolutePath());
-        } catch (IOException e) {
-            view.writeLineToConsole("Geen bestaande liturgie gevonden, klik op de knoppen links om te beginnen.");
-        }
+		view.writeLineToConsole("Welkom bij LiedBase versie: 3.4");
 
-    }
+		// on startup set the liturgy
+		try {
+			File liturgyFile = new File("liturgie.txt");
+			view.setLiturgy(FileUtils.readFileToString(liturgyFile));
+			view.writeLineToConsole("Liturgie is geladen vanuit: " + liturgyFile.getAbsolutePath());
+		} catch (IOException e) {
+			view.writeLineToConsole("Geen bestaande liturgie gevonden, klik op de knoppen links om te beginnen.");
+		}
 
-    @Override
-    public void propertyChange(PropertyChangeEvent evt) {
-        // noop
-    }
+	}
+
+	@Override
+	public void propertyChange(PropertyChangeEvent evt) {
+		// noop
+	}
 
 }

@@ -22,7 +22,7 @@ import org.docx4j.wml.ObjectFactory;
 import org.docx4j.wml.P;
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
@@ -44,20 +44,20 @@ public class PaperMachine {
 
 	ObjectFactory factory = Context.getWmlObjectFactory();
 
-	private List<LiturgyPart.Type> liturgyPartsToPrint = new ArrayList<LiturgyPart.Type>();
+	private List<LiturgyItem.Type> liturgyPartsToPrint = new ArrayList<LiturgyItem.Type>();
 
 	public PaperMachine(Liturgy liturgy) throws PaperMachineException {
 
 		this.liturgy = liturgy;
 
-		liturgyPartsToPrint.add(LiturgyPart.Type.amen);
-		liturgyPartsToPrint.add(LiturgyPart.Type.gathering);
-		liturgyPartsToPrint.add(LiturgyPart.Type.law);
-		liturgyPartsToPrint.add(LiturgyPart.Type.lecture);
-		liturgyPartsToPrint.add(LiturgyPart.Type.prair);
-		liturgyPartsToPrint.add(LiturgyPart.Type.scripture);
-		liturgyPartsToPrint.add(LiturgyPart.Type.song);
-		liturgyPartsToPrint.add(LiturgyPart.Type.votum);
+		liturgyPartsToPrint.add(LiturgyItem.Type.amen);
+		liturgyPartsToPrint.add(LiturgyItem.Type.gathering);
+		liturgyPartsToPrint.add(LiturgyItem.Type.law);
+		liturgyPartsToPrint.add(LiturgyItem.Type.lecture);
+		liturgyPartsToPrint.add(LiturgyItem.Type.prair);
+		liturgyPartsToPrint.add(LiturgyItem.Type.scripture);
+		liturgyPartsToPrint.add(LiturgyItem.Type.song);
+		liturgyPartsToPrint.add(LiturgyItem.Type.votum);
 
 	}
 
@@ -66,7 +66,7 @@ public class PaperMachine {
 			wordMLPackage = WordprocessingMLPackage.load(this.getClass().getClassLoader().getResourceAsStream("template.docx"));
 			mainDocumentPart = wordMLPackage.getMainDocumentPart();
 
-			for (LiturgyPart lp : liturgy.getLiturgyParts()) {
+			for (LiturgyItem lp : liturgy.getLiturgyParts()) {
 				try {
 					addLiturgyPartToDocument(lp);
 				} catch (JAXBException e) {
@@ -84,7 +84,7 @@ public class PaperMachine {
 	}
 
 	@SuppressWarnings("deprecation")
-	private void addLiturgyPartToDocument(LiturgyPart lp) throws JAXBException {
+	private void addLiturgyPartToDocument(LiturgyItem lp) throws JAXBException {
 		if (!liturgyPartsToPrint.contains(lp.getType())) {
 			return;
 		}
@@ -92,12 +92,12 @@ public class PaperMachine {
 		// Get the body of the document
 		Body body = mainDocumentPart.getJaxbElement().getBody();
 
-		if (lp.getType() != LiturgyPart.Type.votum) {
+		if (lp.getType() != LiturgyItem.Type.votum) {
 			// an empty line
 			body.getEGBlockLevelElts().add(getEmptyParagraphShape());
 		}
 
-		if (lp.getType() == LiturgyPart.Type.scripture) {
+		if (lp.getType() == LiturgyItem.Type.scripture) {
 
 			for (SlideContents sc : lp.getSlides()) {
 
@@ -118,7 +118,7 @@ public class PaperMachine {
 
 			return;
 
-		} else if (lp.getType() == LiturgyPart.Type.song) {
+		} else if (lp.getType() == LiturgyItem.Type.song) {
 
 			// Create the heading text
 			org.docx4j.wml.P title = getTitleTextShape("Zingen: " + lp.getSlides().get(0).getHeader());
@@ -149,7 +149,7 @@ public class PaperMachine {
 
 			return;
 
-		} else if (lp.getType() == LiturgyPart.Type.votum) {
+		} else if (lp.getType() == LiturgyItem.Type.votum) {
 
 			// Create the paragraph
 			org.docx4j.wml.P para = getTitleTextShape("Votum/zegengroet");
@@ -157,7 +157,7 @@ public class PaperMachine {
 			// Now add our paragraph to the document body
 			body.getEGBlockLevelElts().add(para);
 
-		} else if (lp.getType() == LiturgyPart.Type.prair) {
+		} else if (lp.getType() == LiturgyItem.Type.prair) {
 
 			// Create the paragraph
 			org.docx4j.wml.P para = getTitleTextShape("Gebed");
@@ -165,7 +165,7 @@ public class PaperMachine {
 			// Now add our paragraph to the document body
 			body.getEGBlockLevelElts().add(para);
 
-		} else if (lp.getType() == LiturgyPart.Type.law) {
+		} else if (lp.getType() == LiturgyItem.Type.law) {
 
 			// Create the paragraph
 			org.docx4j.wml.P para = getTitleTextShape("Wet");
@@ -173,7 +173,7 @@ public class PaperMachine {
 			// Now add our paragraph to the document body
 			body.getEGBlockLevelElts().add(para);
 
-		} else if (lp.getType() == LiturgyPart.Type.lecture) {
+		} else if (lp.getType() == LiturgyItem.Type.lecture) {
 
 			// Create the paragraph
 			org.docx4j.wml.P para = getTitleTextShape("Preek");
@@ -181,7 +181,7 @@ public class PaperMachine {
 			// Now add our paragraph to the document body
 			body.getEGBlockLevelElts().add(para);
 
-		} else if (lp.getType() == LiturgyPart.Type.gathering) {
+		} else if (lp.getType() == LiturgyItem.Type.gathering) {
 
 			// Create the paragraph
 			org.docx4j.wml.P para = getTitleTextShape("Collecte");
@@ -189,7 +189,7 @@ public class PaperMachine {
 			// Now add our paragraph to the document body
 			body.getEGBlockLevelElts().add(para);
 
-		} else if (lp.getType() == LiturgyPart.Type.amen) {
+		} else if (lp.getType() == LiturgyItem.Type.amen) {
 
 			// Create the paragraph
 			org.docx4j.wml.P para = getTitleTextShape("Zegen");

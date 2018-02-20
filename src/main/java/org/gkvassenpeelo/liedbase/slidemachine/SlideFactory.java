@@ -24,7 +24,7 @@ import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
 import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
@@ -42,7 +42,7 @@ import org.pptx4j.pml.Shape;
  */
 public class SlideFactory {
 
-	private Map<LiturgyPart.Type, String> slideLayoutMap = new HashMap<LiturgyPart.Type, String>();
+	private Map<LiturgyItem.Type, String> slideLayoutMap = new HashMap<LiturgyItem.Type, String>();
 
 	private VelocityEngine velocityEngine;
 
@@ -53,24 +53,24 @@ public class SlideFactory {
      */
 	public SlideFactory() {
 		// fill the slide layout map
-		slideLayoutMap.put(LiturgyPart.Type.song, "/ppt/slideLayouts/slideLayout4.xml");
-		slideLayoutMap.put(LiturgyPart.Type.scripture, "/ppt/slideLayouts/slideLayout4.xml");
-		slideLayoutMap.put(LiturgyPart.Type.blank, "/ppt/slideLayouts/slideLayout19.xml");
-		slideLayoutMap.put(LiturgyPart.Type.gathering, "/ppt/slideLayouts/slideLayout6.xml");
-		slideLayoutMap.put(LiturgyPart.Type.prair, "/ppt/slideLayouts/slideLayout10.xml");
-		slideLayoutMap.put(LiturgyPart.Type.welcome, "/ppt/slideLayouts/slideLayout1.xml");
-		slideLayoutMap.put(LiturgyPart.Type.law, "/ppt/slideLayouts/slideLayout12.xml");
-		slideLayoutMap.put(LiturgyPart.Type.votum, "/ppt/slideLayouts/slideLayout3.xml");
-		slideLayoutMap.put(LiturgyPart.Type.amen, "/ppt/slideLayouts/slideLayout9.xml");
-		slideLayoutMap.put(LiturgyPart.Type.endOfMorningService, "/ppt/slideLayouts/slideLayout7.xml");
-		slideLayoutMap.put(LiturgyPart.Type.endOfAfternoonService, "/ppt/slideLayouts/slideLayout8.xml");
-		slideLayoutMap.put(LiturgyPart.Type.lecture, "/ppt/slideLayouts/slideLayout14.xml");
-		slideLayoutMap.put(LiturgyPart.Type.agenda, "/ppt/slideLayouts/slideLayout2.xml");
-		slideLayoutMap.put(LiturgyPart.Type.liturgyOverview, "/ppt/slideLayouts/slideLayout20.xml");
-		slideLayoutMap.put(LiturgyPart.Type.extendedScripture, "/ppt/slideLayouts/slideLayout5.xml");
-		slideLayoutMap.put(LiturgyPart.Type.emptyWithLogo, "/ppt/slideLayouts/slideLayout19.xml");
-		slideLayoutMap.put(LiturgyPart.Type.video, "/ppt/slideLayouts/slideLayout21.xml");
-		slideLayoutMap.put(LiturgyPart.Type.schoonmaak, "/ppt/slideLayouts/slideLayout22.xml");
+		slideLayoutMap.put(LiturgyItem.Type.song, "/ppt/slideLayouts/slideLayout4.xml");
+		slideLayoutMap.put(LiturgyItem.Type.scripture, "/ppt/slideLayouts/slideLayout4.xml");
+		slideLayoutMap.put(LiturgyItem.Type.blank, "/ppt/slideLayouts/slideLayout19.xml");
+		slideLayoutMap.put(LiturgyItem.Type.gathering, "/ppt/slideLayouts/slideLayout6.xml");
+		slideLayoutMap.put(LiturgyItem.Type.prair, "/ppt/slideLayouts/slideLayout10.xml");
+		slideLayoutMap.put(LiturgyItem.Type.welcome, "/ppt/slideLayouts/slideLayout1.xml");
+		slideLayoutMap.put(LiturgyItem.Type.law, "/ppt/slideLayouts/slideLayout12.xml");
+		slideLayoutMap.put(LiturgyItem.Type.votum, "/ppt/slideLayouts/slideLayout3.xml");
+		slideLayoutMap.put(LiturgyItem.Type.amen, "/ppt/slideLayouts/slideLayout9.xml");
+		slideLayoutMap.put(LiturgyItem.Type.endOfMorningService, "/ppt/slideLayouts/slideLayout7.xml");
+		slideLayoutMap.put(LiturgyItem.Type.endOfAfternoonService, "/ppt/slideLayouts/slideLayout8.xml");
+		slideLayoutMap.put(LiturgyItem.Type.lecture, "/ppt/slideLayouts/slideLayout14.xml");
+		slideLayoutMap.put(LiturgyItem.Type.agenda, "/ppt/slideLayouts/slideLayout2.xml");
+		slideLayoutMap.put(LiturgyItem.Type.liturgyOverview, "/ppt/slideLayouts/slideLayout20.xml");
+		slideLayoutMap.put(LiturgyItem.Type.extendedScripture, "/ppt/slideLayouts/slideLayout5.xml");
+		slideLayoutMap.put(LiturgyItem.Type.emptyWithLogo, "/ppt/slideLayouts/slideLayout19.xml");
+		slideLayoutMap.put(LiturgyItem.Type.video, "/ppt/slideLayouts/slideLayout21.xml");
+		slideLayoutMap.put(LiturgyItem.Type.schoonmaak, "/ppt/slideLayouts/slideLayout22.xml");
 
 		// init velocity with defaults
 		Velocity.init();
@@ -85,7 +85,7 @@ public class SlideFactory {
 	 * @throws Docx4JException
 	 * @throws SlideFactoryException
 	 */
-	public void addSlideContents(PresentationMLPackage presentationMLPackage, SlidePart slidePart, SlideContents content, LiturgyPart.Type type) throws JAXBException,
+	public void addSlideContents(PresentationMLPackage presentationMLPackage, SlidePart slidePart, SlideContents content, LiturgyItem.Type type) throws JAXBException,
 			Docx4JException {
 		SlideLayoutPart layoutPart = (SlideLayoutPart) presentationMLPackage.getParts().getParts().get(new PartName(slideLayoutMap.get(type)));
 
@@ -93,7 +93,7 @@ public class SlideFactory {
 		slidePart.addTargetPart(layoutPart);
 
 		// Add contents to layout if neccesary
-		if (type == LiturgyPart.Type.song) {
+		if (type == LiturgyItem.Type.song) {
 			// Create and add header
 			if (!StringUtils.isEmpty(content.getHeader())) {
 				Shape header = createSongHeaderShape((Song) content);
@@ -106,17 +106,17 @@ public class SlideFactory {
 				slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(body);
 			}
 		}
-		if (type == LiturgyPart.Type.gathering) {
+		if (type == LiturgyItem.Type.gathering) {
 			Shape benificiary = createGatheringShape(((Gathering) content).getFirstGatheringBenificiary(), true);
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(benificiary);
 			benificiary = createGatheringShape(((Gathering) content).getSecondGatheringBenificiary(), false);
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(benificiary);
 		}
-		if (type == LiturgyPart.Type.welcome) {
+		if (type == LiturgyItem.Type.welcome) {
 			Shape vicar = createVicarShape(((Welcome) content).getVicarName());
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
 		}
-		if (type == LiturgyPart.Type.endOfMorningService) {
+		if (type == LiturgyItem.Type.endOfMorningService) {
 
 			Shape time = createTimeShape(((EndOfMorningService) content).getTime());
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(time);
@@ -124,7 +124,7 @@ public class SlideFactory {
 			Shape vicar = createNextVicarShape(((EndOfMorningService) content).getVicarName());
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
 		}
-		if (type == LiturgyPart.Type.scripture) {
+		if (type == LiturgyItem.Type.scripture) {
 
 			Shape scriptureHeader = createScriptureHeaderShape(content);
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureHeader);
@@ -133,17 +133,17 @@ public class SlideFactory {
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(scriptureBody);
 
 		}
-		if (type == LiturgyPart.Type.agenda) {
+		if (type == LiturgyItem.Type.agenda) {
 		    
 		    slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createAgendaShape());
 		    
 		}
-		if (type == LiturgyPart.Type.schoonmaak) {
+		if (type == LiturgyItem.Type.schoonmaak) {
 
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(createSchoonmaakShape());
 
 		}
-		if (type == LiturgyPart.Type.liturgyOverview) {
+		if (type == LiturgyItem.Type.liturgyOverview) {
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(getLiturgyOverviewBody(content));
 		}
 

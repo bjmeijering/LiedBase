@@ -7,7 +7,7 @@ import java.util.Scanner;
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 
 public class Bible {
 
@@ -428,7 +428,7 @@ public class Bible {
     public static int getChapterFromLine(String line) throws BibleException {
 
         try {
-            line = LiturgyModel.format(line, LiturgyPart.Type.scripture);
+//            line = LiturgyModel.format(line, LiturgyItem.Type.scripture);
 
             if (line.contains(":")) {
                 String s = StringUtils.substringBefore(line, ":");

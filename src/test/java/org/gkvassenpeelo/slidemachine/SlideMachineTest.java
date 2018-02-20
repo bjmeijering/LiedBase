@@ -10,7 +10,7 @@ import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PartName;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyPart;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
@@ -33,7 +33,7 @@ public class SlideMachineTest {
 		song.setHeader("Samen in de naam van Jezus");
 		song.setBody("Samen in de naam van Jezus" + System.getProperty("line.separator") + "Hef ik hier mijn loflied aan");
 
-		sm.addSlide(song, LiturgyPart.Type.song);
+		sm.addSlide(song, LiturgyItem.Type.song);
 		sm.save();
 	}
 
