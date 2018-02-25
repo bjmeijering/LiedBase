@@ -140,17 +140,18 @@ public class Parser {
 			if (!line.trim().startsWith("#") && !StringUtils.isEmpty(line.trim())) {
 				// first: get the general type, then use that to decide what extractions are needed next
 				LiturgyItem.Type type = getLiturgyPartTypeFromLine(line);
+				logger.info("Type: " + type.toString());
 
 				String book = null;
 				String chapter = null;
 				List<String> verses = null;
 				VerseRange verseRange = null;
 				// only if the the type requires further lookup (like a song or bible text) extract more details
-				if (type == LiturgyItem.Type.song || type == LiturgyItem.Type.lecture) {
+				if (type == LiturgyItem.Type.song || type == LiturgyItem.Type.scripture) {
 					book = getBookFromLine(line);
 					chapter = getChapterFromLine(line);
 					verses = getVersesFromLine(line);
-					if (type == LiturgyItem.Type.lecture) {
+					if (type == LiturgyItem.Type.scripture) {
 						verseRange = getVerseRangeFromLine(line);
 					}
 				}
@@ -174,14 +175,22 @@ public class Parser {
 		return null;
 	}
 
+	// get the chapter. i.e. the word after the first space and before an optional :
 	private String getChapterFromLine(String line) {
-		// TODO Auto-generated method stub
-		return null;
+		Pattern p = Pattern.compile("^[\\d]?[ ]?[a-zA-Z0-9ëü]*[ ]+([0-9a-z]+)");
+		Matcher m = p.matcher(line);
+		m.find();
+		logger.info("Hoofdstuk: " + m.group(1).trim());
+		return m.group(1).trim();
 	}
 
+	// get the book. i.e. the part before the first space
 	private String getBookFromLine(String line) {
-		// TODO Auto-generated method stub
-		return null;
+		Pattern p = Pattern.compile("^([123 ]{0,2}[a-zA-Z0-9ëü]*)[ ]*.*$");
+		Matcher m = p.matcher(line);
+		m.find();
+		logger.info("Boek: " + m.group(1).trim());
+		return m.group(1).trim();
 	}
 
 	// /**
