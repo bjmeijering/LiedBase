@@ -21,8 +21,8 @@ import org.docx4j.wml.Body;
 import org.docx4j.wml.ObjectFactory;
 import org.docx4j.wml.P;
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
-import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.Scripture;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.Song;
@@ -30,7 +30,7 @@ import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 public class PaperMachine {
 
-	private Liturgy liturgy;
+	private LiturgyModel liturgy;
 
 	private MainDocumentPart mainDocumentPart;
 
@@ -46,7 +46,7 @@ public class PaperMachine {
 
 	private List<LiturgyItem.Type> liturgyPartsToPrint = new ArrayList<LiturgyItem.Type>();
 
-	public PaperMachine(Liturgy liturgy) throws PaperMachineException {
+	public PaperMachine(LiturgyModel liturgy) throws PaperMachineException {
 
 		this.liturgy = liturgy;
 
@@ -66,7 +66,7 @@ public class PaperMachine {
 			wordMLPackage = WordprocessingMLPackage.load(this.getClass().getClassLoader().getResourceAsStream("template.docx"));
 			mainDocumentPart = wordMLPackage.getMainDocumentPart();
 
-			for (LiturgyItem lp : liturgy.getLiturgyParts()) {
+			for (LiturgyItem lp : liturgy.getLiturgyItems()) {
 				try {
 					addLiturgyPartToDocument(lp);
 				} catch (JAXBException e) {

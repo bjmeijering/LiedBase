@@ -5,12 +5,14 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 
 import javax.swing.AbstractAction;
 import javax.swing.SwingWorker;
 
 import org.apache.commons.io.FileUtils;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyParseResult;
 import org.gkvassenpeelo.liedbase.liturgy.Parser;
@@ -18,13 +20,9 @@ import org.gkvassenpeelo.liedbase.liturgy.Parser;
 @SuppressWarnings("serial")
 public class LiedBaseController extends AbstractAction implements PropertyChangeListener {
 
-	private LiturgyModel model;
+	private LiturgyModel model = new LiturgyModel();
 	private LiedBaseView view;
 	private Parser parser = new Parser();
-
-	public LiedBaseController() {
-		this.model = new LiturgyModel();
-	}
 
 	@Override
 	public void actionPerformed(ActionEvent event) {
@@ -33,6 +31,14 @@ public class LiedBaseController extends AbstractAction implements PropertyChange
 			parser.setText(view.getLiturgyText());
 
 			LiturgyParseResult result = parser.parseLiturgyScript();
+			List<LiturgyItem> liturgyItems = result.getLiturgyItems();
+			
+			for(LiturgyItem item : liturgyItems) {
+				item.loadContent();
+				model.addLiturgyItem(item);
+			}
+			
+
 			if (!result.hasErrors()) {
 				view.pptxBuildStart();
 				SwingWorker<Void, Void> task = new CreatePptxTask(model, view);

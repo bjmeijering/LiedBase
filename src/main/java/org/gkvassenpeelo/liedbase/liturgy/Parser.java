@@ -157,8 +157,6 @@ public class Parser {
 				}
 				parseResult.addLiturgyItem(new LiturgyItem(line, type, book, chapter, verses, verseRange));
 			}
-			logger.info("Einde verwerken regel: " + line);
-			logger.info("=====================");
 		}
 
 		return parseResult;
@@ -179,9 +177,15 @@ public class Parser {
 	private String getChapterFromLine(String line) {
 		Pattern p = Pattern.compile("^[\\d]?[ ]?[a-zA-Z0-9ëü]*[ ]+([0-9a-z]+)");
 		Matcher m = p.matcher(line);
-		m.find();
-		logger.info("Hoofdstuk: " + m.group(1).trim());
-		return m.group(1).trim();
+		String chapter = null;
+		if (m.find()) {
+			chapter = m.group(1).trim();
+			logger.info("Hoofdstuk: " + chapter);
+		}
+		else {
+			logger.info("Geen hoofdstuk gevond in regel: " + line);
+		}
+		return null;
 	}
 
 	// get the book. i.e. the part before the first space

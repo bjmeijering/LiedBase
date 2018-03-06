@@ -21,7 +21,7 @@ public abstract class SongBook {
 	 * @return
 	 * @throws SongBookException
 	 */
-	private List<SongLine> getSongText(SlideContents.Type type, String songNumber, String verse) throws SongBookException {
+	public static List<SongLine> getSongText(SlideContents.Type type, String songNumber, String verse) throws SongBookException {
 
 		List<SongLine> songText = new ArrayList<SongLine>();
 
@@ -123,7 +123,7 @@ public abstract class SongBook {
 		return null;
 	}
 
-	private boolean readingNextSong(String songIdentifier, int songInteger, String songNumberPostfix, String nextSongNumberPostfix, String line) {
+	private static boolean readingNextSong(String songIdentifier, int songInteger, String songNumberPostfix, String nextSongNumberPostfix, String line) {
 		if (line.matches(String.format("^%s %s%s:.*$", songIdentifier, songInteger + 1, songNumberPostfix))) {
 			return true;
 		}
@@ -136,7 +136,7 @@ public abstract class SongBook {
 
 	// private boolean readingNextSong(String line)
 
-	private List<SongLine> cleanup(List<SongLine> songText) {
+	private static List<SongLine> cleanup(List<SongLine> songText) {
 
 		if (songText.size() > 0) {
 			if (songText.get(songText.size() - 1).getContent().equals("")) {
@@ -151,7 +151,7 @@ public abstract class SongBook {
 
 	}
 
-	private List<List<SongLine>> getOpwekkingSongTekst(String songNumber) throws SongBookException {
+	public static List<List<SongLine>> getOpwekkingSongTekst(String songNumber) throws SongBookException {
 		List<List<SongLine>> verses = new ArrayList<List<SongLine>>();
 
 		String songBookName = "opwekking.txt";
@@ -221,7 +221,7 @@ public abstract class SongBook {
 		throw new SongBookException("Opwekking " + songNumber + " niet gevonden");
 	}
 
-	private List<String> getVersesFromSong(SlideContents.Type type, String songNumber) {
+	public static List<String> getVersesFromSong(SlideContents.Type type, String songNumber) {
 		List<String> verses = new ArrayList<String>();
 
 		String songBookName = "";
@@ -288,19 +288,6 @@ public abstract class SongBook {
 		s.close();
 
 		return verses;
-	}
-
-	/**
-	 * 
-	 * @param line
-	 * @return
-	 */
-	private String getSongNumber(String line) {
-		if (line.contains(":")) {
-			return StringUtils.substringBetween(line, " ", ":").trim();
-		} else {
-			return StringUtils.substringAfter(line, " ");
-		}
 	}
 
 }

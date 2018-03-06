@@ -12,10 +12,9 @@ import org.docx4j.openpackaging.packages.OpcPackage;
 import org.docx4j.openpackaging.packages.PresentationMLPackage;
 import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
 import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
-import org.gkvassenpeelo.liedbase.liturgy.Liturgy;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.pptx4j.Pptx4jException;
 
@@ -39,11 +38,11 @@ public class SlideMachine {
 
 	SlideFactory slideFactory;
 
-	private Liturgy liturgy;
+	private LiturgyModel model;
 
 	public SlideMachine(LiturgyModel model) throws SlideMachineException {
-		this.liturgy = model.getLiturgy();
-		this.liturgyView = model.getLiturgyView();
+		
+		this.model = model;
 
 		try {
 			presentationMLPackage = (PresentationMLPackage) OpcPackage.load(ClassLoader.getSystemResourceAsStream("template.pptx"));
@@ -87,7 +86,7 @@ public class SlideMachine {
 			// Liturgy parsed and created, time to create Slides
 			setTargetFilename(getTargetFilename());
 
-			for (LiturgyItem lp : liturgy.getLiturgyParts()) {
+			for (LiturgyItem lp : model.getLiturgyItems()) {
 
 				if (lp.getSlides().size() == 0) {
 					addSlide(null, lp.getType());

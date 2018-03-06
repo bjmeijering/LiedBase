@@ -23,5 +23,9 @@ public class LiturgyModel {
     public void addLiturgyItem(LiturgyItem liturgyItem) {
         liturgyItems.add(liturgyItem);
     }
+    
+    public List<LiturgyItem> getLiturgyItems() {
+    	return liturgyItems;
+    }
 
 }

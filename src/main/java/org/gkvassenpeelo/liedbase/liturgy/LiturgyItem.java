@@ -2,12 +2,18 @@ package org.gkvassenpeelo.liedbase.liturgy;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
+import java.util.regex.Pattern;
+
+import org.apache.commons.lang.StringUtils;
+import org.gkvassenpeelo.liedbase.songbook.SongBook;
+import org.gkvassenpeelo.liedbase.songbook.SongBookException;
+import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 public class LiturgyItem {
 
 	public enum Type {
-		welcome, blank, schoonmaak, song, gathering, prair, law, lecture, votum, amen, endOfMorningService, 
-		endOfAfternoonService, scripture, agenda, liturgyOverview, extendedScripture, emptyWithLogo, video
+		welcome, blank, schoonmaak, song, gathering, prair, law, lecture, votum, amen, endOfMorningService, endOfAfternoonService, scripture, agenda, liturgyOverview, extendedScripture, emptyWithLogo, video
 	};
 
 	private Type type;
@@ -90,6 +96,98 @@ public class LiturgyItem {
 
 	public void setLine(String line) {
 		this.line = line;
+	}
+
+	/**
+	 * fetches the contents for the slide based on the type
+	 */
+	public void loadContent() {
+		switch (this.type) {
+		case song:
+			try {
+				getSongContent();
+			} catch (SongBookException e) {
+				e.printStackTrace();
+			}
+			break;
+
+		default:
+			break;
+		}
+	}
+
+	/**
+	 * 
+	 * @param line
+	 * @return
+	 */
+	private String getSongNumber(String line) {
+		if (line.contains(":")) {
+			return StringUtils.substringBetween(line, " ", ":").trim();
+		} else {
+			return StringUtils.substringAfter(line, " ");
+		}
+	}
+
+	private void getSongContent() throws SongBookException {
+		SlideContents.Type scType = null;
+		final String regex_psalm = "([pP]salm )";
+		final String regex_gezang = "([gG]ezang(en)?)";
+		final String regex_lied = "([lL]ied([bB]oek)?)";
+		final String regex_opwekking = "([oO]pwekking?)";
+		final String regex_levenslied = "([lL]evenslied?)";
+
+		// determine songtype
+		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s).*", regex_psalm, regex_gezang, regex_lied, regex_levenslied, regex_opwekking);
+		Pattern songPattern = Pattern.compile(regex);
+		java.util.regex.Matcher m = songPattern.matcher(line);
+
+		m.find();
+		if (m.group(1).matches(regex_psalm)) {
+			scType = SlideContents.Type.psalm;
+		} else if (m.group(1).matches(regex_gezang)) {
+			scType = SlideContents.Type.gezang;
+		} else if (m.group(1).matches(regex_lied)) {
+			scType = SlideContents.Type.lied;
+		} else if (m.group(1).matches(regex_levenslied)) {
+			scType = SlideContents.Type.levenslied;
+		} else if (m.group(1).matches(regex_opwekking)) {
+			scType = SlideContents.Type.opwekking;
+		}
+
+		if (scType == SlideContents.Type.opwekking) {
+
+			for (List<SongLine> verse : SongBook.getOpwekkingSongTekst(getSongNumber(line))) {
+				Song song = new Song(line, verse);
+				addSlide(song);
+			}
+
+		} else {
+
+			if (!line.contains(":")) {
+				List<String> allVerses = SongBook.getVersesFromSong(scType, getSongNumber(line));
+				String displayLine = String.format("%s%s", line, ": ");
+				for (String verse : allVerses) {
+					displayLine += verse + ", ";
+				}
+				line = StringUtils.substringBeforeLast(displayLine, ",");
+			}
+			// for each verse, create a songSlideContents and add it to the
+			// liturgyPart
+			StringTokenizer st = new StringTokenizer(StringUtils.substringAfter(line, ":"), ",");
+			while (st.hasMoreTokens()) {
+				String currentVerse = st.nextToken().trim();
+				List<SongLine> songText = SongBook.getSongText(scType, getSongNumber(line), currentVerse);
+
+				if (songText == null) {
+					throw new SongBookException(String.format("Vers %s van %s %s niet gevonden", currentVerse, scType, getSongNumber(line)));
+				}
+
+				Song song = new Song(line, songText);
+				song.setVerseNumber(currentVerse);
+				addSlide(song);
+			}
+		}
 	}
 
 }
