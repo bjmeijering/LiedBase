@@ -2,19 +2,19 @@ package org.gkvassenpeelo.liedbase.liturgy;
 
 public class VerseRange {
 
-	private String startVerse;
-	private String endVerse;
+	private int startVerse;
+	private int endVerse;
 
-	public VerseRange(String start, String end) {
+	public VerseRange(int start, int end) {
 		startVerse = start;
 		endVerse = end;
 	}
 
-	public String getStartVerse() {
+	public int getStartVerse() {
 		return startVerse;
 	}
 
-	public String getEndVerse() {
+	public int getEndVerse() {
 		return endVerse;
 	}
 

@@ -1,6 +1,6 @@
 package org.gkvassenpeelo.liedbase.liturgy;
 
-import java.io.IOException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
@@ -10,12 +10,12 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.impl.Log4JLogger;
 import org.gkvassenpeelo.liedbase.LiedBaseError;
-import org.gkvassenpeelo.liedbase.bible.BibleException;
-import org.gkvassenpeelo.liedbase.songbook.SongBookException;
 
 public class Parser {
 
 	private Log4JLogger logger = new Log4JLogger(this.getClass().toString());
+
+	private static String DEFAULT_TRANSLATION = "BGT";
 
 	private String liturgy;
 
@@ -119,11 +119,9 @@ public class Parser {
 	/**
 	 * 
 	 * @param inputString
-	 * @throws BibleException
-	 * @throws SongBookException
-	 * @throws IOException
+	 * @throws ParseException
 	 */
-	public LiturgyParseResult parseLiturgyScript() {
+	public LiturgyParseResult parseLiturgyScript() throws ParseException {
 
 		LiturgyParseResult parseResult = new LiturgyParseResult();
 
@@ -142,12 +140,14 @@ public class Parser {
 				LiturgyItem.Type type = getLiturgyPartTypeFromLine(line);
 				logger.info("Type: " + type.toString());
 
+				String translation = null;
 				String book = null;
-				String chapter = null;
-				List<String> verses = null;
+				int chapter = -1;
+				int[] verses = null;
 				VerseRange verseRange = null;
 				// only if the the type requires further lookup (like a song or bible text) extract more details
 				if (type == LiturgyItem.Type.song || type == LiturgyItem.Type.scripture) {
+					translation = getTranslationFromLine(line);
 					book = getBookFromLine(line);
 					chapter = getChapterFromLine(line);
 					verses = getVersesFromLine(line);
@@ -155,7 +155,7 @@ public class Parser {
 						verseRange = getVerseRangeFromLine(line);
 					}
 				}
-				parseResult.addLiturgyItem(new LiturgyItem(line, type, book, chapter, verses, verseRange));
+				parseResult.addLiturgyItem(new LiturgyItem(line, type, translation, book, chapter, verses, verseRange));
 			}
 		}
 
@@ -163,29 +163,82 @@ public class Parser {
 
 	}
 
-	private VerseRange getVerseRangeFromLine(String line) {
-		// TODO Auto-generated method stub
-		return null;
+	public static String getTranslationFromLine(String line) throws ParseException {
+		if (line.trim().matches(".*\\([a-zA-Z7]{1,4}\\)$")) {
+			if (line.toLowerCase().trim().endsWith("(nbv)")) {
+				return "NBV";
+			} else if (line.toLowerCase().trim().endsWith("(bgt)")) {
+				return "BGT";
+			} else if (line.toLowerCase().trim().endsWith("(nbg)")) {
+				return "NBG51";
+			} else if (line.toLowerCase().trim().endsWith("(sv77)")) {
+				return "SV77";
+			} else {
+				throw new ParseException("Onbekende vertaling in regel: " + line, 0);
+			}
+		}
+		return DEFAULT_TRANSLATION;
 	}
 
-	private List<String> getVersesFromLine(String line) {
-		// TODO Auto-generated method stub
+	VerseRange getVerseRangeFromLine(String line) {
+
+		int startVerse = 0;
+		int endVerse = 999;
+
+		if (line.contains("-")) {
+			startVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "-").trim());
+		} else {
+			if (line.contains("(")) {
+				startVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "(").trim());
+			} else {
+				startVerse = Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+			}
+		}
+
+		if (line.contains("-")) {
+			if (line.contains("(")) {
+				endVerse = Integer.parseInt(StringUtils.substringBetween(line, "-", "(").trim());
+			} else {
+				endVerse = Integer.parseInt(StringUtils.substringAfterLast(line, "-").trim());
+			}
+		} else {
+			if (line.contains("(")) {
+				endVerse = Integer.parseInt(StringUtils.substringBetween(line, ":", "(").trim());
+			} else {
+				endVerse = Integer.parseInt(StringUtils.substringAfterLast(line, ":").trim());
+			}
+		}
+
+		return new VerseRange(startVerse, endVerse);
+
+	}
+
+	int[] getVersesFromLine(String line) {
+		if (line.contains(":")) {
+			int startPos = line.indexOf(':') + 1;
+			int endPos = line.indexOf("(") == -1 ? line.length() : line.indexOf("(");
+			String[] verses = line.substring(startPos, endPos).split(",");
+			int[] intVerses = new int[verses.length];
+			for (int i = 0; i < verses.length; i++) {
+				intVerses[i] = Integer.parseInt(verses[i].trim());
+			}
+			return intVerses;
+		}
 		return null;
 	}
 
 	// get the chapter. i.e. the word after the first space and before an optional :
-	private String getChapterFromLine(String line) {
+	int getChapterFromLine(String line) {
 		Pattern p = Pattern.compile("^[\\d]?[ ]?[a-zA-Z0-9ëü]*[ ]+([0-9a-z]+)");
 		Matcher m = p.matcher(line);
-		String chapter = null;
+		int chapter = -1;
 		if (m.find()) {
-			chapter = m.group(1).trim();
+			chapter = Integer.parseInt(m.group(1).trim());
 			logger.info("Hoofdstuk: " + chapter);
-		}
-		else {
+		} else {
 			logger.info("Geen hoofdstuk gevond in regel: " + line);
 		}
-		return null;
+		return chapter;
 	}
 
 	// get the book. i.e. the part before the first space

@@ -5,6 +5,7 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 
 import javax.swing.AbstractAction;
@@ -30,14 +31,19 @@ public class LiedBaseController extends AbstractAction implements PropertyChange
 		if ("generatePptx".equals(event.getActionCommand())) {
 			parser.setText(view.getLiturgyText());
 
-			LiturgyParseResult result = parser.parseLiturgyScript();
+			LiturgyParseResult result = null;
+			try {
+				result = parser.parseLiturgyScript();
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			List<LiturgyItem> liturgyItems = result.getLiturgyItems();
-			
-			for(LiturgyItem item : liturgyItems) {
+
+			for (LiturgyItem item : liturgyItems) {
 				item.loadContent();
 				model.addLiturgyItem(item);
 			}
-			
 
 			if (!result.hasErrors()) {
 				view.pptxBuildStart();

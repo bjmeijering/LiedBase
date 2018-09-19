@@ -6,6 +6,8 @@ import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
+import org.gkvassenpeelo.liedbase.bible.Bible;
+import org.gkvassenpeelo.liedbase.bible.BibleException;
 import org.gkvassenpeelo.liedbase.songbook.SongBook;
 import org.gkvassenpeelo.liedbase.songbook.SongBookException;
 import org.gkvassenpeelo.liedbase.songbook.SongLine;
@@ -18,18 +20,23 @@ public class LiturgyItem {
 
 	private Type type;
 	private String line;
+	private String translation;
 	private String book;
-	private String chapter;
-	private List<String> verses = new ArrayList<String>();
+	private int chapter;
+	private int[] verses;
 	private VerseRange verseRange;
 
-	public LiturgyItem(String line, Type type, String book, String chapter, List<String> verses, VerseRange verseRange) {
+	public LiturgyItem(String line, Type type, String translation, String book, int chapter, int[] verses, VerseRange verseRange) {
 		this.line = line;
 		this.type = type;
 		this.book = book;
 		this.chapter = chapter;
 		this.verses = verses;
 		this.verseRange = verseRange;
+	}
+
+	public String getTranslation() {
+		return translation;
 	}
 
 	public String getBook() {
@@ -40,19 +47,19 @@ public class LiturgyItem {
 		this.book = book;
 	}
 
-	public String getChapter() {
+	public int getChapter() {
 		return chapter;
 	}
 
-	public void setChapter(String chapter) {
+	public void setChapter(int chapter) {
 		this.chapter = chapter;
 	}
 
-	public List<String> getVerses() {
+	public int[] getVerses() {
 		return verses;
 	}
 
-	public void setVerses(List<String> verses) {
+	public void setVerses(int[] verses) {
 		this.verses = verses;
 	}
 
@@ -111,9 +118,21 @@ public class LiturgyItem {
 			}
 			break;
 
+		case scripture:
+			try {
+				getScriptureContent();
+			} catch (BibleException e) {
+				e.printStackTrace();
+			}
+			break;
+
 		default:
 			break;
 		}
+	}
+
+	private void getScriptureContent() throws BibleException {
+		Bible.getBiblePart(translation, book, chapter, verseRange);
 	}
 
 	/**
