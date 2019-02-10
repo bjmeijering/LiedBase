@@ -77,7 +77,7 @@ public class LiedBaseController extends AbstractAction implements PropertyChange
         // on startup set the liturgy
         try {
             File liturgyFile = new File("liturgie.txt");
-            view.setLiturgy(FileUtils.readFileToString(liturgyFile));
+            view.setLiturgy(FileUtils.readFileToString(liturgyFile, "UTF-8"));
             view.writeLineToConsole("Liturgie is geladen vanuit: " + liturgyFile.getAbsolutePath());
         } catch (IOException e) {
             view.writeLineToConsole("Geen bestaande liturgie gevonden, klik op de knoppen links om te beginnen.");

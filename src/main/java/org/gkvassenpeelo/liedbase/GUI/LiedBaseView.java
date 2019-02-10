@@ -179,10 +179,12 @@ public class LiedBaseView {
 
 	private class MyWindowListener extends WindowAdapter {
 
+		private static final String UTF_8 = "UTF-8";
+
 		@Override
 		public void windowClosing(WindowEvent e) {
 			try {
-				FileUtils.writeStringToFile(new File("liturgie.txt"), taLiturgy.getText());
+				FileUtils.writeStringToFile(new File("liturgie.txt"), taLiturgy.getText(), UTF_8);
 			} catch (IOException e1) {
 				// noop
 			}

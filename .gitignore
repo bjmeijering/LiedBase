@@ -53,3 +53,7 @@ target
 /dependency-reduced-pom.xml
 .settings/
 release.properties
+.classpath
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
