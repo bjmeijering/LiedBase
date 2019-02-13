@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.impl.Log4JLogger;
 import org.gkvassenpeelo.liedbase.LiedBaseError;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem.Type;
 
 public class Parser {
 
@@ -146,12 +147,13 @@ public class Parser {
 				int[] verses = null;
 				VerseRange verseRange = null;
 				// only if the the type requires further lookup (like a song or bible text) extract more details
-				if (type == LiturgyItem.Type.song || type == LiturgyItem.Type.scripture) {
+				if (type == Type.song || type == Type.scripture) {
 					translation = getTranslationFromLine(line);
 					book = getBookFromLine(line);
 					chapter = getChapterFromLine(line);
-					verses = getVersesFromLine(line);
-					if (type == LiturgyItem.Type.scripture) {
+					if (type == Type.song)
+						verses = getVersesFromLine(line);
+					if (type == Type.scripture) {
 						verseRange = getVerseRangeFromLine(line);
 					}
 				}
@@ -217,7 +219,8 @@ public class Parser {
 		if (line.contains(":")) {
 			int startPos = line.indexOf(':') + 1;
 			int endPos = line.indexOf("(") == -1 ? line.length() : line.indexOf("(");
-			String[] verses = line.substring(startPos, endPos).split(",");
+			String verseLine = line.substring(startPos, endPos);
+			String[] verses = verseLine.split(",");
 			int[] intVerses = new int[verses.length];
 			for (int i = 0; i < verses.length; i++) {
 				intVerses[i] = Integer.parseInt(verses[i].trim());

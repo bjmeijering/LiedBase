@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": ""
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LiedBase",
+            "request": "launch",
+            "mainClass": "org.gkvassenpeelo.liedbase.LiedBase",
+            "projectName": "liedbase"
+        }
+    ]
+}

@@ -33,6 +33,7 @@ public class LiturgyItem {
 		this.chapter = chapter;
 		this.verses = verses;
 		this.verseRange = verseRange;
+		this.translation = translation;
 	}
 
 	public String getTranslation() {

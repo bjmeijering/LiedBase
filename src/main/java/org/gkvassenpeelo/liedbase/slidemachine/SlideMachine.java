@@ -34,7 +34,7 @@ public class SlideMachine {
 
 	private boolean showLiturgyOverview = true;
 
-	private List<String> liturgyView;
+	private List<String> liturgyView = new ArrayList<String>();
 
 	SlideFactory slideFactory;
 
