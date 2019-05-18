@@ -25,9 +25,9 @@ import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
-import org.gkvassenpeelo.liedbase.liturgy.Scripture;
+import org.gkvassenpeelo.liedbase.liturgy.ScriptureContents;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
-import org.gkvassenpeelo.liedbase.liturgy.Song;
+import org.gkvassenpeelo.liedbase.liturgy.SongSlide;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
 import org.gkvassenpeelo.liedbase.songbook.SongLine;
 import org.pptx4j.jaxb.Context;
@@ -96,13 +96,13 @@ public class SlideFactory {
 		if (type == LiturgyItem.Type.song) {
 			// Create and add header
 			if (!StringUtils.isEmpty(content.getHeader())) {
-				Shape header = createSongHeaderShape((Song) content);
+				Shape header = createSongHeaderShape((SongSlide) content);
 				slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(header);
 			}
 
 			// create and add body
-			if (((Song) content).getSongText().size() > 0) {
-				Shape body = createSongBody(((Song) content).getSongText());
+			if (((SongSlide) content).getSongText().size() > 0) {
+				Shape body = createSongBody(((SongSlide) content).getSongText());
 				slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(body);
 			}
 		}
@@ -113,7 +113,7 @@ public class SlideFactory {
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(benificiary);
 		}
 		if (type == LiturgyItem.Type.welcome) {
-			Shape vicar = createVicarShape(((Welcome) content).getVicarName());
+				Shape vicar = createVicarShape(((Welcome) content).getVicarName());
 			slidePart.getContents().getCSld().getSpTree().getSpOrGrpSpOrGraphicFrame().add(vicar);
 		}
 		if (type == LiturgyItem.Type.endOfMorningService) {
@@ -184,15 +184,11 @@ public class SlideFactory {
 
 	private Shape createScriptureHeaderShape(SlideContents content) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
-		vc.put("bibleBook", ((Scripture) content).getBibleBook());
-		vc.put("chapter", ((Scripture) content).getChapter());
-		vc.put("verseStart", ((Scripture) content).getFromVerse());
-		vc.put("verseEnd", ((Scripture) content).getToVerse());
-		if (!((Scripture) content).getTranslation().equals("NBV")) {
-			vc.put("translation", "(" + ((Scripture) content).getTranslation() + ")");
-		} else {
-			vc.put("translation", "");
-		}
+		vc.put("bibleBook", ((ScriptureContents) content).getBibleBook());
+		vc.put("chapter", ((ScriptureContents) content).getChapter());
+		vc.put("verseStart", ((ScriptureContents) content).getFromVerse());
+		vc.put("verseEnd", ((ScriptureContents) content).getToVerse());
+		vc.put("translation", "(" + ((ScriptureContents) content).getTranslation() + ")");
 
 		StringWriter ow = new StringWriter();
 
@@ -204,7 +200,7 @@ public class SlideFactory {
 
 	private Shape createScriptureBodyShape(SlideContents content) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
-		vc.put("biblePartFragments", ((Scripture) content).getBiblePart());
+		vc.put("biblePartFragments", ((ScriptureContents) content).getBiblePart());
 
 		StringWriter ow = new StringWriter();
 
@@ -256,7 +252,7 @@ public class SlideFactory {
 	 * @return
 	 * @throws JAXBException
 	 */
-	private Shape createSongHeaderShape(Song song) throws JAXBException {
+	private Shape createSongHeaderShape(SongSlide song) throws JAXBException {
 
 		// separate the header for easier handling below
 		String songNumber = StringUtils.substringBefore(song.getHeader(), ":");

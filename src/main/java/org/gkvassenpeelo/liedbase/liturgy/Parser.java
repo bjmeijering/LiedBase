@@ -1,5 +1,8 @@
 package org.gkvassenpeelo.liedbase.liturgy;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,9 +63,11 @@ public class Parser {
 		String regex_law = "([wW]et)";
 		String regex_lecture = "([pP]reek)";
 		String regex_agenda = "([aA]genda)";
-		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_schoonmaak, regex_extended_scripture,
-				regex_empty_with_logo, regex_agenda, regex_end_of_morning_service, regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm,
-				regex_gezang, regex_lied, regex_opwekking, regex_levenslied, regex_gebed, regex_collecte, regex_voorganger, regex_law, regex_lecture);
+		String regex = String.format("^[ ]*(%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s|%s).*", regex_schoonmaak,
+				regex_extended_scripture, regex_empty_with_logo, regex_agenda, regex_end_of_morning_service,
+				regex_end_of_afternoon_service, regex_amen, regex_votum, regex_psalm, regex_gezang, regex_lied,
+				regex_opwekking, regex_levenslied, regex_gebed, regex_collecte, regex_voorganger, regex_law,
+				regex_lecture);
 
 		// check liturgy part type
 		Pattern liturgyPattern = Pattern.compile(regex);
@@ -121,8 +126,9 @@ public class Parser {
 	 * 
 	 * @param inputString
 	 * @throws ParseException
+	 * @throws IOException
 	 */
-	public LiturgyParseResult parseLiturgyScript() throws ParseException {
+	public LiturgyParseResult parseLiturgyScript() throws ParseException, IOException {
 
 		LiturgyParseResult parseResult = new LiturgyParseResult();
 
@@ -137,7 +143,8 @@ public class Parser {
 			logger.info("=====================");
 			logger.info("Start verwerken regel: " + line);
 			if (!line.trim().startsWith("#") && !StringUtils.isEmpty(line.trim())) {
-				// first: get the general type, then use that to decide what extractions are needed next
+				// first: get the general type, then use that to decide what extractions are
+				// needed next
 				LiturgyItem.Type type = getLiturgyPartTypeFromLine(line);
 				logger.info("Type: " + type.toString());
 
@@ -146,7 +153,8 @@ public class Parser {
 				int chapter = -1;
 				int[] verses = null;
 				VerseRange verseRange = null;
-				// only if the the type requires further lookup (like a song or bible text) extract more details
+				// only if the the type requires further lookup (like a song or bible text)
+				// extract more details
 				if (type == Type.song || type == Type.scripture) {
 					translation = getTranslationFromLine(line);
 					book = getBookFromLine(line);
@@ -157,7 +165,7 @@ public class Parser {
 						verseRange = getVerseRangeFromLine(line);
 					}
 				}
-				parseResult.addLiturgyItem(new LiturgyItem(line, type, translation, book, chapter, verses, verseRange));
+				parseResult.addLiturgyItem(new LiturgyItem(line, type, translation, book, chapter, verses, verseRange).loadContent());
 			}
 		}
 

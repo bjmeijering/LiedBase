@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
-import org.gkvassenpeelo.liedbase.papermachine.PaperMachine;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachine;
 import org.junit.Before;
 import org.junit.Ignore;

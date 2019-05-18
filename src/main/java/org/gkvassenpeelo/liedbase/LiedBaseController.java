@@ -14,14 +14,11 @@ import javax.swing.SwingWorker;
 import org.apache.commons.io.FileUtils;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyParseResult;
 import org.gkvassenpeelo.liedbase.liturgy.Parser;
 
 @SuppressWarnings("serial")
 public class LiedBaseController extends AbstractAction implements PropertyChangeListener {
-
-	private LiturgyModel model = new LiturgyModel();
 	private LiedBaseView view;
 	private Parser parser = new Parser();
 
@@ -37,17 +34,14 @@ public class LiedBaseController extends AbstractAction implements PropertyChange
 			} catch (ParseException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-			List<LiturgyItem> liturgyItems = result.getLiturgyItems();
-
-			for (LiturgyItem item : liturgyItems) {
-				item.loadContent();
-				model.addLiturgyItem(item);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 
 			if (!result.hasErrors()) {
 				view.pptxBuildStart();
-				SwingWorker<Void, Void> task = new CreatePptxTask(model, view);
+				SwingWorker<Void, Void> task = new CreatePptxTask(result.getLiturgyItems(), view);
 				task.execute();
 			} else {
 				for (String message : result.getErrors()) {
@@ -55,26 +49,6 @@ public class LiedBaseController extends AbstractAction implements PropertyChange
 				}
 			}
 		}
-
-		// if ("generateDocx".equals(event.getActionCommand())) {
-		// try {
-		// LiturgyParseResult result =
-		// model.parseLiturgyScript(view.getLiturgyText());
-		// if (!result.hasErrors()) {
-		// view.docxBuildStart();
-		// SwingWorker<Void, Void> task = new CreateDocxTask(model, view);
-		// task.execute();
-		// } else {
-		// for (String message : result.getErrors()) {
-		// view.writeLineToConsole(message);
-		// }
-		// }
-		// } catch (BibleException e) {
-		// view.writeLineToConsole(e.getMessage());
-		// } catch (SongBookException e) {
-		// view.writeLineToConsole(e.getMessage());
-		// }
-		// }
 
 	}
 

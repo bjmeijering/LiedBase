@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 
-public class Scripture extends SlideContents {
+public class ScriptureContents extends SlideContents {
 
 	private List<BiblePartFragment> biblePart;
 
@@ -14,16 +14,14 @@ public class Scripture extends SlideContents {
 
 	private int chapter;
 
-	private int fromVerse;
+	private VerseRange verseRange;
 
-	private int toVerse;
-
-	public Scripture(List<BiblePartFragment> biblePart, String bibleBook, String translation, int chapter, int fromVerse, int toVerse) {
+	public ScriptureContents(List<BiblePartFragment> biblePart, String bibleBook, String translation, int chapter,
+			VerseRange verseRange) {
 		this.biblePart = biblePart;
 		this.bibleBook = bibleBook;
 		this.chapter = chapter;
-		this.fromVerse = fromVerse;
-		this.toVerse = toVerse;
+		this.verseRange = verseRange;
 		this.translation = translation;
 	}
 
@@ -32,7 +30,7 @@ public class Scripture extends SlideContents {
 	}
 
 	public String getBibleBook() {
-		return bibleBook;
+		return bibleBook.substring(0, 1).toUpperCase() + bibleBook.substring(1);
 	}
 
 	public int getChapter() {
@@ -40,11 +38,11 @@ public class Scripture extends SlideContents {
 	}
 
 	public int getFromVerse() {
-		return fromVerse;
+		return verseRange.getStartVerse();
 	}
 
 	public int getToVerse() {
-		return toVerse;
+		return verseRange.getEndVerse();
 	}
 
 	public String getTranslation() {
@@ -53,5 +51,9 @@ public class Scripture extends SlideContents {
 
 	public void setTranslation(String translation) {
 		this.translation = translation;
+	}
+
+	public String getFormattedHeader() {
+		return String.format("%s %s: %s - %s", getBibleBook(), getChapter(), getFromVerse(), getToVerse());
 	}
 }

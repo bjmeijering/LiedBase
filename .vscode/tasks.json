@@ -6,8 +6,11 @@
         {
             "label": "verify",
             "type": "shell",
-            "command": "mvn -B verify",
-            "group": "build"
+            "command": "echo ${fileBasenameNoExtension}",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
         },
         {
             "label": "test",

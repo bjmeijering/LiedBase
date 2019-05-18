@@ -5,7 +5,6 @@ import javax.swing.UnsupportedLookAndFeelException;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.gkvassenpeelo.liedbase.GUI.LiedBaseView;
-import org.gkvassenpeelo.liedbase.papermachine.PaperMachineException;
 import org.gkvassenpeelo.liedbase.slidemachine.SlideMachineException;
 
 /**
@@ -18,8 +17,8 @@ public class LiedBase {
 
 	static final Logger logger = Logger.getLogger(LiedBase.class);
 
-	public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException,
-			SlideMachineException, PaperMachineException {
+	public static void main(String[] args) throws ClassNotFoundException, InstantiationException,
+			IllegalAccessException, UnsupportedLookAndFeelException, SlideMachineException {
 
 		// // Configure logger
 		BasicConfigurator.configure();

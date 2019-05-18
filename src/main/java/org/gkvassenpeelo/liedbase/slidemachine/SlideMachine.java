@@ -1,32 +1,26 @@
 package org.gkvassenpeelo.liedbase.slidemachine;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.JAXBException;
-
 import org.apache.log4j.Logger;
-import org.docx4j.openpackaging.exceptions.Docx4JException;
-import org.docx4j.openpackaging.packages.OpcPackage;
-import org.docx4j.openpackaging.packages.PresentationMLPackage;
-import org.docx4j.openpackaging.parts.PresentationML.MainPresentationPart;
-import org.docx4j.openpackaging.parts.PresentationML.SlidePart;
+import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
-import org.gkvassenpeelo.liedbase.liturgy.LiturgyModel;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
+import org.gkvassenpeelo.liedbase.liturgy.ScriptureContents;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
-import org.pptx4j.Pptx4jException;
+import org.gkvassenpeelo.liedbase.liturgy.SongSlide;
+import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 public class SlideMachine {
 
+	private static final String SLIDE_BREAK = "\n\n\n";
+	private static final String BLANK_LINE = "\n\n";
+
 	static final Logger logger = Logger.getLogger(SlideMachine.class);
-
-	private MainPresentationPart targetPresentationPart;
-
-	private String targetFilename = "Presentatie.pptx";
-
-	private PresentationMLPackage presentationMLPackage;
 
 	private List<LiturgyItem.Type> followedByLiturgyOverview = new ArrayList<LiturgyItem.Type>();
 
@@ -36,46 +30,27 @@ public class SlideMachine {
 
 	private List<String> liturgyView = new ArrayList<String>();
 
-	SlideFactory slideFactory;
+	private String targetFilename;
 
-	private LiturgyModel model;
+	private List<LiturgyItem> items;
 
-	public SlideMachine(LiturgyModel model) throws SlideMachineException {
-		
-		this.model = model;
+	public SlideMachine(List<LiturgyItem> items) throws SlideMachineException {
 
-		try {
-			presentationMLPackage = (PresentationMLPackage) OpcPackage.load(ClassLoader.getSystemResourceAsStream("template.pptx"));
+		this.items = items;
 
-			slideFactory = new SlideFactory();
-
-			// Need references to these parts to create a slide
-			// Please note that these parts *already exist* - they are
-			// created by createPackage() above. See that method
-			// for instruction on how to create and add a part.
-			targetPresentationPart = slideFactory.getMainPresentationPart(presentationMLPackage);
-
-			// remove the first slide
-			targetPresentationPart.removeSlide(0);
-
-			// fill list containing slide types after which a liturgy overview slide
-			// must be added
-			followedByLiturgyOverview.add(LiturgyItem.Type.welcome);
-			followedByLiturgyOverview.add(LiturgyItem.Type.law);
-			followedByLiturgyOverview.add(LiturgyItem.Type.song);
-			followedByLiturgyOverview.add(LiturgyItem.Type.lecture);
-			followedByLiturgyOverview.add(LiturgyItem.Type.votum);
-			followedByLiturgyOverview.add(LiturgyItem.Type.prair);
-			followedByLiturgyOverview.add(LiturgyItem.Type.scripture);
-			followedByLiturgyOverview.add(LiturgyItem.Type.gathering);
-		} catch (Docx4JException e) {
-			throw new SlideMachineException(e.getMessage(), e);
-		} catch (Pptx4jException e) {
-			throw new SlideMachineException(e.getMessage(), e);
-		}
+		// fill list containing slide types after which a liturgy overview slide
+		// must be added
+		followedByLiturgyOverview.add(LiturgyItem.Type.welcome);
+		followedByLiturgyOverview.add(LiturgyItem.Type.law);
+		followedByLiturgyOverview.add(LiturgyItem.Type.song);
+		followedByLiturgyOverview.add(LiturgyItem.Type.lecture);
+		followedByLiturgyOverview.add(LiturgyItem.Type.votum);
+		followedByLiturgyOverview.add(LiturgyItem.Type.prair);
+		followedByLiturgyOverview.add(LiturgyItem.Type.scripture);
+		followedByLiturgyOverview.add(LiturgyItem.Type.gathering);
 	}
 
-	// Where will we save our new .pptx?
+	// Where will we save our new Markdown file?
 	public void setTargetFilename(String filename) {
 		targetFilename = filename;
 	}
@@ -86,30 +61,57 @@ public class SlideMachine {
 			// Liturgy parsed and created, time to create Slides
 			setTargetFilename(getTargetFilename());
 
-			for (LiturgyItem lp : model.getLiturgyItems()) {
+			// also create Markdown file
+			FileWriter md = new FileWriter(new File(System.getProperty("user.dir") + "/target/liturgy.md"));
 
-				if (lp.getSlides().size() == 0) {
-					addSlide(null, lp.getType());
-				} else {
-					for (SlideContents sc : lp.getSlides()) {
-						addSlide(sc, lp.getType());
+			for (LiturgyItem item : items) {
+
+				if (item.isSong()) {
+
+					for (SlideContents slide : item.getSlides()) {
+
+						SongSlide songSlide = (SongSlide) slide;
+
+						md.append(songSlide.getHeader());
+						md.append(BLANK_LINE);
+						for (SongLine line : songSlide.getSongText()) {
+							md.append(line.getContent() + "\n");
+						}
+						md.append(SLIDE_BREAK);
 					}
 				}
 
-				addIntermediateSlide(lp);
+				if (item.isScripture()) {
+
+					for (SlideContents slide : item.getSlides()) {
+
+						ScriptureContents scriptureSlide = (ScriptureContents) slide;
+
+						// print header
+						md.append(scriptureSlide.getFormattedHeader());
+						md.append(BLANK_LINE);
+
+						// print main bible text
+						for (BiblePartFragment fragment : scriptureSlide.getBiblePart()) {
+							md.append(fragment.getContent());
+						}
+						md.append(SLIDE_BREAK);
+					}
+				}
+
+				addIntermediateSlide(item);
 
 			}
 
-		} catch (JAXBException e) {
-			throw new SlideMachineException(e.getMessage(), e);
-		} catch (Pptx4jException e) {
-			throw new SlideMachineException(e.getMessage(), e);
-		} catch (Docx4JException e) {
+			// close Markdown file
+			md.close();
+
+		} catch (IOException e) {
 			throw new SlideMachineException(e.getMessage(), e);
 		}
 	}
 
-	private void addIntermediateSlide(LiturgyItem lp) throws JAXBException, Pptx4jException, Docx4JException {
+	private void addIntermediateSlide(LiturgyItem lp) {
 		// after some liturgy parts, add an overview slide, except for
 		// the last one!
 
@@ -141,29 +143,17 @@ public class SlideMachine {
 
 			lo.setHeader("Liturgie:");
 			lo.setBody(builder.toString());
-			addSlide(lo, LiturgyItem.Type.liturgyOverview);
+			// addSlide(lo, LiturgyItem.Type.liturgyOverview);
 		} else {
-			if (lp.getType() != LiturgyItem.Type.endOfMorningService && lp.getType() != LiturgyItem.Type.endOfAfternoonService) {
-				addSlide(null, LiturgyItem.Type.blank);
+			if (lp.getType() != LiturgyItem.Type.endOfMorningService
+					&& lp.getType() != LiturgyItem.Type.endOfAfternoonService) {
+				// addSlide(null, LiturgyItem.Type.blank);
 			}
 		}
 	}
 
-	public void addSlide(SlideContents content, LiturgyItem.Type type) throws JAXBException, Pptx4jException, Docx4JException {
-
-		SlidePart slidePart = slideFactory.createSlide(targetPresentationPart.getSlideCount());
-		targetPresentationPart.addSlide(slidePart);
-
-		slideFactory.addSlideContents(presentationMLPackage, slidePart, content, type);
-
-	}
-
 	private String getTargetFilename() {
 		return targetFilename;
-	}
-
-	public void save() throws Docx4JException {
-		presentationMLPackage.save(new File(targetFilename));
 	}
 
 }

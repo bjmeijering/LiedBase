@@ -26,6 +26,8 @@ public class LiturgyItem {
 	private int[] verses;
 	private VerseRange verseRange;
 
+	private List<SlideContents> slides = new ArrayList<SlideContents>();
+
 	public LiturgyItem(String line, Type type, String translation, String book, int chapter, int[] verses, VerseRange verseRange) {
 		this.line = line;
 		this.type = type;
@@ -76,8 +78,6 @@ public class LiturgyItem {
 		this.slides = slides;
 	}
 
-	private List<SlideContents> slides = new ArrayList<SlideContents>();
-
 	public LiturgyItem(Type type) {
 		setType(type);
 	}
@@ -109,7 +109,7 @@ public class LiturgyItem {
 	/**
 	 * fetches the contents for the slide based on the type
 	 */
-	public void loadContent() {
+	public LiturgyItem loadContent() {
 		switch (this.type) {
 		case song:
 			try {
@@ -130,10 +130,13 @@ public class LiturgyItem {
 		default:
 			break;
 		}
+		return this;
 	}
 
 	private void getScriptureContent() throws BibleException {
 		Bible.getBiblePart(translation, book, chapter, verseRange);
+		ScriptureContents scripture = new ScriptureContents(Bible.getBiblePart(translation, book, chapter, verseRange), book, translation, chapter, verseRange);
+		addSlide(scripture);
 	}
 
 	/**
@@ -178,7 +181,7 @@ public class LiturgyItem {
 		if (scType == SlideContents.Type.opwekking) {
 
 			for (List<SongLine> verse : SongBook.getOpwekkingSongTekst(getSongNumber(line))) {
-				Song song = new Song(line, verse);
+				SongSlide song = new SongSlide(line, verse);
 				addSlide(song);
 			}
 
@@ -203,11 +206,19 @@ public class LiturgyItem {
 					throw new SongBookException(String.format("Vers %s van %s %s niet gevonden", currentVerse, scType, getSongNumber(line)));
 				}
 
-				Song song = new Song(line, songText);
+				SongSlide song = new SongSlide(line, songText);
 				song.setVerseNumber(currentVerse);
 				addSlide(song);
 			}
 		}
+	}
+
+	public boolean isSong() {
+		return getType() == Type.song;
+	}
+
+	public boolean isScripture() {
+		return getType() == Type.scripture;
 	}
 
 }
