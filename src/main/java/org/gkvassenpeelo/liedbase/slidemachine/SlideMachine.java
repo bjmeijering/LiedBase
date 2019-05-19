@@ -10,15 +10,17 @@ import org.apache.log4j.Logger;
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
-import org.gkvassenpeelo.liedbase.liturgy.ScriptureContents;
+import org.gkvassenpeelo.liedbase.liturgy.ScriptureSlide;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.SongSlide;
 import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 public class SlideMachine {
 
-	private static final String SLIDE_BREAK = "\n\n\n";
+	private static final String SLIDE_BREAK = "\n\n\n\n";
 	private static final String BLANK_LINE = "\n\n";
+	private static final String SUPERSCRIPT_OPEN = "<sup>";
+	private static final String SUPERSCRIPT_CLOSE = "</sup>";
 
 	static final Logger logger = Logger.getLogger(SlideMachine.class);
 
@@ -62,7 +64,7 @@ public class SlideMachine {
 			setTargetFilename(getTargetFilename());
 
 			// also create Markdown file
-			FileWriter md = new FileWriter(new File(System.getProperty("user.dir") + "/target/liturgy.md"));
+			FileWriter md = new FileWriter(new File("/Users/hdoedens/coding/reveal.js/liturgy.md"));
 
 			for (LiturgyItem item : items) {
 
@@ -75,17 +77,15 @@ public class SlideMachine {
 						md.append(songSlide.getHeader());
 						md.append(BLANK_LINE);
 						for (SongLine line : songSlide.getSongText()) {
-							md.append(line.getContent() + "\n");
+							md.append(line.getContent() + "  \n");
 						}
 						md.append(SLIDE_BREAK);
 					}
-				}
-
-				if (item.isScripture()) {
+				} else if (item.isScripture()) {
 
 					for (SlideContents slide : item.getSlides()) {
 
-						ScriptureContents scriptureSlide = (ScriptureContents) slide;
+						ScriptureSlide scriptureSlide = (ScriptureSlide) slide;
 
 						// print header
 						md.append(scriptureSlide.getFormattedHeader());
@@ -93,13 +93,20 @@ public class SlideMachine {
 
 						// print main bible text
 						for (BiblePartFragment fragment : scriptureSlide.getBiblePart()) {
-							md.append(fragment.getContent());
+							if (fragment.getDisplayType() == BiblePartFragment.DisplayType.superScript) {
+								md.append(superscript(fragment.getContent()));
+							} else {
+								md.append(fragment.getContent());
+							}
 						}
 						md.append(SLIDE_BREAK);
 					}
+				} else {
+					md.append("item van type: " + item.getType().toString());
+					md.append(SLIDE_BREAK);
 				}
 
-				addIntermediateSlide(item);
+				addIntermediateSlide(item, md);
 
 			}
 
@@ -111,11 +118,22 @@ public class SlideMachine {
 		}
 	}
 
-	private void addIntermediateSlide(LiturgyItem lp) {
+	private String superscript(String content) {
+		return SUPERSCRIPT_OPEN + content + SUPERSCRIPT_CLOSE;
+	}
+
+	private void addIntermediateSlide(LiturgyItem lp, FileWriter md) throws IOException {
 		// after some liturgy parts, add an overview slide, except for
 		// the last one!
 
+		if (liturgyView.size() == 0) {
+			createLiturgyView();
+		}
+
 		if (followedByLiturgyOverview.contains(lp.getType()) && showLiturgyOverview) {
+
+			md.append("Liturgie:" + BLANK_LINE);
+
 			LiturgyOverview lo = new LiturgyOverview();
 
 			StringBuilder builder = new StringBuilder();
@@ -139,16 +157,25 @@ public class SlideMachine {
 
 				}
 
-			}
+				md.append(s + "  \n");
 
-			lo.setHeader("Liturgie:");
+			}
 			lo.setBody(builder.toString());
 			// addSlide(lo, LiturgyItem.Type.liturgyOverview);
 		} else {
 			if (lp.getType() != LiturgyItem.Type.endOfMorningService
 					&& lp.getType() != LiturgyItem.Type.endOfAfternoonService) {
 				// addSlide(null, LiturgyItem.Type.blank);
+				md.append(SLIDE_BREAK);
 			}
+		}
+
+		md.append(SLIDE_BREAK);
+	}
+
+	private void createLiturgyView() {
+		for (LiturgyItem item : items) {
+			liturgyView.add(item.getType().toString());
 		}
 	}
 

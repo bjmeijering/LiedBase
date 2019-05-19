@@ -25,7 +25,7 @@ import org.gkvassenpeelo.liedbase.liturgy.EndOfMorningService;
 import org.gkvassenpeelo.liedbase.liturgy.Gathering;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
 import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem;
-import org.gkvassenpeelo.liedbase.liturgy.ScriptureContents;
+import org.gkvassenpeelo.liedbase.liturgy.ScriptureSlide;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.SongSlide;
 import org.gkvassenpeelo.liedbase.liturgy.Welcome;
@@ -184,11 +184,11 @@ public class SlideFactory {
 
 	private Shape createScriptureHeaderShape(SlideContents content) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
-		vc.put("bibleBook", ((ScriptureContents) content).getBibleBook());
-		vc.put("chapter", ((ScriptureContents) content).getChapter());
-		vc.put("verseStart", ((ScriptureContents) content).getFromVerse());
-		vc.put("verseEnd", ((ScriptureContents) content).getToVerse());
-		vc.put("translation", "(" + ((ScriptureContents) content).getTranslation() + ")");
+		vc.put("bibleBook", ((ScriptureSlide) content).getBibleBook());
+		vc.put("chapter", ((ScriptureSlide) content).getChapter());
+		vc.put("verseStart", ((ScriptureSlide) content).getFromVerse());
+		vc.put("verseEnd", ((ScriptureSlide) content).getToVerse());
+		vc.put("translation", "(" + ((ScriptureSlide) content).getTranslation() + ")");
 
 		StringWriter ow = new StringWriter();
 
@@ -200,7 +200,7 @@ public class SlideFactory {
 
 	private Shape createScriptureBodyShape(SlideContents content) throws JAXBException {
 		VelocityContext vc = new VelocityContext();
-		vc.put("biblePartFragments", ((ScriptureContents) content).getBiblePart());
+		vc.put("biblePartFragments", ((ScriptureSlide) content).getBiblePart());
 
 		StringWriter ow = new StringWriter();
 

@@ -34,11 +34,11 @@ public class SlideMachineTest {
 	@Test
 	public void testCreateMdFile() throws SlideMachineException, ParseException, IOException {
 		Parser parser = new Parser();
-		parser.setText("liedboek 1\ngezang 12\ndaniel 3: 5-7");
+		parser.setText("liedboek 1\ngezang 12\nVotum\nwelkom: naam domi\ndaniel 3: 5-7");
 		LiturgyParseResult result = parser.parseLiturgyScript();
 		assert(!result.hasErrors());
 		assert(!result.hasWarnings());
-		assertEquals(3, result.getLiturgyItems().size());
+		assertEquals(5, result.getLiturgyItems().size());
 		SlideMachine sm = new SlideMachine(result.getLiturgyItems());
 		sm.createSlides();
 	}

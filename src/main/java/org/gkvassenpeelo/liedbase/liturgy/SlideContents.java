@@ -2,7 +2,7 @@ package org.gkvassenpeelo.liedbase.liturgy;
 
 public abstract class SlideContents {
 
-    private String header;
+    String header;
 
     private String body;
 

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.gkvassenpeelo.liedbase.bible.BiblePartFragment;
 
-public class ScriptureContents extends SlideContents {
+public class ScriptureSlide extends SlideContents {
 
 	private List<BiblePartFragment> biblePart;
 
@@ -16,7 +16,7 @@ public class ScriptureContents extends SlideContents {
 
 	private VerseRange verseRange;
 
-	public ScriptureContents(List<BiblePartFragment> biblePart, String bibleBook, String translation, int chapter,
+	public ScriptureSlide(List<BiblePartFragment> biblePart, String bibleBook, String translation, int chapter,
 			VerseRange verseRange) {
 		this.biblePart = biblePart;
 		this.bibleBook = bibleBook;

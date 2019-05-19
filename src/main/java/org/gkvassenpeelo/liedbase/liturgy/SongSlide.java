@@ -34,4 +34,12 @@ public class SongSlide extends SlideContents {
         return verseNumber;
     }
 
+    /**
+     * Build a nicely formatted header with the current versenu,ber in bold.
+     */
+    public String getHeader() {
+        return header.substring(0, 1).toUpperCase() + header.substring(1, header.indexOf(":"))
+                + (header.substring(header.indexOf(":"))).replace(verseNumber, "**" + verseNumber + "**");
+    }
+
 }

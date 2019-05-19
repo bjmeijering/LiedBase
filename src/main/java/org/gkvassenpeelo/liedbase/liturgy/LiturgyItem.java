@@ -135,7 +135,7 @@ public class LiturgyItem {
 
 	private void getScriptureContent() throws BibleException {
 		Bible.getBiblePart(translation, book, chapter, verseRange);
-		ScriptureContents scripture = new ScriptureContents(Bible.getBiblePart(translation, book, chapter, verseRange), book, translation, chapter, verseRange);
+		ScriptureSlide scripture = new ScriptureSlide(Bible.getBiblePart(translation, book, chapter, verseRange), book, translation, chapter, verseRange);
 		addSlide(scripture);
 	}
 
