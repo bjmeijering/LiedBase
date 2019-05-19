@@ -34,7 +34,7 @@ public class SlideMachineTest {
 	@Test
 	public void testCreateMdFile() throws SlideMachineException, ParseException, IOException {
 		Parser parser = new Parser();
-		parser.setText("liedboek 1\ngezang 12\nVotum\nwelkom: naam domi\ndaniel 3: 5-7");
+		parser.setText("welkom: naam domi\nVotum\nliedboek 1:1,2\ngezang 12:3\ndaniel 3: 5-7");
 		LiturgyParseResult result = parser.parseLiturgyScript();
 		assert(!result.hasErrors());
 		assert(!result.hasWarnings());

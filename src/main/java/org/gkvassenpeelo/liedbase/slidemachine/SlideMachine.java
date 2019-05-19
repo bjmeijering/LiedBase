@@ -13,6 +13,7 @@ import org.gkvassenpeelo.liedbase.liturgy.LiturgyOverview;
 import org.gkvassenpeelo.liedbase.liturgy.ScriptureSlide;
 import org.gkvassenpeelo.liedbase.liturgy.SlideContents;
 import org.gkvassenpeelo.liedbase.liturgy.SongSlide;
+import org.gkvassenpeelo.liedbase.liturgy.LiturgyItem.Type;
 import org.gkvassenpeelo.liedbase.songbook.SongLine;
 
 public class SlideMachine {
@@ -64,7 +65,7 @@ public class SlideMachine {
 			setTargetFilename(getTargetFilename());
 
 			// also create Markdown file
-			FileWriter md = new FileWriter(new File("/Users/hdoedens/coding/reveal.js/liturgy.md"));
+			FileWriter md = new FileWriter(new File("/Users/hdoedens/coding/reveal.js/noorderlicht/liturgy.md"));
 
 			for (LiturgyItem item : items) {
 
@@ -101,6 +102,9 @@ public class SlideMachine {
 						}
 						md.append(SLIDE_BREAK);
 					}
+				} else if (item.isVotum()) {
+					md.append("![](gezongen_votum.png)");
+					md.append(SLIDE_BREAK);
 				} else {
 					md.append("item van type: " + item.getType().toString());
 					md.append(SLIDE_BREAK);
@@ -134,40 +138,12 @@ public class SlideMachine {
 
 			md.append("Liturgie:" + BLANK_LINE);
 
-			LiturgyOverview lo = new LiturgyOverview();
-
-			StringBuilder builder = new StringBuilder();
-			int pos = liturgyView.indexOf(lp.getLine());
-			int currentPosition = 0;
-			for (String s : liturgyView) {
-
-				if (pos == -1) {
-					if (currentLiturgyPartIndex > currentPosition++) {
-						lo.addLiturgyLinePast(s);
-					} else {
-						lo.addLiturgyLinesFuture(s);
-					}
-				} else {
-					if (liturgyView.indexOf(s) <= pos) {
-						lo.addLiturgyLinePast(s);
-						currentLiturgyPartIndex = pos + 1;
-					} else {
-						lo.addLiturgyLinesFuture(s);
-					}
-
+			for (LiturgyItem item : items) {
+				if (item.getType() == Type.song || item.getType() == Type.scripture) {
+					md.append(item.getLine() + "  \n");
 				}
-
-				md.append(s + "  \n");
-
 			}
-			lo.setBody(builder.toString());
-			// addSlide(lo, LiturgyItem.Type.liturgyOverview);
-		} else {
-			if (lp.getType() != LiturgyItem.Type.endOfMorningService
-					&& lp.getType() != LiturgyItem.Type.endOfAfternoonService) {
-				// addSlide(null, LiturgyItem.Type.blank);
-				md.append(SLIDE_BREAK);
-			}
+
 		}
 
 		md.append(SLIDE_BREAK);

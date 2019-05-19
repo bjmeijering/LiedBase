@@ -29,7 +29,7 @@ public class LiturgyItem {
 	private List<SlideContents> slides = new ArrayList<SlideContents>();
 
 	public LiturgyItem(String line, Type type, String translation, String book, int chapter, int[] verses, VerseRange verseRange) {
-		this.line = line;
+		this.line = Parser.format(line, type);
 		this.type = type;
 		this.book = book;
 		this.chapter = chapter;
@@ -219,6 +219,10 @@ public class LiturgyItem {
 
 	public boolean isScripture() {
 		return getType() == Type.scripture;
+	}
+
+	public boolean isVotum() {
+		return getType() == Type.votum;
 	}
 
 }
