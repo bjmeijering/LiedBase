@@ -202,6 +202,7 @@ public class SongBook {
                     if (!nextSong) {
                         verses.add(verseText);
                     }
+                    s.close();
 
                     return verses;
                 }
