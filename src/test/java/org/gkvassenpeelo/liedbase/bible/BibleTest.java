@@ -33,10 +33,10 @@ public class BibleTest {
 		try {
 			assertEquals("Genesis", Bible.getBibleBookFromLine("genesis 3: 2-3"));
 			assertEquals("Exodus", Bible.getBibleBookFromLine("eXoddues 3: 2-3"));
-			assertEquals("Daniël", Bible.getBibleBookFromLine(" daniel 1"));
+			assertEquals("DaniÃ«l", Bible.getBibleBookFromLine(" daniel 1"));
 			assertEquals("2 Johannes", Bible.getBibleBookFromLine("2 johannus 14: 34 - 10000"));
 			assertEquals("Openbaring", Bible.getBibleBookFromLine("openbaringngn 2: 2-3"));
-			assertEquals("Matteüs", Bible.getBibleBookFromLine("mattheus 2: 2-2"));
+			assertEquals("MatteÃ¼s", Bible.getBibleBookFromLine("mattheus 2: 2-2"));
 		} catch (BibleException e) {
 			fail("Something went wrong: " + e.getMessage());
 		}
